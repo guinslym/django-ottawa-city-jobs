@@ -13,6 +13,9 @@ class Job(models.Model):
     def was_published_recently(self):
         now = timezone.now()
         return now - datetime.timedelta(days=7) <= self.pub_date <= now
+    def still_not_expired_job_list(self):
+        now = timezone.now()
+        return self.expirydate >= now 
 
 
     joburl = models.URLField(max_length=250)

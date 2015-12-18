@@ -2,3 +2,8 @@ Todo:
  ☐ Creating Fixtures
  ☐ Think about what the app should do in the Front end
  ☐ Think about how will I implement the time format
+ ☐ Create a dummy json and play with it on index.html
+   ☐ https://stackoverflow.com/questions/7852855/how-to-convert-a-python-datetime-object-to-seconds
+   ☐ http://cal-heatmap.com/
+ ☐ Add an Active boolean field so that I know if they are expired or add a function still_not_yet_expired_job_list() to the model
+ ☐ Add comments
