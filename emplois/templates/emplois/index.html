@@ -1,1 +1,14 @@
+{#% extends "base.html" %#}
+
+
+{% block content %}
+
 <h1>Liste des Emplois</h1>
+<ul>
+
+{% for emploi in latest_jobs_list %}
+<li>{{ emploi.position }} </li>
+{% endfor %}
+</ul>
+
+{% endblock %}

@@ -1,9 +1,75 @@
 Todo:
  ☐ Creating Fixtures
  ☐ Think about what the app should do in the Front end
- ☐ Think about how will I implement the time format
  ☐ Create a dummy json and play with it on index.html
-   ☐ https://stackoverflow.com/questions/7852855/how-to-convert-a-python-datetime-object-to-seconds
-   ☐ http://cal-heatmap.com/
+   ☐ https://jsfiddle.net/gdiamond/ec0qhgwd/4/
  ☐ Add an Active boolean field so that I know if they are expired or add a function still_not_yet_expired_job_list() to the model
- ☐ Add comments
+
+
+
+todo Dec 23:
+ ☐ Creating a view that list all
+ ☐ Add the proper file for page.js
+ ☐ Draw your front-end app without js framework 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿
+Archive:
+ ✔ Think about how will I implement the time format @done (15-12-23 15:32) @project(Todo)
+ ✔ https://stackoverflow.com/questions/34442456/how-to-get-the-timestamp-in-seconds-for-cal-heatmap-js @done (15-12-23 15:32) @project(Todo)
+ ✔ Add comments @done (15-12-23 15:32) @project(Todo)
