@@ -21,4 +21,5 @@ admin.autodiscover()
 urlpatterns = [
     url(r'^ottawacityjobs/', include('emplois.urls')),
     url(r'^admin/', admin.site.urls),
+    #url(r'^$', 'emplois.views.mainpage'),
 ]
