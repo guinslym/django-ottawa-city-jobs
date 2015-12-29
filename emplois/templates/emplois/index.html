@@ -1,6 +1,10 @@
+{% load humanize %}
 {#% extends "base.html" %#}
 
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha256-3dkvEK0WLHRJ7/Csr0BZjAWxERc5WH7bdeUya2aXxdU= sha512-+L4yy6FRcDGbXJ9mPG8MT/3UCDzwR9gPeyFNMCtInsol++5m3bk2bXWKdZjvybmohrAsn3Ua5x8gfLnbE1YkOg==" crossorigin="anonymous">
+
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw==" crossorigin="anonymous">
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.1/jquery.js"></script>
 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha256-KXn5puMvxCw+dAYznun+drMdG1IFl3agK0p/pqT9KAo= sha512-2e8qq0ETcfWRI4HJBzQiA3UoyFk6tbNyG+qSaIBZLyW9Xf3sWZHN/lxe9fTh1U45DpPf07yj94KsUHHWe4Yk1A==" crossorigin="anonymous"></script>
 
@@ -12,21 +16,63 @@
 		padding-right: 10px;
 	}
 </style>
+
+<div class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="/" class="navbar-brand">Ottawa City Jobs</a>
+          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar-main">
+          <ul class="nav navbar-nav">
+            <li>
+              <a href="#"></a>
+            </li>
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">Stats</a></li>
+            <li><a href="#">Fr/En</a></li>
+            <li><a href="#">About</a></li>
+          </ul>
+
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
 <div class="container">
 	<div class="col-lg-12">
 	{% block content %}
 
 	<h1>Liste des Emplois</h1>
+	
+	<div class="row text-right">
+		<ul>
+			<li><a href="#">Latest job posting</a></li>
+			<li><a href="#">Salary</a></li>
+			<li><a href="#">Expiring soon</a></li>
+		</ul>	
+	</div>
 
 	{% for emploi in latest_jobs_list %}
 
-		<h3>Postition: {{ emploi.position }}.</h3>
+		<h3>Postition: <a href="#">{{ emploi.position }}.</a></h3>
 		<p><strong>Description: </strong>{{ emploi.job_summary }}.</p>
 		<ul>
-			<li><strong>Salary: </strong>{{ emploi.salarymax }}$</li>
-			<li><strong>Expiring in: </strong>8 days</li>
-			<li><strong>postdate: </strong> {{ emploi.expiredate}}</li>
-			<li><strong>Apply link: </strong> <a href="{{ emploi.job_url }}">Apply</a></li>
+			<li><strong>Salary: </strong>{{ emploi.salarymax | intcomma }}$</li>
+			<li><strong>Expiring in: </strong>{{ emploi.expiredate | naturaltime}}</li>
+			<li><strong>postdate: </strong> {{ emploi.pub_date| naturaltime }}</li>
+			<li><strong>Apply link: </strong> <a href="{{ emploi.job_url }}" target="_blank">Apply</a></li>
+			<li><strong>email it to me: </strong> <a href="#">button</a></li>
 		</ul>
 
 	{% endfor %}
@@ -36,6 +82,7 @@
 	</div>
 </div>
 
+<!--
 <div class="container">
 	<div class="col-lg-12">
 		<h3>Postition: Lorem ipsum dolor sit amet.</h3>
@@ -53,3 +100,7 @@
 		</ul>
 	</div>
 </div>
+-->
+<script type="text/javascript">
+
+</script>
