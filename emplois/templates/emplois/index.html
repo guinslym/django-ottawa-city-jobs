@@ -1,14 +1,55 @@
 {#% extends "base.html" %#}
 
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw==" crossorigin="anonymous">
 
-{% block content %}
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha256-KXn5puMvxCw+dAYznun+drMdG1IFl3agK0p/pqT9KAo= sha512-2e8qq0ETcfWRI4HJBzQiA3UoyFk6tbNyG+qSaIBZLyW9Xf3sWZHN/lxe9fTh1U45DpPf07yj94KsUHHWe4Yk1A==" crossorigin="anonymous"></script>
 
-<h1>Liste des Emplois</h1>
-<ul>
+<style type="text/css">
+	ul li{
+		display: inline;
+		list-style: none;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+</style>
+<div class="container">
+	<div class="col-lg-12">
+	{% block content %}
 
-{% for emploi in latest_jobs_list %}
-<li>{{ emploi.position }} </li>
-{% endfor %}
-</ul>
+	<h1>Liste des Emplois</h1>
 
-{% endblock %}
+	{% for emploi in latest_jobs_list %}
+
+		<h3>Postition: {{ emploi.position }}.</h3>
+		<p><strong>Description: </strong>{{ emploi.job_summary }}.</p>
+		<ul>
+			<li><strong>Salary: </strong>{{ emploi.salarymax }}$</li>
+			<li><strong>Expiring in: </strong>8 days</li>
+			<li><strong>postdate: </strong> {{ emploi.expiredate}}</li>
+			<li><strong>Apply link: </strong> <a href="{{ emploi.job_url }}">Apply</a></li>
+		</ul>
+
+	{% endfor %}
+
+	{% endblock %}
+		
+	</div>
+</div>
+
+<div class="container">
+	<div class="col-lg-12">
+		<h3>Postition: Lorem ipsum dolor sit amet.</h3>
+		<p><strong>Description: </strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		<ul>
+			<li><strong>Salary: </strong>15 000$</li>
+			<li><strong>Expiring in: </strong>8 days</li>
+			<li><strong>postdate: </strong> Jan-12-2016</li>
+			<li><strong>Apply link: </strong> <a href="#">Apply</a></li>
+		</ul>
+	</div>
+</div>

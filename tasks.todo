@@ -1,25 +1,10 @@
 Todo:
- ☐ Creating Fixtures
+ ☐ Creating Fixtures.... (maybe I will have some issue with the will fixture DATE https://docs.djangoproject.com/en/dev/topics/i18n/timezones/#code)
+ ☐ Layout to modify and
  ☐ Think about what the app should do in the Front end
  ☐ Create a dummy json and play with it on index.html
    ☐ https://jsfiddle.net/gdiamond/ec0qhgwd/4/
  ☐ Add an Active boolean field so that I know if they are expired or add a function still_not_yet_expired_job_list() to the model
-
-
-
-todo Dec 23:
- ☐ Creating a view that list all
- ☐ Add the proper file for page.js
- ☐ Draw your front-end app without js framework 
-
-
-
-
-
-
-
-
-
 
 
 

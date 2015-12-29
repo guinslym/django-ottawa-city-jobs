@@ -20,14 +20,15 @@ class Job(models.Model):
         return self.expirydate >= now 
 
 
-    joburl = models.URLField(max_length=250)
-    expirydate = models.DateField()
-    salarymax = models.DecimalField(max_digits=6, decimal_places=2)
-    name = models.CharField(max_length=40) 
-    position = models.CharField(max_length=150)
-    jobref = models.CharField(max_length=30, unique=True)
-    job_summary = models.TextField()
-    pub_date = models.DateTimeField(auto_now=True)
+    joburl = models.URLField(max_length=250, blank=True, null=True)
+    expirydate = models.DateField(blank=True, null=True)
+    salarymax = models.DecimalField(max_digits=11, decimal_places=2, blank=True, null=True)
+    name = models.CharField(max_length=40, blank=True, null=True) 
+    position = models.CharField(max_length=150, blank=True, null=True)
+    jobref = models.CharField(max_length=30, unique=True, blank=True, null=True)
+    job_summary = models.TextField(blank=True, null=True)
+    pub_date = models.DateTimeField(auto_now=True, blank=True, null=True)
+    timestamps = models.DateTimeField(auto_now=True, blank=True, null=True)
 
 @python_2_unicode_compatible
 class Description(models.Model):
