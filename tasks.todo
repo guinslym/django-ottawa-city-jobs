@@ -6,18 +6,19 @@ Todo:
    ☐ https://jsfiddle.net/gdiamond/ec0qhgwd/4/
 
 Frontend:
-  ☐ Add the real data to view the result
+  ☐ Add the real data to view the result--- problem with Date???
   ☐ add translation (KSKS via route)
     ☐ https://openclassrooms.com/courses/developpez-votre-site-web-avec-le-framework-django/l-internationalisation-1
-  ☐ email to me (Ajax)
-    ☐ https://realpython.com/blog/python/django-and-ajax-form-submissions/
   ☐ Research a position (Haystack)
     ☐ https://www.calazan.com/adding-basic-search-to-your-django-site/
+  ☐ Add pagination
   ☐ Layout finalize
   ☐ Celery (create a temp file)
   ☐ add d3 heatmap
   ☐ Deployment
   ☐ Deploy with twitter tweets
+  ☐ email to me (Ajax)
+    ☐ https://realpython.com/blog/python/django-and-ajax-form-submissions/
 
 
 
