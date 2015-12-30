@@ -10,6 +10,12 @@ class Job(models.Model):
     '''
 
     '''
+    FRENCH = 'FR'
+    ENGLISH = 'EN'
+    LANGUAGE_CHOICE = (
+            (FRENCH, 'Francais'),
+            (ENGLISH, 'English'),
+            )
     def __str__(self):
         return self.position
     def was_published_recently(self):
@@ -24,6 +30,7 @@ class Job(models.Model):
     expirydate = models.DateField(auto_now=True, blank=True, null=True)
     salarymax = models.CharField(max_length=40, blank=True, null=True)
     name = models.CharField(max_length=40, blank=True, null=True) 
+    language = models.CharField(max_length=2, choices=LANGUAGE_CHOICE, default=ENGLISH) 
     position = models.CharField(max_length=150, blank=True, null=True)
     jobref = models.CharField(max_length=30, unique=True, blank=True, null=True)
     job_summary = models.TextField(blank=True, null=True)

@@ -75,6 +75,7 @@ for lang in [0,1]:
                 "expirydate": expirydate,
                 "job_summary": job.get('JOB_SUMMARY', None),
                 "jobref": job.get('JOBREF', None),
+                "language": (job.get('JOBREF', None)).split('-')[2],
                 "joburl": job.get('JOBURL', None),
                 "name": job.get('NAME', None),
                 "position": job.get('POSITION', None),

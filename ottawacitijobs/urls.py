@@ -22,5 +22,6 @@ urlpatterns = [
     url(r'^emplois/', include('emplois.urls', namespace="emplois")),
     url(r'^ottawacityjobs/', include('emplois.urls')),
     url(r'^admin/', admin.site.urls),
+   # url(r'^djohno/', include('djohno.urls')),
     url(r'^$', include('emplois.urls')),
 ]

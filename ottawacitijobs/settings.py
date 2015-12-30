@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.humanize',
     'debug_toolbar',
     'emplois',
+    'analytical',
 ]
 
 MIDDLEWARE_CLASSES = [
