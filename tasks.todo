@@ -6,19 +6,24 @@ Todo:
    ☐ https://jsfiddle.net/gdiamond/ec0qhgwd/4/
 
 Frontend:
-  ☐ Add the real data to view the result--- problem with Date???
-  ☐ add translation (KSKS via route)
-    ☐ https://openclassrooms.com/courses/developpez-votre-site-web-avec-le-framework-django/l-internationalisation-1
-  ☐ Research a position (Haystack)
-    ☐ https://www.calazan.com/adding-basic-search-to-your-django-site/
-  ☐ Add pagination
+  ✔ Add the real data to view the result--- problem with Date??? @done (15-12-30 11:17)
+  ✔ how to put salary in decimal @done (15-12-30 11:18)
+  ✔ how to format the date @done (15-12-30 11:18)
+  ✔ Add data with description @done (15-12-30 12:11)
   ☐ Layout finalize
   ☐ Celery (create a temp file)
-  ☐ add d3 heatmap
+  ☐ add d3 heatmap json...file
+  ☐ Research a position (Haystack)
+    ☐ https://www.calazan.com/adding-basic-search-to-your-django-site/
   ☐ Deployment
   ☐ Deploy with twitter tweets
+  ☐ add translation (KSKS via route)
+    ☐ https://openclassrooms.com/courses/developpez-votre-site-web-avec-le-framework-django/l-internationalisation-1
+  ☐ Add Archive
+  ☐ Add pagination
   ☐ email to me (Ajax)
     ☐ https://realpython.com/blog/python/django-and-ajax-form-submissions/
+  ☐ django-API
 
 
 

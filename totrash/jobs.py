@@ -3,6 +3,9 @@ import urllib
 #import urllib2
 import requests
 import datetime
+from dateutil.parser import *
+TZOFFSETS = {"BRST": -10800}
+from decimal import Decimal
 
 def get_data():
     data = []
@@ -54,28 +57,47 @@ conteneur = []
 compteur = 1
 for lang in [0,1]:
     for job in data[lang]['jobs']:
-        today = datetime.date.today()
+        expirydate = parse(job.get('EXPIRYDATE', None))
+        expirydate = str(expirydate).split(' ')[0]
+        pub_date = parse(job.get('POSTDATE', None))
+        pub_date = str(pub_date).split(' ')[0]
         #calcul
         if job.get('SALARYMAX', None):
             if ',' in job.get('SALARYMAX', None):
                 salary = job.get('SALARYMAX', None)
-                salary = salary.replace(',', ' ')
+                salary = (salary.replace(',', ' '))
+                #salary = int(salary)
         else:
             salary = None
         conteneur.append(
         {
             "fields": {
-                "expirydate": str(job.get('EXPIRYDATE', None)),
+                "expirydate": expirydate,
                 "job_summary": job.get('JOB_SUMMARY', None),
                 "jobref": job.get('JOBREF', None),
                 "joburl": job.get('JOBURL', None),
                 "name": job.get('NAME', None),
                 "position": job.get('POSITION', None),
-                "pub_date": str(today),
-                "salarymax": salary,
-                "timestamps": str(today)
+                "pub_date": pub_date,
+                "salarymax": salary
             },
             "model": "emplois.job",
+            "pk": compteur
+            },
+                )
+        conteneur.append(
+        {
+            "fields": {
+                "jobs": compteur,
+                "salarytype": job.get('SALARYTYPE', None),
+                "knowledge": job.get('KNOWLEDGE', None),
+                "languagecert": job.get('LANGUAGE_CERTIFICATES', None),
+                "educationandexp": job.get('EDUCATIONANDEXP', None),
+                "company_desc": job.get('COMPANY_DESC', None),
+                "salarymin": job.get('SALARYMIN', None),
+                "pub_date": pub_date
+            },
+            "model": "emplois.description",
             "pk": compteur
             },
                 )
