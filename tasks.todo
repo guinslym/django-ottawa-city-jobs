@@ -4,15 +4,17 @@ Todo:
  ☐ Think about what the app should do in the Front end
  ☐ Create a dummy json and play with it on index.html
    ☐ https://jsfiddle.net/gdiamond/ec0qhgwd/4/
- ☐ Add an Active boolean field so that I know if they are expired or add a function still_not_yet_expired_job_list() to the model
 
 Frontend:
-  ✔ add a root page (set default page) @done (15-12-29 19:29) (need to restart the server in order to work)
-  ☐ add translation 
+  ☐ Add the real data to view the result
+  ☐ add translation (KSKS via route)
   ☐ add d3 heatmap
   ☐ email to me (Ajax)
-  ☐ Research a position
-  ☐ Add pagination
+  ☐ Research a position (Haystack)
+  ☐ Layout finalize
+  ☐ Celery
+  ☐ Deployment
+  ☐ Deploy with twitter
 
 
 
@@ -63,19 +65,21 @@ Frontend:
 
 ＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿
 Archive:
- ✔ Position should link to another page @done (15-12-29 19:02) @project(Frontend)
- ✔ get DetailView @done (15-12-29 19:02) @project(Frontend)
- ✔ Sort by latest job posting @done (15-12-29 19:27) @project(Frontend)
+ ✔ Add an Active boolean field so that I know if they are expired or add a function still_not_yet_expired_job_list() to the model @done (15-12-29 19:43) @project(Todo)
+ ✔ add a root page (set default page) @done (15-12-29 19:29) (need to restart the server in order to work) @project(Frontend)
  ✔ sort by Salary @done (15-12-29 19:27) @project(Frontend)
+ ✔ Sort by latest job posting @done (15-12-29 19:27) @project(Frontend)
  ✔ Sort by Expiring soon @done (15-12-29 19:27) @project(Frontend)
+ ✔ get DetailView @done (15-12-29 19:02) @project(Frontend)
+ ✔ Position should link to another page @done (15-12-29 19:02) @project(Frontend)
  ✔ Add Footer @done (15-12-29 18:31) @project(Frontend)
- ✔ Adding D3.js @done (15-12-29 18:10) @project(Frontend)
  ✔ Adding translation @done (15-12-29 18:23) @project(Frontend)
  ✔ Add an about us page @done (15-12-29 18:23) @project(Frontend)
  ✔ Add a root url @done (15-12-29 18:23) @project(Frontend)
+ ✔ Adding D3.js @done (15-12-29 18:10) @project(Frontend)
+ ✔ http://codepen.io/gab/pen/KLhgr @done (15-12-29 18:06) @project(Frontend)
  ✔ Add navbar @done (15-12-29 18:06) @project(Frontend)
  ✔ Add moment.js @done (15-12-29 18:06) @project(Frontend)
- ✔ http://codepen.io/gab/pen/KLhgr @done (15-12-29 18:06) @project(Frontend)
- ✔ Think about how will I implement the time format @done (15-12-23 15:32) @project(Todo)
  ✔ https://stackoverflow.com/questions/34442456/how-to-get-the-timestamp-in-seconds-for-cal-heatmap-js @done (15-12-23 15:32) @project(Todo)
+ ✔ Think about how will I implement the time format @done (15-12-23 15:32) @project(Todo)
  ✔ Add comments @done (15-12-23 15:32) @project(Todo)
