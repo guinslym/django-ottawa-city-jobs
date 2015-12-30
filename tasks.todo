@@ -8,13 +8,16 @@ Todo:
 Frontend:
   ☐ Add the real data to view the result
   ☐ add translation (KSKS via route)
-  ☐ add d3 heatmap
+    ☐ https://openclassrooms.com/courses/developpez-votre-site-web-avec-le-framework-django/l-internationalisation-1
   ☐ email to me (Ajax)
+    ☐ https://realpython.com/blog/python/django-and-ajax-form-submissions/
   ☐ Research a position (Haystack)
+    ☐ https://www.calazan.com/adding-basic-search-to-your-django-site/
   ☐ Layout finalize
-  ☐ Celery
+  ☐ Celery (create a temp file)
+  ☐ add d3 heatmap
   ☐ Deployment
-  ☐ Deploy with twitter
+  ☐ Deploy with twitter tweets
 
 
 
