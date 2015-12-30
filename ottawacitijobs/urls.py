@@ -19,7 +19,8 @@ from django.contrib import admin
 admin.autodiscover()
 
 urlpatterns = [
+    url(r'^emplois/', include('emplois.urls', namespace="emplois")),
     url(r'^ottawacityjobs/', include('emplois.urls')),
     url(r'^admin/', admin.site.urls),
-    #url(r'^$', 'emplois.views.mainpage'),
+    url(r'^$', include('emplois.urls')),
 ]

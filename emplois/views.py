@@ -10,7 +10,31 @@ class IndexView(generic.ListView):
     context_object_name='latest_jobs_list'
 
     def get_queryset(self):
-        return Job.objects.order_by('-pub_date')
+       return Job.objects.order_by('-pub_date')
 
-def mainpage():
-	print('hello')
+class LatestView(generic.ListView):
+    template_name='emplois/latest.html'
+    context_object_name='latest_jobs_list'
+
+    def get_queryset(self):
+       return Job.objects.order_by('-pub_date')
+
+class SalaryView(generic.ListView):
+    template_name='emplois/salary.html'
+    context_object_name='latest_jobs_list'
+
+    def get_queryset(self):
+       return Job.objects.order_by('-salarymax')
+
+class ExpiringSoonView(generic.ListView):
+    template_name='emplois/expire.html'
+    context_object_name='latest_jobs_list'
+
+    def get_queryset(self):
+       return Job.objects.order_by('-expirydate')
+
+class DetailView(generic.DetailView):
+    model = Job
+    template_name = 'emplois/details.html'
+    context_object_name='job'
+
