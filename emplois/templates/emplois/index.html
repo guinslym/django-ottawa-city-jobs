@@ -10,9 +10,6 @@
 	<div class="row text-right">
 		<ul>
 			<li><a href="{% url 'emplois:latest' %}">Latest job posting</a></li>
-			<!--
-			<li><a href="{% url 'emplois:salary' %}">Salary</a></li>
-			-->
 			<li><a href="{% url 'emplois:expire' %}">Expiring soon</a></li>
 		</ul>	
 	</div>
@@ -31,7 +28,9 @@
 			<li><strong>Expiring date: </strong>{{ emploi.expirydate }}</li>
 			<li><strong>postdate: </strong> {{ emploi.pub_date| naturaltime }}</li>
 			<li><strong>Apply link: </strong> <a href="{{ emploi.joburl }}" target="_blank">Apply</a></li>
+			<!--
 			<li><strong>email it to me: </strong> <a href="#">button</a></li>
+			-->
 		</ul>
 
 	{% endfor %}

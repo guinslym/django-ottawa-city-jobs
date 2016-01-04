@@ -38,15 +38,15 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+    'django.contrib.sites',
     'django.contrib.staticfiles',
     'django.contrib.humanize',
     'django_extensions',
     'debug_toolbar',
     'djcelery',
-    'emplois',
     'analytical',
+    'emplois',
 ]
-
 
 MIDDLEWARE_CLASSES = [
     'django.middleware.security.SecurityMiddleware',
@@ -57,6 +57,7 @@ MIDDLEWARE_CLASSES = [
     'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
 ]
 
 ROOT_URLCONF = 'ottawacitijobs.urls'
@@ -92,6 +93,8 @@ DATABASES = {
     }
 }
 
+BROKER_URL = 'sqla+sqlite:///celerydb.sqlite'
+
 
 # Password validation
 # https://docs.djangoproject.com/en/1.9/ref/settings/#auth-password-validators
@@ -124,6 +127,14 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
+
+gettext = lambda s: s
+LANGUAGES = (
+    ('FR', gettext('Français')),
+    ('EN', gettext('English')),
+)
+
+DEFAULT_LANGUAGE = 1
 
 #FIXTURE_DIRS = ['fixtures']
 

@@ -55,7 +55,13 @@
         <div class="navbar-collapse collapse" id="navbar-main">
           <ul class="nav navbar-nav">
             <li>
-              <a href="#"></a>
+              <a href="#"> 
+              <form action="/searchBlog" method="get">
+              {% csrf_token %}
+                  <input type="text" name = "searchKey"
+                        placeholder="Search by Job title" />
+                        <button>Search</button>
+                    </form></a>
             </li>
           </ul>
 
@@ -77,6 +83,24 @@
 <div class="container">
 	<div class="col-lg-12">
 
+
+
+
+
+<form action="/i18n/" method="post">
+<input name="lang" type="hidden" value="/next/page/" />
+<select name="language">
+    {% for lang in LANGUAGES %}
+    <option value="{{ lang.0 }}">{{ lang.1 }}</option>
+    {% endfor %}
+</select>
+<input type="submit" value="Go" />
+</form>
+
+
+
+{% load i18n %}
+{% trans "Bienvenue sur mon site" %}
   
   {% block content %}
   {% endblock %}

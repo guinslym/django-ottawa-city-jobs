@@ -16,40 +16,33 @@
 	<h1>Stats page</h1>
 
 <div id="example-d"></div>
+<div id="onClick-placeholder">
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+</div>
 <script type="text/javascript">
 
-var data = {
-    "1423803600.0": 4,
-    "1424322000.0": 2,
-    "1427774400.0": 5,
-    "1429243200.0": 5,
-    "1430280000.0": 1,
-    "1430884800.0": 3,
-    "1430971200.0": 2,
-    "1432008000.0": 2,
-    "1433131200.0": 2,
-    "1433217600.0": 1,
-    "1434513600.0": 1,
-    "1434600000.0": 3,
-    "1434859200.0": 4,
-    "1435032000.0": 2,
-    "1447131600.0": 4,
-    "1447390800.0": 2,
-    "1447650000.0": 4,
-    "1447736400.0": 4,
-    "1447909200.0": 2,
-    "1447995600.0": 6
-}
+
+
 var cal = new CalHeatMap();
 cal.init({
 	itemSelector: "#example-d",
 	domain: "year",
 	subDomain: "day",
-	data: data,
+    itemName: ["job", "jobs"],
+	data: {{ stats }},
 	start: new Date(2015, 0),
 	cellSize: 10,
 	range: 1,
-	legend: [20, 40, 60, 80]
+	legend: [20, 40, 60, 80],
+    onClick: function(date, nb) {
+        //Add AJAX call for all the jobs for that date
+        //Add cookie or variable for the language i18n
+        $("#onClick-placeholder").html("You just clicked <br/>on <b>" +
+            date + "</b> <br/>with <b>" +
+            (nb === null ? "unknown" : nb) + "</b> jobs"
+        );
+    }
 });
 </script>
 

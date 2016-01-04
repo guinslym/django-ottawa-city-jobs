@@ -23,7 +23,9 @@
 			<li><strong>Expiring in: </strong>{{ emploi.expiredate | naturaltime}}</li>
 			<li><strong>postdate: </strong> {{ emploi.pub_date| naturaltime }}</li>
 			<li><strong>Apply link: </strong> <a href="{{ emploi.job_url }}" target="_blank">Apply</a></li>
+			<!--
 			<li><strong>email it to me: </strong> <a href="#">button</a></li>
+			-->
 		</ul>
 
 	{% endfor %}

@@ -5,34 +5,36 @@ Todo:
  ☐ Create a dummy json and play with it on index.html
    ☐ https://jsfiddle.net/gdiamond/ec0qhgwd/4/
 
+
+Priority today:
+ ☐ Search form
+ ☐ Celery (Create file)
+ ☐ Send email
+ ☐ Language switcher
+ ☐ Ajax
+
 Frontend:
-  ✔ Add the real data to view the result--- problem with Date??? @done (15-12-30 11:17)
-  ✔ how to put salary in decimal @done (15-12-30 11:18)
-  ✔ how to format the date @done (15-12-30 11:18)
-  ✔ Add data with dexscription @done (15-12-30 12:11)
-  ✔ Add routes for everything @done (16-01-03 19:44)
-  ✔ add translation (KSKS via route) @done (16-01-03 19:51)
-  ✔ Add a base.html page for every page @done (16-01-03 20:10)
-  ✔ Add the template that I did for Heatmap d3.js @done (16-01-03 20:42)
-  ☐ How to convert date to unixtimestamps
-  ☐ Sql syntax to group by date and count
-  ☐ add d3 heatmap json...file render json
-  ☐ Research a position 
+  ☐ Language (i18n) in session (youtube)
+  ☐ Language .. do it in JS for the form KISS
+  ☐ Research a position (job title only)
     ☐ https://www.calazan.com/adding-basic-search-to-your-django-site/
   ☐ Layout finalize
-  ☐ Add a form to research by title only
-  ✔ Add languages in model (choice fr or en) @done (15-12-30 12:57)
-  ☐ Deployment
-  ☐ Celery (create a temp file)
+  ☐ Django Celery
   ☐ Deploy with twitter tweets
     ☐ https://openclassrooms.com/courses/developpez-votre-site-web-avec-le-framework-django/l-internationalisation-1
   ☐ Add Archive
-  ☐ Add pagination
+  ☐ Add pagination (for results page)
   ☐ email to me (Ajax)
     ☐ https://realpython.com/blog/python/django-and-ajax-form-submissions/
   ☐ django-API
   ☐ frontpage: Add latest tweet
   ☐ Add static in base for all the fonts instead of cdn
+  ☐ Share it with Fb and twitter
+  ☐ Google analytics
+  ☐ Objects association get Salary_Type (maybe put it on the Job model)
+  ☐ Listview in index to remove the expiring date older then today
+  ☐ There might be a problem with the date...
+  ☐ Tooltip for the date (postdate)
 
 
 
@@ -83,6 +85,20 @@ Frontend:
 
 ＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿
 Archive:
+ ✔ Static css/js/font/img @done (16-01-04 16:36) @project(Priority today)
+ ✔ Front-end redesign @done (16-01-04 16:36) @project(Priority today)
+ ✔ add d3 heatmap json...file render json @done (16-01-03 22:10) @project(Frontend)
+ ✔ Sql syntax to group by date and count @done (16-01-03 22:10) @project(Frontend)
+ ✔ How to convert date to unixtimestamps @done (16-01-03 22:10) @project(Frontend)
+ ✔ Add the template that I did for Heatmap d3.js @done (16-01-03 20:42) @project(Frontend)
+ ✔ Add a base.html page for every page @done (16-01-03 20:10) @project(Frontend)
+ ✔ add translation (KSKS via route) @done (16-01-03 19:51) @project(Frontend)
+ ✔ Add routes for everything @done (16-01-03 19:44) @project(Frontend)
+ ✔ Add languages in model (choice fr or en) @done (15-12-30 12:57) @project(Frontend)
+ ✔ Add data with dexscription @done (15-12-30 12:11) @project(Frontend)
+ ✔ how to put salary in decimal @done (15-12-30 11:18) @project(Frontend)
+ ✔ how to format the date @done (15-12-30 11:18) @project(Frontend)
+ ✔ Add the real data to view the result--- problem with Date??? @done (15-12-30 11:17) @project(Frontend)
  ✔ Add an Active boolean field so that I know if they are expired or add a function still_not_yet_expired_job_list() to the model @done (15-12-29 19:43) @project(Todo)
  ✔ add a root page (set default page) @done (15-12-29 19:29) (need to restart the server in order to work) @project(Frontend)
  ✔ sort by Salary @done (15-12-29 19:27) @project(Frontend)

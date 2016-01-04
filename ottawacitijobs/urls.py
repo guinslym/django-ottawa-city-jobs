@@ -23,5 +23,7 @@ urlpatterns = [
     url(r'^ottawacityjobs/', include('emplois.urls')),
     url(r'^admin/', admin.site.urls),
    # url(r'^djohno/', include('djohno.urls')),
+    url(r'^searchBlog/$','emplois.views.blog_search',name="blog_search"),
+    #url(r'^searchBlog/$','emplois.views.SearchJobView',name="blog_search"),
     url(r'^$', include('emplois.urls')),
 ]
