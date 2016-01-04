@@ -9,12 +9,18 @@ Frontend:
   ✔ Add the real data to view the result--- problem with Date??? @done (15-12-30 11:17)
   ✔ how to put salary in decimal @done (15-12-30 11:18)
   ✔ how to format the date @done (15-12-30 11:18)
-  ✔ Add data with description @done (15-12-30 12:11)
-  ☐ add translation (KSKS via route)
-  ☐ add d3 heatmap json...file
-  ☐ Research a position (Haystack)
+  ✔ Add data with dexscription @done (15-12-30 12:11)
+  ✔ Add routes for everything @done (16-01-03 19:44)
+  ✔ add translation (KSKS via route) @done (16-01-03 19:51)
+  ✔ Add a base.html page for every page @done (16-01-03 20:10)
+  ✔ Add the template that I did for Heatmap d3.js @done (16-01-03 20:42)
+  ☐ How to convert date to unixtimestamps
+  ☐ Sql syntax to group by date and count
+  ☐ add d3 heatmap json...file render json
+  ☐ Research a position 
     ☐ https://www.calazan.com/adding-basic-search-to-your-django-site/
   ☐ Layout finalize
+  ☐ Add a form to research by title only
   ✔ Add languages in model (choice fr or en) @done (15-12-30 12:57)
   ☐ Deployment
   ☐ Celery (create a temp file)
@@ -25,6 +31,8 @@ Frontend:
   ☐ email to me (Ajax)
     ☐ https://realpython.com/blog/python/django-and-ajax-form-submissions/
   ☐ django-API
+  ☐ frontpage: Add latest tweet
+  ☐ Add static in base for all the fonts instead of cdn
 
 
 

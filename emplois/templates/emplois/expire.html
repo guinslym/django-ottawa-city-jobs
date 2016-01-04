@@ -1,58 +1,8 @@
+{% extends "base.html" %}
 {% load humanize %}
-{#% extends "base.html" %#}
-
-<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha256-3dkvEK0WLHRJ7/Csr0BZjAWxERc5WH7bdeUya2aXxdU= sha512-+L4yy6FRcDGbXJ9mPG8MT/3UCDzwR9gPeyFNMCtInsol++5m3bk2bXWKdZjvybmohrAsn3Ua5x8gfLnbE1YkOg==" crossorigin="anonymous">
-
-<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw==" crossorigin="anonymous">
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.1/jquery.js"></script>
-
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha256-KXn5puMvxCw+dAYznun+drMdG1IFl3agK0p/pqT9KAo= sha512-2e8qq0ETcfWRI4HJBzQiA3UoyFk6tbNyG+qSaIBZLyW9Xf3sWZHN/lxe9fTh1U45DpPf07yj94KsUHHWe4Yk1A==" crossorigin="anonymous"></script>
-
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.12/d3.min.js"></script>
-
-<style type="text/css">
-	ul li{
-		display: inline;
-		list-style: none;
-		padding-left: 10px;
-		padding-right: 10px;
-	}
-</style>
-
-<div class="navbar navbar-default">
-      <div class="container">
-        <div class="navbar-header">
-          <a href="/" class="navbar-brand">Ottawa City Jobs</a>
-          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-        </div>
-        <div class="navbar-collapse collapse" id="navbar-main">
-          <ul class="nav navbar-nav">
-            <li>
-              <a href="#"></a>
-            </li>
-          </ul>
-
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">Stats</a></li>
-            <li><a href="#">Fr/En</a></li>
-            <li><a href="#">About</a></li>
-          </ul>
-
-        </div>
-      </div>
-    </div>
+{% load analytical %}
 
 
-
-
-
-
-<div class="container">
-	<div class="col-lg-12">
 	{% block content %}
 
 	<h1>Liste des Emplois</h1>
@@ -60,7 +10,6 @@
 	<div class="row text-right">
 		<ul>
 			<li><a href="{% url 'emplois:latest' %}">Latest job posting</a></li>
-			<li><a href="{% url 'emplois:salary' %}">Salary</a></li>
 			<li><a href="{% url 'emplois:expire' %}">Expiring soon</a></li>
 		</ul>	
 	</div>
@@ -80,84 +29,3 @@
 	{% endfor %}
 
 	{% endblock %}
-		
-	</div>
-</div>
-
-<!--
-<div class="container">
-	<div class="col-lg-12">
-		<h3>Postition: Lorem ipsum dolor sit amet.</h3>
-		<p><strong>Description: </strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-		<ul>
-			<li><strong>Salary: </strong>15 000$</li>
-			<li><strong>Expiring in: </strong>8 days</li>
-			<li><strong>postdate: </strong> Jan-12-2016</li>
-			<li><strong>Apply link: </strong> <a href="#">Apply</a></li>
-		</ul>
-	</div>
-</div>
--->
-
-<script type="text/javascript">
-/*
-about:
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-*/
-</script>
-
-<style type="text/css">
-	.bs-docs-featurette+.bs-docs-footer {
-    margin-top: 0;
-    border-top: 0;
-}
-@media (min-width: 768px)
-.bs-docs-footer {
-    text-align: left;
-}
-.bs-docs-footer {
-    padding-top: 50px;
-    padding-bottom: 50px;
-    margin-top: 100px;
-    color: #99979c;
-    text-align: center;
-    background-color: #2a2730;
-}
-</style>
-
-<footer class="bs-docs-footer" role="contentinfo">
-    <div class="container">
-        <ul class="bs-docs-footer-links">
-            <li><a href="#">GitHub</a></li>
-            <li><a href="#">Twitter</a></li>
-            <li><a href="#">Examples</a></li>
-            <li><a href="#">About</a></li>
-        </ul>
-        <p>Designed and built with all the love in the world by <a href="https://twitter.com/guinslym" target="_blank">@guinslym</a>. Maintained by the <a href="https://github.com/orgs/twbs/people">core team</a> with the help of <a href="https://github.com/twbs/bootstrap/graphs/contributors">our contributors</a>.</p>
-        <p>Code licensed <a rel="license" href="https://github.com/twbs/bootstrap/blob/master/LICENSE" target="_blank">MIT</a>, docs <a rel="license" href="https://creativecommons.org/licenses/by/3.0/" target="_blank">CC BY 3.0</a>.</p>
-    </div>
-</footer>

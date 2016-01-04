@@ -38,3 +38,24 @@ class DetailView(generic.DetailView):
     template_name = 'emplois/details.html'
     context_object_name='job'
 
+class StatsView(generic.TemplateView):
+    template_name='emplois/stats.html'
+    #context_object_name='latest_jobs_list'
+    def get_contet_data(self, **kwargs):
+        import time
+        import dateutil.parser
+        import datetime
+        """
+
+        """
+        context = super(StatsView, self).get_context_data(**kwargs)
+        #get all the English values
+        english = Job.objects.filter(language='EN')
+        #Grouup by date
+        context['stats'] = english.values('pub_date').annotate(dcount=Count('pub_date'))
+        return context
+
+
+class AboutView(generic.TemplateView):
+    template_name='emplois/about.html'
+    #context_object_name='latest_jobs_list'

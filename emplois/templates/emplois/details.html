@@ -1,5 +1,12 @@
+{% extends "base.html" %}
 {% load humanize %}
+{% load analytical %}
 
+
+
+	{% block content %}
+
+	
 <h1>{{ job.name }}</h1>
 <h1>{{ job.position }}</h1>
 <h1>{{ job.salarymax |intcomma}}</h1>
@@ -7,3 +14,8 @@
 
 <!-- Description -->
 <h1>{{ job.description }}</h1>
+
+
+	{% endblock %}
+
+
