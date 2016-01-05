@@ -1,8 +1,7 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from django.views import generic
 from django.utils import timezone
 from django.core.urlresolvers import reverse
-from django.shortcuts import render
 
 from .models import Job, Description
 # Create your views here.
@@ -89,16 +88,15 @@ def blog_search(request):
                 return render(request,'emplois/index.html',{'error':True})
         else:
             latest_jobs_list = Job.objects.filter(position__icontains = keyword).order_by('-pub_date')
-            print(latest_jobs_list.count())
             if latest_jobs_list.count()==0 :
-                return render(request,'emplois/index.html',{'latest_jobs_list':latest_jobs_list,'error':True})
+                return render(request,'emplois/index.html',{'latest_jobs_list':latest_jobs_list,'error':True, 'keyword': keyword})
             else:
-                return render(request,'emplois/index.html',{'latest_jobs_list':latest_jobs_list,'error':False})
+                return render(request,'emplois/index.html',{'latest_jobs_list':latest_jobs_list,'error':False, 'keyword': keyword})
     return redirect('/')
 
 
 
-
+#Error on this template
 class SearchJobView(generic.ListView):
     template_name='emplois/index.html'
     context_object_name='latest_jobs_list'
@@ -110,3 +108,5 @@ class SearchJobView(generic.ListView):
             return Job.objects.filter(position__icontains = keyword).order_by('-pub_date')
         else:
             return None
+
+

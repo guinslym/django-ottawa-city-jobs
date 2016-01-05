@@ -7,10 +7,10 @@ Todo:
 
 
 Priority today:
- ☐ Search form
+ ✔ Search form @done (16-01-04 19:04)
  ☐ Celery (Create file)
- ☐ Send email
- ☐ Language switcher
+ ✔ Send email (not Agile) @done (16-01-04 19:07)
+ ☐ Language switcher    
  ☐ Ajax
 
 Frontend:
