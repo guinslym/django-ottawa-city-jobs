@@ -8,16 +8,17 @@ Todo:
 
 Priority today:
  ✔ Search form @done (16-01-04 19:04)
+ ☐ Language switcher    
  ☐ Celery (Create file)
  ✔ Send email (not Agile) @done (16-01-04 19:07)
- ☐ Language switcher    
- ☐ Ajax
+ ✔ Ajax @done (16-01-04 19:09)
+ ☐ Django 1.9.1
 
 Frontend:
   ☐ Language (i18n) in session (youtube)
-  ☐ Language .. do it in JS for the form KISS
-  ☐ Research a position (job title only)
-    ☐ https://www.calazan.com/adding-basic-search-to-your-django-site/
+  ✔ Language .. do it in JS for the form KISS @done (16-01-04 19:10)
+  ✔ Research a position (job title only) @done (16-01-04 19:11)
+    ✔ https://www.calazan.com/adding-basic-search-to-your-django-site/ @done (16-01-04 19:11)
   ☐ Layout finalize
   ☐ Django Celery
   ☐ Deploy with twitter tweets
@@ -30,11 +31,14 @@ Frontend:
   ☐ frontpage: Add latest tweet
   ☐ Add static in base for all the fonts instead of cdn
   ☐ Share it with Fb and twitter
-  ☐ Google analytics
+  ☐ Google analytics (analytical)
   ☐ Objects association get Salary_Type (maybe put it on the Job model)
   ☐ Listview in index to remove the expiring date older then today
   ☐ There might be a problem with the date...
   ☐ Tooltip for the date (postdate)
+  ☐ Asmallorange deploy django
+  ☐ Add tweets
+  ☐ Add test
 
 
 
