@@ -1,0 +1,2000 @@
+ 9174  cd public/tutorial
+ 9175  ls
+ 9176  cd django
+ 9177  ls
+ 9178  cd ..
+ 9179  cd django_tut
+ 9180  cd django_tutorial
+ 9181  ls
+ 9182  cat history.txt
+ 9183  ls
+ 9184  cd ..
+ 9185  mkdir django_website_documentation
+ 9186  cd django_website_documentation
+ 9187  python manage.py startapp polls
+ 9188  django-admin startproject guinsly_tuto
+ 9189  ls
+ 9190  cd guinsly_tuto
+ 9191  ls
+ 9192  python manage.py startapp polls
+ 9193  ls
+ 9194  tree polls
+ 9195  cd ..
+ 9196  rm -r guinsly_tuto
+ 9197  virtualenv3 python3
+ 9198  history | grep virtualenv
+ 9199  virtualenv --python=python3.4 env_python_3.4
+ 9200  source env_python_3.4/bin/activate
+ 9201  django-admin startproject guinslym_tuto
+ 9202  ls
+ 9203  cd guinslym_tuto
+ 9204  ls
+ 9205  python manage.py startapp polls
+ 9206  pip3 install django-admin
+ 9207  pip3 install django
+ 9208  ls
+ 9209  python manage.py startapp polls
+ 9210  ls
+ 9211  tree polls
+ 9212  vim polls/views.py
+ 9213  vim polls/urls.py
+ 9214  ls
+ 9215  tree guinslym_tuto
+ 9216  vim guinslym_tuto/urls.py
+ 9217  ls
+ 9218  python manage.py runserver
+ 9219  ls
+ 9220  vim guinslym_tuto/settings.py
+ 9221  python manage.py migrate
+ 9222  vim polls/models.py
+ 9223  vim guinslym_tuto/settings.py
+ 9224  python manage.py makemigrations polls
+ 9225  vim guinslym_tuto/settings.py
+ 9226  vim guinslym_tuto/urls.py
+ 9227  python manage.py sqlmigrate polls 0001
+ 9228  python manage.py migrate
+ 9229  python manage.py shell
+ 9230  vim polls/models.py
+ 9231  python manage.py shell
+ 9232  vim polls/models.py
+ 9233  python manage.py shell
+ 9234  vim polls/models.py
+ 9235  python manage.py shell
+ 9236  python manage.py createsuperuser
+ 9237  python manage.py runserver
+ 9238  vim polls/admin.py
+ 9239  python manage.py runserver
+ 9240  vim polls/admin.py
+ 9241  python manage.py runserver
+ 9242  vim guinslym_tuto/settings.py
+ 9243  python manage.py runserver
+ 9244  vim polls/views.py
+ 9245  vim polls/urls.py
+ 9246  python manage.py runserver
+ 9247  vim polls/views.py
+ 9248  python manage.py runserver
+ 9249  vim polls/views.py
+ 9250  ls
+ 9251  mkdir polls/templates
+ 9252  mkdir polls/templates/polls
+ 9253  touch polls/templates/polls/index.html
+ 9254  vim polls/templates/polls/index.html
+ 9255  vim polls/views.py
+ 9256  vim polls/templates/polls/detail.html
+ 9257  vim polls/templates/polls/index.html
+ 9258  vim polls/urls.py
+ 9259  vim polls/templates/polls/index.html
+ 9260  python manage.py runserver
+ 9261  vim polls/views.py
+ 9262  python manage.py runserver
+ 9263  ls
+ 9264  cd ..
+ 9265  ls
+ 9266  cd -
+ 9267  git st
+ 9268  git init
+ 9269  git add .
+ 9270  git commit -am 'partie 4 but templates can t be found'
+ 9271  git st
+ 9272  vim .gitignore
+ 9273  git init
+ 9274  git add .
+ 9275  git commit -am 'adding .pyc'
+ 9276  git st
+ 9277  ungit
+ 9278  python manage.py runserver
+ 9279  vim guinslym_tuto/settings.py
+ 9280  python manage.py runserver
+ 9281  vim guinslym_tuto/settings.py
+ 9282  python manage.py runserver
+ 9283  vim guinslym_tuto/settings.py
+ 9284  python manage.py runserver
+ 9285  vim guinslym_tuto/settings.py
+ 9286  python manage.py runserver
+ 9287  vim guinslym_tuto/settings.py
+ 9288  python manage.py runserver
+ 9289  vim polls/views.py
+ 9290  python manage.py runserver
+ 9291  vim polls/views.py
+ 9292  python manage.py runserver
+ 9293  pip list
+ 9294  ls
+ 9295  tree polls
+ 9296  subl guinslym_tuto/settings.py
+ 9297  python manage.py runserver
+ 9298  subl guinslym_tuto/urls.py
+ 9299  python manage.py runserver
+ 9300  ls polls
+ 9301  ls polls/templates
+ 9302  ls polls/templates/polls/index.html
+ 9303  vim guinslym_tuto/settings.py
+ 9304  python manage.py runserver
+ 9305  tree polls/templates
+ 9306  mv polls/templates/polls/detail.html polls/templates/polls/details.html
+ 9307  python manage.py runserver
+ 9308  git st
+ 9309  vim .gitignore
+ 9310  git st
+ 9311  git add .
+ 9312  git commit -am 'fixing the template issues'
+ 9313  git st
+ 9314  git add .
+ 9315  git st
+ 9316  cd ..
+ 9317  git st
+ 9318  cd -
+ 9319  git st
+ 9320  git add .
+ 9321  rm .git/index.lock
+ 9322  git st
+ 9323  gia dd .
+ 9324  git add .
+ 9325  git st
+ 9326  gi rm polls/templates/polls/detail.html
+ 9327  git rm polls/templates/polls/detail.html
+ 9328  git add .
+ 9329  git commit -am 'fixing issue with template debug'
+ 9330  git st
+ 9331  vim polls/templates/polls/details.html
+ 9332  vim polls/urls.py
+ 9333  vim polls/views.py
+ 9334  vim polls/templates/polls/results.html
+ 9335  vim polls/urls.py
+ 9336  vim polls/views.py
+ 9337  python manage.py runserver
+ 9338  vim polls/tests.py
+ 9339  python manage.py test polls
+ 9340  ls
+ 9341  vim polls/models.py
+ 9342  python manage.py test polls
+ 9343  vim polls/models.py
+ 9344  python manage.py test polls
+ 9345  vim polls/models.py
+ 9346  vim polls/tests.py
+ 9347  python manage.py test polls
+ 9348  vim polls/views.py
+ 9349  vim polls/tests.py
+ 9350  python manage.py test polls
+ 9351  vim polls/views.py
+ 9352  python manage.py test polls
+ 9353  vim polls/tests.py
+ 9354  mkdir polls/static
+ 9355  mkdir polls/static/polls
+ 9356  touch polls/static/style.css
+ 9357  vim polls/static/style.css
+ 9358  vim polls/templates/polls/index.html
+ 9359  python manage.py runserver
+ 9360  vim polls/tests.py
+ 9361  vim polls/views.py
+ 9362  python manage.py runserver
+ 9363  sudo pip install lightning-python
+ 9364  vim guinslym_tuto/urls.py
+ 9365  cd
+ 9366  cd totrash
+ 9367  ls
+ 9368  cd skc_speaker_series
+ 9369  ls
+ 9370  cd totrash
+ 9371  ls
+ 9372  cd guinslym
+ 9373  git st
+ 9374  git add .
+ 9375  git commit -am 'adding todo'
+ 9376  git st
+ 9377  git push
+ 9378  heroku login
+ 9379  heroku open
+ 9380  wget -mk https://guinslym.herokuapp.com/
+ 9381  ls
+ 9382  google-chrome guinslym.herokuapp.com/index.html
+ 9383  nautilus .
+ 9384  middleman server
+ 9385  subl /etc/security/limits.conf
+ 9386  middleman server
+ 9387  cd totrash/skc_speaker_series/totrash/guinslym
+ 9388  ls
+ 9389  middleman server
+ 9390  history | grep 'exclude'
+ 9391  history | grep 'grep'
+ 9392  man grep
+ 9393  grep -ri --exclude-dir=build 'herokuapp.com'
+ 9394  git st
+ 9395  mkdir totrash
+ 9396  mv guinslym.herokuapp.com totrash
+ 9397  mv guinslym.herokuapp.com.zip totrash
+ 9398  git st
+ 9399  vim .gitignore
+ 9400  git st
+ 9401  git add .
+ 9402  git commit -am 'adding totrash to gitignore'
+ 9403  git st
+ 9404  git remote add github git@github.com:guinslym/guinsly_blog.git
+ 9405  git push -u origin master
+ 9406  cd totrash/skc_speaker_series/totrash/guinslym
+ 9407  git push -u github master
+ 9408  cd
+ 9409  cd development/public/
+ 9410  ls
+ 9411  cd tutorial
+ 9412  ls
+ 9413  cd django_tut
+ 9414  cd django_tutorial
+ 9415  ls
+ 9416  cd ..
+ 9417  ls
+ 9418  cd django_website_documentation
+ 9419  ls
+ 9420  source env_python_3.4/bin/activate
+ 9421  python -c "import django; print(django.get_version())"
+ 9422  pip list
+ 9423  django-admin startproject mysite
+ 9424  ls
+ 9425  cd mysite
+ 9426  tree .
+ 9427  ls
+ 9428  python manage.py runserver
+ 9429  history | grep 'kill'
+ 9430  sudo lsof -t -i tcp:8000 | xargs kill -9
+ 9431  python manage.py runserver
+ 9432  history > /tmp/history.txt && subl /tmp/history.txt
+ 9433  sudo netstat -lpn |grep :8000
+ 9434  kill -9 1832
+ 9435  sudo kill -9 1832
+ 9436  python manage.py runserver
+ 9437  sudo netstat -lpn |grep :8000
+ 9438  sudo apt-get autoremove webfsd
+ 9439  sudo netstat -lpn |grep :8000
+ 9440  ps aux | grep -i manage
+ 9441  ps aux | grep -i manage | grep 8000
+ 9442  kill -9 pid
+ 9443  python manage.py runserver 8001
+ 9444  python manage.py startapp polls
+ 9445  ls
+ 9446  vim mysite/settings.py
+ 9447  vim polls/views.py
+ 9448  sudo pip install django==1.9
+ 9449  bpython3 -q 
+ 9450  ls
+ 9451  tree polls
+ 9452  vim polls/urls.py
+ 9453  vim mysite/urls.py
+ 9454  python manage.py runserver 8001
+ 9455  ls
+ 9456  pip list
+ 9457  vim polls/urls.py
+ 9458  python manage.py runserver 8001
+ 9459  python manage.py migrate
+ 9460  vim polls/models.py
+ 9461  vim mysite/settings.py
+ 9462  python manage.py makemigrations polls
+ 9463  python manage.py sqlmigrate polls 001
+ 9464  python manage.py sqlmigrate polls 0001
+ 9465  tree polls
+ 9466  tree polls/migrations
+ 9467  subl polls/migrations/0001_initial.py
+ 9468  python manage.py migrate
+ 9469  python manage.py shell
+ 9470  pip install django-debug-toolbar
+ 9471  vim mysite/settings.py
+ 9472  python manage.py runserver 8001
+ 9473  python manage.py shell
+ 9474  pip install django-extensions
+ 9475  vim mysite/settings.py
+ 9476  python manage.py shell_plus --bpython
+ 9477  pip install bpython
+ 9478  python manage.py shell_plus --bpython
+ 9479  python manage.py shell_plus --ipython
+ 9480  pip install ipython
+ 9481  vim polls/models.py
+ 9482  python manage.py shell_plus --ipython
+ 9483  vim polls/models.py
+ 9484  python manage.py shell_plus --ipython
+ 9485  vim polls/models.py
+ 9486  python manage.py createsuperuser
+ 9487  python manage.py runserver 8001
+ 9488  vim polls/admin.py
+ 9489  cat polls/apps.py
+ 9490  cat polls/admin.py
+ 9491  vim  polls/admin.py
+ 9492  python manage.py runserver 8001
+ 9493  vim polls/models.py
+ 9494  python manage.py migrate
+ 9495  python manage.py makemigrations
+ 9496  python manage.py migrate
+ 9497  python manage.py runserver 8001
+ 9498  vim polls/views.py
+ 9499  vim polls/urls.py
+ 9500  vim polls/views.py
+ 9501  mkdir -p polls/templates/polls/index.html
+ 9502  vim polls/templates/polls/index.html
+ 9503  rm -r polls/templates/polls/index.html
+ 9504  vim polls/templates/polls/index.html
+ 9505  vim polls/views.py
+ 9506  mkdir -p polls/templates/polls/detail.html
+ 9507  vrm -r polls/templates/polls/detail.html
+ 9508  rm -r polls/templates/polls/detail.html
+ 9509  vim polls/templates/polls/detail.html
+ 9510  vim polls/templates/polls/index.html
+ 9511  vim polls/urls.py
+ 9512  vim polls/views.py
+ 9513  git st
+ 9514  cd ..
+ 9515  ls
+ 9516  cd mysite
+ 9517  git init
+ 9518  git commit -add
+ 9519  git add .
+ 9520  git commit -am 'initial commit and starting step 4 french'
+ 9521  git st
+ 9522  git log
+ 9523  git log --oneline
+ 9524  python manage.py check auth admin
+ 9525  cd ..
+ 9526  ls
+ 9527  cd guinslym_tuto
+ 9528  python manage.py check auth admin
+ 9529  python manage.py check --tag security --tag compatibility
+ 9530  git st
+ 9531  git add .
+ 9532  git commit -m 'finish app'
+ 9533  git st
+ 9534  django-admin compilemessages --locale=pt_BR --locale=fr -f
+ 9535  django-admin diffsetting
+ 9536  django-admin diffsettings
+ 9537  django-admin dumpdata
+ 9538  django-admin runserver 8001
+ 9539  python manage.py runserver 8001
+ 9540  python manage.py runserver -6
+ 9541  python manage.py runserver --ipv6
+ 9542  django-admin shell -i bpython
+ 9543  pip list
+ 9544  django-admin shell --interface ipython
+ 9545  django-admin showmigrations
+ 9546  pip install tblib
+ 9547  python manage.py showmigrations
+ 9548  python manage.py shell -i bpython
+ 9549  pip install django-localflavor
+ 9550  ls
+ 9551  cd ..
+ 9552  cd -
+ 9553  python manage.py check --tag security --tag compatibility
+ 9554  python manage.py check auth admin
+ 9555  cd -
+ 9556  ls
+ 9557  cd mysite
+ 9558  ls
+ 9559  python manage.py runserver
+ 9560  vim mysite/urls.py
+ 9561  vim polls/urls.py
+ 9562  cd development/public/tutorial/django_website_documentation
+ 9563  cd guinslym_tuto
+ 9564  ls
+ 9565  vim  polls/urls.py
+ 9566  python manage.py runserver
+ 9567  python manage.py runserver 8001
+ 9568  python manage.py check auth admin
+ 9569  python manage.py runserver 8001
+ 9570  ls
+ 9571  vim mysite/settings.py
+ 9572  python manage.py runserver 8001
+ 9573  vim mysite/settings.py
+ 9574  python manage.py runserver 8001
+ 9575  vim polls/templates/polls/index.html
+ 9576  python manage.py runserver 8001
+ 9577  ls
+ 9578  vim polls/templates/polls/index.html
+ 9579  python manage.py runserver 8001
+ 9580  vim polls/templates/polls/index.html
+ 9581  vim mysite/urls.py
+ 9582  python manage.py runserver 8001
+ 9583  vim mysite/urls.py
+ 9584  git log --oneline
+ 9585  vim polls/templates/polls/detail.html
+ 9586  vim polls/views.py
+ 9587  vim polls/templates/polls/results.html
+ 9588  vim mysite/urls.py
+ 9589  vim polls/urls.py
+ 9590  vim polls/views.py
+ 9591  git st
+ 9592  git add .
+ 9593  git commit -am 'finish step 4 but need to review it'
+ 9594  git s
+ 9595  vim polls/views.py
+ 9596  vim polls/models.py
+ 9597  vim polls/views.py
+ 9598  touch polls/static/polls/style.css
+ 9599  mkdir -p polls/static/polls/
+ 9600  touch polls/static/polls/style.css
+ 9601  vim polls/static/polls/style.css
+ 9602  vim polls/templates/polls/index.html
+ 9603  vim polls/static/polls/style.css
+ 9604  python manage.py runserver 8001
+ 9605  vim polls/urls.py
+ 9606  vim polls/views.py
+ 9607  vim polls/urls.py
+ 9608  python manage.py runserver 8001
+ 9609  vim polls/templates/polls/index.html
+ 9610  subl polls/urls.py
+ 9611  subl polls/views.py
+ 9612  python manage.py runserver 8001
+ 9613  subl polls/templates/polls/results.html
+ 9614  cat polls/templates/polls/results.html
+ 9615  cat polls/templates/polls/detail.html
+ 9616  subl polls/templates/polls/details.html
+ 9617  cat polls/templates/polls/index.html
+ 9618  pip install Sphinx
+ 9619  git st
+ 9620  git add .
+ 9621  ls
+ 9622  cd ..
+ 9623  ls
+ 9624  source env_python_3.4/bin/activate
+ 9625  cd guinslym_tuto
+ 9626  ls
+ 9627  python manage.py runserver 8001
+ 9628  git commit -am 'finish app tutorial'
+ 9629  git st
+ 9630  cd 
+ 9631  cd totrash
+ 9632  ls
+ 9633  cd uottawa_jobs
+ 9634  ls
+ 9635  cd ..
+ 9636  ls *ttaw*
+ 9637  cd ottawacityjobs
+ 9638  ls
+ 9639  subl jobs.py
+ 9640  ls
+ 9641  cd ..
+ 9642  ls
+ 9643  django startproject ottawacitijobs
+ 9644  django-admin startproject ottawacitijobs
+ 9645  ls
+ 9646  cd ottawacitijobs
+ 9647  ls
+ 9648  cd ottawacitijobs
+ 9649  ls
+ 9650  cd ..
+ 9651  ls
+ 9652  python manage.py startapp emplois
+ 9653  ls
+ 9654  vim ottawacitijobs/settings.py
+ 9655  ls
+ 9656  mkdir -p emplois/templates/emplois
+ 9657  python manage.py createsuperuser
+ 9658  vim ottawacitijobs/settings.py
+ 9659  python manage.py migrate
+ 9660  python manage.py createsuperuser
+ 9661  python manage.py makemigration
+ 9662  python manage.py makemigrations
+ 9663  python manage.py migrate
+ 9664  ls emplois/migrations
+ 9665  vim emplois/models.py
+ 9666  vim polls/models.py
+ 9667  subl jobs_en.json
+ 9668  python manage.py makemigrations
+ 9669  vim polls/models.py
+ 9670  vim emplois/models.py
+ 9671  python manage.py makemigrations
+ 9672  vim emplois/models.py
+ 9673  python manage.py makemigrations
+ 9674  python manage.py migrate
+ 9675  ls
+ 9676  mkdir emplois/fixtures
+ 9677  vim emplois/models.py
+ 9678  python manage.py makemigrations
+ 9679  vim emplois/models.py
+ 9680  python manage.py makemigrations
+ 9681  vim emplois/models.py
+ 9682  python manage.py makemigrations
+ 9683  vim emplois/models.py
+ 9684  ls
+ 9685  vim ottawacitijobs/urls.py
+ 9686  python manage.py runserver
+ 9687  vim ottawacitijobs/urls.py
+ 9688  python manage.py runserver 8001
+ 9689  ls
+ 9690  vim emplois/urls.py
+ 9691  vim emplois/views.py
+ 9692  subl polls/models.py
+ 9693  subl polls/views.py
+ 9694  vim emplois/templates/emplois/index.html
+ 9695  python manage.py runserver 8001
+ 9696  vim emplois/views.py
+ 9697  vim polls/views.py
+ 9698  subl polls/views.py
+ 9699  python manage.py runserver 8001
+ 9700  python manage.py migrate
+ 9701  python manage.py runserver 8001
+ 9702  python manage.py check auth admin
+ 9703  python manage.py runserver 8001
+ 9704  ls
+ 9705  vim guinslym_tuto/settings.py
+ 9706  ls
+ 9707  vim ..
+ 9708  cd ..
+ 9709  ls
+ 9710  cd mysite
+ 9711  vim mysite/settings.py
+ 9712  cd mysite
+ 9713  vim mysite/settings.py
+ 9714  cd ..
+ 9715  vim mysite/settings.py
+ 9716  vim ottawacitijobs/settings.py
+ 9717  python manage.py check auth admin
+ 9718  pip install pygraphviz
+ 9719  sudo pip install pygraphviz
+ 9720  python manage.py validate_templates
+ 9721  vim ottawacitijobs/settings.py
+ 9722  python manage.py check auth admin
+ 9723  git st
+ 9724  git init
+ 9725  git add .
+ 9726  git commit -am 'initial commit'
+ 9727  git st
+ 9728  vim .gitignore
+ 9729  git st
+ 9730  git tag
+ 9731  git tag -a v0.1 -m "installing the components"
+ 9732  git tag 
+ 9733  git tag -l
+ 9734  git show tag
+ 9735  git show v0.1
+ 9736  git log --pretty=oneline
+ 9737  git st
+ 9738  git add .
+ 9739  git commit -am 'adding tags'
+ 9740  ungit
+ 9741  subl tasks.todo
+ 9742  git remote add origin git@bitbucket.org:guinslym/ottawa_city_hal_jobs.git
+ 9743  git push -u origin master
+ 9744  ls
+ 9745  vim .gitignore
+ 9746  git st
+ 9747  git add .
+ 9748  git commit -am 'removing sqlite'
+ 9749  it st
+ 9750  git st
+ 9751  git push 
+ 9752  subl tasks.todo
+ 9753  vim emplois/models.py
+ 9754  ls
+ 9755  vim mysite/settings.py
+ 9756  ls
+ 9757  pip install django-admin-interface
+ 9758  python manage.py runserver
+ 9759  python manage.py runserver 8001
+ 9760  vim mysite/settings.py
+ 9761  python manage.py runserver 8001
+ 9762  vim mysite/settings.py
+ 9763  python manage.py runserver 8001
+ 9764  pip install django-flat-theme
+ 9765  python manage.py runserver 8001
+ 9766  pip install django-admin-interface
+ 9767  vim mysite/settings.py
+ 9768  python manage.py runserver 8001
+ 9769  vim mysite/settings.py
+ 9770  python manage.py runserver 8001
+ 9771  python manage.py migrate
+ 9772  vim mysite/settings.py
+ 9773  python manage.py runserver 8001
+ 9774  pip install django-admin-bootstrapped
+ 9775  vim mysite/settings.py
+ 9776  python manage.py runserver 8001
+ 9777  pip install django-fluent-dashboard
+ 9778  pip install django-grappelli
+ 9779  vim mysite/settings.py
+ 9780  python manage.py runserver 8001
+ 9781  vim mysite/settings.py
+ 9782  python manage.py runserver 8001
+ 9783  pip install django-wpadmin
+ 9784  vim mysite/settings.py
+ 9785  python manage.py runserver 8001
+ 9786  pip list
+ 9787  pip remove django-admin-interface colorfield django-grappelli
+ 9788  pip unistall django-admin-interface colorfield django-grappelli
+ 9789  pip uninstall django-admin-interface colorfield django-grappelli
+ 9790  pip list
+ 9791  pip uninstalldjango-grappelli django-fluent-dashboard django-flat-theme  django-extensions<
+ 9792  pip uninstalldjango-grappelli django-fluent-dashboard django-flat-theme  django-extensions
+ 9793  pip uninstall django-grappelli django-fluent-dashboard django-flat-theme  django-extensions
+ 9794  pip list
+ 9795  pip uninstall django-admin-bootstrapped  django-colorfield  pytz tblib 
+ 9796  pip list
+ 9797  pip uninstall django-admin-tools Sphinx sphinx-rtd-theme
+ 9798  pip list
+ 9799  pip uninstalll django-localflavor bpython ipython
+ 9800  pip uninstall  django-localflavor bpython ipython
+ 9801  pip list
+ 9802  pip uninstall django-wpadmin ipython-genutils 
+ 9803  pip list
+ 9804  vim mysite/settings.py
+ 9805  pip list
+ 9806  pip list django
+ 9807  python manage.py runserver 8001
+ 9808  ls
+ 9809  git st
+ 9810  vim .gitignore
+ 9811  git add .
+ 9812  git commit -am 'adding functions'
+ 9813  git st
+ 9814  git push
+ 9815  peerflix 'https://torcache.net/torrent/66D5BD837AE9AB22A7B818ED96818A39B84E5F87.torrent?title=[kat.cr]superman.returns.french.dvdrip.xvid.anonym' -v
+ 9816  rm -r /tmp/torrent-stream
+ 9817  peerflix 'https://torcache.net/torrent/9D53B6F893B371929C32B2B655AE7A4234E0B404.torrent?title=[kat.cr]ultimate.surrender.us.33262.tag.team.finale.wrestling.rounds.and.a.12.girl.fuck.fest.video.amp.images' -v
+ 9818  pactl set-sink-volume 0 +150%
+ 9819  df -h
+ 9820  peerflix 'https://torcache.net/torrent/6FAED1FEDC057B4F4628F450A53A61FF750BEECD.torrent?title=[kat.cr]homeland.s05e12.web.dl.xvid.fum.ettv' -v
+ 9821  pactl set-sink-volume 0 +120%
+ 9822  rm -r /tmp/torrent-stream
+ 9823  df -h
+ 9824  peerflix 'https://torcache.net/torrent/2FF489C4E35AF05E11243836E75DC16A941270D7.torrent?title=[kat.cr]the.revenant.2015.dvdscr.xvid.ac3.etrg' -v
+ 9825  cd totrash/ottawacityjobs
+ 9826  ls
+ 9827  cd ..
+ 9828  cd ottawajobs
+ 9829  ls
+ 9830  cd ottawacityjobs
+ 9831  ls
+ 9832  cd ..
+ 9833  cd totrash
+ 9834  ls
+ 9835  wget -mk http://cal-heatmap.com/
+ 9836  ls cal-heatmap.com
+ 9837  cd cal-heatmap.com
+ 9838  subl datas-years.json
+ 9839  cd ..
+ 9840  ls
+ 9841  cd ..
+ 9842  ls
+ 9843  cd ..
+ 9844  ls
+ 9845  cd ottawacityjobs
+ 9846  ls
+ 9847  cp *.json ../ottawajobs/totrash
+ 9848  cp *.py ../ottawajobs/totrash
+ 9849  cd ..
+ 9850  cd ottawajobs
+ 9851  ls
+ 9852  cd totrash
+ 9853  ls
+ 9854  subl jobs.py
+ 9855  subl jobs_en.json
+ 9856  bpython -q
+ 9857  ls
+ 9858  cd ..
+ 9859  ls
+ 9860  subl tasks.todo
+ 9861  bpython -q 
+ 9862  ls
+ 9863  subl totrash/jobs_en.json
+ 9864  subl tasks.todo
+ 9865  git st
+ 9866  sudo pip install python-dateutil
+ 9867  bpython -q
+ 9868  ls
+ 9869  cd totrash
+ 9870  subl cal.py
+ 9871  python cal.py
+ 9872  ls *.json
+ 9873  python cal.py
+ 9874  subl jobs_en.json
+ 9875  python cal.py
+ 9876  bpython -q
+ 9877  python cal.py
+ 9878  python3 cal.py
+ 9879  subl jobs_en.json
+ 9880  python3 cal.py
+ 9881  bpython -q
+ 9882  python3 cal.py
+ 9883  ls
+ 9884  subl cal-heatmap.com/datas-years.json
+ 9885  python3 cal.py
+ 9886  ls
+ 9887  subl jobs.py
+ 9888  python3 cal.py
+ 9889  ls
+ 9890  subl json_data_for_try.txt
+ 9891  ls
+ 9892  mkdir cal-try
+ 9893  mv json_data_for_try.txt json_data_for_try.json
+ 9894  ls
+ 9895  cp json_data_for_try.json cal-try
+ 9896  ls
+ 9897  ls cal-try
+ 9898  subl .
+ 9899  nautilus .
+ 9900  cd cal-try
+ 9901  subl index.html
+ 9902  bpls
+ 9903  ls
+ 9904  exit
+ 9905  ls
+ 9906  python -m SimpleHttpServer 8001
+ 9907  python -m SimpleHTTPServer 8001
+ 9908  ls
+ 9909  subl json_data_for_try.json
+ 9910  git st
+ 9911  vim ../../.gitignore
+ 9912  git s
+ 9913  git st
+ 9914  cd ..
+ 9915  ls
+ 9916  subl jobs_en.json
+ 9917  subl cal-heatmap.com/datas-years.json
+ 9918  cd totrash/ottawajobs
+ 9919  ls
+ 9920  cd ottawacityjobs
+ 9921  ls
+ 9922  cd ..
+ 9923  ls
+ 9924  ls *ottawa*
+ 9925  cd ~/development/public/tutorial/django_website_documentation
+ 9926  ls
+ 9927  cd ottawacitijobs
+ 9928  ls
+ 9929  ./manage.py runserver 8001
+ 9930  git st
+ 9931  git remote -v
+ 9932  ls
+ 9933  python manage.py check auth admin
+ 9934  ls
+ 9935  subl emplois/models.py
+ 9936  vim emplois/models.py
+ 9937  git st
+ 9938  python manage.py check auth admin
+ 9939  python manage.py check auth
+ 9940  python manage.py check 
+ 9941  ls
+ 9942  ls emplois
+ 9943  ./manage.py runserver 8001
+ 9944  ls
+ 9945  vim ottawacitijobs/settings.py
+ 9946  ./manage.py runserver 8001
+ 9947  subl ottawacitijobs/settings.py
+ 9948  ls
+ 9949  cd ..
+ 9950  ls
+ 9951  source env_python_3.4/bin/activate
+ 9952  ls
+ 9953  cd -
+ 9954  ls
+ 9955  ./manage.py runserver 8001
+ 9956  ./manage.py runserver 8002
+ 9957  ls
+ 9958  subl tasks.todo
+ 9959  ls
+ 9960  vim emplois/views.py
+ 9961  ls
+ 9962  vim emplois/templates/emplois/index.html
+ 9963  cd development/public/tutorial/django_website_documentation
+ 9964  ls
+ 9965  cd guinslym_tuto
+ 9966  ls
+ 9967  vim polls/views.py
+ 9968  ls
+ 9969  vim emplois/views.py
+ 9970  vim emplois/templates/emplois/index.html
+ 9971  ./manage.py runserver 8002
+ 9972  ls
+ 9973  vim emplois/views.py
+ 9974  touch emplois/templates/emplois/base.html
+ 9975  vim emplois/templates/emplois/base.html
+ 9976  vim emplois/templates/emplois/index.html
+ 9977  ./manage.py runserver 8002
+ 9978  vim ottawacitijobs/settings.py
+ 9979  vim emplois/templates/emplois/index.html
+ 9980  vim emplois/models.py
+ 9981  python manage.py syncdb
+ 9982  python manage.py makemigrations
+ 9983  python manage.py migrate
+ 9984  git st
+ 9985  git add .
+ 9986  git st
+ 9987  git commit -am 'adding more task in todos'
+ 9988  git st
+ 9989  git remote -v
+ 9990  ls
+ 9991  vim emplois/admin.py
+ 9992  rm -r /tmp/torrent-stream
+ 9993  peerflix 'https://torcache.net/torrent/DD2A7D3DFE57CCA856BEDC4381C348B3856B6F89.torrent?title=[kat.cr]the.intern.2015.hdrip.xvid.etrg' -v
+ 9994  rm -r /tmp/torrent-stream
+ 9995  df -h
+ 9996  rm -r /tmp/*
+ 9997  df -h
+ 9998  pactl set-sink-volume 0 +120%
+ 9999  pactl set-sink-volume 0 +170%
+10000  exit
+10001  peerflix 'https://torcache.net/torrent/829A2291145A10A85E7A6710E027F948C012C29E.torrent?title=[kat.cr]ultimate.surrender.ariel.x.karmen.karma.amp.syd.blakovich.us.39022.hard.body.wrestlers.go.all.out.in.100.competitive.erotic.wrestling' -v
+10002  peerflix 'https://torcache.net/torrent/11B73A83AF32242711EE4401106D5E4BF8EC0203.torrent?title=[kat.cr]ultimate.surrender.anal.fisting.for.the.loser.hd.720p' -v
+10003  peerflix 'https://torcache.net/torrent/C5CA8413F438C3EA0BD0AE786E03A89AD34FCC34.torrent?title=[kat.cr]ultimate.surrender.penny.barber.amp.mia.li.us.38843.orgasmic.wrestlers.meet.on.the.mats.it.39.s.inevitable.that.one.will.cum' -v
+10004  peerflix 'https://torcache.net/torrent/015532BD11938B43E673265FCBCB44F95E0F5431.torrent?title=[kat.cr]ultimate.surrender.big.busted.blond.barbie.hd.720p' -v
+10005  peerflix 'https://torcache.net/torrent/2E5A28DC81938081118B53D96108BE06F65ED526.torrent?title=[kat.cr]ultimate.surrender.dragonlily.isis.love.xxx.pornalized.avi' -v
+10006  peerflix 'https://torcache.net/torrent/9807C7548666D002C4E165D0A08F5229E3163513.torrent?title=[kat.cr]ultimate.surrender.wenona.and.sophia.fiore.hd.720p' -v
+10007  peerflix 'https://torcache.net/torrent/DFFA3A3D2F2DAE5F6379543B5F573124B29492C3.torrent?title=[kat.cr]dandy.462.wild.kingdom.vol.3.africa.s.oldest.natives.and.live.do.natsume.airi' -v
+10008  peerflix 'https://torcache.net/torrent/5AF17CB30F0A3129E13A60DF9AE257120551F91D.torrent?title=[kat.cr]big.ass.brazilian.butts.vol.20.new.2015.realitykings.split.scenes.web.dl' -v
+10009  peerflix 'https://torcache.net/torrent/7E8879BB6A2C210809619EB6167194D0E56BE61F.torrent?title=[kat.cr]girlsdoporn.girls.do.porn.episode.296.18.years.old.curvy.ebony.teen.720p' -v
+10010  peerflix 'https://torcache.net/torrent/5AF17CB30F0A3129E13A60DF9AE257120551F91D.torrent?title=[kat.cr]big.ass.brazilian.butts.vol.20.new.2015.realitykings.split.scenes.web.dl' -v
+10011  peerflix 'https://torcache.net/torrent/7E8879BB6A2C210809619EB6167194D0E56BE61F.torrent?title=[kat.cr]girlsdoporn.girls.do.porn.episode.296.18.years.old.curvy.ebony.teen.720p' -v
+10012  rm -r /tmp/torrent-stream
+10013  mkdir python_video
+10014  cd python_
+10015  cd python_video
+10016  youtube-dl https://www.youtube.com/watch\?v\=KsLHt3D_jsE\&index\=1\&list\=PLEsfXFp6DpzRcd-q4vR5qAgOZUuz8041S
+10017  pip install -U youtube-dl
+10018  sudo pip install -U youtube-dl
+10019  youtube-dl https://www.youtube.com/watch\?v\=KsLHt3D_jsE\&index\=1\&list\=PLEsfXFp6DpzRcd-q4vR5qAgOZUuz8041S
+10020  youtube-dl --version
+10021  youtube-dl -cit https://www.youtube.com/watch\?v\=KsLHt3D_jsE\&index\=1\&list\=PLEsfXFp6DpzRcd-q4vR5qAgOZUuz8041S
+10022  youtube-dl --version
+10023  mpsyt --version
+10024  peerflix 'https://torcache.net/torrent/59A4DDA27A8EC0BE2F91598C348A2405FD0F958D.torrent?title=[kat.cr]homeland.s05e12.web.dl.x264.fum.ettv' -v
+10025  pactl set-sink-volume 0 +150%
+10026  pactl set-sink-volume 0 +0%
+10027  pactl set-sink-volume 0 -10%
+10028  pactl set-sink-volume 0 +10%
+10029  peerflix 'https://torcache.net/torrent/FE5FBCB647F4056517D974D1A4DD32EB2D6AF405.torrent?title=[kat.cr]theupperfloor.kink.my.step.mother.is.a.secret.sex.slave.phoenix.marie.ramon.nomar.piper.perri' -v
+10030  peerflix 'https://torcache.net/torrent/E209EDD02702186E05F145AB7CC779BBCB7FC399.torrent?title=[kat.cr]everythingbutt.aiden.starr.janice.griffith.lea.hart.aiden.starr.has.an.all.anal.flower.shop.08.december.2015' -v
+10031  peerflix 'https://torcache.net/torrent/71AC4D23962BA3392E81F50E9AC748D816A46098.torrent?title=[kat.cr]everythingbutt.kimberly.kane.lily.labeau.kimberly.kane.gives.a.diabolically.seductive.anal.fisting.to.lily.labeau.15.december.2015' -v
+10032  peerflix 'https://torcache.net/torrent/EF680C970894885E816460CA19398D93B59E90DE.torrent?title=[kat.cr]booty.talk.100.ebony.porn.xxx' -v
+10033  peerflix 'https://torcache.net/torrent/26EC4458A16B0A7A40A63CEF0225CAFFFD838D1A.torrent?title=[kat.cr]letstryanal.jenna.j.foxx.ebony.angel.s.first.anal.fuck.new.09.october.2015' -v
+10034  peerflix 'https://torcache.net/torrent/7E8879BB6A2C210809619EB6167194D0E56BE61F.torrent?title=[kat.cr]girlsdoporn.girls.do.porn.episode.296.18.years.old.curvy.ebony.teen.720p' -v
+10035  peerflix 'https://torcache.net/torrent/26EC4458A16B0A7A40A63CEF0225CAFFFD838D1A.torrent?title=[kat.cr]letstryanal.jenna.j.foxx.ebony.angel.s.first.anal.fuck.new.09.october.2015' -v
+10036  peerflix 'https://torcache.net/torrent/C5CA8413F438C3EA0BD0AE786E03A89AD34FCC34.torrent?title=[kat.cr]ultimate.surrender.penny.barber.amp.mia.li.us.38843.orgasmic.wrestlers.meet.on.the.mats.it.39.s.inevitable.that.one.will.cum' -v
+10037  top
+10038  dstat
+10039  htop
+10040  df -h
+10041  rm -r /tmp/torrent-stream
+10042  df -h
+10043  peerflix 'https://torcache.net/torrent/7E8879BB6A2C210809619EB6167194D0E56BE61F.torrent?title=[kat.cr]girlsdoporn.girls.do.porn.episode.296.18.years.old.curvy.ebony.teen.720p' -v
+10044  df -h
+10045  peerflix 'https://torcache.net/torrent/C28B3973F693BAE99C1B0C13A137A051EEF8D9D5.torrent?title=[kat.cr]star.wars.the.force.awakens.2015.hd.cam.xvid.hqmic.ac3.cpg.avi' -v
+10046  cd totrash
+10047  peerflix 'https://torcache.net/torrent/26EC4458A16B0A7A40A63CEF0225CAFFFD838D1A.torrent?title=[kat.cr]letstryanal.jenna.j.foxx.ebony.angel.s.first.anal.fuck.new.09.october.2015' -v
+10048  wget http://c1f1.podcast.ustream.ca/a/107408.mp3
+10049  vlc 107408.mp3
+10050  peerflix 'https://torcache.net/torrent/7E8879BB6A2C210809619EB6167194D0E56BE61F.torrent?title=[kat.cr]girlsdoporn.girls.do.porn.episode.296.18.years.old.curvy.ebony.teen.720p' -v
+10051  peerflix 'https://torcache.net/torrent/26EC4458A16B0A7A40A63CEF0225CAFFFD838D1A.torrent?title=[kat.cr]letstryanal.jenna.j.foxx.ebony.angel.s.first.anal.fuck.new.09.october.2015' -v
+10052  peerflix 'https://torcache.net/torrent/EF680C970894885E816460CA19398D93B59E90DE.torrent?title=[kat.cr]booty.talk.100.ebony.porn.xxx' -v
+10053  peerflix 'https://torcache.net/torrent/FE5FBCB647F4056517D974D1A4DD32EB2D6AF405.torrent?title=[kat.cr]theupperfloor.kink.my.step.mother.is.a.secret.sex.slave.phoenix.marie.ramon.nomar.piper.perri' -v
+10054  rm -r /tmp/torrent-stream
+10055  peerflix 'http://www.cpasbien.io/telechargement/sicario-french-dvdrip-2015.torrent' -v
+10056  rm -r /tmp/torrent-stream
+10057  cd
+10058  cd development/public/tutorial/django_website_documentation
+10059  ls
+10060  cd ottawacitijobs
+10061  ls
+10062  python manage.py --help
+10063  python manage.py runserver 8001
+10064  ls
+10065  vim emplois/models.py
+10066  python manage.py makemigrations
+10067  python manage.py makemigration
+10068  python manage.py runserver 8001
+10069  python manage.py migrate
+10070  python manage.py migrates
+10071  python manage.py 
+10072  python manage.py runserver 8001
+10073  ls
+10074  cd ..
+10075  ls
+10076  source env_python_3.4/bin/activate
+10077  cd -
+10078  python manage.py runserver 8001
+10079  pip install django-twitter-bootstrap==3.3.0
+10080  vim ottawacitijobs/settings.py
+10081  ls
+10082  pip uninstall django-twitter-bootstrap==3.3.0
+10083  vim ottawacitijobs/settings.py
+10084  ls
+10085  cd emplois
+10086  vim templates/emplois/index.html
+10087  cd -
+10088  ls
+10089  python manage.py runserver 8001
+10090  subl emplois/templates/emplois/index.html
+10091  python manage.py runserver 8001
+10092  python manage.py dumpdata
+10093  ls
+10094  python manage.py dumpdata > data.json
+10095  subl data.json
+10096  vim emplois/models.py
+10097  ls
+10098  mkdir fixtures
+10099  cd fixtures
+10100  ls
+10101  cd -
+10102  ls
+10103  mv data.json fixtures
+10104  ls
+10105  subl fixtures/data.json
+10106  python manage.py loaddata data
+10107  python manage.py loaddata emplois
+10108  ls
+10109  python manage.py loaddata fixtures/data.json
+10110  python manage.py makemigration
+10111  python manage.py makemigrations
+10112  python manage.py migrate
+10113  python manage.py loaddata fixtures/data.json
+10114  python manage.py runserver 8001
+10115  python manage.py loaddata fixtures/data.json
+10116  python manage.py runserver 8001
+10117  vim ottawacitijobs/settings.py
+10118  ls
+10119  nautilus .
+10120  python manage.py loaddata 
+10121  python manage.py loaddata emplois
+10122  python manage.py loaddata emplois/fixtures
+10123  python manage.py loaddata emplois/fixtures/data.json
+10124  ls
+10125  python manage.py dumpdata > data.json
+10126  ls
+10127  subl data.json
+10128  pip install faker
+10129  sudo pip install faker
+10130  ls
+10131  mkdir totrash
+10132  cd totrash
+10133  subl fixtures_data.py
+10134  python fixtures_data.py
+10135  pip install faker
+10136  pip install fake-factory
+10137  python fixtures_data.py
+10138  python
+10139  python fixtures_data.py
+10140  ls
+10141  subl emplois_fixtures.json
+10142  python 
+10143  python fixtures_data.py
+10144  subl emplois_fixtures.json
+10145  python fixtures_data.py
+10146  subl emplois_fixtures.json
+10147  python fixtures_data.py
+10148  subl emplois_fixtures.json
+10149  ls
+10150  cd ..
+10151  ls
+10152  cp totrash/emplois_fixtures.json emplois/fixtures
+10153  python manage.py loaddata emplois/fixtures/emplois_fixtures.json
+10154  python manage.py makemigrations
+10155  python manage.py migrate
+10156  python manage.py loaddata emplois/fixtures/emplois_fixtures.json
+10157  python manage.py dumpdata > data.json
+10158  ls
+10159  subl data.json
+10160  python manage.py runserver 8001
+10161  ls
+10162  subl tasks.todo
+10163  git st
+10164  git add .
+10165  ls
+10166  mv data.json totrash
+10167  git st
+10168  git add .
+10169  git commit -am 'adding fixtures'
+10170  git st
+10171  git push -u origin master
+10172  git st
+10173  For this exploration we're going to pull some data from the Malware Domain List website [http://www.malwaredomainlist.com](http://www.malwaredomainlist.com). We'd like to thank them for providing a great resourse and making their data available to the public. In general data is messy so even though we're going to be nit-picking quite a bit, we recognized that many datasets will have similar issues which is why we feel like this is a good 'real world' example of data.
+10174  history | grep 'star'
+10175  peerflix 'https://torcache.net/torrent/C28B3973F693BAE99C1B0C13A137A051EEF8D9D5.torrent?title=[kat.cr]star.wars.the.force.awakens.2015.hd.cam.xvid.hqmic.ac3.cpg.avi' -v
+10176  rm -r /tmp/torrent-stream
+10177  cd ..
+10178  ls
+10179  cd guinslym_tuto
+10180  ls
+10181  cd polls
+10182  ls
+10183  vim views.py
+10184  cd
+10185  cd development/public/tutorial
+10186  ls
+10187  cd django_website_documentation
+10188  ls
+10189  source env_python_3.4/bin/activate
+10190  cd ottawacitijobs
+10191  ls
+10192  subl emplois/views.py
+10193  cd ../../
+10194  ls
+10195  cd ottawacitijobs
+10196  ls
+10197  subl tasks.todo
+10198  subl emplois/templates/emplois/index.html
+10199  ls
+10200  python manage.py runserver 8001
+10201  subl ottawacitijobs/settings.py
+10202  python manage.py runserver 8001
+10203  subl emplois/views.py
+10204  subl emplois/templates/emplois/index.html
+10205  subl tasks.todo
+10206  git st
+10207  git add .
+10208  git commit -am 'adding the basic components for the front-end'
+10209  git st
+10210  git push
+10211  ls
+10212  ls ottawacitijobs
+10213  ls
+10214  subl emplois/urls.py
+10215  subl ottawacitijobs/urls.py
+10216  subl emplois/urls.py
+10217  subl emplois/views.py
+10218  subl emplois/urls.py
+10219  subl ottawacitijobs/urls.py
+10220  git st
+10221  git diff 
+10222  git st
+10223  git add .
+10224  git st
+10225  git commit -am 'urls'
+10226  git st
+10227  sulbl ottawacitijobs/urls.py
+10228  subl ottawacitijobs/urls.py
+10229  cd ..
+10230  ls
+10231  cd guinslym_tuto
+10232  python manage.py runserver 8002
+10233  ls
+10234  vim polls/views.py
+10235  cd development/public/tutorial
+10236  cd django_website_documentation
+10237  ls
+10238  source env_python_3.4/bin/activate
+10239  ls
+10240  cd ottawacitijobs
+10241  ls
+10242  ./manage.py runserver 8001
+10243  ls
+10244  vim emplois/views.py
+10245  subl emplois/templates/emplois/details.html
+10246  vim emplois/views.py
+10247  ./manage.py runserver 8001
+10248  cd development/public/tutorial/django_website_documentation/
+10249  source env_python_3.4/bin/activate
+10250  ls
+10251  cd ottawacitijobs
+10252  ls
+10253  subl emplois/templates/emplois/salary.html
+10254  subl emplois/urls.py
+10255  subl emplois/templates/emplois/index.html
+10256  subl emplois/urls.py
+10257  subl emplois/templates/emplois/index.html
+10258  subl emplois/urls.py
+10259  ./manage.py runserver 8001
+10260  vim emplois/views.py
+10261  ls
+10262  git st
+10263  git add .
+10264  subl tasks.todo
+10265  ls
+10266  ls ottawacitijobs
+10267  vim ottawacitijobs/settings.py
+10268  mkdir ottawacitijobs/locale
+10269  vim ottawacitijobs/settings.py
+10270  ./manage.py runserver 8001
+10271  ./manage.py shell
+10272  vim ottawacitijobs/settings.py
+10273  git st
+10274  git add .
+10275  git st
+10276  git commit -am 'Sorting the job by latest, expire, salary'
+10277  git push
+10278  git st
+10279  git add .
+10280  git commit -am 'todos refurbish ksks 3hours'
+10281  git st
+10282  git push
+10283  git st
+10284  git commit -am 'adding references for the todos list'
+10285  git push
+10286  cd
+10287  cd totrash
+10288  ls
+10289  cd uottawa_jobs
+10290  ls
+10291  cd ..
+10292  cd ottawacityjobs_bot
+10293  ls
+10294  cat ottawajobs.py
+10295  subl ottawajobs.py
+10296  ls
+10297  cd ..
+10298  cd ottawajobs
+10299  ls
+10300  cd totrash
+10301  ls
+10302  subl jobs.py
+10303  ls
+10304  subl totrash/jobs.py
+10305  pip install requests
+10306  vim totrash/jobs.py
+10307  bpython3 -q
+10308  ls
+10309  ls totrash
+10310  subl totrash/fixtures_data.py
+10311  vim totrash/jobs.py
+10312  python totrash/jobs.py
+10313  vim totrash/jobs.py
+10314  python totrash/jobs.py
+10315  ls
+10316  ls totrash
+10317  subl totrash/fixtures_data.py
+10318  ls
+10319  ls totrash
+10320  python totrash/jobs.py
+10321  ls
+10322  subl uottawa_emplois_bilingual.json
+10323  python totrash/jobs.py
+10324  subl uottawa_emplois_bilingual.json
+10325  ls
+10326  mv uottawa_emplois_bilingual.json totrash
+10327  python manage.py loaddata totrash/uottawa_emplois_bilingual.json
+10328  python totrash/jobs.py
+10329  mv uottawa_emplois_bilingual.json totrash
+10330  python manage.py loaddata totrash/uottawa_emplois_bilingual.json
+10331  python totrash/jobs.py
+10332  mv uottawa_emplois_bilingual.json totrash
+10333  vim totrash/uottawa_emplois_bilingual.json
+10334  python 
+10335  vim totrash/uottawa_emplois_bilingual.json
+10336  python 
+10337  vim totrash/jobs.py
+10338  python
+10339  vim totrash/jobs.py
+10340  python totrash/jobs.py
+10341  vim totrash/jobs.py
+10342  python totrash/jobs.py
+10343  vim uottawa_emplois_bilingual.json
+10344  mv uottawa_emplois_bilingual.json totrash
+10345  python manage.py loaddata totrash/uottawa_emplois_bilingual.json
+10346  pip install dateutil
+10347  python
+10348  pip install python-dateutil
+10349  python
+10350  git st
+10351  git add .
+10352  git commit -am 'trying to add real fixtures'
+10353  git st
+10354  git push
+10355  python
+10356  vim totrash/jobs.py
+10357  python totrash/jobs.py
+10358  subl uottawa_emplois_bilingual.json
+10359  mv uottawa_emplois_bilingual.json totrash
+10360  python manage.py loaddata totrash/uottawa_emplois_bilingual.json
+10361  python totrash/jobs.py
+10362  subl uottawa_emplois_bilingual.json
+10363  mv uottawa_emplois_bilingual.json totrash
+10364  python manage.py loaddata totrash/uottawa_emplois_bilingual.json
+10365  vim emplois/models.py
+10366  python manage.py makemigrations
+10367  vim emplois/models.py
+10368  python manage.py makemigrations
+10369  python manage.py migrate
+10370  python manage.py loaddata totrash/uottawa_emplois_bilingual.json
+10371  python
+10372  python totrash/jobs.py
+10373  vim emplois/models.py
+10374  python manage.py makemigrations
+10375  vim emplois/models.py
+10376  python manage.py makemigrations
+10377  vim emplois/models.py
+10378  python manage.py makemigrations
+10379  python manage.py migrate
+10380  python manage.py loaddata totrash/uottawa_emplois_bilingual.json
+10381  python totrash/jobs.py
+10382  mv uottawa_emplois_bilingual.json totrash
+10383  python manage.py loaddata totrash/uottawa_emplois_bilingual.json
+10384  python totrash/jobs.py
+10385  mv uottawa_emplois_bilingual.json totrash
+10386  python manage.py loaddata totrash/uottawa_emplois_bilingual.json
+10387  vim totrash/u
+10388  vim totrash/uottawa_emplois_bilingual.json
+10389  python totrash/jobs.py
+10390  mv uottawa_emplois_bilingual.json totrash
+10391  python manage.py loaddata totrash/uottawa_emplois_bilingual.json
+10392  vim emplois/models.py
+10393  python manage.py makemigrations
+10394  python manage.py migrate
+10395  python manage.py loaddata totrash/uottawa_emplois_bilingual.json
+10396  python
+10397  vim emplois/models.py
+10398  python manage.py makemigrations
+10399  python manage.py migrate
+10400  python totrash/jobs.py
+10401  mv uottawa_emplois_bilingual.json totrash
+10402  python manage.py loaddata totrash/uottawa_emplois_bilingual.json
+10403  python manage.py dumpdata > data.json
+10404  subl data.json
+10405  ls
+10406  python manage.py runserver 8001
+10407  vim ottawacitijobs/settings.py
+10408  python manage.py runserver 8001
+10409  python manage.py runserver 8002
+10410  subl totrash/uottawa_emplois_bilingual.json
+10411  vim emplois/models.py
+10412  python manage.py makemigrations
+10413  python manage.py migrate
+10414  python manage.py loaddata totrash/uottawa_emplois_bilingual.json
+10415  vim emplois/templates/emplois/index.html
+10416  subl emplois/models.py
+10417  vim emplois/templates/emplois/index.html
+10418  subl emplois/templates/emplois/index.html
+10419  vim totrash/jobs.py
+10420  subl j
+10421  subl totrash/jobs.py
+10422  python totrash/jobs.py
+10423  mv uottawa_emplois_bilingual.json totrash
+10424  python manage.py loaddata totrash/uottawa_emplois_bilingual.json
+10425  python manage.py dumpdata > data.json
+10426  subl data.json
+10427  vim emplois/admin.py
+10428  vim emplois/models.py
+10429  python manage.py makemigrations
+10430  python manage.py migrate
+10431  python manage.py dumpdata > data.json
+10432  subl data.json
+10433  vim totrash/jobs.py
+10434  python totrash/jobs.py
+10435  subl uottawa_emplois_bilingual.json
+10436  python totrash/jobs.py
+10437  subl uottawa_emplois_bilingual.json
+10438  python totrash/jobs.py
+10439  subl uottawa_emplois_bilingual.json
+10440  mv uottawa_emplois_bilingual.json totrash
+10441  python manage.py loaddata totrash/uottawa_emplois_bilingual.json
+10442  python manage.py makemigrations
+10443  python manage.py migrate
+10444  python totrash/jobs.py
+10445  mv uottawa_emplois_bilingual.json totrash
+10446  python manage.py loaddata totrash/uottawa_emplois_bilingual.json
+10447  python manage.py makemigrations
+10448  python manage.py migrate
+10449  python manage.py loaddata totrash/uottawa_emplois_bilingual.json
+10450  python manage.py makemigrations
+10451  python manage.py migrate
+10452  python manage.py loaddata totrash/uottawa_emplois_bilingual.json
+10453  python manage.py dumpdata > data.json
+10454  subl data.json
+10455  python manage.py makemigrations
+10456  python manage.py loaddata totrash/uottawa_emplois_bilingual.json
+10457  python manage.py dumpdata > data.json
+10458  subl data.json
+10459  ls
+10460  rm db.sqlite3
+10461  python manage.py makemigrations
+10462  python manage.py syncdb
+10463  python manage.py makemigrations
+10464  python manage.py dumpdata > data.json
+10465  subl data.json
+10466  python manage.py loaddata totrash/uottawa_emplois_bilingual.json
+10467  python manage.py dumpdata > data.json
+10468  subl data.json
+10469  ps
+10470  ls
+10471  git st
+10472  git add .
+10473  git commit -am 'adding Description fixtures'
+10474  git st
+10475  git push
+10476  pip install django-analytical
+10477  pip install metron
+10478  vim ottawacitijobs/settings.py
+10479  vim emplois/templates/emplois/index.html
+10480  vim totrash/jobs.py
+10481  python totrash/jobs.py
+10482  subl uottawa_emplois_bilingual.json
+10483  vim emplois/models.py
+10484  python manage.py makemigrations
+10485  vim emplois/models.py
+10486  python manage.py makemigrations
+10487  python manage.py migrate
+10488  mv uottawa_emplois_bilingual.json totrash
+10489  python manage.py loaddata totrash/uottawa_emplois_bilingual.json
+10490  python manage.py makemigrations
+10491  python manage.py migrate
+10492  python manage.py loaddata totrash/uottawa_emplois_bilingual.json
+10493  ls
+10494  subl totrash/uottawa_emplois_bilingual.json
+10495  vim emplois/models.py
+10496  python manage.py makemigrations
+10497  python manage.py migrate
+10498  python manage.py loaddata totrash/uottawa_emplois_bilingual.json
+10499  python manage.py dumpdata > data.json
+10500  subl data.json
+10501  python manage.py loaddata totrash/uottawa_emplois_bilingual.json
+10502  python manage.py dumpdata > data.json
+10503  subl data.json
+10504  pip uninstall metron
+10505  pip list
+10506  pip install djohno
+10507  vim ottawacitijobs/settings.py
+10508  vim ottawacitijobs/urls.py
+10509  python manage.py collectstatic
+10510  vim ottawacitijobs/settings.py
+10511  vim ottawacitijobs/urls.py
+10512  pip uninstall djohno
+10513  vim ottawacitijobs/settings.py
+10514  git st
+10515  git add .
+10516  git commit -am 'add language in models'
+10517  git st
+10518  git push
+10519  peerflix 'magnet:?xt=urn:btih:82187fbb4b72d9b2ead11014b7d199f35666106b&dn=Roberto Cacciapaglia Ten Directions&tr=http://5.79.83.193:2710/announce&tr=udp://62.138.0.158:6969/announce&tr=udp://tracker.coppersurfer.tk:6969/announce&tr=udp://tracker.leechers-paradise.org:6969/announce&tr=udp://tracker.openbittorrent.com:80/announce'
+10520  youtube-dl https://soundcloud.com/icarusmoth/alt-j-breezeblocks-icarus-moth-remix
+10521  youtube-dl https://soundcloud.com/vancejoy/02-riptide
+10522  youtube-dl https://soundcloud.com/shura/shura-touch
+10523  peerflix 'http://www.cpasbien.io/telechargement/le-pont-des-espions-french-dvdscr-2015.torrent' -v
+10524  df -h
+10525  peerflix 'http://www.cpasbien.io/telechargement/le-pont-des-espions-french-dvdscr-2015.torrent' -v
+10526  peerflix 'https://torcache.net/torrent/4C5E5DB6494242D16BDCBD075C679D3373B884A8.torrent?title=[kat.cr]bridge.of.spies.2015.repack.truefrench.dvdscr.md.xvid.zt.avi' -v
+10527  peerflix 'https://torcache.net/torrent/F248B6B29281EEB2B4D89EDC4D392B70E534DF03.torrent?title=[kat.cr]the.big.short.2015.dvdscr.xvid.ac3.hq.hive.cm8' -v
+10528  ssh wadiyabi@65.75.148.158
+10529  rm -r /tmp/torrent-stream
+10530  peerflix 'https://torcache.net/torrent/C2A0EB833CA4571F6DD8402EBB7DCD34B89706C7.torrent?title=[kat.cr]power.2014.s01e01.hdtv.x264.killers.eztv' -v
+10531  peerflix 'https://torcache.net/torrent/4B219802E41113FAE845705758D91B39EDBEC78D.torrent?title=[kat.cr]power.2014.s01e02.hdtv.x264.killers.eztv' -v
+10532  peerflix 'https://torcache.net/torrent/A662B4C0D527E52A7923F6B2557969D302CD1208.torrent?title=[kat.cr]power.2014.s01e03.hdtv.x264.killers.eztv' -v
+10533  peerflix 'https://torcache.net/torrent/C6C8B33B223F3C165C781A4F72D2ADB1BB2CDE14.torrent?title=[kat.cr]power.2014.s01e04.hdtv.x264.killers.eztv' -v
+10534  peerflix 'https://torcache.net/torrent/4F17B0F40729A914450D8F1FD34230ED0656F47B.torrent?title=[kat.cr]power.2014.s01e05.hdtv.x264.killers.eztv' -v
+10535  peerflix 'magnet:?xt=urn:btih:915D87CF432F496A2AEF430128DD9A5DE330E8FD&dn=Powers.2015.S01E06.The.Raconteur.of.the.Funeral.Circuit.WEBRip.XviD-FUM%5Bettv%5D&tr=udp%3A%2F%2Fopen.demonii.com%3A1337%2Fannounce&tr=udp%3A%2F%2Finferno.demonoid.ooo%3A3392%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker4.piratux.com%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fcoppersurfer.tk%3A6969%2Fannounce&tr=http%3A%2F%2Fbttracker.crunchbanglinux.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.pomf.se%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fopen.demonii.com%3A1337&tr=udp%3A%2F%2F9.rarbg.me%3A2710%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Fglotorrents.pw%3A6969%2Fannounce&tr=udp%3A%2F%2Feddie4.nl%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.com%3A2710%2Fannounce&tr=udp://tracker.openbittorrent.com:80/announce&tr=udp://tracker.leechers-paradise.org:6969/announce&tr=udp://coppersurfer.tk:6969/announce' -v
+10536  peerflix 'https://torcache.net/torrent/9AB5C2E8DD5595D2AA753ED7002F957B5420D5F9.torrent?title=[kat.cr]power.2014.s01e06.hdtv.x264.killers.eztv' -v
+10537  peerflix 'https://torcache.net/torrent/CF55F5E3484C16069538538015D9BF10B6806F32.torrent?title=[kat.cr]power.2014.s01e07.hdtv.x264.killers.eztv' -v
+10538  peerflix 'https://torcache.net/torrent/D460AB821685238E34906F274D9EF0B5370CC58C.torrent?title=[kat.cr]power.2014.s01e08.hdtv.x264.killers.eztv' -v
+10539  peerflix 'https://torcache.net/torrent/DA1C8E816A241DF107FBD5F6F584AA29FED792D5.torrent?title=[kat.cr]power.2014.s02e01.hdtv.xvid.fum.ettv' -v
+10540  peerflix 'https://torcache.net/torrent/18C24ED2BC10D2D4CA6BC7AE38F2562BF2311BBC.torrent?title=[kat.cr]power.2014.s02e02.hdtv.x264.killers.ettv' -v
+10541  peerflix 'magnet:?xt=urn:btih:38C55103C60F6C8A2E0D3D977DB2894DD973A429&dn=Power.2014.S02E03.HDTV.x264-KILLERS%5Bettv%5D&tr=udp%3A%2F%2Fopen.demonii.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker4.piratux.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.blackunicorn.xyz%3A6969%2Fannounce&tr=udp%3A%2F%2Fcoppersurfer.tk%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.aletorrenty.pl%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.pomf.se%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fopen.demonii.com%3A1337&tr=udp%3A%2F%2F9.rarbg.me%3A2710%2Fannounce&tr=http%3A%2F%2Ftorrent.gresille.org%2Fannounce&tr=udp%3A%2F%2Fglotorrents.pw%3A6969%2Fannounce&tr=udp%3A%2F%2Feddie4.nl%3A6969%2Fannounce&tr=udp%3A%2F%2F9.rarbg.to%3A2710%2Fannounce&tr=udp://tracker.openbittorrent.com:80/announce&tr=udp://tracker.leechers-paradise.org:6969/announce&tr=udp://coppersurfer.tk:6969/announce' -v
+10542  peerflix 'https://torcache.net/torrent/D0B7457DD644A5D224F245AC67BFAAEB63E1B01F.torrent?title=[kat.cr]power.2014.s02e04.hdtv.x264.killers.ettv' -v
+10543  peerflix 'https://torcache.net/torrent/0150D83DDBC7E65E4906DE2E18F1E841D32F8A4A.torrent?title=[kat.cr]power.2014.s02e05.hdtv.x264.killers.ettv' -v
+10544  rm -r /tmp/torrent-stream
+10545  peerflix 'https://torcache.net/torrent/E250BA1E4F9FBD1DD821AAED84650723E6C661E0.torrent?title=[kat.cr]power.2014.s02e06.internal.hdtv.x264.batv.ettv' -v
+10546  peerflix 'https://torcache.net/torrent/C0A9633A03AD344D745EF0E0D456328517BC2A1F.torrent?title=[kat.cr]power.2014.s02e07.hdtv.x264.killers.ettv' -v
+10547  peerflix 'https://torcache.net/torrent/9B15B56DCC593646DA4D48E743503456F4362AC4.torrent?title=[kat.cr]power.2014.s02e08.hdtv.x264.killers.ettv' -v
+10548  peerflix 'https://torcache.net/torrent/45FA38E80EDAF0EB1E3EC03600D2DE23F4F75169.torrent?title=[kat.cr]power.2014.s02e09.hdtv.x264.killers.ettv' -v
+10549  peerflix 'https://torcache.net/torrent/734E2BC3EF30BCCAD1D3B10FB49D38BAC845FF50.torrent?title=[kat.cr]power.2014.s02e10.hdtv.x264.killers.ettv'  -v
+10550  rm -r /tmp/torrent-stream
+10551  peerflix 'https://torcache.net/torrent/989B6E91AC682105002C3B6275D49449A9DF47BA.torrent?title=[kat.cr]billions.s01e01.hdtv.x264.batv.ettv' -v
+10552  peerflix 'https://torcache.net/torrent/3021E6606BF182589D8537C05B43288BA6CA2428.torrent?title=[kat.cr]tyrant.s01e01.hdtv.x264.lol.eztv' -v
+10553  cd development/public/tutorial/django_website_documentation
+10554  ls
+10555  source env_python_3.4/bin/activate
+10556  deactivate
+10557  pyvenv myenv
+10558  peerflix 'https://torcache.net/torrent/3E8E860EE2B1005498AC2CBB459558CB0880DC0E.torrent?title=[kat.cr]tyrant.s01e02.hdtv.x264.lol.eztv' -v
+10559  peerflix 'https://torcache.net/torrent/F888971BB27E14EE1FD8442203AADD7F6E3094F1.torrent?title=[kat.cr]tyrant.s01e02.hdtv.x264.lol.ettv' -v
+10560* sudo pip3 install -U virtualenv virtualenvwrapper
+10561* which python3
+10562* vim ~/.virtualenvs
+10563* cd development/public/tutorial/django_website_documentation
+10564* ls
+10565* mkvirtualenv --python=/usr/bin/python3 tb_dev
+10566* mkdir ~/.environments
+10567* export WORKON_HOME=~/.environments
+10568* source /usr/local/bin/virtualenvwrapper.sh
+10569* source ~/.bashrc
+10570* zsh
+10571* mkvirtualenv --python=/usr/bin/python3 tb_dev
+10572* mkvirtualenv BUGS
+10573* export PATH=/usr/local/bin:$PATH
+10574* source /usr/local/bin/virtualenvwrapper.sh
+10575* mkvirtualenv BUGS
+10576* mkvirtualenv --python=/usr/bin/python3 tb_dev
+10577* ls
+10578* which python
+10579* deactivate
+10580* workon tb_dev
+10581* pip install Django==1.8.5
+10582* mkdir taskbuster_project
+10583* subl taskbuster_project
+10584* ls
+10585* cd taskbuster_project
+10586* ls
+10587* ls -al
+10588* mkvirtualenv --python=/usr/local/bin/python3 tb_test
+10589* deactivate
+10590* cd ..
+10591* mkvirtualenv --python=/usr/bin/python3 tb_test
+10592* pip install Django==1.8
+10593  peerflix 'https://torcache.net/torrent/F888971BB27E14EE1FD8442203AADD7F6E3094F1.torrent?title=[kat.cr]tyrant.s01e02.hdtv.x264.lol.ettv' -v
+10594* pip install Django==1.8
+10595* pip install --upgrade selenium
+10596* cd taskbuster_project
+10597* mkdir functional_tests
+10598* cd functional_tests
+10599* touch all_users.py
+10600* vim all_users.py
+10601* python
+10602* python all_users.py
+10603* cd .
+10604* cd ..
+10605* ls
+10606* django-admin.py startproject taskbuster .
+10607* ls
+10608* python manage.py runserver 8001
+10609* pip freeze
+10610* deactivate
+10611* workon tb_dev
+10612* pip freeze
+10613* pip install --upgrade selenium
+10614* pip freeze > requirements.txt
+10615* mkdir requirements
+10616* touch requirements/{base.txt,development.txt,production.txt,testing.txt}
+10617* ls requirements
+10618* touch requirements/staging.txt
+10619* cd requirements
+10620* echo "Django==1.8.5" >> base.txt
+10621* echo "-r base.txt" | tee -a development.txt testing.txt production.txt
+10622* cat development.txt
+10623* echo "selenium==2.48.0" >> testing.txt
+10624* man tee
+10625* pip freeze
+10626* pip install -r requirements/development.txt
+10627* cd ..
+10628* pip install -r requirements/development.txt
+10629* mkdir taskbuster/settings
+10630* cd taskbuster/settings
+10631* touch __init__.py development.py testing.py production.py staging.py
+10632* ls
+10633* vim base.py
+10634* cp base.py {a.py b.py}
+10635* cp base.py {a.py, b.py}
+10636* ls
+10637* cp base.py development.py
+10638* cp base.py production.py
+10639* cp base.py staging.py
+10640* cp base.py testing.py
+10641* cat testing.py
+10642  peerflix 'https://torcache.net/torrent/F888971BB27E14EE1FD8442203AADD7F6E3094F1.torrent?title=[kat.cr]tyrant.s01e02.hdtv.x264.lol.ettv' -v
+10643* mv ../settings.py base.py
+10644  peerflix 'https://torcache.net/torrent/41D1598C09B3B08335C312E1F7B27C749AF104B2.torrent?title=[kat.cr]tyrant.s01e10.hdtv.x264.2hd.eztv' -v
+10645  peerflix 'https://torcache.net/torrent/1EBEC8B8439A3EBB643173881C4D5ACFDA407962.torrent?title=[kat.cr]tyrant.s02e01.hdtv.x264.lol.ettv' -v
+10646  peerflix 'https://torcache.net/torrent/2A10B12C7C2108EAEB633C0BCA462090C121304A.torrent?title=[kat.cr]tyrant.s02e03.hdtv.x264.lol.ettv' -v
+10647  rm -r /tmp/torrent-stream
+10648  peerflix 'https://torcache.net/torrent/03E65BED2B894772DDCD414E45D6CF2CD05D5822.torrent?title=[kat.cr]tyrant.s02e05.hdtv.x264.asap.ettv' -v
+10649  peerflix 'https://torcache.net/torrent/1CC23EFE46470F4C80C2E839A0BAE285E22EE440.torrent?title=[kat.cr]tyrant.s02e07.hdtv.xvid.fum.ettv' -v
+10650  peerflix 'https://torcache.net/torrent/07299757A60D9269F8CD1C08FDAEE26F6572D77C.torrent?title=[kat.cr]tyrant.s02e10.hdtv.x264.killers.ettv' -v
+10651  peerflix 'https://torcache.net/torrent/07299757A60D9269F8CD1C08FDAEE26F6572D77C.torrent?title=[kat.cr]tyrant.s02e10.hdtv.x264.killers.ettv' -V
+10652  peerflix 'https://torcache.net/torrent/07299757A60D9269F8CD1C08FDAEE26F6572D77C.torrent?title=[kat.cr]tyrant.s02e10.hdtv.x264.killers.ettv' -v
+10653  peerflix 'https://torcache.net/torrent/671646DD0FC52D8C2CBAB039AFF4932551EA892E.torrent?title=[kat.cr]tyrant.s02e12.hdtv.xvid.fum.ettv' -v
+10654  peerflix 'http://www.cpasbien.io/telechargement/le-prodige-pawn-sacrifice-french-dvdrip-2015.torrent' -v
+10655  peerflix 'http://www.cpasbien.io/telechargement/le-pont-des-espions-french-dvdscr-2015.torrent' -v
+10656  peerflix 'http://www.cpasbien.io/telechargement/le-pont-des-espions-french-dvdscr-2015.torrent'
+10657  rm -r /tmp/torrent-stream
+10658  deactivate
+10659  ls
+10660  source env_python_3.4/bin/activate
+10661  ls
+10662  ll
+10663  cd ottawacitijobs
+10664  ls
+10665  cat .gitignore
+10666  nautilus .
+10667  ls
+10668  vim .gitignore
+10669  git st
+10670  ls
+10671  mv *.mp3 totrash
+10672  ls
+10673  python manage.py runserver 8001
+10674  pwd
+10675* cd /home/guinsly/development/public/tutorial/django_website_documentation/ottawacitijobs
+10676* cd ..
+10677* ls
+10678* source env_python_3.4/bin/activate
+10679* cd ottawacitijobs
+10680* ls
+10681* python manage.py runserver 8001
+10682  pip freeze
+10683  pip install django-celery
+10684  vim ottawacitijobs/settings.py
+10685  pip install grappelli
+10686  vim ottawacitijobs/settings.py
+10687* python manage.py migrate
+10688* python manage.py runserver 8001
+10689  vim ottawacitijobs/settings.py
+10690  python manage.py migrate
+10691  python manage.py makemigrations
+10692  python manage.py migrate
+10693  mkdir emplois/tasks.py
+10694  ls emplois
+10695  vim emplois/urls.py
+10696  ls
+10697* python manage.py runserver 8001
+10698  vim .
+10699  nautilus .
+10700  subl tasks.todo
+10701  vim emplois/urls.py
+10702  subl tasks.todo
+10703  vim emplois/urls.py
+10704  subl tasks.todo
+10705* history | grep 'cal'
+10706* cd totrash
+10707* ls
+10708* ls *ottawa
+10709* ls ottawacityjobs
+10710* ls ottawacityjobs/totrash
+10711* cd ..
+10712* ls
+10713* cd totrash
+10714* ll
+10715* cd uottawa_jobs
+10716* ls
+10717* cd ..
+10718* ls
+10719* ls  ottawajobs
+10720* cd totrash_lagotto
+10721* ls
+10722* cd ..
+10723* cd -
+10724* ls
+10725* cd ..
+10726* ls
+10727* cd ottawajobs
+10728* ls
+10729* ls totrash
+10730* cd totrash/cal-
+10731* ls
+10732* cd totrash
+10733* cd cal-try
+10734* ls
+10735* python -m SimpleHTTPServer 8002
+10736  nautilus .
+10737  vim ottawacitijobs/settings.py
+10738* python manage.py runserver 8001
+10739  vim ottawacitijobs/settings.py
+10740* python manage.py runserver 8001
+10741  vim ottawacitijobs/settings.py
+10742* subl index.html
+10743* pyls
+10744* ls
+10745* cd ..
+10746  python manage.py shell
+10747  python manage.py shell_plus
+10748  vim ottawacitijobs/settings.py
+10749  pip install django-extensions
+10750  python manage.py shell_plus bpython
+10751  python manage.py shell_plus
+10752  pip install ipython
+10753  python manage.py shell_plus
+10754* python manage.py runserver 8001
+10755* pwd
+10756* python manage.py runserver 8001
+10757* cd /home/guinsly/development/public/tutorial/django_website_documentation/ottawacitijobs
+10758* ls
+10759* vim emplois/views.py
+10760* subl tasks.todo
+10761* exit
+10762* cd -
+10763* cd
+10764* cd totrash
+10765* cd ottawajobs
+10766* ls
+10767* cd totrash
+10768* ls
+10769* subl jobs.py
+10770* ls
+10771* subl ottwbot.py
+10772* ls
+10773* subl test_ottawajobs.py
+10774* subl ottwbot.py
+10775* ls
+10776* subl json_data_for_try.json
+10777* subl cal.py
+10778  git st
+10779  git add .
+10780  git commit -am 'adding static file and other pages'
+10781  git st
+10782  git push -u origin master
+10783  python manage.py shell_plus
+10784  pip install python-dateutil
+10785  pip install -u python-dateutil
+10786  pip install -U python-dateutil
+10787  python manage.py shell _plus
+10788  python manage.py shell_plus
+10789* python manage.py runserver 8001
+10790* pip list
+10791* pip install -U django-admin
+10792* pip install -U django
+10793* python manage.py runserver 8001
+10794* pip install django==1.8.7
+10795* pip list
+10796* python manage.py runserver 8001
+10797  subl task
+10798  git st
+10799  subl tasks.todo
+10800  subl emplois/views.py
+10801  vim ottawacitijobs/settings.py
+10802  vim emplois/views.py
+10803  subl ottawacitijobs/settings.py
+10804* python manage.py runserver 8001
+10805  django-admin.py makemessages --all
+10806  ls
+10807  python manage.py makemessages
+10808  python manage.py makemessages -all
+10809  subl emplois/urls.py
+10810  django-admin.py makemessages -l de
+10811  pip install pybabel
+10812  vim emplois/models.py
+10813  subl ottawacitijobs/settings.py
+10814* python manage.py runserver 8001
+10815  vim emplois/views.py
+10816* python manage.py runserver 8001
+10817  django-admin compilemessages
+10818  ls
+10819  cd emplois
+10820  django-admin compilemessages
+10821  ls
+10822  cd ..
+10823  cd ottawacitijobs
+10824  django-admin compilemessages
+10825  ls
+10826  ls locale
+10827  tree .
+10828  vim locale
+10829  tree .
+10830  pip install pybabel
+10831  pip install potpie
+10832  peerflix 'https://torcache.net/torrent/9F1B53F068A8449BF9722A8543BDA014D68E1E2B.torrent?title=[kat.cr]ultimatesurrender.us.39336.jayogen.karmen.karma.mia.li.and.angel.allwood.hd' -v
+10833  git st
+10834  ls
+10835  cd ..
+10836  python manage.py makemigrations
+10837  python manage.py migrate
+10838  ls
+10839* python manage.py runserver 8001
+10840  ls
+10841  tree emplois/templates
+10842  tree emplois/templates/emplois
+10843  ls emplois/templates/emplois
+10844  touch emplois/templates/emplois/search.html
+10845  pip install ipdb
+10846  vim emplois/views.py
+10847* python manage.py runserver 8001
+10848  vim ottawacitijobs/settings.py
+10849  pip uninstall ipdb
+10850  vim emplois/views.py
+10851  pip install django-pdb
+10852  vim ottawacitijobs/settings.py
+10853* python manage.py runserver 8001 --pdb
+10854* python manage.py runserver --pdb
+10855* python manage.py runserver 8001
+10856  vim emplois/views.py
+10857  vim ottawacitijobs/settings.py
+10858  vim emplois/views.py
+10859  pip uninstall django_ipdb
+10860  pip uninstall django_pdb
+10861  pip install django-silk
+10862  vim ottawacitijobs/settings.py
+10863  vim ottawacitijobs/urls.py
+10864* python manage.py runserver 8001
+10865  python manage.py makemigrations
+10866  python manage.py migrate
+10867* python manage.py runserver 8001
+10868  vim ottawacitijobs/settings.py
+10869  vim ottawacitijobs/urls.py
+10870* cd ..
+10871* ls
+10872* virtualenv env_python_2.7
+10873* source env_python_2.7/bin/activate
+10874* git clone git@github.com:roadrui/ruiblog.git
+10875* pip install django
+10876* pip install django==1.6
+10877* ls
+10878* cd ruiblog
+10879* ls
+10880* python manage.py 8002
+10881* python manage.py runserver 8002
+10882* pip install django_debug_toolbar
+10883* python manage.py runserver 8002
+10884* pip uninstall django_debug_toolbar
+10885* pip install django==1.6
+10886* python manage.py runserver 8002
+10887  cp emplois/templates/emplois/index.html emplois/templates/emplois
+10888  cp emplois/templates/emplois/index.html emplois/templates
+10889* python manage.py runserver 8001
+10890* exit
+10891  ls
+10892  vim emplois/views.py
+10893* python manage.py runserver 8001
+10894  rm emplois/templates/index.html
+10895  git st
+10896  git add .
+10897  git commit -am 'Search form'
+10898  git st
+10899  git push
+10900  git st
+10901  git add .
+10902  git commit -am 'removing Ajax and send email in form'
+10903  git st
+10904  pip install django-autoslug
+10905  ls
+10906  pip freeze > requirements.txt
+10907  subl requirements.txt
+10908  git st
+10909  git add .
+10910  git commit -am 'adding a requirement file'
+10911  git push
+10912  git st
+10913  python manage.py makemigrations
+10914  mv emplois/migrations emplois/migrations2
+10915  python manage.py makemigrations
+10916  python manage.py migrate
+10917  tree emplois/migrations2
+10918  tree emplois/migrations
+10919  mv emplois/migrations2 emplois/migrations
+10920  python manage.py migrate
+10921  python manage.py makemigrations
+10922  vim emplois/models.py
+10923  python manage.py makemigrations
+10924  python manage.py migrate
+10925* python manage.py runserver 8001
+10926  vim emplois/templates/emplois/test_i18n.html
+10927  python manage.py makemessages -l en
+10928  \tpython manage.py makemessages --all
+10929  la
+10930  ls
+10931  mkdir emplois/locale
+10932  mkdir -p ottawacitijobs/locale/de
+10933  mkdir -p ottawacitijobs/locale/fr
+10934  django-admin.py makemessages -l fr
+10935  manage.py makemessages -l ua
+10936  python manage.py makemessages -l ua
+10937  python manage.py makemessages -l fr
+10938  python manage.py makemessages -l en
+10939  tree emplois/locale
+10940  tree ottawacitijobs/locale
+10941* python manage.py runserver 8001
+10942  git st
+10943  git add .
+10944  git st
+10945  git -am 'adding translation part 1 ... moving to 1.9.1'
+10946  git commit -am 'adding translation part 1 ... moving to 1.9.1'
+10947  git st
+10948  git push
+10949  git st
+10950  git checkout -b django_1.9.1
+10951  ls
+10952  git st
+10953  ls
+10954  mkdir new_app
+10955  cd new_app
+10956  ls
+10957  pip install -U django
+10958  django-admin help
+10959  django-admin help startproject
+10960  cd ..
+10961  ls
+10962  cd totrash
+10963  ls
+10964  pip install cookiecutter
+10965  ls
+10966  mkdir redditclone
+10967  cd redditclone
+10968  cookiecutter  https://github.com/marcofucci/cookiecutter-simple-django.git
+10969  ls
+10970  cd ottwjobs
+10971  ls
+10972  tree requirements
+10973  cat requirements/base.txt
+10974  vim requirements/base.txt
+10975  cat requirements/production.txt
+10976  ls
+10977  tree ottwjobs
+10978  vim ottwjobs/settings/base.py
+10979  vim ottwjobs/settings/local.py
+10980  vim ottwjobs/settings/production.py
+10981  tree ottwjobs
+10982  vim ottwjobs/settings/testing.py
+10983  tree ottwjobs
+10984  vim ottwjobs/urls.py
+10985  ls
+10986  cd  ...
+10987  ls
+10988  rm -r redditclone
+10989  pip uninstall cookiecutter
+10990  ls
+10991  cd ..
+10992  ls
+10993  cd new_app
+10994  ls
+10995  django-admin startproject ottawacityjobs
+10996  ls
+10997  cd ottawacityjobs
+10998  ls
+10999  subl ottawacityjobs/settings.py
+11000  python manage.py startapp emplois
+11001  ls
+11002  python manage.py startapp  jobs
+11003  python manage.py startapp emplois
+11004  ls
+11005  python manage.py syncdb
+11006  history | tail -n 1000 > history.txt && subl history.txt
+11007  ls
+11008  rm history.txt
+11009  python manage.py makemigrations
+11010  history | grep 'user'
+11011  python manage.py createsuperuser
+11012  ls
+11013  subl ottawacityjobs/urls.py
+11014  python manage.py makemigrations
+11015  subl ottawacityjobs/urls.py
+11016  python manage.py makemigrations
+11017  python manage.py migrate
+11018  vim ottawacityjobs/settings.py
+11019  ls
+11020  python manage.py makemigrations
+11021  python manage.py migrate
+11022  vim emplois/models.py
+11023  ls
+11024  mv emplois/migrations2 emplois/migrations
+11025  subl emplois/models.py
+11026  python manage.py makemigrations
+11027  ls
+11028  rm db.sqlite3
+11029  ls
+11030  python manage.py syncdb
+11031  python manage.py makemigrations
+11032  nautilus emplois
+11033  vim emplois/models.py
+11034  python manage.py makemigrations
+11035  python manage.py migrate
+11036  python manage.py syncdb
+11037  python manage.py 
+11038  python manage.py resetdb
+11039  python manage.py 
+11040  python manage.py reset_db
+11041  ls
+11042  python manage.py makemigrations
+11043  python manage.py migrate
+11044  python manage.py createsuperuser
+11045  python manage.py migrate
+11046  python manage.py makemigrations
+11047  python manage.py migrate
+11048  python manage.py runserver 8001
+11049  vim ottawacityjobs/settings.py
+11050  python manage.py runserver 8001
+11051  vim emplois/templates/emplois/index.html
+11052  python manage.py runserver 8001
+11053  rm -r emplois/migrations
+11054  ls ottawacityjobs
+11055  ./manage.py schemamigration emplois
+11056  python manage.py
+11057  python manage.py makemigrations
+11058  ls
+11059  tree | grep '0018_auto_'
+11060  tree ottawacityjobs | grep '0018_auto_'
+11061  tree emplois | grep '0018_auto_'
+11062  tree emplois
+11063  python manage.py makemigrations
+11064  rm -r emplois/migrations\ \(copy\)
+11065  tree emplois | grep '0018_auto_'
+11066  python manage.py makemigrations
+11067  python manage.py migrate
+11068  python manage.py migrate emplois
+11069  python manage.py migrate ottawacityjobs
+11070  python manage.py runserver 8001
+11071  vim emplois/models.py
+11072  django-admin showmigrations
+11073  python manage.py showmigrations
+11074  vim ottawacityjobs/settings.py
+11075  python manage.py migrate emplois
+11076  vim ottawacityjobs/settings.py
+11077  python manage.py migrate emplois
+11078  ls emplois
+11079  python manage.py startapp school
+11080  ls school
+11081  vim school/models.py
+11082  vim ottawacityjobs/settings.py
+11083  python manage.py makemigrations
+11084  vim emplois/models.py
+11085  python manage.py makemigrations
+11086  python manage.py startapp jobs
+11087  subl emplois/models.py
+11088  subl jobs/models.py
+11089  vim ottawacityjobs/settings.py
+11090  python manage.py makemigrations
+11091  subl jobs/models.py
+11092  subl ottawacityjobs/settings.py
+11093  python manage.py makemigrations
+11094  subl jobs/models.py
+11095  python manage.py makemigrations
+11096  python manage.py migrate
+11097  vim ottawacityjobs/settings.py
+11098  ls
+11099  trash-put school
+11100  python manage.py makemigrations
+11101  ls
+11102  trash-put emplois
+11103  python manage.py makemigrations
+11104  ls
+11105  tree ottawacityjobs
+11106  tree jobs
+11107  python manage.py emplois
+11108  python manage.py startapp emplois
+11109  vim ottawacityjobs
+11110  python manage.py makemigrations
+11111  python manage.py migrate
+11112  vim ottawacityjobs/urls.py
+11113  subl jobs/views.py
+11114  python manage.py migrate
+11115  python manage.py migrate > /tmp/error.txt 
+11116  subl /tmp/error.txt
+11117  ls
+11118  vim ottawacityjobs/settings.py
+11119  vim ottawacityjobs/urls.py
+11120  python manage.py migrate
+11121  vim ottawacityjobs/urls.py
+11122  ls
+11123  vim ottawacityjobs/urls.py
+11124  python manage.py migrate
+11125  ls
+11126  cd ...
+11127  cd ..
+11128  ls
+11129  cd -
+11130  ls
+11131  cd new_app
+11132  ls
+11133  rm -r ottawacityjobs
+11134  django-admin startproject ottawacityjobs
+11135  ls
+11136  cd ottawacityjobs
+11137  ls
+11138  python manage.py startapp emplois
+11139  ls
+11140  vim ottawacityjobs/settings.py
+11141  subl ottawacityjobs/settings.py
+11142  python manage.py makemigrations
+11143  subl emplois/models.py
+11144  python manage.py makemigrations
+11145  python manage.py createsuperuser
+11146  subl ottawacityjobs/settings.py
+11147  manage.py syncdb
+11148  python manage.py syncdb
+11149  ./manage.py migrate
+11150  python manage.py createsuperuser
+11151  subl ottawacityjobs/urls.py
+11152  subl emplois/admin.py
+11153  subl emplois/views.py
+11154  ./manage.py migrate
+11155  subl ottawacityjobs/urls.py
+11156  ./manage.py migrate
+11157  subl emplois/urls.py
+11158  ./manage.py migrate
+11159  subl ottawacityjobs/urls.py
+11160  ./manage.py migrate
+11161  ./manage.py runserver 8001
+11162  subl ottawacityjobs/settings.py
+11163  ./manage.py runserver 8001
+11164  subl ottawacityjobs/settings.py
+11165  vim emplois/templates/emplois
+11166  ./manage.py runserver 8001
+11167  ls
+11168  subl upgrading.todo
+11169  ls
+11170  ls emplois
+11171  cat emplois/apps.py
+11172  ./manage.py runserver 8001
+11173  history | grep 'data.json'

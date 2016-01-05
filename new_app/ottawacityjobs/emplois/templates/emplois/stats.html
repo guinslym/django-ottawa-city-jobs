@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% load humanize %}
+
+{% load staticfiles %}
+
+	{% block content %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>
+
+<link href="{% static "emplois/css/font-awesome.min.css" %}" rel="stylesheet"/>
+
+
+	<link rel="stylesheet" href="{% static "emplois/css/cal-heatmap.css" %}" rel="stylesheet" />
+<script type="text/javascript" src="{% static "emplois/js/cal-heatmap.min.js" %}"></script>
+
+	<h1>Stats page</h1>
+
+<div id="example-d"></div>
+<div id="onClick-placeholder">
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+</div>
+<script type="text/javascript">
+
+
+
+var cal = new CalHeatMap();
+cal.init({
+	itemSelector: "#example-d",
+	domain: "year",
+	subDomain: "day",
+    itemName: ["job", "jobs"],
+	data: {{ stats }},
+	start: new Date(2015, 0),
+	cellSize: 10,
+	range: 1,
+	legend: [20, 40, 60, 80],
+    onClick: function(date, nb) {
+        //Add AJAX call for all the jobs for that date
+        //Add cookie or variable for the language i18n
+        $("#onClick-placeholder").html("You just clicked <br/>on <b>" +
+            date + "</b> <br/>with <b>" +
+            (nb === null ? "unknown" : nb) + "</b> jobs"
+        );
+    }
+});
+</script>
+
+	{% endblock %}

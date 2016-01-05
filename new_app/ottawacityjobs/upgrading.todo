@@ -1,0 +1,18 @@
+Upgrading:
+ ☐ Create project
+ ☐ Create app
+ ☐ Modify settings.py (don't necessarly add all the third-party apps)
+ ☐ runserver to see if you have error in the logs
+ ☐ Create app.models
+ ☐ .manage.py migrate (or makemigrations)
+ ☐ After all the next steps check to see if you have error in loggings (.manage.py migrate or runserver)
+ ☐ add project.urls
+ ☐ add app.views
+ ☐ add app.urls
+ ☐ add app.templates
+ ☐ runserver and look at it in the browser
+ ☐ Load the json (fixture) into apps
+
+
+
+Extra
