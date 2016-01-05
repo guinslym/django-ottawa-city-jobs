@@ -31,8 +31,8 @@ class Job(models.Model):
 
     joburl = models.URLField(max_length=250, blank=True, null=True)
     expirydate = models.DateField(auto_now=True, blank=True, null=True)
-    salarymax = models.CharField(max_length=40, blank=True, null=True)
-    salarytype = models.CharField(max_length=250, blank=True, null=True)
+    salarymax = models.DecimalField(max_digits=8, decimal_places=2, default=0.00)
+    salarytype = models.DecimalField(max_digits=8, decimal_places=2, default=0.00)
     name = models.CharField(max_length=40, blank=True, null=True) 
     language = models.CharField(max_length=2, choices=LANGUAGE_CHOICE, default=ENGLISH) 
     position = models.CharField(max_length=150, blank=True, null=True)
