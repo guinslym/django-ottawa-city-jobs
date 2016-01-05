@@ -1,6 +1,9 @@
 from django.db import models
 from django.utils.encoding import python_2_unicode_compatible
 
+#third party
+from autoslug import AutoSlugField
+
 import datetime
 from django.utils import timezone
 
@@ -36,7 +39,11 @@ class Job(models.Model):
     job_summary = models.TextField(blank=True, null=True)
     pub_date = models.DateTimeField(auto_now=True, blank=True, null=True)
     timestamps = models.DateTimeField(auto_now_add=True, blank=True)
-
+    ''''
+    #slug = AutoSlugField(populate_from=lambda instance: instance.name,
+                         unique_with=['position', 'pub_date__month'],
+                         slugify=lambda value: value.replace(' ','-'))
+    '''
 @python_2_unicode_compatible
 class Description(models.Model):
     '''

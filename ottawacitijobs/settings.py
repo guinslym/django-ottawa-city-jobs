@@ -128,10 +128,11 @@ USE_L10N = True
 
 USE_TZ = True
 
-gettext = lambda s: s
+gettext = lambda x: x
+
 LANGUAGES = (
-    ('FR', gettext('Français')),
-    ('EN', gettext('English')),
+   ('FR', gettext('French')),
+   ('EN', gettext('English')),
 )
 
 DEFAULT_LANGUAGE = 1
@@ -143,3 +144,4 @@ DEFAULT_LANGUAGE = 1
 
 STATIC_URL = '/static/'
 
+LOCALE_PATHS = ('locale', )

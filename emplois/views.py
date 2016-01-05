@@ -110,3 +110,26 @@ class SearchJobView(generic.ListView):
             return None
 
 
+from django.utils.translation import ugettext as _
+from django.utils.translation import ungettext
+
+from django.utils.translation import pgettext
+
+verbe = pgettext("verbe 'avoir'", "as")
+valeur = pgettext("carte de jeu", "as")
+carte = _("%(suj)s %(ver)s : %(val)s %(col)s") % {
+    "suj": _("tu"), 
+    "ver": verbe,
+    "val": valeur, 
+    "col": _("de trèfle")}
+    
+def test_i18n(request):
+    nb_chats = 2
+    couleur = "blanc"
+    chaine = _("J'ai un %(animal)s %(col)s.") % {'animal': 'chat', 'col': couleur}
+    infos = ungettext(
+        "… et selon mes informations, vous avez %(nb)s chat %(col)s !",
+        "… et selon mes informations, vous avez %(nb)s chats %(col)ss !",
+        nb_chats) % {'nb': nb_chats, 'col': couleur}
+
+    return render(request, 'test_i18n.html', locals())
