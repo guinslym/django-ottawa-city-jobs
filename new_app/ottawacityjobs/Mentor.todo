@@ -1,0 +1,4 @@
+Questions:
+ ☐ On a day to day practice do you use Templates to start any Django project? Because Django tutorial didn't use one. Is it a best practice?
+ ☐ For the class based view in (Emplois.View.py) is it better to use only class-based views or is it ok to alternate.
+ ☐ Views: if I will only use a module for only one Function (or view) is it better to import it directly whithin that function? If I put it outside will it affect (in time) each call that I made to the View

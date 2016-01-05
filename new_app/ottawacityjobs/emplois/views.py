@@ -15,14 +15,14 @@ class IndexView(generic.ListView):
        return Job.objects.filter(language='EN').order_by('-pub_date')
 
 class LatestView(generic.ListView):
-    template_name='emplois/latest.html'
+    template_name='emplois/index.html'
     context_object_name='latest_jobs_list'
 
     def get_queryset(self):
        return Job.objects.order_by('-pub_date')
 
 class ExpiringSoonView(generic.ListView):
-    template_name='emplois/expire.html'
+    template_name='emplois/index.html'
     context_object_name='latest_jobs_list'
 
     def get_queryset(self):
