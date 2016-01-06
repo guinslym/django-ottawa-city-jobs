@@ -17,4 +17,4 @@ urlpatterns = [
       #url(r'^(?P<lang>\w+)/$', generic.RedirectView.as_view(), name='lang_redirect'),
       url(r'^$', views.IndexView.as_view(), name='index'),
 
-        ]#blog_search_list_view
+        ]

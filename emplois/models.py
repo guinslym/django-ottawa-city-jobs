@@ -32,18 +32,17 @@ class Job(models.Model):
     joburl = models.URLField(max_length=250, blank=True, null=True)
     expirydate = models.DateField(auto_now=True, blank=True, null=True)
     salarymax = models.CharField(max_length=40, blank=True, null=True)
+    salarymin = models.CharField(max_length=40, blank=True, null=True)
+    salarytype = models.CharField(max_length=20, blank=True, null=True) 
     name = models.CharField(max_length=40, blank=True, null=True) 
     language = models.CharField(max_length=2, choices=LANGUAGE_CHOICE, default=ENGLISH) 
     position = models.CharField(max_length=150, blank=True, null=True)
     jobref = models.CharField(max_length=30, unique=True, blank=True, null=True)
     job_summary = models.TextField(blank=True, null=True)
     pub_date = models.DateTimeField(auto_now=True, blank=True, null=True)
-    timestamps = models.DateTimeField(auto_now_add=True, blank=True)
-    ''''
-    #slug = AutoSlugField(populate_from=lambda instance: instance.name,
-                         unique_with=['position', 'pub_date__month'],
-                         slugify=lambda value: value.replace(' ','-'))
-    '''
+    slug = AutoSlugField(populate_from='name',
+                         unique_with=['jobref','position', 'pub_date__month'])
+
 @python_2_unicode_compatible
 class Description(models.Model):
     '''
@@ -53,12 +52,10 @@ class Description(models.Model):
         return self.company_desc
 
     jobs = models.ForeignKey(Job, on_delete=models.CASCADE)
-    salarytype = models.CharField(max_length=250, blank=True, null=True)
     knowledge = models.TextField(blank=True, null=True)
     languagecert = models.TextField(blank=True, null=True)
     educationandexp = models.TextField(blank=True, null=True)
     company_desc = models.TextField(blank=True, null=True)
-    salarymin = models.CharField(max_length=40, blank=True, null=True)
     pub_date = models.DateTimeField(auto_now=True, blank=True, null=True)
 
 
