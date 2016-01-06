@@ -8,8 +8,8 @@ Todo:
 
 Priority today:
  ✔ Search form @done (16-01-04 19:04)
- ☐ Archive with pagination
- ☐ Add data (fixture)
+ ✔ Archive with pagination @done (16-01-06 00:39)
+ ✔ Add data (fixture) @done (16-01-06 00:39)
  ☐ Create a function to call for the fixtures
  ✔ field = models.DecimalField(max_digits=8, decimal_places=2) @done (16-01-05 18:02)
  ☐ Layout
