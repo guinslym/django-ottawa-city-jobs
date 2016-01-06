@@ -85,7 +85,7 @@ def blog_search(request):
     if 'searchKey' in request.GET:
         keyword = request.GET['searchKey']
         if not keyword :
-                return render(request,'emplois/index.html',{'error':True})
+                return redirect('/')
         else:
             latest_jobs_list = Job.objects.filter(position__icontains = keyword).order_by('-pub_date')
             if latest_jobs_list.count()==0 :
@@ -109,20 +109,12 @@ class SearchJobView(generic.ListView):
         else:
             return None
 
+   
 
 from django.utils.translation import ugettext as _
 from django.utils.translation import ungettext
 
 from django.utils.translation import pgettext
-
-verbe = pgettext("verbe 'avoir'", "as")
-valeur = pgettext("carte de jeu", "as")
-carte = _("%(suj)s %(ver)s : %(val)s %(col)s") % {
-    "suj": _("tu"), 
-    "ver": verbe,
-    "val": valeur, 
-    "col": _("de trèfle")}
-    
 def test_i18n(request):
     nb_chats = 2
     couleur = "blanc"

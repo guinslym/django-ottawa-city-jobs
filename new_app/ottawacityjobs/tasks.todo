@@ -8,11 +8,13 @@ Todo:
 
 Priority today:
  ✔ Search form @done (16-01-04 19:04)
- ☐ Language switcher
  ☐ Archive with pagination
+ ☐ Add data (fixture)
+ ☐ Create a function to call for the fixtures
  ✔ field = models.DecimalField(max_digits=8, decimal_places=2) @done (16-01-05 18:02)
  ☐ Layout
  ☐ Celery (Create file)
+ ☐ Language switcher
  ✔ Send email (not Agile) @done (16-01-04 19:07)
  ✔ Ajax @done (16-01-04 19:09)
  ✔ Django 1.9.1 @done (16-01-05 12:23)

@@ -133,6 +133,8 @@ USE_I18N = True
 
 USE_L10N = True
 
+USE_THOUSAND_SEPARATOR = True
+
 USE_TZ = True
 
 gettext = lambda x: x
@@ -154,3 +156,6 @@ STATIC_URL = '/static/'
 LOCALE_PATHS = ('locale', )
 
 GOOGLE_ANALYTICS_PROPERTY_ID = 'UA-1234567-8'
+
+
+

@@ -12,6 +12,8 @@ Upgrading:
  ☐ add app.templates
  ☐ runserver and look at it in the browser
  ☐ Load the json (fixture) into apps
+ ☐ mkdir project/fixtures
+ ☐ python manage.py loaddata fixtures/data.json
 
 
 
