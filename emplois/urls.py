@@ -10,6 +10,7 @@ app_name = 'emplois'
 urlpatterns = [
       url(r'^(?P<pk>[0-9]+)/$', views.DetailView.as_view(), name='detail'),
       url(r'^stats$', views.StatsView.as_view(), name='stats'),
+      url(r'^searchBlog/$', views.blog_search, name='blog_search'),
       url(r'^about$', views.AboutView.as_view(), name='about'),
       url(r'^expiring$', views.ExpiringSoonView.as_view(), name='expire'),
       url(r'^latest$', views.LatestView.as_view(), name='latest'),

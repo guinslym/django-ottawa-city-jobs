@@ -4,16 +4,28 @@
 
 	{% block content %}
 
-	<h1>Liste des Emplois</h1>
+	<h1>Job list</h1>
 
 	<div class="row">
-		Keyword: {{ keyword }}
+		<div class="col-lg-12">
+			
+		{% with total=latest_jobs_list.count %}
+			     
+			{% if keyword %}
+					<p><strong>{{ total }}</strong> jobs found for <strong>"{{ keyword }}"</strong></p>
+
+					{% else %}
+					<p><strong>{{ total }}</strong> jobs found.</p>
+			{% endif %}
+		{% endwith %}
+		</div>
 	</div>
 	
 	<div class="row text-right">
 		<ul>
-			<li><a href="{% url 'emplois:latest' %}">Latest job posting</a></li>
-			<li><a href="{% url 'emplois:expire' %}">Expiring soon</a></li>
+			<li><strong>Sort by:</strong></li>
+			<li><a href="{% url 'emplois:latest' %}">Posted 2 weeks ago</a></li>
+			<li><a href="{% url 'emplois:expire' %}">Will expired in 2 weeks from now</a></li>
 		</ul>	
 	</div>
 
@@ -27,7 +39,13 @@
 			{% endautoescape %}
 		</p>
 		<ul>
-			<li><strong>Salary: </strong>{{ emploi.salarymax | intcomma }}$</li>
+			<li><strong>Salary: </strong>
+				{% if ',' in emploi.salarymax %}
+			{{ emploi.salarymax | intcomma }}$ anually
+			{% else %}
+			{{ emploi.salarymax | floatformat:2 }}$ hourly
+			{% endif %}
+			</li>
 			<li><strong>Expiring date: </strong>{{ emploi.expirydate }}</li>
 			<li><strong>postdate: </strong> {{ emploi.pub_date| naturaltime }}</li>
 			<li><strong>Apply link: </strong> <a href="{{ emploi.joburl }}" target="_blank">Apply</a></li>
@@ -39,4 +57,3 @@
 	{% endfor %}
 
 	{% endblock %}
-		

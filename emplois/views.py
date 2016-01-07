@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.views import generic
 from django.utils import timezone
 from django.core.urlresolvers import reverse
+from datetime import datetime, timedelta
 
 from .models import Job, Description
 # Create your views here.
@@ -12,21 +13,25 @@ class IndexView(generic.ListView):
 
     def get_queryset(self):
        print(self.request.LANGUAGE_CODE)
-       return Job.objects.filter(language='EN').order_by('-pub_date')
+       return Job.objects.filter(language='EN', 
+        expirydate__gt=datetime.now())\
+            .order_by('expirydate')
 
 class LatestView(generic.ListView):
     template_name='emplois/index.html'
     context_object_name='latest_jobs_list'
 
     def get_queryset(self):
-       return Job.objects.order_by('-pub_date')
+       return Job.objects.filter(language='EN', 
+        pub_date__gte=datetime.now()-timedelta(days=14)).order_by('expirydate')
 
 class ExpiringSoonView(generic.ListView):
     template_name='emplois/index.html'
     context_object_name='latest_jobs_list'
 
     def get_queryset(self):
-       return Job.objects.order_by('-expirydate')
+       return Job.objects.filter(language='EN', 
+        expirydate__lte=datetime.now()+timedelta(days=14)).order_by('expirydate')
 
 class DetailView(generic.DetailView):
     model = Job
@@ -87,7 +92,7 @@ def blog_search(request):
         if not keyword :
                 return redirect('/')
         else:
-            latest_jobs_list = Job.objects.filter(position__icontains = keyword).order_by('-pub_date')
+            latest_jobs_list = Job.objects.filter(position__icontains = keyword,language__icontains='EN').order_by('-pub_date')
             if latest_jobs_list.count()==0 :
                 return render(request,'emplois/index.html',{'latest_jobs_list':latest_jobs_list,'error':True, 'keyword': keyword})
             else:
@@ -107,7 +112,7 @@ class SearchJobView(generic.ListView):
         if keyword:
             return Job.objects.filter(position__icontains = keyword).order_by('-pub_date')
         else:
-            return None
+            return redirect('/')
 
    
 

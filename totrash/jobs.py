@@ -33,6 +33,11 @@ for lang in [0,1]:
         pub_date = parse(job.get('POSTDATE', None))
         pub_date = str(pub_date).split(' ')[0]
         #calcul
+        if job.get('SALARYMAX', None):
+            if ',' in job.get('SALARYMAX', None):
+                salary = job.get('SALARYMAX', None)
+                salary = (salary.replace(',', ''))
+                #salary = int(salary)
         conteneur.append(
         {
             "fields": {
@@ -44,7 +49,7 @@ for lang in [0,1]:
                 "name": job.get('NAME', None),
                 "position": job.get('POSITION', None),
                 "pub_date": pub_date,
-                "salarymax": Decimal(job.get('SALARYMAX', None)),
+                "salarymax": salary,
                 "salarymin": job.get('SALARYMIN', None),
                 "salarytype": job.get('SALARYTYPE', None),
             },
