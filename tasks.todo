@@ -10,6 +10,8 @@ Priority today:
  ✔ If salary contains ',' than it's annually @done (16-01-06 19:36)
  ✔ Layout for Details views @done (16-01-06 20:51)
  ☐ Create a function to call for the fixtures (delete the last 2 job instances and call it)
+ ☐ 2 within two weeks ago (ago to remove)
+ ☐ Create a view
  ☐ Celery (Create file)
  ✔ Twitter @done (16-01-06 20:04)
  ☐ Deploy
