@@ -8,12 +8,12 @@ Todo:
 
 Priority today:
  ✔ If salary contains ',' than it's annually @done (16-01-06 19:36)
- ☐ Layout for Details views
+ ✔ Layout for Details views @done (16-01-06 20:51)
  ☐ Create a function to call for the fixtures (delete the last 2 job instances and call it)
  ☐ Celery (Create file)
  ✔ Twitter @done (16-01-06 20:04)
  ☐ Deploy
- ☐ Slug doen's work
+ ✔ Slug doen's work @done (16-01-06 20:51)
  ✔ Scroll to top https://markgoodyear.com/labs/scrollup/?theme=link @done (16-01-06 20:04)
 
 Frontend:
