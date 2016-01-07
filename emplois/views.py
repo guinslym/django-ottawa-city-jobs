@@ -33,6 +33,13 @@ class ExpiringSoonView(generic.ListView):
        return Job.objects.filter(language='EN', 
         expirydate__lte=datetime.now()+timedelta(days=14)).order_by('expirydate')
 
+class AllJobsView(generic.ListView):
+    template_name='emplois/index.html'
+    context_object_name='latest_jobs_list'
+
+    def get_queryset(self):
+       return Job.objects.filter(language='EN').order_by('expirydate')
+
 class DetailView(generic.DetailView):
     model = Job
     template_name = 'emplois/details.html'

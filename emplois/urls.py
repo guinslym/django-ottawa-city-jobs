@@ -12,6 +12,7 @@ urlpatterns = [
       url(r'^stats$', views.StatsView.as_view(), name='stats'),
       url(r'^searchBlog/$', views.blog_search, name='blog_search'),
       url(r'^about$', views.AboutView.as_view(), name='about'),
+      url(r'^all_jobs_posted$', views.AllJobsView.as_view(), name='all_jobs_posted'),
       url(r'^expiring$', views.ExpiringSoonView.as_view(), name='expire'),
       url(r'^latest$', views.LatestView.as_view(), name='latest'),
       url(r'^i18n/', include('django.conf.urls.i18n')),
