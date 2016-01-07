@@ -16,5 +16,16 @@ Upgrading:
  ☐ python manage.py loaddata fixtures/data.json
 
 
+Shell:
+ ☐ ./manage.py shell_plus  --bpython
+ ☐ import django
+ ☐ django.setup()
+ ☐ from emplois.models import Job, Description
+ ☐ Job.objects.values('jobref') or Job.objects.values_list('jobref')
+   ☐ http://stackoverflow.com/a/10705100/2581266
+   ☐ exemple:
+     ☐ a = Job.objects.values('jobref') [list of dict]
+     ☐ {'jobref': '2015-EX-EN-51084750'} in a  => True
+ ☐ http://stackoverflow.com/a/10705100/2581266
 
 Extra

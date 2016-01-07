@@ -7,3 +7,5 @@ Questions:
  ☐ Sometimes the documentation are unclear : how to use to access the url https://github.com/thoas/django-metasettings
  ☐ How to make a Based-Class view for the search form
  ☐ Where can I put the helpers like for updating the database with new Job posting
+ ☐ In the template (Ex: details.html) How can I remove the <br> tags
+ ☐ Job search do I need a crossref?

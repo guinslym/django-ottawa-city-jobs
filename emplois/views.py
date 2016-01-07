@@ -93,7 +93,7 @@ class SetLanguageView(generic.RedirectView):
 #https://stackoverflow.com/questions/32258010/django-i18n-particular-behavior-setup
 
 #https://github.com/roadrui/ruiblog/blob/master/ruiblog/views.py
-def blog_search(request):
+def job_search(request):
     if 'searchKey' in request.GET:
         keyword = request.GET['searchKey']
         if not keyword :
@@ -106,6 +106,9 @@ def blog_search(request):
                 return render(request,'emplois/index.html',{'latest_jobs_list':latest_jobs_list,'error':False, 'keyword': keyword})
     return redirect('/')
 
+##########outside##########
+def emplois(request):
+    pass
 
 
 #Error on this template
