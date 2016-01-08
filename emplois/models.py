@@ -2,7 +2,7 @@ from django.db import models
 from django.utils.encoding import python_2_unicode_compatible
 
 #third party
-from autoslug import AutoSlugField
+from uuslug import slugify
 
 import datetime
 from django.utils import timezone
@@ -40,8 +40,11 @@ class Job(models.Model):
     jobref = models.CharField(max_length=30, unique=True, blank=True, null=True)
     job_summary = models.TextField(blank=True, null=True)
     pub_date = models.DateTimeField(auto_now=True, blank=True, null=True)
-    slug = AutoSlugField(populate_from='name',
-                         unique_with=['jobref','position', 'pub_date__month'])
+    slug = models.CharField(max_length=200)
+
+    def save(self, *args, **kwargs):
+        self.slug = uuslug(self.jobref, instance=self)
+        super(Job, self).save(*args, **kwargs)
 
 @python_2_unicode_compatible
 class Description(models.Model):
