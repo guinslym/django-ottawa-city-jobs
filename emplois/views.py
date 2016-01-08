@@ -1,10 +1,13 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.views import generic
 from django.utils import timezone
+from django.core import serializers
 from django.core.urlresolvers import reverse
+from django.http import HttpResponse
 from datetime import datetime, timedelta
 
 from .models import Job, Description
+from .utils import job_object_list
 # Create your views here.
 
 class IndexView(generic.ListView):
@@ -12,7 +15,8 @@ class IndexView(generic.ListView):
     context_object_name='latest_jobs_list'
 
     def get_queryset(self):
-       print(self.request.LANGUAGE_CODE)
+       #print(self.request.LANGUAGE_CODE) #'en-us
+       #job_object_list()
        return Job.objects.filter(language='EN', 
         expirydate__gt=datetime.now())\
             .order_by('expirydate')
@@ -52,7 +56,6 @@ class StatsView(generic.TemplateView):
         """
 
         """
-        import dateutil.parser
         import time
         from django.db.models import Count
         #
@@ -66,6 +69,7 @@ class StatsView(generic.TemplateView):
             unix_time = time.mktime(job['pub_date'].timetuple())
             content.update({unix_time:job['dcount']})
         context['stats'] = content
+
         return context
 
 
@@ -108,7 +112,9 @@ def job_search(request):
 
 ##########outside##########
 def emplois(request):
-    pass
+    foos = Job.objects.all()
+    data = serializers.serialize('json', foos)
+    return HttpResponse(data, mimetype='application/json')
 
 
 #Error on this template

@@ -56,7 +56,7 @@
           <ul class="nav navbar-nav">
             <li>
               <a href="#"> 
-              <form action="/searchJob" method="get">
+              <form action="/emplois/searchJobs" method="get">
               {% csrf_token %}
                   <input type="text" name = "searchKey"
                         placeholder="Search by Job title" />
@@ -128,7 +128,6 @@
 <span id="scrollUp"></span>
 {% load staticfiles %}
 <script type="text/javascript" src="{% static 'emplois/js/jquery.scrollUp.js' %}"></script>
-    hello
 
 <script type="text/javascript">
   $(function () {

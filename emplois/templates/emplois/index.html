@@ -24,7 +24,7 @@
 	<div class="row text-right">
 		<ul>
 			<li><strong>Sort by:</strong></li>
-			<li><a href="{% url 'emplois:latest' %}">Posted within 2 weeks ago</a></li>
+			<li><a href="{% url 'emplois:latest' %}">Posted within the last 2 weeks</a></li>
 			<li><a href="{% url 'emplois:expire' %}">Will expired in 2 weeks from now</a></li>
 			<li><a href="{% url 'emplois:all_jobs_posted' %}">All jobs</a></li>
 		</ul>	
@@ -48,7 +48,7 @@
 			{% endif %}
 			</li>
 			<li><strong>Expiring date: </strong>{{ emploi.expirydate }}</li>
-			<li><strong>postdate: </strong> {{ emploi.pub_date| naturaltime }}</li>
+			<li><strong>postdate: </strong> {{ emploi.pub_date| naturalday }}</li>
 			<li><strong>Apply link: </strong> <a href="{{ emploi.joburl }}" target="_blank">Apply</a></li>
 			<!--
 			<li><strong>email it to me: </strong> <a href="#">button</a></li>

@@ -25,7 +25,7 @@
 					{% endif %}
 					</li>
 					<li><strong>Expiring date: </strong>{{ job.expirydate }}</li>
-					<li><strong>postdate: </strong> {{ job.pub_date| naturaltime }}</li>
+					<li><strong>postdate: </strong> {{ job.pub_date| naturalday }}</li>
 					<li><strong>Apply link: </strong> <a href="{{ job.joburl }}" target="_blank">Apply</a></li>
 					<!--
 					<li><strong>email it to me: </strong> <a href="#">button</a></li>

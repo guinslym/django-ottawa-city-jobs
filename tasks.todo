@@ -7,16 +7,10 @@ Todo:
 
 
 Priority today:
- ✔ If salary contains ',' than it's annually @done (16-01-06 19:36)
- ✔ Layout for Details views @done (16-01-06 20:51)
- ☐ Create a function to call for the fixtures (delete the last 2 job instances and call it)
- ☐ 2 within two weeks ago (ago to remove)
- ☐ Create a view
  ☐ Celery (Create file)
- ✔ Twitter @done (16-01-06 20:04)
+ ☐ Slugify
+ ☐ Tweets
  ☐ Deploy
- ✔ Slug doen's work @done (16-01-06 20:51)
- ✔ Scroll to top https://markgoodyear.com/labs/scrollup/?theme=link @done (16-01-06 20:04)
 
 Frontend:
   ☐ Language (i18n) in session (youtube)
@@ -90,6 +84,14 @@ Frontend:
 
 ＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿
 Archive:
+ ✔ Create a view @done (16-01-07 20:22) @project(Priority today)
+ ✔ 2 within two weeks ago (ago to remove) @done (16-01-07 20:22) @project(Priority today)
+ ✔ Create a function to call for the fixtures (delete the last 2 job instances and call it) @done (16-01-07 20:20) @project(Priority today)
+ ✔ Slug doen's work @done (16-01-06 20:51) @project(Priority today)
+ ✔ Layout for Details views @done (16-01-06 20:51) @project(Priority today)
+ ✔ Twitter @done (16-01-06 20:04) @project(Priority today)
+ ✔ Scroll to top https://markgoodyear.com/labs/scrollup/?theme=link @done (16-01-06 20:04) @project(Priority today)
+ ✔ If salary contains ',' than it's annually @done (16-01-06 19:36) @project(Priority today)
  ✔ Index put only those that is not expired @done (16-01-06 19:31) @project(Priority today)
  ✔ Search form is not working @done (16-01-06 18:50) @project(Priority today)
  ✔ Remove French @done (16-01-06 18:25) @project(Priority today)

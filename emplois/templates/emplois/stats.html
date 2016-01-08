@@ -14,6 +14,16 @@
 
 	<h1>Stats page</h1>
 
+<button id="example-c-PreviousDomain-selector" style="margin-bottom: 10px;" class="btn btn-info"> 
+	<i class="icon icon-chevron-left"></i>
+</button>
+
+<button id="example-c-NextDomain-selector" style="margin-bottom: 10px;" class="btn btn-info"> 
+	<i class="icon icon-chevron-right"></i>
+</button>
+
+	</button>
+
 <div id="example-d"></div>
 <div id="onClick-placeholder">
     <p>&nbsp;</p>
@@ -26,14 +36,16 @@
 var cal = new CalHeatMap();
 cal.init({
 	itemSelector: "#example-d",
-	domain: "year",
-	subDomain: "day",
-    itemName: ["job", "jobs"],
+	domain: "month",
+	//subDomain: "month",
+  itemName: ["job", "jobs"],
 	data: {{ stats }},
-	start: new Date(2015, 0),
+	start: new Date(2015, 3),
 	cellSize: 10,
-	range: 1,
-	legend: [20, 40, 60, 80],
+	range: 15,
+	legend: [2, 4, 6, 8],
+	previousSelector: "#example-c-PreviousDomain-selector",
+	nextSelector: "#example-c-NextDomain-selector",
     onClick: function(date, nb) {
         //Add AJAX call for all the jobs for that date
         //Add cookie or variable for the language i18n
@@ -41,6 +53,7 @@ cal.init({
             date + "</b> <br/>with <b>" +
             (nb === null ? "unknown" : nb) + "</b> jobs"
         );
+        console.log(this);
     }
 });
 </script>
