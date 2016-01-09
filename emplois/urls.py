@@ -4,13 +4,14 @@ from django.conf.urls import url, include
 
 from . import views
 from django.views import generic
+from django.views.decorators.cache import cache_page
 __author__ = 'Guinsly'
 
 app_name = 'emplois'
 urlpatterns = [
       url(r'^(?P<pk>[0-9]+)/$', views.DetailView.as_view(), name='detail'),
       url(r'^stats$', views.StatsView.as_view(), name='stats'),
-      url(r'^searchJobs/$', views.job_search, name='job_search'),
+      url(r'^searchJobs/$', cache_page(60 * 15)(views.job_search), name='job_search'),
       url(r'^emplois/$', views.emplois, name='emplois'),
       url(r'^about$', views.AboutView.as_view(), name='about'),
       url(r'^all_jobs_posted$', views.AllJobsView.as_view(), name='all_jobs_posted'),
@@ -21,3 +22,4 @@ urlpatterns = [
       url(r'^$', views.IndexView.as_view(), name='index'),
 
         ]
+ 

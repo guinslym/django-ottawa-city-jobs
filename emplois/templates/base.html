@@ -102,8 +102,50 @@
 
 
 {% load i18n %}
-{#% trans "Bienvenue sur mon site" %#}
-  
+{% trans "Bienvenue sur mon site" %}
+
+{% get_current_language as LANGUAGE_CODE %}
+<!-- Current language: {{ LANGUAGE_CODE }} -->
+<p>Current language {{ LANGUAGE_CODE}}</p>
+
+<!--
+{% language 'en' %}
+    {% get_current_language as LANGUAGE_CODE %}
+    <p>{% trans "Bienvenue sur mon site" %}</p>
+{% endlanguage %}
+
+{% language 'fr' %}
+    {% get_current_language as LANGUAGE_CODE %}
+    <p>{% trans "Bienvenue sur mon site" %}</p>
+{% endlanguage %}
+-->
+
+
+<br/>
+
+<form action="/i18n/setlang/" method="post" class="auto_submit_item">
+{% csrf_token %}
+<select name="language">
+    <option value="fr">Language</option>
+    {% for lang in LANGUAGES %}
+    <option value="{{ lang.0 }}">{{ lang.1 }}</option>
+    {% endfor %}
+</select>
+<!--
+<input type="submit" value="Go" />
+-->
+</form>
+
+<script type="text/javascript">
+  $(function() {
+   $(".auto_submit_item").change(function() {
+     $("form").submit();
+   });
+ });
+</script>
+<br>
+
+<br/>
   {% block content %}
   {% endblock %}
 

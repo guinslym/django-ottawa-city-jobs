@@ -2,3 +2,5 @@
 *.mp3
 *.sqlite3
 history.txt
+hello_cache/
+cache_dir/

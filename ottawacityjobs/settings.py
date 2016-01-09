@@ -49,13 +49,14 @@ INSTALLED_APPS = [
 MIDDLEWARE_CLASSES = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.cache.CacheMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'django.middleware.locale.LocaleMiddleware',
 ]
 
 ROOT_URLCONF = 'ottawacityjobs.urls'
@@ -77,6 +78,20 @@ TEMPLATES = [
         },
     },
 ]
+
+#CACHE_BACKEND = 'db://hello.sqlite3'
+#CACHE_BACKEND = os.path.join(BASE_DIR, 'hello.txt')
+
+CACHES = {
+    'default': {
+        'BACKEND': 'django.core.cache.backends.filebased.FileBasedCache',
+        'LOCATION': os.path.join(BASE_DIR, 'hello_cache'),
+        'TIMEOUT': 60,
+        'OPTIONS': {
+            'MAX_ENTRIES': 1000
+        }
+    }
+}
 
 WSGI_APPLICATION = 'ottawacityjobs.wsgi.application'
 
@@ -126,7 +141,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/1.9/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'fr-CA'
 
 TIME_ZONE = 'America/Montreal'
 
@@ -141,11 +156,11 @@ USE_TZ = True
 gettext = lambda x: x
 
 LANGUAGES = (
-   ('FR', gettext('French')),
-   ('EN', gettext('English')),
+   ('fr', gettext('French')),
+   ('en', gettext('English')),
 )
 
-DEFAULT_LANGUAGE = 1
+DEFAULT_LANGUAGE = 0    
 
 #FIXTURE_DIRS = ['fixtures']
 

@@ -6,6 +6,8 @@ from django.core.urlresolvers import reverse
 from django.http import HttpResponse
 from datetime import datetime, timedelta
 
+from django.views.decorators.cache import cache_page
+
 from .models import Job, Description
 from .utils import job_object_list
 # Create your views here.
@@ -97,6 +99,7 @@ class SetLanguageView(generic.RedirectView):
 #https://stackoverflow.com/questions/32258010/django-i18n-particular-behavior-setup
 
 #https://github.com/roadrui/ruiblog/blob/master/ruiblog/views.py
+@cache_page(60 * 1, key_prefix="site1"  )
 def job_search(request):
     if 'searchKey' in request.GET:
         keyword = request.GET['searchKey']

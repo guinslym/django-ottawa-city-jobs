@@ -28,4 +28,9 @@ Shell:
      ☐ {'jobref': '2015-EX-EN-51084750'} in a  => True
  ☐ http://stackoverflow.com/a/10705100/2581266
 
-Extra
+Translation:
+ ☐ cd application
+ ☐ setting.py make sure I have the proper LANGUAGE_CODE
+ ☐ django-admin.py makemessages
+ ☐ cd your locale/fr/.. translate the sentences
+ ☐ django-admin.py compilemessages

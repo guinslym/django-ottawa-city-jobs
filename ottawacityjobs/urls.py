@@ -21,6 +21,8 @@ urlpatterns = [
     url(r'^emplois/', include('emplois.urls', namespace="emplois")),
     url(r'^ottawacityjobs/', include('emplois.urls')),
     url(r'^admin/', admin.site.urls),
+    # i18n
+    url(r'^i18n/', include('django.conf.urls.i18n')),
     #url (r'^settings', include('metasettings.urls')),
     #url(r'^searchBlog/$','emplois.views.SearchJobView',name="blog_search"),
     url(r'^', include('emplois.urls')),

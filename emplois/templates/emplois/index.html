@@ -30,6 +30,9 @@
 		</ul>	
 	</div>
 
+{% load cache %}
+{% cache 500 sidebar %}
+
 	{% for emploi in latest_jobs_list %}
 
 		<h3><a href="{% url 'emplois:detail' emploi.id %}">{{ emploi.position }}.</a></h3>
@@ -56,5 +59,6 @@
 		</ul>
 
 	{% endfor %}
+{% endcache %}
 
 	{% endblock %}

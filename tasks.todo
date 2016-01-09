@@ -7,10 +7,11 @@ Todo:
 
 
 Priority today:
- ☐ Celery (Create file)
+ ☐ Celery (Create file)--Cache
  ☐ Slugify
  ☐ Tweets
  ☐ Deploy
+ ☐ Kizomba Ottawa
 
 Frontend:
   ☐ Language (i18n) in session (youtube)
