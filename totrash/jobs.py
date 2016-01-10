@@ -76,8 +76,12 @@ for lang in [0,1]:
 
 #print(conteneur)
 
-with open('uottawa_emplois_bilingual.json', 'w') as f:
-  json.dump(conteneur, f, sort_keys = True, indent = 4, ensure_ascii=False, cls=DecimalEncoder)
+def hello():
+    import random, datetime
+    number = str(random.randint(2,2000))+'.json'
+    conteneur = {'hello', datetime.datetime.time().now()}
+    with open(number, 'w') as f:
+        json.dump(conteneur, f, sort_keys = True, indent = 4, ensure_ascii=False, cls=DecimalEncoder)
 
 print('json file created: uottawa_emplois_bilingual.json')
 

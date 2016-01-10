@@ -14,3 +14,4 @@ Questions:
  ☐ Save vs pre_save (Signal)
  ☐ https://github.com/LucasMagnum/django-template  Grunt.js  
  ☐ how to get a link to change the language
+ ☐ Cache Daily how to in a view function (https://django-q.readthedocs.org/en/latest/examples.html)

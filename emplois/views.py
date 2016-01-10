@@ -6,10 +6,14 @@ from django.core.urlresolvers import reverse
 from django.http import HttpResponse
 from datetime import datetime, timedelta
 
+#Task queues
+from django_q.tasks import async, schedule, result
+from django_q.models import Schedule
+
 from django.views.decorators.cache import cache_page
 
 from .models import Job, Description
-from .utils import job_object_list
+from .utils import job_object_list, hello
 # Create your views here.
 
 class IndexView(generic.ListView):
@@ -18,6 +22,7 @@ class IndexView(generic.ListView):
 
     def get_queryset(self):
        #print(self.request.LANGUAGE_CODE) #'en-us
+       tid = async('subprocess.run', ['cp', 'setup.py', 'setup.py.bak'])
        #job_object_list()
        return Job.objects.filter(language='EN', 
         expirydate__gt=datetime.now())\
@@ -107,10 +112,7 @@ def job_search(request):
                 return redirect('/')
         else:
             latest_jobs_list = Job.objects.filter(position__icontains = keyword,language__icontains='EN').order_by('-pub_date')
-            if latest_jobs_list.count()==0 :
-                return render(request,'emplois/index.html',{'latest_jobs_list':latest_jobs_list,'error':True, 'keyword': keyword})
-            else:
-                return render(request,'emplois/index.html',{'latest_jobs_list':latest_jobs_list,'error':False, 'keyword': keyword})
+            return render(request,'emplois/index.html',{'latest_jobs_list':latest_jobs_list,'error':False, 'keyword': keyword})
     return redirect('/')
 
 ##########outside##########
