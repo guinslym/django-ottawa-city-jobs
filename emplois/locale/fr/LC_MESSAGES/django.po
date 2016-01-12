@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-01-11 23:42-0500\n"
+"POT-Creation-Date: 2016-01-11 23:55-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,14 +17,44 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: emplois/templates/base.html:105 emplois/templates/base.html.py:114
-#: emplois/templates/base.html:119
+#: emplois/templates/base.html:49
+msgid "Ottawa City Jobs"
+msgstr "Emploi à la ville d'Ottawa"
+
+#: emplois/templates/base.html:63
+msgid "Search by Job title"
+msgstr "Rechercher ce titre"
+
+#: emplois/templates/base.html:64
+msgid "Search"
+msgstr "Rechercher"
+
+#: emplois/templates/base.html:70
+msgid "Stats"
+msgstr "Statistiques"
+
+#: emplois/templates/base.html:74
+msgid "About"
+msgstr "À Propos"
+
+#: emplois/templates/base.html:106 emplois/templates/base.html.py:115
+#: emplois/templates/base.html:120
 msgid "Bienvenue sur mon site"
 msgstr "Bienvenue sur mon site (fr)"
 
 #: emplois/templates/emplois/index.html:8
 msgid "Job list"
 msgstr "Liste d'emploi"
+
+#: emplois/templates/emplois/index.html:16
+msgid "jobs found for"
+msgstr "emplois trouvés pour"
+
+#: emplois/templates/emplois/index.html:19
+#, fuzzy
+#| msgid "jobs found for"
+msgid "jobs found"
+msgstr "emplois trouvés pour"
 
 #: emplois/templates/emplois/index.html:27
 msgid "Sort by"
@@ -48,11 +78,15 @@ msgstr "Salaire"
 
 #: emplois/templates/emplois/index.html:49
 msgid "anually"
-msgstr "annuelle"
+msgstr "par an"
 
 #: emplois/templates/emplois/index.html:51
 msgid "hourly"
 msgstr "par heure"
+
+#: emplois/templates/emplois/index.html:54
+msgid "Expiring date"
+msgstr "Date d'expiration"
 
 #: emplois/templates/emplois/index.html:55
 msgid "postdate"

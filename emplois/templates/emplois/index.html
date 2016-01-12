@@ -13,10 +13,10 @@
 		{% with total=latest_jobs_list.count %}
 			     
 			{% if keyword %}
-					<p><strong>{{ total }}</strong> jobs found for <strong>"{{ keyword }}"</strong></p>
+					<p><strong>{{ total }}</strong> {% trans "jobs found for" %} <strong>"{{ keyword }}"</strong></p>
 
 					{% else %}
-					<p><strong>{{ total }}</strong> jobs found.</p>
+					<p><strong>{{ total }}</strong> {% trans "jobs found" %}.</p>
 			{% endif %}
 		{% endwith %}
 		</div>
@@ -51,7 +51,7 @@
 			{{ emploi.salarymax | floatformat:2 }}$ {% trans "hourly" %}
 			{% endif %}
 			</li>
-			<li><strong>{% trans "Expiring date"} %: </strong>{{ emploi.expirydate }}</li>
+			<li><strong>{% trans "Expiring date"%} : </strong>{{ emploi.expirydate }}</li>
 			<li><strong>{% trans "postdate" %}: </strong> {{ emploi.pub_date| naturalday }}</li>
 			<li><strong>{% trans "Apply link" %}: </strong> <a href="{{ emploi.joburl }}" target="_blank">{% trans "Apply"%}</a></li>
 			<!--
