@@ -1,10 +1,11 @@
 {% extends "base.html" %}
+{% load i18n %}
 {% load humanize %}
 
 
 	{% block content %}
 
-	<h1>Job list</h1>
+	<h1>{% trans "Job list"%}</h1>
 
 	<div class="row">
 		<div class="col-lg-12">
@@ -23,15 +24,15 @@
 	
 	<div class="row text-right">
 		<ul>
-			<li><strong>Sort by:</strong></li>
-			<li><a href="{% url 'emplois:latest' %}">Posted within the last 2 weeks</a></li>
-			<li><a href="{% url 'emplois:expire' %}">Will expired in 2 weeks from now</a></li>
-			<li><a href="{% url 'emplois:all_jobs_posted' %}">All jobs</a></li>
+			<li><strong>{% trans "Sort by"%}:</strong></li>
+			<li><a href="{% url 'emplois:latest' %}">{% trans "Posted within the last 2 weeks"%}</a></li>
+			<li><a href="{% url 'emplois:expire' %}">{% trans "Will expired in 2 weeks from now" %}</a></li>
+			<li><a href="{% url 'emplois:all_jobs_posted' %}">{% trans "All jobs" %}</a></li>
 		</ul>	
 	</div>
 
-{% load cache %}
-{% cache 500 sidebar %}
+{#% load cache %#}
+{#% cache 500 sidebar %#}
 
 	{% for emploi in latest_jobs_list %}
 
@@ -43,22 +44,22 @@
 			{% endautoescape %}
 		</p>
 		<ul>
-			<li><strong>Salary: </strong>
+			<li><strong>{% trans "Salary" %}: </strong>
 				{% if ',' in emploi.salarymax %}
-			{{ emploi.salarymax | intcomma }}$ anually
+			{{ emploi.salarymax | intcomma }}$ {% trans "anually" %}
 			{% else %}
-			{{ emploi.salarymax | floatformat:2 }}$ hourly
+			{{ emploi.salarymax | floatformat:2 }}$ {% trans "hourly" %}
 			{% endif %}
 			</li>
-			<li><strong>Expiring date: </strong>{{ emploi.expirydate }}</li>
-			<li><strong>postdate: </strong> {{ emploi.pub_date| naturalday }}</li>
-			<li><strong>Apply link: </strong> <a href="{{ emploi.joburl }}" target="_blank">Apply</a></li>
+			<li><strong>{% trans "Expiring date"} %: </strong>{{ emploi.expirydate }}</li>
+			<li><strong>{% trans "postdate" %}: </strong> {{ emploi.pub_date| naturalday }}</li>
+			<li><strong>{% trans "Apply link" %}: </strong> <a href="{{ emploi.joburl }}" target="_blank">{% trans "Apply"%}</a></li>
 			<!--
 			<li><strong>email it to me: </strong> <a href="#">button</a></li>
 			-->
 		</ul>
 
 	{% endfor %}
-{% endcache %}
+{#% endcache %#}
 
 	{% endblock %}

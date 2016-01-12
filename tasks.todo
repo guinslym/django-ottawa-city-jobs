@@ -8,8 +8,9 @@ Todo:
 
 Priority today:
  ☐ Celery (Create file)--Cache
- ☐ Slugify
- ☐ Tweets
+ ☐ Job count doesn't work
+ ✔ Slugify @done (16-01-09 21:07)
+ ☐ Tweets (view... + view for Job populate)
  ☐ Deploy
  ☐ Kizomba Ottawa
 

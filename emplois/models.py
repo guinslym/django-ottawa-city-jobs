@@ -3,6 +3,7 @@ from django.utils.encoding import python_2_unicode_compatible
 
 #third party
 from uuslug import slugify
+from uuslug import uuslug
 
 import datetime
 from django.utils import timezone
@@ -39,7 +40,7 @@ class Job(models.Model):
     position = models.CharField(max_length=150, blank=True, null=True)
     jobref = models.CharField(max_length=30, unique=True, blank=True, null=True)
     job_summary = models.TextField(blank=True, null=True)
-    pub_date = models.DateTimeField(auto_now=True, blank=True, null=True)
+    pub_date = models.DateTimeField(auto_now=False, blank=True, null=True)
     slug = models.CharField(max_length=200)
 
     def save(self, *args, **kwargs):
