@@ -11,8 +11,11 @@ from decimal import Decimal
 
 from .models import Job, Description
 
-def hello():
-    print("hello\n\n\n\n")
+def language_set(language):
+    if "-" in language:
+        return (language.split('-')[1]).upper()
+    else:
+        return language.upper()
 
 def get_data():
     '''
