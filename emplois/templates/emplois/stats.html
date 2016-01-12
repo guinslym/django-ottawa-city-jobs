@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load i18n %}
 {% load humanize %}
 
 {% load staticfiles %}
@@ -12,7 +13,7 @@
 	<link rel="stylesheet" href="{% static "emplois/css/cal-heatmap.css" %}" rel="stylesheet" />
 <script type="text/javascript" src="{% static "emplois/js/cal-heatmap.min.js" %}"></script>
 
-	<h1>Stats page</h1>
+	<h1>{% trans "stats" %}</h1>
 
 <button id="example-c-PreviousDomain-selector" style="margin-bottom: 10px;" class="btn btn-info"> 
 	<i class="icon icon-chevron-left"></i>
@@ -29,6 +30,11 @@
     <p>&nbsp;</p>
     <p>&nbsp;</p>
 </div>
+
+{% get_current_language as LANGUAGE_CODE %}
+<script type="text/javascript"> 
+   var lang = "{{ LANGUAGE_CODE}}"
+</script>
 <script type="text/javascript">
 
 
@@ -43,17 +49,37 @@ cal.init({
 	start: new Date(2015, 3),
 	cellSize: 10,
 	range: 15,
-	legend: [2, 4, 6, 8],
+	legend: [1, 2, 4, 6],
 	previousSelector: "#example-c-PreviousDomain-selector",
 	nextSelector: "#example-c-NextDomain-selector",
     onClick: function(date, nb) {
+    	console.log(date);
         //Add AJAX call for all the jobs for that date
         //Add cookie or variable for the language i18n
+        /*
         $("#onClick-placeholder").html("You just clicked <br/>on <b>" +
             date + "</b> <br/>with <b>" +
             (nb === null ? "unknown" : nb) + "</b> jobs"
         );
-        console.log(this);
+*/
+var jqxhr = $.ajax({
+  method: "GET",
+  url: "stats_emplois",
+  data: { mois: 12, annee: 2015, jour:23, language: lang }
+})
+  .done(function(data) {
+    console.log( data );
+    //mettre les données
+    //foreach
+  })
+  .fail(function() {
+    console.log( "error" );
+    //print error
+  })
+  .always(function() {
+    console.log( "complete" );
+  });
+
     }
 });
 </script>

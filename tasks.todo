@@ -8,11 +8,17 @@ Todo:
 
 Priority today:
  ☐ Celery (Create file)--Cache
- ☐ Job count doesn't work
+ ☐ Job count doesn't work (traduction) + Stats
+ ☐ Pagination
+ ☐ Deploy
+ ☐ Assets directory??? (look in django tutorial)
+ ✔ https://stackoverflow.com/questions/1622793/django-cookies-how-can-i-set-them @done (16-01-12 10:16)
+ ☐ set language code in cookie
  ✔ Slugify @done (16-01-09 21:07)
  ☐ Tweets (view... + view for Job populate)
- ☐ Deploy
  ☐ Kizomba Ottawa
+
+
 
 Frontend:
   ☐ Language (i18n) in session (youtube)

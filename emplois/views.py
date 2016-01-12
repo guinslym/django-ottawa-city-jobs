@@ -107,9 +107,15 @@ def job_search(request):
 
 ##########outside##########
 def emplois(request):
-    foos = Job.objects.all()
+    import datetime
+    foos = Job.objects.filter(
+        pub_date__year=request.GET.get('annee'),
+        pub_date__month=request.GET.get('mois'),
+        pub_date__day=request.GET.get('jour'),
+        language=language_set(request.LANGUAGE_CODE)
+        )
     data = serializers.serialize('json', foos)
-    return HttpResponse(data, mimetype='application/json')
+    return HttpResponse(data, content_type='application/json')
 
 
 #Error on this template
