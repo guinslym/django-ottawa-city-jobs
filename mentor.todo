@@ -15,6 +15,9 @@ Questions:
  ☐ https://github.com/LucasMagnum/django-template  Grunt.js  
  ☐ how to get a link to change the language
  ☐ Cache Daily how to in a view function (https://django-q.readthedocs.org/en/latest/examples.html)
+ ☐ job_search couldn't use pagination with template 'index.html'
+ ☐ Couldn't use 'a' as paginator request
+ ☐ how to keep my view DRY with pagination
 
 
 

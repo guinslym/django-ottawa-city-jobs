@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'debug_toolbar',
     'django_q',
     #'metasettings',
+    'bootstrap_pagination',
     'uuslug',
     'emplois',
 ]

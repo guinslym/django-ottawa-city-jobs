@@ -5,7 +5,11 @@ from django.core import serializers
 from django.core.urlresolvers import reverse
 from django.http import HttpResponse
 from datetime import datetime, timedelta
-from django.conf import settings    
+from django.conf import settings 
+#pagination   
+from django.core.paginator import Paginator
+from django.core.paginator import EmptyPage
+from django.core.paginator import PageNotAnInteger
 
 #Task queues
 from django_q.tasks import async, schedule, result
@@ -20,6 +24,7 @@ from .utils import job_object_list, language_set
 class IndexView(generic.ListView):
     template_name='emplois/index.html'
     context_object_name='latest_jobs_list'
+    paginate_by = 10
     
 
     def get_queryset(self):
@@ -32,8 +37,29 @@ class IndexView(generic.ListView):
         expirydate__gt=datetime.now())\
             .order_by('expirydate')
 
+    def get_context_data(self, **kwargs):
+        context = super(IndexView, self).get_context_data(**kwargs) 
+        language = language_set(self.request.LANGUAGE_CODE)
+        latest_jobs_list = Job.objects.filter(language=language, 
+                            expirydate__gt=datetime.now())\
+                        .order_by('expirydate')
+        paginator = Paginator(latest_jobs_list, self.paginate_by)
+
+        page = self.request.GET.get('page')
+
+        try:
+            latest_jobs_list = paginator.page(page)
+        except PageNotAnInteger:
+            latest_jobs_list = paginator.page(1)
+        except EmptyPage:
+            latest_jobs_list = paginator.page(paginator.num_pages)
+
+        context['latest_jobs_list'] = latest_jobs_list
+        return context
+
 class LatestView(generic.ListView):
     template_name='emplois/index.html'
+    paginate_by = 10 
     context_object_name='latest_jobs_list'
 
     def get_queryset(self):
@@ -41,8 +67,11 @@ class LatestView(generic.ListView):
        return Job.objects.filter(language=language, 
         pub_date__gte=datetime.now()-timedelta(days=14)).order_by('expirydate')
 
+
+
 class ExpiringSoonView(generic.ListView):
     template_name='emplois/index.html'
+    paginate_by = 10 
     context_object_name='latest_jobs_list'
 
     def get_queryset(self):
@@ -52,6 +81,7 @@ class ExpiringSoonView(generic.ListView):
 
 class AllJobsView(generic.ListView):
     template_name='emplois/index.html'
+    paginate_by = 10 
     context_object_name='latest_jobs_list'
 
     def get_queryset(self):
@@ -60,12 +90,14 @@ class AllJobsView(generic.ListView):
 
 class DetailView(generic.DetailView):
     model = Job
+    paginate_by = 10 
     template_name = 'emplois/details.html'
     context_object_name='job'
 
 class StatsView(generic.TemplateView):
     template_name='emplois/stats.html'
     #context_object_name='latest_jobs_list'
+    paginate_by = 10 
     def get_context_data(self, **kwargs):
         """
 
@@ -90,6 +122,7 @@ class StatsView(generic.TemplateView):
 
 class AboutView(generic.TemplateView):
     template_name='emplois/about.html'
+    paginate_by = 10 
     #context_object_name='latest_jobs_list'
 
 
@@ -101,8 +134,19 @@ def job_search(request):
         if not keyword :
                 return redirect('/')
         else:
-            latest_jobs_list = Job.objects.filter(position__icontains = keyword,language__icontains='EN').order_by('-pub_date')
-            return render(request,'emplois/index.html',{'latest_jobs_list':latest_jobs_list,'error':False, 'keyword': keyword})
+            lang = language_set(request.LANGUAGE_CODE)
+            latest_jobs_list = Job.objects.filter(position__icontains = keyword,language__icontains=lang).order_by('-pub_date')
+            paginator = Paginator(latest_jobs_list, 10)
+            page = request.GET.get('page')
+            try:
+                latest_jobs_list = paginator.page(page)
+            except PageNotAnInteger:
+                # If page is not an integer, deliver first page.
+                latest_jobs_list = paginator.page(1)
+            except EmptyPage:
+                # If page is out of range (e.g. 9999), deliver last page of results.
+                latest_jobs_list = paginator.page(paginator.num_pages)
+            return render(request,'emplois/result.html',{'latest_jobs_list':latest_jobs_list})
     return redirect('/')
 
 ##########outside##########
