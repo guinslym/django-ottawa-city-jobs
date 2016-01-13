@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-01-12 10:17-0500\n"
+"POT-Creation-Date: 2016-01-12 19:11-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -42,64 +42,87 @@ msgstr "About"
 msgid "Bienvenue sur mon site"
 msgstr "Welcome to my site (en)"
 
-#: emplois/templates/emplois/index.html:8
+#: emplois/templates/base.html:130
+msgid "Langue"
+msgstr "Language"
+
+#: emplois/templates/emplois/index.html:9
+#: emplois/templates/emplois/result.html:9
 msgid "Job list"
 msgstr "Job list"
 
 #: emplois/templates/emplois/index.html:16
+#: emplois/templates/emplois/result.html:16
 msgid "jobs found for"
 msgstr "jobs found for"
 
 #: emplois/templates/emplois/index.html:19
+#: emplois/templates/emplois/result.html:19
 msgid "jobs found"
 msgstr "jobs found"
 
-#: emplois/templates/emplois/index.html:27
+#: emplois/templates/emplois/index.html:30
+#: emplois/templates/emplois/result.html:30
 msgid "Sort by"
 msgstr "Sort by"
 
-#: emplois/templates/emplois/index.html:28
+#: emplois/templates/emplois/index.html:31
+#: emplois/templates/emplois/result.html:31
 msgid "Posted within the last 2 weeks"
 msgstr "Posted within the last 2 weeks"
 
-#: emplois/templates/emplois/index.html:29
+#: emplois/templates/emplois/index.html:32
+#: emplois/templates/emplois/result.html:32
 msgid "Will expired in 2 weeks from now"
 msgstr "Will expired in 2 weeks from now"
 
-#: emplois/templates/emplois/index.html:30
+#: emplois/templates/emplois/index.html:33
+#: emplois/templates/emplois/result.html:33
 msgid "All jobs"
 msgstr "All jobs"
 
-#: emplois/templates/emplois/index.html:47
+#: emplois/templates/emplois/index.html:58
+#: emplois/templates/emplois/result.html:51
 msgid "Salary"
 msgstr "Salary"
 
-#: emplois/templates/emplois/index.html:49
+#: emplois/templates/emplois/index.html:60
+#: emplois/templates/emplois/result.html:53
 msgid "anually"
 msgstr "anually"
 
-#: emplois/templates/emplois/index.html:51
+#: emplois/templates/emplois/index.html:62
+#: emplois/templates/emplois/result.html:55
 msgid "hourly"
 msgstr "hourly"
 
-#: emplois/templates/emplois/index.html:54
+#: emplois/templates/emplois/index.html:65
+#: emplois/templates/emplois/result.html:58
 msgid "Expiring date"
 msgstr "Expiring date"
 
-#: emplois/templates/emplois/index.html:55
+#: emplois/templates/emplois/index.html:66
+#: emplois/templates/emplois/result.html:59
 msgid "postdate"
 msgstr "postdate"
 
-#: emplois/templates/emplois/index.html:56
+#: emplois/templates/emplois/index.html:67
+#: emplois/templates/emplois/result.html:60
 msgid "Apply link"
 msgstr "Apply link"
 
-#: emplois/templates/emplois/index.html:56
+#: emplois/templates/emplois/index.html:67
+#: emplois/templates/emplois/result.html:60
 msgid "Apply"
 msgstr "Apply"
 
 #: emplois/templates/emplois/stats.html:16
 #, fuzzy
 #| msgid "Stats"
-msgid "Stats page"
+msgid "statistics"
 msgstr "Stats"
+
+#, fuzzy
+#~| msgid "Stats"
+#~ msgid "Stats page"
+#~ msgstr "Stats"

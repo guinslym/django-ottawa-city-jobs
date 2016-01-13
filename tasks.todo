@@ -8,15 +8,20 @@ Todo:
 
 Priority today:
  ☐ Celery (Create file)--Cache
- ✔ Job count doesn't work (traduction) + Stats @done (16-01-12 19:07)
+ ☐ Tweets (view... + view for Job populate)
+ ☐ Assets directory??? (look in django tutorial)
+ ☐ A propos (traduction)
+ ☐ Django production and development
+ ☐ delete virtual and create another one install the necessary only
+ ☐ pip freeze >requirements.txt
+ ☐ language in statistics > change??
+ ✔ Job count developpez-votre-site-web-avec-le-framework-django't work (traduction) + Stats @done (16-01-12 19:07)
  ✔ Pagination @done (16-01-12 19:07)
  ☐ Deploy
- ☐ Assets directory??? (look in django tutorial)
  ✔ https://stackoverflow.com/questions/1622793/django-cookies-how-can-i-set-them @done (16-01-12 10:16)
- ☐ https://stackoverflow.com/questions/5907575/how-do-i-use-pagination-with-django-class-based-generic-listviews
+ ✔ https://stackoverflow.com/questions/5907575/how-do-i-use-pagination-with-django-class-based-generic-listviews @done (16-01-12 19:08)
  ✔ https://stackoverflow.com/questions/1622793/django-cookies-how-can-i-set-them @done (16-01-12 10:16)
  ✔ Slugify @done (16-01-09 21:07)
- ☐ Tweets (view... + view for Job populate)
  ☐ Kizomba Ottawa
 
 todo:

@@ -7,16 +7,13 @@ from django.http import HttpResponse
 from datetime import datetime, timedelta
 from django.conf import settings 
 #pagination   
-from django.core.paginator import Paginator
-from django.core.paginator import EmptyPage
-from django.core.paginator import PageNotAnInteger
-
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 #Task queues
 from django_q.tasks import async, schedule, result
 from django_q.models import Schedule
-
+#cache
 from django.views.decorators.cache import cache_page
-
+#models and utils
 from .models import Job, Description
 from .utils import job_object_list, language_set
 # Create your views here.
