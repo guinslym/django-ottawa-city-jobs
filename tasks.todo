@@ -16,23 +16,19 @@ Priority today:
  ☐ pip freeze >requirements.txt
  ☐ language in statistics > change??
  ☐ Movies
- ☐ ASO upload
- ☐ ASO blog
- ✔ Job count developpez-votre-site-web-avec-le-framework-django't work (traduction) + Stats @done (16-01-12 19:07)
- ✔ Pagination @done (16-01-12 19:07)
  ☐ Deploy
- ✔ https://stackoverflow.com/questions/1622793/django-cookies-how-can-i-set-them @done (16-01-12 10:16)
- ✔ https://stackoverflow.com/questions/5907575/how-do-i-use-pagination-with-django-class-based-generic-listviews @done (16-01-12 19:08)
- ✔ https://stackoverflow.com/questions/1622793/django-cookies-how-can-i-set-them @done (16-01-12 10:16)
- ✔ Slugify @done (16-01-09 21:07)
  ☐ Kizomba Ottawa
 
 todo:
- ✔ domi @done (16-01-12 13:44)
- ☐ job weekend
- ☐ Appeller mme Bertrand
- ✔ School Job to decide when can I work @done (16-01-12 13:44)
- ☐ Python ... 
+ ✔ job weekend @done (16-01-13 17:18)
+ ✔ Python ...  @done (16-01-13 17:17)
+ ✔ Read django @done (16-01-13 14:18)
+ ✔ What type of meetup that I could choose @done (16-01-13 17:17)
+ ☐ Portugais
+ ✔ About page (Or something to put my pictures or my resume Or should I keep it simple) @done (16-01-13 17:32)
+ ☐ Django
+ ☐ Yoruba
+ ☐ Abbey to call (sorry for late reply)
 
 Frontend:
   ☐ Language (i18n) in session (youtube)
@@ -106,6 +102,23 @@ Frontend:
 
 ＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿
 Archive:
+ ✔ ASO upload @done (16-01-13 10:33) @project(Priority today)
+ ✔ ASO blog @done (16-01-13 10:33) @project(Priority today)
+ ✔ Job count developpez-votre-site-web-avec-le-framework-django't work (traduction) + Stats @done (16-01-12 19:07) @project(Priority today)
+ ✔ Pagination @done (16-01-12 19:07) @project(Priority today)
+ ✔ https://stackoverflow.com/questions/1622793/django-cookies-how-can-i-set-them @done (16-01-12 10:16) @project(Priority today)
+ ✔ https://stackoverflow.com/questions/5907575/how-do-i-use-pagination-with-django-class-based-generic-listviews @done (16-01-12 19:08) @project(Priority today)
+ ✔ https://stackoverflow.com/questions/1622793/django-cookies-how-can-i-set-them @done (16-01-12 10:16) @project(Priority today)
+ ✔ Slugify @done (16-01-09 21:07) @project(Priority today)
+ ✔ domi @done (16-01-12 13:44) @project(todo)
+ ✔ Susan Mowers (Start on Tuesday) @done (16-01-13 11:42) @project(todo)
+ ✔ Appeller mme Bertrand @done (16-01-13 11:42) @project(todo)
+ ✔ School Job to decide when can I work @done (16-01-12 13:44) @project(todo)
+ ✔ Blog @done (16-01-13 13:12) @project(todo)
+ ✔ Find my blog @done (16-01-13 13:13) @project(todo)
+ ✔ Correct the background color @done (16-01-13 14:10) @project(todo)
+ ✔ Add cname @done (16-01-13 14:10) @project(todo)
+ ✔ ARCGIS @done (16-01-13 12:37) @project(todo)
  ✔ Create a view @done (16-01-07 20:22) @project(Priority today)
  ✔ 2 within two weeks ago (ago to remove) @done (16-01-07 20:22) @project(Priority today)
  ✔ Create a function to call for the fixtures (delete the last 2 job instances and call it) @done (16-01-07 20:20) @project(Priority today)
