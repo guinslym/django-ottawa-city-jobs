@@ -7,10 +7,6 @@ https://ottawa-city-jobs.herokuapp.com/
 ottawacityjobs
 ├── __init__.py
 ├── __pycache__
-│   ├── __init__.cpython-34.pyc
-│   ├── settings.cpython-34.pyc
-│   ├── urls.cpython-34.pyc
-│   └── wsgi.cpython-34.pyc
 ├── settings.py
 ├── static
 ├── urls.py
