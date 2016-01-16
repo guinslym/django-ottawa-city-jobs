@@ -7,3 +7,4 @@ cache_dir/
 totrash/
 /totrash
 tasks.todo
+staticfiles/
