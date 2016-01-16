@@ -1,7 +1,7 @@
 https://ottawa-city-jobs.herokuapp.com/
 
 ##Structure of the app
-
+```
 ottawacityjobs
 ├── __init__.py
 ├── __pycache__
@@ -31,3 +31,4 @@ emplois
 └── views.py
 
 5 directories, 8 files
+```
