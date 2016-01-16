@@ -6,7 +6,7 @@ https://ottawa-city-jobs.herokuapp.com/
 ```
 ottawacityjobs
 ├── __init__.py
-├── __pycache__
+├── __pycache__/
 ├── settings.py
 ├── static
 ├── urls.py
@@ -28,7 +28,7 @@ emplois
 │   ├── 0001_initial.py
 │   ├── 0002_auto_20160111_2331.py
 │   ├── __init__.py
-│   └── __pycache__
+│   └── __pycache__/
 ├── models.py
 ├── __pycache__
 ├── templates
