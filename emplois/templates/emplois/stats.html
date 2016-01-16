@@ -40,6 +40,7 @@
 
 
 var cal = new CalHeatMap();
+var hello =0;
 cal.init({
 	itemSelector: "#example-d",
 	domain: "month",
@@ -53,7 +54,7 @@ cal.init({
 	previousSelector: "#example-c-PreviousDomain-selector",
 	nextSelector: "#example-c-NextDomain-selector",
     onClick: function(date, nb) {
-    	console.log(date);
+    	
         //Add AJAX call for all the jobs for that date
         //Add cookie or variable for the language i18n
         /*
@@ -62,14 +63,37 @@ cal.init({
             (nb === null ? "unknown" : nb) + "</b> jobs"
         );
 */
+  var le_jour = date.getDate();
+  var le_mois = date.getMonth() + 1;
+  var l_annee = date.getFullYear();
+
+  console.log(le_jour);
+  console.log(le_mois);
+  console.log(l_annee);
 var jqxhr = $.ajax({
   method: "GET",
   url: "stats_emplois",
-  data: { mois: 12, annee: 2015, jour:23, language: lang }
+  data: { mois: le_mois,
+          annee: l_annee,
+          jour:le_jour,
+          language: lang 
+        }
 })
   .done(function(data) {
-    console.log( data );
+    //console.log( data );
     //mettre les données
+    $("#onClick-placeholder").empty();
+    data.forEach(function(entry) {
+      console.log(entry);
+      console.log(entry['fields']['slug'])
+      position = entry['fields']['position'];
+
+      $("#onClick-placeholder").append(
+       "Position : <b>" +  position + " </b><br/>" + " date : " +"<b>" +
+      date.toLocaleDateString(lang + '-CA') + "</b> <br/> <b>" + "</b>"
+    );
+
+    });
     //foreach
   })
   .fail(function() {
