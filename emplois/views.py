@@ -18,6 +18,7 @@ from .models import Job, Description
 from .utils import job_object_list, language_set
 # Create your views here.
 
+#http:://localhost:8001/
 class IndexView(generic.ListView):
     template_name='emplois/index.html'
     context_object_name='latest_jobs_list'
@@ -54,6 +55,7 @@ class IndexView(generic.ListView):
         context['latest_jobs_list'] = latest_jobs_list
         return context
 
+#http://localhost:8001/emplois/latest
 class LatestView(generic.ListView):
     template_name='emplois/index.html'
     paginate_by = 10 
@@ -65,7 +67,7 @@ class LatestView(generic.ListView):
         pub_date__gte=datetime.now()-timedelta(days=14)).order_by('expirydate')
 
 
-
+#http://localhost:8001/emplois/expiring
 class ExpiringSoonView(generic.ListView):
     template_name='emplois/index.html'
     paginate_by = 10 
@@ -76,6 +78,7 @@ class ExpiringSoonView(generic.ListView):
        return Job.objects.filter(language=language, 
         expirydate__lte=datetime.now()+timedelta(days=14)).order_by('expirydate')
 
+#http://localhost:8001/emplois/all_job_posted
 class AllJobsView(generic.ListView):
     template_name='emplois/index.html'
     paginate_by = 10 
@@ -85,12 +88,14 @@ class AllJobsView(generic.ListView):
        language = language_set(self.request.LANGUAGE_CODE)
        return Job.objects.filter(language=language).order_by('expirydate')
 
+#http://localhost:8001/emplois/<id>
 class DetailView(generic.DetailView):
     model = Job
     paginate_by = 10 
     template_name = 'emplois/details.html'
     context_object_name='job'
 
+#http://localhost:8001/emplois/stats
 class StatsView(generic.TemplateView):
     template_name='emplois/stats.html'
     #context_object_name='latest_jobs_list'
@@ -116,14 +121,14 @@ class StatsView(generic.TemplateView):
 
         return context
 
-
+#http://localhost:8001/emplois/about
 class AboutView(generic.TemplateView):
     template_name='emplois/about.html'
     paginate_by = 10 
     #context_object_name='latest_jobs_list'
 
 
-#https://github.com/roadrui/ruiblog/blob/master/ruiblog/views.py
+#http://localhost:8001/emplois/searchJobs/<searchKey>
 @cache_page(60 * 1, key_prefix="site1"  )
 def job_search(request):
     if 'searchKey' in request.GET:
@@ -146,7 +151,8 @@ def job_search(request):
             return render(request,'emplois/result.html',{'latest_jobs_list':latest_jobs_list})
     return redirect('/')
 
-##########outside##########
+##########JAVASCRIPT = JSOM ##########
+#http://localhost:8001/emplois/<annee>/<mois>/<jour>
 def emplois(request):
     import datetime
     foos = Job.objects.filter(
@@ -160,6 +166,7 @@ def emplois(request):
 
 
 #Error on this template
+#I try  to create a Class based view of 'def job_search()'
 class SearchJobView(generic.ListView):
     template_name='emplois/index.html'
     context_object_name='latest_jobs_list'
