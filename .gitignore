@@ -8,3 +8,5 @@ totrash/
 /totrash
 tasks.todo
 staticfiles/
+local_settings.py
+__pycache__
