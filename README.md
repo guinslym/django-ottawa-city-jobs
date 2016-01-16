@@ -35,12 +35,6 @@ emplois
 │   └── __pycache__
 ├── models.py
 ├── __pycache__
-│   ├── admin.cpython-34.pyc
-│   ├── __init__.cpython-34.pyc
-│   ├── models.cpython-34.pyc
-│   ├── urls.cpython-34.pyc
-│   ├── utils.cpython-34.pyc
-│   └── views.cpython-34.pyc
 ├── templates
 │   ├── base.html
 │   └── emplois
