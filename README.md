@@ -8,7 +8,7 @@ ottawacityjobs
 ├── __init__.py
 ├── __pycache__/
 ├── settings.py
-├── static
+├── static/
 ├── urls.py
 └── wsgi.py
 ```
