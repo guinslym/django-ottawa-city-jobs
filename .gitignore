@@ -2,7 +2,7 @@
 *.mp3
 *.sqlite3
 history.txt
-hello_cache/
+cache/
 cache_dir/
 totrash/
 tasks.todo

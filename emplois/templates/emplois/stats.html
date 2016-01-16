@@ -7,11 +7,11 @@
 	{% block content %}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>
 
-<link href="{% static "emplois/css/font-awesome.min.css" %}" rel="stylesheet"/>
+<link href="{% static "css/font-awesome.min.css" %}" rel="stylesheet"/>
 
 
-	<link rel="stylesheet" href="{% static "emplois/css/cal-heatmap.css" %}" rel="stylesheet" />
-<script type="text/javascript" src="{% static "emplois/js/cal-heatmap.min.js" %}"></script>
+	<link rel="stylesheet" href="{% static "css/cal-heatmap.css" %}" rel="stylesheet" />
+<script type="text/javascript" src="{% static "js/cal-heatmap.min.js" %}"></script>
 
 	<h1>{% trans "statistics" %}</h1>
 
@@ -67,9 +67,9 @@ cal.init({
   var le_mois = date.getMonth() + 1;
   var l_annee = date.getFullYear();
 
-  console.log(le_jour);
-  console.log(le_mois);
-  console.log(l_annee);
+  //console.log(le_jour);
+  //console.log(le_mois);
+  //console.log(l_annee);
 var jqxhr = $.ajax({
   method: "GET",
   url: "stats_emplois",
@@ -84,12 +84,12 @@ var jqxhr = $.ajax({
     //mettre les données
     $("#onClick-placeholder").empty();
     data.forEach(function(entry) {
-      console.log(entry);
-      console.log(entry['fields']['slug'])
+      //console.log(entry);
+      //console.log(entry['fields']['slug'])
       position = entry['fields']['position'];
 
       $("#onClick-placeholder").append(
-       "Position : <b>" +  position + " </b><br/>" + " date : " +"<b>" +
+       "Position : <b style='font-size:16px;'>" +  position + " </b><br/>" + " date : " +"<b>" +
       date.toLocaleDateString(lang + '-CA') + "</b> <br/> <b>" + "</b>"
     );
 
@@ -97,11 +97,11 @@ var jqxhr = $.ajax({
     //foreach
   })
   .fail(function() {
-    console.log( "error" );
+    //console.log( "error" );
     //print error
   })
   .always(function() {
-    console.log( "complete" );
+    //console.log( "complete" );
   });
 
     }
