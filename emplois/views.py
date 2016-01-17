@@ -170,7 +170,13 @@ def update_and_tweets(request):
     #Update the list of jobs from Open Data portal (Ottawa.open.data)
     job_object_list()
     #Tweets
-    job_object_list()
+    from .tweets import JOB
+    #if it's between 7am-5pm
+    #select a random Job that haven't been tweeted
+    #Tweet it
+    #Save to the db: tweeted:true
+    #skjdflkj
+    return redirect('/')
 
 #Error on this template
 #I try  to create a Class based view of 'def job_search()'

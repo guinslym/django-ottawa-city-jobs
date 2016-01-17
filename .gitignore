@@ -12,4 +12,4 @@ staticfiles/
 local_settings.py
 __pycache__
 *tweets.py
-
+*twitter_secrets.py
