@@ -11,3 +11,5 @@ tasks.todo
 staticfiles/
 local_settings.py
 __pycache__
+*tweets.py
+

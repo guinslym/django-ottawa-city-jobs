@@ -29,7 +29,6 @@ class IndexView(generic.ListView):
        #print(self.request.LANGUAGE_CODE) #'en-us
        language = language_set(self.request.LANGUAGE_CODE)
        #import ipdb;ipdb.set_trace()
-       #tid = async('subprocess.run', ['cp', 'setup.py', 'setup.py.bak'])
        #job_object_list()
        return Job.objects.filter(language=language, 
         expirydate__gt=datetime.now())\
@@ -164,6 +163,14 @@ def emplois(request):
     data = serializers.serialize('json', foos)
     return HttpResponse(data, content_type='application/json')
 
+
+
+##########TWITTER + Update the content######################
+def update_and_tweets(request):
+    #Update the list of jobs from Open Data portal (Ottawa.open.data)
+    job_object_list()
+    #Tweets
+    job_object_list()
 
 #Error on this template
 #I try  to create a Class based view of 'def job_search()'
