@@ -167,16 +167,25 @@ def emplois(request):
 
 ##########TWITTER + Update the content######################
 def update_and_tweets(request):
-    #Update the list of jobs from Open Data portal (Ottawa.open.data)
-    job_object_list()
-    #Tweets
-    from .tweets import JOB
-    #if it's between 7am-5pm
-    #select a random Job that haven't been tweeted
-    #Tweet it
-    #Save to the db: tweeted:true
-    #skjdflkj
-    return redirect('/')
+    from datetime import datetime, timedelta, time
+    from pytz import timezone
+    ottawa_timezone = timezone('America/Montreal')
+    ottawa_now = datetime.now(ottawa_timezone)
+    now_time = ottawa_now.time()
+    tweet_time = now_time >= time(5,30) and now_time <= time(18,30)
+    upgrade_time = (now_time >= time(12,00) and now_time <= time(16,30))
+    if tweet_time:
+        #tweet
+        print('Tweet time')
+        redirect('/')
+    elif upgrade_time: 
+        #Update the list of jobs from Open Data portal (Ottawa.open.data)
+        print('Upgrade time')
+        #job_object_list()
+        redirect('/')
+    else:
+        print('nothing')
+        redirect('/')
 
 #Error on this template
 #I try  to create a Class based view of 'def job_search()'

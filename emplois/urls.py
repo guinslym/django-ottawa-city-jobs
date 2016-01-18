@@ -18,6 +18,7 @@ urlpatterns = [
       url(r'^expiring$', views.ExpiringSoonView.as_view(), name='expire'),
       url(r'^latest$', views.LatestView.as_view(), name='latest'),
       url(r'^i18n/', include('django.conf.urls.i18n')),
+      url(r'^update/$', views.update_and_tweets, name='upgrade'),
       #url(r'^(?P<lang>\w+)/$', generic.RedirectView.as_view(), name='lang_redirect'),
       url(r'^emplois/$', views.IndexView.as_view(), name='index'),
       url(r'^$', views.IndexView.as_view(), name='index'),
