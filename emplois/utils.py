@@ -53,6 +53,7 @@ def stringify_object(data):
     return expirydate
 
 def job_object_list():
+    #print('OK')
     """
     This function will compare the list of Jobs
     from the DB with the list of jobs from the website 
@@ -64,12 +65,14 @@ def job_object_list():
     #flatten jobsDb
     jobs_db = [ i.get('jobref') for i in jobsDb]
     data = get_data()
+    #print(data)
     list_emploi = []
     for job in [0,1]:
         for emploi in data[job]['jobs']:
             if emploi.get('JOBREF') not in jobs_db:
                 #save Job to db
                 #calcul
+                salary = emploi.get('SALARYMAX', None)  
                 if emploi.get('SALARYMAX', None):
                     if ',' in emploi.get('SALARYMAX', None):
                         salary = emploi.get('SALARYMAX', None)

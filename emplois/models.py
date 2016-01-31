@@ -42,6 +42,7 @@ class Job(models.Model):
     job_summary = models.TextField(blank=True, null=True)
     pub_date = models.DateTimeField(auto_now=False, blank=True, null=True)
     slug = models.CharField(max_length=200)
+    tweeted = models.BooleanField(default=False)
 
     def save(self, *args, **kwargs):
         self.slug = uuslug(self.jobref, instance=self)

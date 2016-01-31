@@ -29,7 +29,6 @@ class IndexView(generic.ListView):
        #print(self.request.LANGUAGE_CODE) #'en-us
        language = language_set(self.request.LANGUAGE_CODE)
        #import ipdb;ipdb.set_trace()
-       #job_object_list()
        return Job.objects.filter(language=language, 
         expirydate__gt=datetime.now())\
             .order_by('expirydate')
@@ -123,9 +122,19 @@ class StatsView(generic.TemplateView):
 #http://localhost:8001/emplois/about
 class AboutView(generic.TemplateView):
     template_name='emplois/about.html'
-    paginate_by = 10 
-    #context_object_name='latest_jobs_list'
+    context_object_name='language'
 
+    def get_context_data(self, **kwargs):
+        """
+
+        """
+        import time
+        from django.db.models import Count
+        #
+        context = super(AboutView, self).get_context_data(**kwargs)
+        context['language'] = language_set(self.request.LANGUAGE_CODE)
+
+        return context
 
 #http://localhost:8001/emplois/searchJobs/<searchKey>
 @cache_page(60 * 1, key_prefix="site1"  )
@@ -172,7 +181,7 @@ def update_and_tweets(request):
     ottawa_timezone = timezone('America/Montreal')
     ottawa_now = datetime.now(ottawa_timezone)
     now_time = ottawa_now.time()
-    tweet_time = now_time >= time(5,30) #and now_time <= time(18,30)
+    tweet_time = now_time #>= time(5,30) #and now_time <= time(18,30)
     upgrade_time = (now_time >= time(12,00) and now_time <= time(16,30))
     if tweet_time:
         #tweet

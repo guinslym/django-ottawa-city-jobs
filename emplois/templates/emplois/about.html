@@ -1,20 +1,43 @@
 {% extends "base.html" %}
 {% load humanize %}
 
-
 	{% block content %}
 
-	<h1>About page</h1>
+{% if language == "EN" %}
 
- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi suscipit ratione ut consequatur iure nam sequi molestias itaque provident mollitia ducimus autem dolore possimus veniam modi quaerat dolores, eaque in.</p>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum officia repudiandae corporis tenetur id dolorum repellendus aperiam provident dolor debitis facilis beatae, minus officiis quisquam ratione ad assumenda voluptatem ipsum, expedita ut nemo odit veritatis. Eligendi enim tenetur ullam ipsum quam deserunt, accusantium architecto sed vitae, hic est porro nobis repellat vel atque. Fugiat laborum laudantium illum suscipit, quis beatae debitis vel. Pariatur fuga, quae facilis nostrum soluta quod provident enim excepturi omnis autem. Porro culpa blanditiis reiciendis, dolore accusantium totam numquam perspiciatis illum ea distinctio eaque ipsum tenetur, eligendi impedit harum placeat, ad laboriosam. Excepturi quis deleniti, asperiores est modi eaque placeat non iusto similique voluptates. Pariatur et asperiores, maiores at, omnis laborum voluptatum illo. Quibusdam porro pariatur repudiandae debitis neque inventore velit obcaecati vero amet officiis atque unde, minima laboriosam dolorem fugiat? Excepturi quae nihil inventore accusantium, adipisci voluptates minus soluta natus debitis hic voluptatum distinctio magni! Inventore dolorum dolore, eum cum nostrum temporibus officia laborum mollitia eligendi dolores non odit commodi debitis cupiditate quis fuga nobis ipsam doloribus asperiores, dolor omnis dignissimos iste! Dicta incidunt culpa, est provident ipsum atque consequuntur. Sint commodi animi ipsa optio quia culpa cum veniam incidunt. Architecto iusto at modi odit cupiditate voluptas tempora ipsum. Vitae numquam incidunt accusantium in quam dolore excepturi provident recusandae aperiam odio rerum nisi maxime accusamus quo neque deserunt, aspernatur earum, ea eum assumenda, labore voluptatibus. Eveniet beatae, deleniti harum sunt quos dolorum, unde at consectetur placeat dolores, esse repellendus quas! Quidem distinctio dicta aspernatur nobis voluptatem.</p>
+		<h1>About page</h1>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi suscipit ratione ut consequatur iure nam sequi molestias itaque provident mollitia ducimus autem dolore possimus veniam modi quaerat dolores, eaque in.</p>
 
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum officia repudiandae corporis tenetur id dolorum repellendus aperiam provident dolor debitis facilis beatae, minus officiis quisquam ratione ad assumenda voluptatem ipsum, expedita ut nemo odit veritatis. Eligendi enim tenetur ullam ipsum quam deserunt, accusantium architecto sed vitae, hic est porro nobis repellat vel atque. Fugiat laborum laudantium illum suscipit, quis beatae debitis vel. Pariatur fuga, quae facilis nostrum soluta quod provident enim excepturi omnis autem. Porro culpa blanditiis reiciendis, dolore accusantium totam numquam perspiciatis illum ea distinctio eaque ipsum tenetur, eligendi impedit harum placeat, ad laboriosam. Excepturi quis deleniti, asperiores est modi eaque placeat non iusto similique voluptates. Pariatur et asperiores, maiores at, omnis laborum voluptatum illo. Quibusdam porro pariatur repudiandae debitis neque inventore velit obcaecati vero amet officiis atque unde, minima laboriosam dolorem fugiat? Excepturi quae nihil inventore accusantium, adipisci voluptates minus soluta natus debitis hic voluptatum distinctio magni! Inventore dolorum dolore, eum cum nostrum temporibus officia laborum mollitia eligendi dolores non odit commodi debitis cupiditate quis fuga nobis ipsam doloribus asperiores, dolor omnis dignissimos iste! Dicta incidunt culpa, est provident ipsum atque consequuntur. Sint commodi animi ipsa optio quia culpa cum veniam incidunt. Architecto iusto at modi odit cupiditate voluptas tempora ipsum. Vitae numquam incidunt accusantium in quam dolore excepturi provident recusandae aperiam odio rerum nisi maxime accusamus quo neque deserunt, aspernatur earum, ea eum assumenda, labore voluptatibus. Eveniet beatae, deleniti harum sunt quos dolorum, unde at consectetur placeat dolores, esse repellendus quas! Quidem distinctio dicta aspernatur nobis voluptatem.</p>
+
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+	{% endif %}
+
+
+
+{% if language == "FR" %}
+
+
+		<h1>À Propos</h1>
+
+	 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi suscipit ratione ut consequatur iure nam sequi molestias itaque provident mollitia ducimus autem dolore possimus veniam modi quaerat dolores, eaque in.</p>
+
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum officia repudiandae corporis tenetur id dolorum repellendus aperiam provident dolor debitis facilis beatae, minus officiis quisquam ratione ad assumenda voluptatem ipsum, expedita ut nemo odit veritatis. Eligendi enim tenetur ullam ipsum quam deserunt, accusantium architecto sed vitae, hic est porro nobis repellat vel atque. Fugiat laborum laudantium illum suscipit, quis beatae debitis vel. Pariatur fuga, quae facilis nostrum soluta quod provident enim excepturi omnis autem. Porro culpa blanditiis reiciendis, dolore accusantium totam numquam perspiciatis illum ea distinctio eaque ipsum tenetur, eligendi impedit harum placeat, ad laboriosam. Excepturi quis deleniti, asperiores est modi eaque placeat non iusto similique voluptates. Pariatur et asperiores, maiores at, omnis laborum voluptatum illo. Quibusdam porro pariatur repudiandae debitis neque inventore velit obcaecati vero amet officiis atque unde, minima laboriosam dolorem fugiat? Excepturi quae nihil inventore accusantium, adipisci voluptates minus soluta natus debitis hic voluptatum distinctio magni! Inventore dolorum dolore, eum cum nostrum temporibus officia laborum mollitia eligendi dolores non odit commodi debitis cupiditate quis fuga nobis ipsam doloribus asperiores, dolor omnis dignissimos iste! Dicta incidunt culpa, est provident ipsum atque consequuntur. Sint commodi animi ipsa optio quia culpa cum veniam incidunt. Architecto iusto at modi odit cupiditate voluptas tempora ipsum. Vitae numquam incidunt accusantium in quam dolore excepturi provident recusandae aperiam odio rerum nisi maxime accusamus quo neque deserunt, aspernatur earum, ea eum assumenda, labore voluptatibus. Eveniet beatae, deleniti harum sunt quos dolorum, unde at consectetur placeat dolores, esse repellendus quas! Quidem distinctio dicta aspernatur nobis voluptatem.</p>
+
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+	{% endif %}
 {% endblock %}

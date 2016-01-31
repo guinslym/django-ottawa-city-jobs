@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-01-12 19:11-0500\n"
+"POT-Creation-Date: 2016-01-18 10:43-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -37,12 +37,11 @@ msgstr "Stats"
 msgid "About"
 msgstr "About"
 
-#: emplois/templates/base.html:106 emplois/templates/base.html.py:115
-#: emplois/templates/base.html:120
+#: emplois/templates/base.html:188 emplois/templates/base.html.py:193
 msgid "Bienvenue sur mon site"
 msgstr "Welcome to my site (en)"
 
-#: emplois/templates/base.html:130
+#: emplois/templates/base.html:204
 msgid "Langue"
 msgstr "Language"
 
@@ -51,67 +50,67 @@ msgstr "Language"
 msgid "Job list"
 msgstr "Job list"
 
-#: emplois/templates/emplois/index.html:16
+#: emplois/templates/emplois/index.html:17
 #: emplois/templates/emplois/result.html:16
 msgid "jobs found for"
 msgstr "jobs found for"
 
-#: emplois/templates/emplois/index.html:19
+#: emplois/templates/emplois/index.html:20
 #: emplois/templates/emplois/result.html:19
 msgid "jobs found"
 msgstr "jobs found"
 
-#: emplois/templates/emplois/index.html:30
+#: emplois/templates/emplois/index.html:31
 #: emplois/templates/emplois/result.html:30
 msgid "Sort by"
 msgstr "Sort by"
 
-#: emplois/templates/emplois/index.html:31
+#: emplois/templates/emplois/index.html:32
 #: emplois/templates/emplois/result.html:31
 msgid "Posted within the last 2 weeks"
 msgstr "Posted within the last 2 weeks"
 
-#: emplois/templates/emplois/index.html:32
+#: emplois/templates/emplois/index.html:33
 #: emplois/templates/emplois/result.html:32
 msgid "Will expired in 2 weeks from now"
 msgstr "Will expired in 2 weeks from now"
 
-#: emplois/templates/emplois/index.html:33
+#: emplois/templates/emplois/index.html:34
 #: emplois/templates/emplois/result.html:33
 msgid "All jobs"
 msgstr "All jobs"
 
-#: emplois/templates/emplois/index.html:58
+#: emplois/templates/emplois/index.html:59
 #: emplois/templates/emplois/result.html:51
 msgid "Salary"
 msgstr "Salary"
 
-#: emplois/templates/emplois/index.html:60
+#: emplois/templates/emplois/index.html:61
 #: emplois/templates/emplois/result.html:53
 msgid "anually"
 msgstr "anually"
 
-#: emplois/templates/emplois/index.html:62
+#: emplois/templates/emplois/index.html:63
 #: emplois/templates/emplois/result.html:55
 msgid "hourly"
 msgstr "hourly"
 
-#: emplois/templates/emplois/index.html:65
+#: emplois/templates/emplois/index.html:66
 #: emplois/templates/emplois/result.html:58
 msgid "Expiring date"
 msgstr "Expiring date"
 
-#: emplois/templates/emplois/index.html:66
+#: emplois/templates/emplois/index.html:67
 #: emplois/templates/emplois/result.html:59
 msgid "postdate"
 msgstr "postdate"
 
-#: emplois/templates/emplois/index.html:67
+#: emplois/templates/emplois/index.html:68
 #: emplois/templates/emplois/result.html:60
 msgid "Apply link"
 msgstr "Apply link"
 
-#: emplois/templates/emplois/index.html:67
+#: emplois/templates/emplois/index.html:68
 #: emplois/templates/emplois/result.html:60
 msgid "Apply"
 msgstr "Apply"
@@ -122,7 +121,51 @@ msgstr "Apply"
 msgid "statistics"
 msgstr "Stats"
 
-#, fuzzy
-#~| msgid "Stats"
-#~ msgid "Stats page"
-#~ msgstr "Stats"
+#~ msgid ""
+#~ "This string will have %(value)s inside. Lorem ipsum dolor sit amet, "
+#~ "consectetur adipisicing elit. Et totam pariatur tenetur, modi dolores "
+#~ "quas quasi nisi, consectetur nobis quos suscipit architecto debitis, "
+#~ "sapiente ex recusandae odio quam at. Repellendus repudiandae velit "
+#~ "beatae, unde officia reiciendis expedita, dicta quia, quos quaerat saepe "
+#~ "recusandae architecto placeat dolorem at est atque laborum. Unde "
+#~ "repellendus reiciendis iste officiis suscipit itaque ex necessitatibus, "
+#~ "labore id, doloribus voluptas laudantium minima inventore sunt facilis "
+#~ "ratione omnis, illo sit fuga ipsam quia eveniet laborum? In quidem sequi "
+#~ "dolor inventore nesciunt, nam aperiam sit placeat repellat nostrum "
+#~ "facilis cupiditate delectus possimus aliquid autem aliquam, illum optio "
+#~ "laboriosam illo distinctio. Numquam ex reprehenderit aliquam, porro "
+#~ "necessitatibus eaque eos ipsa sapiente, cum, maxime, quasi nulla "
+#~ "laboriosam. Asperiores, similique officiis in eligendi quidem esse "
+#~ "numquam quaerat corporis laboriosam, optio pariatur quo. Rerum mollitia "
+#~ "ducimus reiciendis vel atque, qui assumenda quidem ex provident sed "
+#~ "laboriosam animi ipsum consequatur a ea consequuntur, corporis dolor "
+#~ "totam, saepe excepturi doloremque quo ullam blanditiis maiores? Deserunt "
+#~ "consectetur reprehenderit itaque velit rem saepe illum, quas, optio "
+#~ "eligendi excepturi facere odio perspiciatis doloremque hic ducimus earum, "
+#~ "iusto numquam? Quod, et, dolore. Eaque quam aliquid odio cum omnis earum "
+#~ "debitis aspernatur delectus, facilis maiores nihil fugit, possimus porro, "
+#~ "error."
+#~ msgstr ""
+#~ "Tanslate in en %(value)s inside. Lorem ipsum dolor sit amet, consectetur "
+#~ "adipisicing elit. Et totam pariatur tenetur, modi dolores quas quasi "
+#~ "nisi, consectetur nobis quos suscipit architecto debitis, sapiente ex "
+#~ "recusandae odio quam at. Repellendus repudiandae velit beatae, unde "
+#~ "officia reiciendis expedita, dicta quia, quos quaerat saepe recusandae "
+#~ "architecto placeat dolorem at est atque laborum. Unde repellendus "
+#~ "reiciendis iste officiis suscipit itaque ex necessitatibus, labore id, "
+#~ "doloribus voluptas laudantium minima inventore sunt facilis ratione "
+#~ "omnis, illo sit fuga ipsam quia eveniet laborum? In quidem sequi dolor "
+#~ "inventore nesciunt, nam aperiam sit placeat repellat nostrum facilis "
+#~ "cupiditate delectus possimus aliquid autem aliquam, illum optio "
+#~ "laboriosam illo distinctio. Numquam ex reprehenderit aliquam, porro "
+#~ "necessitatibus eaque eos ipsa sapiente, cum, maxime, quasi nulla "
+#~ "laboriosam. Asperiores, similique officiis in eligendi quidem esse "
+#~ "numquam quaerat corporis laboriosam, optio pariatur quo. Rerum mollitia "
+#~ "ducimus reiciendis vel atque, qui assumenda quidem ex provident sed "
+#~ "laboriosam animi ipsum consequatur a ea consequuntur, corporis dolor "
+#~ "totam, saepe excepturi doloremque quo ullam blanditiis maiores? Deserunt "
+#~ "consectetur reprehenderit itaque velit rem saepe illum, quas, optio "
+#~ "eligendi excepturi facere odio perspiciatis doloremque hic ducimus earum, "
+#~ "iusto numquam? Quod, et, dolore. Eaque quam aliquid odio cum omnis earum "
+#~ "debitis aspernatur delectus, facilis maiores nihil fugit, possimus porro, "
+#~ "error."
