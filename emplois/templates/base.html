@@ -11,13 +11,22 @@
 
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw==" crossorigin="anonymous">
 
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.9.4/css/bootstrap-select.min.css">
+
+<!--
 <link rel="stylesheet" type="text/css" href="">
+-->
 
 
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.1/jquery.js"></script>
 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha256-KXn5puMvxCw+dAYznun+drMdG1IFl3agK0p/pqT9KAo= sha512-2e8qq0ETcfWRI4HJBzQiA3UoyFk6tbNyG+qSaIBZLyW9Xf3sWZHN/lxe9fTh1U45DpPf07yj94KsUHHWe4Yk1A==" crossorigin="anonymous"></script>
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.9.4/js/bootstrap-select.min.js"></script>
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.12/d3.min.js"></script>
 
@@ -45,92 +54,6 @@
     background-color: #2a2730;
 }
 </style>
-</head>
-<body>
-
-<div class="navbar navbar-default">
-      <div class="container">
-        <div class="navbar-header">
-          <a href="/" class="navbar-brand">{% trans "Ottawa City Jobs"%}</a>
-          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-        </div>
-        <div class="navbar-collapse collapse" id="navbar-main">
-          <ul class="nav navbar-nav">
-            <li>
-              <a href="#">
-              <!-- 
-              <form action="/emplois/searchJobs" method="get">
-              {% csrf_token %}
-                  <input type="text" name = "searchKey"
-                        placeholder='{%trans "Search by Job title"%}' />
-                        <button class="btn btn-sm btn-info">{% trans "Search" %}</button>
-                    </form>
-              -->
-                    </a>
-            </li>
-          </ul>
-
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="{% url 'emplois:stats' %}">{% trans "Stats"%}</a></li>
-            <!--
-            <li><a href="#">Fr/En</a></li>
-            -->
-            <li><a href="{% url 'emplois:about' %}">{% trans "About"%}</a></li>
-          </ul>
-
-        </div>
-      </div>
-    </div>
-
-
-<!-- Jumbotron -->
-<style type="text/css">
-        div.navbar, div.navbar-default, div.navbar-static-top{
-          margin-bottom: 0;
-        }
-        div.jumbotron{
-        //background-color: #333333;
-        margin-bottom: 0;
-        background-image: url("data:image/svg+xml,%3Csvg%20version%3D%271.1%27%20id%3D%27Layer_1%27%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20xmlns%3Axlink%3D%27http%3A//www.w3.org/1999/xlink%27%20x%3D%270px%27%20y%3D%270px%27%0A%20%20%20%20%20width%3D%2736px%27%20height%3D%2736px%27%20viewBox%3D%27-7%20-7%2036%2036%27%20enable-background%3D%27new%20-7%20-7%2036%2036%27%20xml%3Aspace%3D%27preserve%27%3E%0A%3Cpath%20fill%3D%27white%27%20d%3D%27M5%2C0H0v5h-2V0h-5v-2h5v-5h2v5h5V0z%20M23%2C18h-5v5h-2v-5h-5v-2h5v-5h2v5h5V18z%27/%3E%0A%3C/svg%3E");
-        background-repeat: no-repeat;
-        background-position: center -80px;
-        min-height: 200px;
-        color: #fff;
-      }
-      div.jumbotron {
-    min-height: 100px;
-    //background-color: #33CC99;
-    text-align: center;
-    background-image: url("data:image/svg+xml,%3Csvg%20version%3D%271.1%27%20id%3D%27Layer_1%27%20xml…5h2v5h5V0z%20M23%2C18h-5v5h-2v-5h-5v-2h5v-5h2v5h5V18z%27/%3E%0A%3C/svg%3E");
-}
-      .jumbotron h1{
-  padding-top: 40px;
-}
-</style>
-<div class="jumbotron">
-
-    <div class="col-lg-10 col-lg-offset-1 text-center" id="main-page">
-   <form accept-charset="UTF-8" action="/emplois/searchJobs" class="form-group main-form" id="search-form" method="get">
-   {% csrf_token %}
-      <div style="display:none"><input name="utf8" type="hidden" value="✓"></div>
-      <input class="form-group main-form" id="q_objname_en_cont" name="q[objname_en_cont]" placeholder="Search by Job title (i.e. job, associate, assistant ..)" required="required" style="height:40px;width:60%" type="search">
-      <input class="btn btn-warning" type="submit" value="Search Jobs">
-   </form>
-  
-
-
-</div>
-</div>
-
-
-
-
-<div class="container">
-	<div class="col-lg-12">
 
 <style type="text/css">
   .search-form .form-group {
@@ -183,63 +106,96 @@
   left: initial;
   font-size: 14px;
 }
+input {
+    width: 100px;
+    transition: ease-in-out, width .35s ease-in-out;
+    color:black;
+    font-size: 14px;
+}
 input:focus{
   color:blue;
   font-size: 16px;
+  text-transform:uppercase;
+  padding-left:5px;
 }
 
 </style>
-<!--
 
-<div class="container">
-    <div class="row">
-        <div class="col-md-6 col-md-offset-3">
-            <h1>Search by Title</h1>
+<!-- Jumbotron -->
+<style type="text/css">
+        div.navbar, div.navbar-default, div.navbar-static-top{
+          margin-bottom: 0;
+        }
+        div.jumbotron{
+        //background-color: #333333;
+        margin-bottom: 0;
+        background-image: url("data:image/svg+xml,%3Csvg%20version%3D%271.1%27%20id%3D%27Layer_1%27%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20xmlns%3Axlink%3D%27http%3A//www.w3.org/1999/xlink%27%20x%3D%270px%27%20y%3D%270px%27%0A%20%20%20%20%20width%3D%2736px%27%20height%3D%2736px%27%20viewBox%3D%27-7%20-7%2036%2036%27%20enable-background%3D%27new%20-7%20-7%2036%2036%27%20xml%3Aspace%3D%27preserve%27%3E%0A%3Cpath%20fill%3D%27white%27%20d%3D%27M5%2C0H0v5h-2V0h-5v-2h5v-5h2v5h5V0z%20M23%2C18h-5v5h-2v-5h-5v-2h5v-5h2v5h5V18z%27/%3E%0A%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: center -80px;
+        min-height: 200px;
+        color: #fff;
+      }
+      div.jumbotron {
+    min-height: 100px;
+    //background-color: #33CC99;
+    text-align: center;
+    background-image: url("data:image/svg+xml,%3Csvg%20version%3D%271.1%27%20id%3D%27Layer_1%27%20xml…5h2v5h5V0z%20M23%2C18h-5v5h-2v-5h-5v-2h5v-5h2v5h5V18z%27/%3E%0A%3C/svg%3E");
+     //background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Flag_of_Ottawa%2C_Ontario.svg/250px-Flag_of_Ottawa%2C_Ontario.svg.png");
+     background-repeat:repeat;
+}
+      .jumbotron h1{
+  padding-top: 40px;
+}
+</style>
+
+</head>
+<body>
+
+<div class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="/" class="navbar-brand">{% trans "Ottawa City Jobs"%}</a>
+          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
         </div>
-    </div>
-    <div class="row">
-        <div class="col-md-4 col-md-offset-3">
-            <form action="" class="search-form">
-                <div class="form-group has-feedback">
-                <label for="search" class="sr-only">Search</label>
-                <input type="text" class="form-control" name="search" id="search" placeholder="search">
-                  <span class="glyphicon glyphicon-search form-control-feedback"></span>
-              </div>
-            </form>
+        <div class="navbar-collapse collapse" id="navbar-main">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="{% url 'emplois:stats' %}">{% trans "Stats"%}</a></li>
+            <!--
+            <li><a href="#">Fr/En</a></li>
+            -->
+            <li><a href="{% url 'emplois:about' %}">{% trans "About"%}</a></li>
+          </ul>
+
         </div>
+      </div>
     </div>
+
+
+
+<div class="jumbotron">
+
+
+
+    <div class="col-lg-10  col-lg-offset-1 text-center" id="main-page">
+    <h3>Ottawa City Jobs</h3>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Flag_of_Ottawa%2C_Ontario.svg/250px-Flag_of_Ottawa%2C_Ontario.svg.png">
+   <form accept-charset="UTF-8" action="/emplois/searchJobs" class="form-group main-form" id="search-form" method="get">
+   {% csrf_token %}
+      <div style="display:none"><input name="utf8" type="hidden" value="✓"></div>
+      <input class="form-group main-form" id="q_objname_en_cont" name="searchKey"  placeholder='{%trans "Search by Job title"%}' required="required" style="height:40px;width:60%" type="search">
+      <input class="btn btn-warning" type="submit" value="{% trans "Search" %}">
+   </form>
+  
+</div>
 </div>
 
--->
 
-
-
-<!--
-<form action="/i18n/" method="post">
-<input name="lang" type="hidden" value="/next/page/" />
-<select name="language">
-    {% for lang in LANGUAGES %}
-    <option value="{{ lang.0 }}">{{ lang.1 }}</option>
-    {% endfor %}
-</select>
-<input type="submit" value="Go" />
-</form>
--->
-
-
-
-
-<!--
-{% language 'en' %}
-    {% get_current_language as LANGUAGE_CODE %}
-    <p>{% trans "Bienvenue sur mon site" %}</p>
-{% endlanguage %}
-
-{% language 'fr' %}
-    {% get_current_language as LANGUAGE_CODE %}
-    <p>{% trans "Bienvenue sur mon site" %}</p>
-{% endlanguage %}
--->
+<div class="container">
+	<div class="col-lg-12">
 
 
 <br/>
@@ -247,7 +203,7 @@ input:focus{
 <div class="row text-right">
   <form action="/i18n/setlang/" method="post" class="auto_submit_item">
   {% csrf_token %}
-  <select name="language">
+  <select name="language" class="selectpicker" data-live-search="true">
       <option value="fr">{% trans "Langue" %}</option>
       {% for lang in LANGUAGES %}
       <option value="{{ lang.0 }}">{{ lang.1 }}</option>
@@ -266,17 +222,25 @@ input:focus{
      $("form").submit();
    });
  });
+
+  $('.selectpicker').selectpicker({
+  style: 'btn-info',
+  size: 4
+});
+
 </script>
 <br>
 
 <br/>
+
+  <div class="col-lg-10 col-lg-offset-1">
+    
   {% block content %}
   {% endblock %}
+  </div>
 
 	</div>
 </div>
-
-
 
 <footer class="bs-docs-footer" role="contentinfo">
     <div class="container">
