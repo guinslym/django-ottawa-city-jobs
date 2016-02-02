@@ -23,7 +23,7 @@ class IndexView(generic.ListView):
     template_name='emplois/index.html'
     context_object_name='latest_jobs_list'
     paginate_by = 10
-    
+
 
     def get_queryset(self):
        #print(self.request.LANGUAGE_CODE) #'en-us
@@ -73,8 +73,10 @@ class ExpiringSoonView(generic.ListView):
 
     def get_queryset(self):
        language = language_set(self.request.LANGUAGE_CODE)
+       today =  timezone.now().date()
+       ending_in_two_weeks =  datetime.now()
        return Job.objects.filter(language=language, 
-        expirydate__lte=datetime.now()+timedelta(days=14)).order_by('expirydate')
+        expirydate__lte=ending_in_two_weeks,expirydate__gte=today).order_by('-expirydate')
 
 #http://localhost:8001/emplois/all_job_posted
 class AllJobsView(generic.ListView):
