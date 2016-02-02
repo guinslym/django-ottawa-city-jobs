@@ -186,7 +186,7 @@ def update_and_tweets(request):
     if tweet_time:
         #tweet
         from .tweets import tweet_a_job
-        tweet_a_job()
+        #tweet_a_job()
         print('Tweet time')
         return HttpResponse("<h1>Tweet time </h1>")
     elif upgrade_time: 
