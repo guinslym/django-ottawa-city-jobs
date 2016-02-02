@@ -148,15 +148,19 @@ input:focus{
         color: #fff;
       }
       div.jumbotron {
-    min-height: 300px;
-    //background-color: #33CC99;
+    min-height: 350px;
+    background-color: #33CC99;
     text-align: center;
     background-image: url("data:image/svg+xml,%3Csvg%20version%3D%271.1%27%20id%3D%27Layer_1%27%20xml…5h2v5h5V0z%20M23%2C18h-5v5h-2v-5h-5v-2h5v-5h2v5h5V18z%27/%3E%0A%3C/svg%3E");
      //background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Flag_of_Ottawa%2C_Ontario.svg/250px-Flag_of_Ottawa%2C_Ontario.svg.png");
      background-repeat:repeat;
+     border-bottom: 10px solid #666;
 }
       .jumbotron h1{
-  padding-top: 40px;
+  padding-top: 20px;
+}
+div.jumbotron img{
+  padding-bottom: 20px;
 }
 </style>
 
@@ -215,6 +219,7 @@ input:focus{
 <div class="row text-right">
   <form action="/i18n/setlang/" method="post" class="auto_submit_item">
   {% csrf_token %}
+
   <select name="language" class="selectpicker" data-live-search="true">
       <option value="fr">{% trans "Langue" %}</option>
       {% for lang in LANGUAGES %}
