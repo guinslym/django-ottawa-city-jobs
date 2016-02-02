@@ -23,6 +23,7 @@ class IndexView(generic.ListView):
     template_name='emplois/index.html'
     context_object_name='latest_jobs_list'
     paginate_by = 10
+    job_object_list()
     
 
     def get_queryset(self):
