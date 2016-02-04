@@ -1,9 +1,7 @@
 import os
+#import dj_database_url
 
-INSTALLED_APPS = (
-    'django.contrib.contenttypes',
-    'emplois',
-)
+from settings import *
 
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
