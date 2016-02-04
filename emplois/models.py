@@ -31,7 +31,7 @@ class Job(models.Model):
 
 
     joburl = models.URLField(max_length=250, blank=True, null=True)
-    expirydate = models.DateField(auto_now=True, blank=True, null=True)
+    expirydate = models.DateField(auto_now=False, blank=True, null=True)
     salarymax = models.CharField(max_length=40, blank=True, null=True)
     salarymin = models.CharField(max_length=40, blank=True, null=True)
     salarytype = models.CharField(max_length=20, blank=True, null=True) 

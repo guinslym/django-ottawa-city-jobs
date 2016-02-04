@@ -17,6 +17,7 @@ from django.views.decorators.cache import cache_page
 from .models import Job, Description
 from .utils import job_object_list, language_set
 # Create your views here.
+import json
 
 #http:://localhost:8001/
 class IndexView(generic.ListView):
@@ -172,6 +173,13 @@ def emplois(request):
         language=language_set(request.LANGUAGE_CODE)
         )
     data = serializers.serialize('json', foos)
+    return HttpResponse(data, content_type='application/json')
+
+#http://localhost:8001/emplois/<annee>/<mois>/<jour>
+def download(request):
+    import datetime
+    data = serializers.serialize('json', Job.objects.all() )
+    data = json.dumps(json.loads(data), indent=4)
     return HttpResponse(data, content_type='application/json')
 
 
