@@ -174,6 +174,7 @@ gettext = lambda x: x
 LANGUAGES = (
    ('fr', gettext('French')),
    ('en', gettext('English')),
+   #('pt', gettext('Portugues')),
 )
 
 DEFAULT_LANGUAGE = 0    

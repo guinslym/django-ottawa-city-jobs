@@ -1,0 +1,121 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-02-10 14:22-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: emplois/templates/base.html:161
+msgid "Ottawa City Jobs"
+msgstr "Jobs na cidade de Ottawa"
+
+#: emplois/templates/base.html:170
+msgid "Stats"
+msgstr "Estatística"
+
+#: emplois/templates/base.html:174
+msgid "About"
+msgstr "Sobre nós"
+
+#: emplois/templates/base.html:175
+msgid "Download"
+msgstr "Baixar"
+
+#: emplois/templates/base.html:192
+msgid "Search by Job title"
+msgstr "Busca por título Job"
+
+#: emplois/templates/base.html:193
+msgid "Search"
+msgstr "Busca"
+
+#: emplois/templates/base.html:211
+msgid "Langue"
+msgstr "Idioma"
+
+#: emplois/templates/emplois/index.html:9
+#: emplois/templates/emplois/result.html:9
+msgid "Job list"
+msgstr "Lista de trabalhos"
+
+#: emplois/templates/emplois/index.html:17
+#: emplois/templates/emplois/result.html:16
+msgid "jobs found for"
+msgstr "empregos encontrado para"
+
+#: emplois/templates/emplois/index.html:20
+#: emplois/templates/emplois/result.html:19
+msgid "jobs found"
+msgstr "empregos encontrados"
+
+#: emplois/templates/emplois/index.html:31
+#: emplois/templates/emplois/result.html:30
+msgid "Sort by"
+msgstr "ordenar por"
+
+#: emplois/templates/emplois/index.html:32
+#: emplois/templates/emplois/result.html:31
+msgid "Posted within the last 2 weeks"
+msgstr "Publicado dans le últimas 2 semanas"
+
+#: emplois/templates/emplois/index.html:33
+#: emplois/templates/emplois/result.html:32
+msgid "Will expired in 2 weeks from now"
+msgstr "Será que expirou em 2 semanas a partir de agora"
+
+#: emplois/templates/emplois/index.html:34
+#: emplois/templates/emplois/result.html:33
+msgid "All jobs"
+msgstr "Todos os trabalhos"
+
+#: emplois/templates/emplois/index.html:62
+#: emplois/templates/emplois/result.html:51
+msgid "Salary"
+msgstr "Salário"
+
+#: emplois/templates/emplois/index.html:64
+#: emplois/templates/emplois/result.html:53
+msgid "anually"
+msgstr "por ano"
+
+#: emplois/templates/emplois/index.html:66
+#: emplois/templates/emplois/result.html:55
+msgid "hourly"
+msgstr "por hora"
+
+#: emplois/templates/emplois/index.html:69
+#: emplois/templates/emplois/result.html:58
+msgid "Expiring date"
+msgstr "Expirar Data"
+
+#: emplois/templates/emplois/index.html:70
+#: emplois/templates/emplois/result.html:59
+msgid "postdate"
+msgstr "pós-data"
+
+#: emplois/templates/emplois/index.html:71
+#: emplois/templates/emplois/result.html:60
+msgid "Apply link"
+msgstr "aplicar ligação"
+
+#: emplois/templates/emplois/index.html:71
+#: emplois/templates/emplois/result.html:60
+msgid "Apply"
+msgstr "Aplicar"
+
+#: emplois/templates/emplois/stats.html:16
+msgid "statistics"
+msgstr "Estatística"

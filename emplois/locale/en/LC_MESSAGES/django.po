@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-01-18 10:43-0500\n"
+"POT-Creation-Date: 2016-02-10 14:22-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,31 +17,31 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: emplois/templates/base.html:49
+#: emplois/templates/base.html:161
 msgid "Ottawa City Jobs"
 msgstr "Ottawa City Jobs"
 
-#: emplois/templates/base.html:63
-msgid "Search by Job title"
-msgstr "Search by Job title"
-
-#: emplois/templates/base.html:64
-msgid "Search"
-msgstr "Search"
-
-#: emplois/templates/base.html:70
+#: emplois/templates/base.html:170
 msgid "Stats"
 msgstr "Stats"
 
-#: emplois/templates/base.html:74
+#: emplois/templates/base.html:174
 msgid "About"
 msgstr "About"
 
-#: emplois/templates/base.html:188 emplois/templates/base.html.py:193
-msgid "Bienvenue sur mon site"
-msgstr "Welcome to my site (en)"
+#: emplois/templates/base.html:175
+msgid "Download"
+msgstr ""
 
-#: emplois/templates/base.html:204
+#: emplois/templates/base.html:192
+msgid "Search by Job title"
+msgstr "Search by Job title"
+
+#: emplois/templates/base.html:193
+msgid "Search"
+msgstr "Search"
+
+#: emplois/templates/base.html:211
 msgid "Langue"
 msgstr "Language"
 
@@ -80,37 +80,37 @@ msgstr "Will expired in 2 weeks from now"
 msgid "All jobs"
 msgstr "All jobs"
 
-#: emplois/templates/emplois/index.html:59
+#: emplois/templates/emplois/index.html:62
 #: emplois/templates/emplois/result.html:51
 msgid "Salary"
 msgstr "Salary"
 
-#: emplois/templates/emplois/index.html:61
+#: emplois/templates/emplois/index.html:64
 #: emplois/templates/emplois/result.html:53
 msgid "anually"
 msgstr "anually"
 
-#: emplois/templates/emplois/index.html:63
+#: emplois/templates/emplois/index.html:66
 #: emplois/templates/emplois/result.html:55
 msgid "hourly"
 msgstr "hourly"
 
-#: emplois/templates/emplois/index.html:66
+#: emplois/templates/emplois/index.html:69
 #: emplois/templates/emplois/result.html:58
 msgid "Expiring date"
 msgstr "Expiring date"
 
-#: emplois/templates/emplois/index.html:67
+#: emplois/templates/emplois/index.html:70
 #: emplois/templates/emplois/result.html:59
 msgid "postdate"
 msgstr "postdate"
 
-#: emplois/templates/emplois/index.html:68
+#: emplois/templates/emplois/index.html:71
 #: emplois/templates/emplois/result.html:60
 msgid "Apply link"
 msgstr "Apply link"
 
-#: emplois/templates/emplois/index.html:68
+#: emplois/templates/emplois/index.html:71
 #: emplois/templates/emplois/result.html:60
 msgid "Apply"
 msgstr "Apply"
@@ -120,6 +120,9 @@ msgstr "Apply"
 #| msgid "Stats"
 msgid "statistics"
 msgstr "Stats"
+
+#~ msgid "Bienvenue sur mon site"
+#~ msgstr "Welcome to my site (en)"
 
 #~ msgid ""
 #~ "This string will have %(value)s inside. Lorem ipsum dolor sit amet, "
