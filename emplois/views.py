@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 #Django
 from django.shortcuts import render, get_object_or_404, redirect
 from django.views import generic
