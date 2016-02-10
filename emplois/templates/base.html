@@ -116,6 +116,9 @@ input {
     color:black;
     font-size: 14px;
 }
+form#language{
+  padding-top: 15px;
+}
 input:focus{
   color:blue;
   font-size: 16px;
@@ -204,7 +207,7 @@ div.jumbotron img{
 <br/>
 
 <div class="row text-right">
-  <form action="/i18n/setlang/" method="post" class="auto_submit_item">
+  <form action="/i18n/setlang/" method="post" id="language" class="auto_submit_item">
   {% csrf_token %}
 
   <select name="language" class="selectpicker" data-live-search="true">
