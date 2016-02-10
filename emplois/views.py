@@ -247,13 +247,13 @@ def emplois(request):
     object 
     """
     import datetime
-    foos = Job.objects.filter(
+    jobs = Job.objects.filter(
         pub_date__year=request.GET.get('annee'),
         pub_date__month=request.GET.get('mois'),
         pub_date__day=request.GET.get('jour'),
         language=language_set(request.LANGUAGE_CODE)
         )
-    data = serializers.serialize('json', foos)
+    data = serializers.serialize('json', jobs)
     return HttpResponse(data, content_type='application/json')
 
 #http://localhost:8001/emplois/download

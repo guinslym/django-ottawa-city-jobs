@@ -13,7 +13,7 @@ from django.utils import timezone
 @python_2_unicode_compatible
 class Job(models.Model):
     '''
-
+    Job.models
     '''
     FRENCH = 'FR'
     ENGLISH = 'EN'
@@ -52,7 +52,7 @@ class Job(models.Model):
 @python_2_unicode_compatible
 class Description(models.Model):
     '''
-
+    Job.Description.models
     '''
     def __str__(self):
         return self.company_desc
