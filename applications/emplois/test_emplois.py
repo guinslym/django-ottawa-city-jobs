@@ -3,7 +3,7 @@ import datetime
 from django.utils import timezone
 from django.core.urlresolvers import reverse
 from django.test import TestCase
-from emplois.models import Job
+from applications.emplois.models import Job
 
 def create_poll(question, days):
     """
