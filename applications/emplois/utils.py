@@ -105,6 +105,9 @@ def job_object_list():
 
 
 class DecimalEncoder(json.JSONEncoder):
+    """Utils so that the json file can 
+    write the proper Datetime
+    """
     def _iterencode(self, o, markers=None):
         if isinstance(o, decimal.Decimal):
             # wanted a simple yield str(o) in the next line,
