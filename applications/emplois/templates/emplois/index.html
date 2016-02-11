@@ -7,24 +7,6 @@
 	{% block content %}
 
 	<h1>{% trans "Job list"%} </h1>
-
-<!--
-	<div class="row">
-		<div class="col-lg-12">
-			
-			     
-			{% if keyword %}
-					<p><strong>{{ latest_jobs_list|length  }}</strong> {% trans "jobs found for" %} <strong>"{{ keyword }}"</strong></p>
-
-					{% else %}
-					<p><strong>{{ latest_jobs_list|length  }}</strong> {% trans "jobs found" %}.</p>
-			{% endif %}
-		</div>
-	</div>
-
--->
-
-
 	
 	<div class="row text-right">
 		<ul>
@@ -38,7 +20,7 @@
 <div class="row">
 <div class="text-left">
 <br/>
- {% bootstrap_paginate page_obj range=10 show_prev_next='true' previous_label='<' next_label='>' last_label='>>' %}		
+ {% bootstrap_paginate page_obj last_label="Last" first_label="First"  range=5 show_prev_next='true' previous_label="<" next_label=">" %}		
 </div>
 
 </div>
@@ -69,9 +51,6 @@
 			<li><strong>{% trans "Expiring date"%} : </strong>{{ emploi.expirydate }}</li>
 			<li><strong>{% trans "postdate" %}: </strong> {{ emploi.pub_date| naturalday }}</li>
 			<li><strong>{% trans "Apply link" %}: </strong> <a href="{{ emploi.joburl }}" target="_blank">{% trans "Apply"%}</a></li>
-			<!--
-			<li><strong>email it to me: </strong> <a href="#">button</a></li>
-			-->
 		</ul>
 	
 	</div><!-- div.filterWrap-->

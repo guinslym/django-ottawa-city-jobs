@@ -44,7 +44,9 @@ INSTALLED_APPS = [
     'django_q',
     #'metasettings',
     'bootstrap_pagination',
+    #slugs
     'uuslug',
+    #applications
     'applications.emplois',
 ]
 
