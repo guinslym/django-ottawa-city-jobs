@@ -53,7 +53,6 @@ def stringify_object(data):
     return expirydate
 
 def job_object_list():
-    #print('OK')
     """
     This function will compare the list of Jobs
     from the DB with the list of jobs from the website 
@@ -61,7 +60,6 @@ def job_object_list():
     and if it s found new jobs it will save it to
     the DB
     """
-    last_job_date = Job.objects.all().order_by('-pub_date')[0].pub_date
     jobsDb = Job.objects.values('jobref')
     #flatten jobsDb
     jobs_db = [ i.get('jobref') for i in jobsDb]
@@ -102,7 +100,7 @@ def job_object_list():
                     company_desc = emploi.get('COMPANY_DESC', None),
                     pub_date = stringify_object(emploi.get('POSTDATE'))
                         )
-    print(len(list_emploi))
+    #print(len(list_emploi))
                 
 
 
@@ -116,6 +114,12 @@ class DecimalEncoder(json.JSONEncoder):
         return super(DecimalEncoder, self)._iterencode(o, markers)
 
 def emplois():
+    """
+    This function does almost the same thing as 
+    job_object_list()
+    but it wont' save anything in the DB
+    it will create a JSON file instead
+    """
     data = get_data()
     conteneur = []
     compteur = 1

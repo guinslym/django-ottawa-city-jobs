@@ -277,11 +277,13 @@ def update_and_tweets(request):
     """
     from datetime import datetime, timedelta, time
     from pytz import timezone
+
     ottawa_timezone = timezone('America/Montreal')
     ottawa_now = datetime.now(ottawa_timezone)
     now_time = ottawa_now.time()
     tweet_time = False #now_time >= time(5,30) and now_time <= time(18,30)
     upgrade_time = True#(now_time >= time(12,00) and now_time <= time(16,30))
+    
     if tweet_time:
         #tweet
         from .tweets import tweet_a_job
@@ -290,7 +292,7 @@ def update_and_tweets(request):
     elif upgrade_time: 
         #Update the list of jobs from Open Data portal (Ottawa.open.data)
         job_object_list()
-        return HttpResponse("<h1>Upgrade time</h1>")
+        return HttpResponse("<h1>Update time</h1>")
     else:
         return HttpResponse("<h1>Nothing</h1>")
 
