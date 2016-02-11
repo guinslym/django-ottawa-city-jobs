@@ -1,26 +1,25 @@
 https://ottawa-city-jobs.herokuapp.com/
-###Projects
+##Projects
 this is the project django project for https://ottawa-city-jobs.herokuapp.com/
 
 ##Structure of the app
 
-###Projects & Applications
 ```
 .
 ├── applications
-				├── admin.py
-				├── apps.py
-				├── __init__.py
-				├── locale/
-				├── migrations/
-				├── models.py
-				├── __pycache__
-				├── templates/
-				├── test_emplois.py
-				├── tests.py
-				├── urls.py
-				├── utils.py
-				└── views.py
+		├── admin.py
+		├── apps.py
+		├── __init__.py
+		├── locale/
+		├── migrations/
+		├── models.py
+		├── __pycache__
+		├── templates/
+		├── test_emplois.py
+		├── tests.py
+		├── urls.py
+		├── utils.py
+		└── views.py
 ├── cache
 ├── db.sqlite3
 ├── fixtures
@@ -28,13 +27,13 @@ this is the project django project for https://ottawa-city-jobs.herokuapp.com/
 ├── locale
 ├── manage.py
 ├── ottawacityjobs/
-				├── conftest.py
-				├── __init__.py
-				├── __pycache__
-				├── settings.py
-				├── test_settings.py
-				├── urls.py
-				└── wsgi.py
+		├── conftest.py
+		├── __init__.py
+		├── __pycache__
+		├── settings.py
+		├── test_settings.py
+		├── urls.py
+		└── wsgi.py
 ├── Procfile
 ├── pytest.ini
 ├── README.md
