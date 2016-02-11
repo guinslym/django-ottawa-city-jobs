@@ -15,10 +15,10 @@
 
 <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/flatly/bootstrap.min.css" rel="stylesheet" integrity="sha256-Av2lUNJFz7FqxLquvIFyxyCQA/VHUFna3onVy+5jUBM= sha512-zyqATyziDoUzMiMR8EAD3c5Ye55I2V3K7GcmJDHbL49cXzFQCEA6flSKqxEzwxXqq73/M4A0jKFFJ/ysEhbExQ==" crossorigin="anonymous">
 
-<!-- Latest compiled and minified CSS -->
+<!-- Latest compiled and minified CSS Bootstrap select -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.9.4/css/bootstrap-select.min.css">
 
-
+<!-- Jquery 2.0.1-->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.1/jquery.js"></script>
 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha256-KXn5puMvxCw+dAYznun+drMdG1IFl3agK0p/pqT9KAo= sha512-2e8qq0ETcfWRI4HJBzQiA3UoyFk6tbNyG+qSaIBZLyW9Xf3sWZHN/lxe9fTh1U45DpPf07yj94KsUHHWe4Yk1A==" crossorigin="anonymous"></script>
@@ -26,6 +26,7 @@
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.9.4/js/bootstrap-select.min.js"></script>
 
+<!-- D3.js for Stats visualisation -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.12/d3.min.js"></script>
 
 <style type="text/css">
@@ -35,16 +36,16 @@
     box-shadow: 3px 3px #c7c7c7;
 }
 
-	ul li{
-		display: inline;
-		list-style: none;
-		padding-left: 0px;
-		padding-right: 10px;
+ul li{
+    display: inline;
+    list-style: none;
+    padding-left: 0px;
+    padding-right: 10px;
 	}
-  footer{
+footer{
     border-top: 10px solid #666;
-  }
-		.bs-docs-featurette+.bs-docs-footer {
+}
+.bs-docs-featurette+.bs-docs-footer {
     margin-top: 0;
     border-top: 0;
 }
@@ -158,6 +159,13 @@ div.jumbotron img{
 </head>
 <body>
 
+<!-- 
+ _  _          _              
+| \| |__ ___ _| |__  __ _ _ _ 
+| .` / _` \ V / '_ \/ _` | '_|
+|_|\_\__,_|\_/|_.__/\__,_|_|  
+                              
+                              -->
 <div class="navbar navbar-default">
       <div class="container">
         <div class="navbar-header">
@@ -171,9 +179,6 @@ div.jumbotron img{
         <div class="navbar-collapse collapse" id="navbar-main">
           <ul class="nav navbar-nav navbar-right">
             <li><a href="{% url 'emplois:stats' %}">{% trans "Stats"%}</a></li>
-            <!--
-            <li><a href="#">Fr/En</a></li>
-            -->
             <li><a href="{% url 'emplois:about' %}">{% trans "About"%}</a></li>
             <li><a href="{% url 'emplois:download' %}">{% trans "Download"%}</a></li>
           </ul>
@@ -182,8 +187,15 @@ div.jumbotron img{
       </div>
     </div>
 
+<!-- end Navbar -->
 
 
+<!--
+     _            _         _                
+  _ | |_  _ _ __ | |__  ___| |_ _ _ ___ _ _  
+ | || | || | '  \| '_ \/ _ \  _| '_/ _ \ ' \ 
+  \__/ \_,_|_|_|_|_.__/\___/\__|_| \___/_||_|
+-->
 <div class="jumbotron">
 
     <div class="col-lg-10  col-lg-offset-1 text-center" id="main-page">
@@ -198,10 +210,20 @@ div.jumbotron img{
   
 </div>
 </div>
+<!-- end Jumbotron -->
 
 
 <div class="container">
-	<div class="col-lg-12">
+
+
+<!-- 
+  _                                      
+ | |   __ _ _ _  __ _ _  _ __ _ __ _ ___ 
+ | |__/ _` | ' \/ _` | || / _` / _` / -_)
+ |____\__,_|_||_\__, |\_,_\__,_\__, \___|
+                |___/          |___/     
+-->	
+  <div class="col-lg-12">
 
 
 <br/>
@@ -216,24 +238,40 @@ div.jumbotron img{
       <option value="{{ lang.0 }}">{{ lang.1 }}</option>
       {% endfor %}
   </select>
-  <!--
-  <input type="submit" value="Go" />
-  -->
   </form>  
+
 </div>
+</div><!-- div col-lg-12 end -->
 
 <br>
 
 <br/>
 
+<!--
+    __    __           __                       __             __ 
+   / /_  / /___  _____/ /__   _________  ____  / /____  ____  / /_
+  / __ \/ / __ \/ ___/ //_/  / ___/ __ \/ __ \/ __/ _ \/ __ \/ __/
+ / /_/ / / /_/ / /__/ ,<    / /__/ /_/ / / / / /_/  __/ / / / /_  
+/_.___/_/\____/\___/_/|_|   \___/\____/_/ /_/\__/\___/_/ /_/\__/  
+                                                                  
+ -->
   <div class="col-lg-11 col-lg-offset-1">
     
   {% block content %}
   {% endblock %}
   </div>
-
+<!-- end content -->
 	</div>
 </div>
+
+<!--
+    ____            __           
+   / __/___  ____  / /____  _____
+  / /_/ __ \/ __ \/ __/ _ \/ ___/
+ / __/ /_/ / /_/ / /_/  __/ /    
+/_/  \____/\____/\__/\___/_/     
+                                 
+                                 -->
 
 <footer class="bs-docs-footer" role="contentinfo">
     <div class="container">
@@ -248,6 +286,15 @@ div.jumbotron img{
 </footer>
 
 <span id="scrollUp"></span>
+
+<!--
+       _                                  _       __ 
+      (_)___ __   ______ ________________(_)___  / /_
+     / / __ `/ | / / __ `/ ___/ ___/ ___/ / __ \/ __/
+    / / /_/ /| |/ / /_/ (__  ) /__/ /  / / /_/ / /_  
+ __/ /\__,_/ |___/\__,_/____/\___/_/  /_/ .___/\__/  
+/___/                                  /_/           
+-->
 
 <script type="text/javascript" src="{% static 'js/jquery.scrollUp.js' %}"></script>
 
@@ -284,5 +331,6 @@ div.jumbotron img{
 $('br').remove();
 
 </script>
+
 </body>
 </html>
