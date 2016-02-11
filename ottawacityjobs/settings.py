@@ -45,7 +45,7 @@ INSTALLED_APPS = [
     #'metasettings',
     'bootstrap_pagination',
     'uuslug',
-    'emplois',
+    'applications.emplois',
 ]
 
 MIDDLEWARE_CLASSES = [

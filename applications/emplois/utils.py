@@ -61,6 +61,7 @@ def job_object_list():
     and if it s found new jobs it will save it to
     the DB
     """
+    last_job_date = Job.objects.all().order_by('-pub_date')[0].pub_date
     jobsDb = Job.objects.values('jobref')
     #flatten jobsDb
     jobs_db = [ i.get('jobref') for i in jobsDb]
