@@ -1,43 +1,62 @@
 https://ottawa-city-jobs.herokuapp.com/
+###Projects
+this is the project django project for https://ottawa-city-jobs.herokuapp.com/
 
 ##Structure of the app
 
-###Project
+###Projects & Applications
 ```
-ottawacityjobs
-├── __init__.py
-├── __pycache__/
-├── settings.py
-├── static/
-├── urls.py
-└── wsgi.py
-```
-
-###Applications
-```
-emplois
-├── admin.py
-├── apps.py
+.
+├── applications
+				├── admin.py
+				├── apps.py
+				├── __init__.py
+				├── locale/
+				├── migrations/
+				├── models.py
+				├── __pycache__
+				├── templates/
+				├── test_emplois.py
+				├── tests.py
+				├── urls.py
+				├── utils.py
+				└── views.py
+├── cache
+├── db.sqlite3
 ├── fixtures
-│   ├── data.json
-├── __init__.py
+├── LICENSE
 ├── locale
-│   ├── en
-│   └── fr
-├── migrations
-│   ├── 0001_initial.py
-│   ├── 0002_auto_20160111_2331.py
-│   ├── __init__.py
-│   └── __pycache__/
-├── models.py
-├── __pycache__
-├── templates
-│   ├── base.html
-│   └── emplois
-├── tests.py
-├── urls.py
-├── utils.py
-└── views.py
+├── manage.py
+├── ottawacityjobs/
+				├── conftest.py
+				├── __init__.py
+				├── __pycache__
+				├── settings.py
+				├── test_settings.py
+				├── urls.py
+				└── wsgi.py
+├── Procfile
+├── pytest.ini
+├── README.md
+├── requirements.txt
+├── runtime.txt
+├── setup.cfg
+└── static
+
+
+
 
 9 directories, 20 files
+```
+
+###Installation
+
+```
+mkdir ottawacityjobs 
+cd ottawacityjobs
+virtualenv env_python_34
+source env_python_34/bin/activate
+git clone git@github.com:guinslym/django-ottawa-city-jobs.git
+cd django-ottawa-city-jobs
+python manage.py runserver 8001
 ```
