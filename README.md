@@ -2,18 +2,30 @@ https://ottawa-city-jobs.herokuapp.com/
 ##Projects
 this is the project django project for https://ottawa-city-jobs.herokuapp.com/
 
+###Installation
+
+```
+mkdir ottawacityjobs 
+cd ottawacityjobs
+virtualenv env_python_34
+source env_python_34/bin/activate
+git clone git@github.com:guinslym/django-ottawa-city-jobs.git
+cd django-ottawa-city-jobs
+python manage.py runserver 8001
+```
+
 ##Structure of the app
 
 ```
 .
-├── applications
+├── applications/
 		├── admin.py
 		├── apps.py
 		├── __init__.py
 		├── locale/
 		├── migrations/
 		├── models.py
-		├── __pycache__
+		├── __pycache__/
 		├── templates/
 		├── test_emplois.py
 		├── tests.py
@@ -22,14 +34,14 @@ this is the project django project for https://ottawa-city-jobs.herokuapp.com/
 		└── views.py
 ├── cache
 ├── db.sqlite3
-├── fixtures
+├── fixtures/
 ├── LICENSE
-├── locale
+├── locale/
 ├── manage.py
 ├── ottawacityjobs/
 		├── conftest.py
 		├── __init__.py
-		├── __pycache__
+		├── __pycache__/
 		├── settings.py
 		├── test_settings.py
 		├── urls.py
@@ -48,14 +60,3 @@ this is the project django project for https://ottawa-city-jobs.herokuapp.com/
 9 directories, 20 files
 ```
 
-###Installation
-
-```
-mkdir ottawacityjobs 
-cd ottawacityjobs
-virtualenv env_python_34
-source env_python_34/bin/activate
-git clone git@github.com:guinslym/django-ottawa-city-jobs.git
-cd django-ottawa-city-jobs
-python manage.py runserver 8001
-```
