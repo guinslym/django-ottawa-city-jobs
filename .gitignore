@@ -1,6 +1,5 @@
 *.pyc
 *.mp3
-*.sqlite3
 history.txt
 cache/
 .cache/
@@ -11,6 +10,5 @@ tasks.todo
 staticfiles/
 local_settings.py
 __pycache__
-*tweets.py
 *twitter_secrets.py
 emplois/__pycache__/
