@@ -281,8 +281,8 @@ def update_and_tweets(request):
     ottawa_timezone = timezone('America/Montreal')
     ottawa_now = datetime.now(ottawa_timezone)
     now_time = ottawa_now.time()
-    tweet_time = now_time >= time(5,30) and now_time <= time(18,30)
-    upgrade_time = (now_time >= time(12,00) and now_time <= time(16,30))
+    tweet_time = False#now_time >= time(5,30) and now_time <= time(18,30)
+    upgrade_time = True#(now_time >= time(12,00) and now_time <= time(16,30))
     
     if tweet_time:
         #tweet
