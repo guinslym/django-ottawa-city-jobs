@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'uuslug',
     #applications
     'applications.emplois',
+    'applications.cityjobs',
 ]
 
 MIDDLEWARE_CLASSES = [
