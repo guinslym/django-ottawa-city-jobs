@@ -22,12 +22,12 @@ class Job(models.Model):
     educationandexp = models.TextField(blank=True, null=True)
     expirydate = models.DateTimeField(auto_now=False, blank=True, null=True)
     joburl = models.URLField(max_length=250, blank=True, null=True)
-    jobref = models.CharField(max_length=30, blank=True, null=True)
+    jobref = models.CharField(max_length=30, unique=True, blank=True, null=True)
     job_summary = models.TextField(blank=True, null=True)
     knowledge = models.TextField(blank=True, null=True)
     language_certificates = models.TextField(blank=True, null=True)
     language = models.CharField(max_length=2, choices=LANGUAGE_CHOICE, default=ENGLISH) 
-    job_name = models.URLField(max_length=250, blank=True, null=True)
+    jobname = models.URLField(max_length=250, blank=True, null=True)
     position = models.CharField(max_length=150, blank=True, null=True)
     postdate = models.DateTimeField(auto_now=False, blank=True, null=True)
     salarymin = models.CharField(max_length=40, blank=True, null=True)
@@ -45,21 +45,6 @@ class Job(models.Model):
         now = timezone.now()
         return self.expirydate >= now 
 
-
-
-class Description(models.Model):
-    '''
-    Job.Description.models
-    '''
-    def __str__(self):
-        return self.company_desc
-
-    company_desc = models.TextField(blank=True, null=True)
-    postdate = models.DateTimeField(auto_now=False, blank=True, null=True)
-    pub_date = models.DateTimeField(auto_now=True, blank=True, null=True)
-
-"""
-
 @python_2_unicode_compatible
 class Description(models.Model):
     '''
@@ -70,30 +55,8 @@ class Description(models.Model):
 
     jobs = models.ForeignKey(Job, on_delete=models.CASCADE)
     knowledge = models.TextField(blank=True, null=True)
-    languagecert = models.TextField(blank=True, null=True)
+    language_certificates = models.TextField(blank=True, null=True)
     educationandexp = models.TextField(blank=True, null=True)
     company_desc = models.TextField(blank=True, null=True)
     pub_date = models.DateTimeField(auto_now=True, blank=True, null=True)
-
-
-
-
-import json
-from dateutil.parser import parse
-
-#indentation error
-def open_json()
-    with open('a.json') as data_file:
-        data = json.load(data_file)
-    return data
-
-data = data['jobs']
-
-for i in data:
-    p = i.get('POSTDATE')
-    p = parse(p)
-    p = p.strftime('%Y-%m-%d')
-    Description.objects.create(postdate=p)
-
-"""
 
