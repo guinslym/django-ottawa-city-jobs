@@ -32,7 +32,7 @@ def open_json_file(data):
         language_certificates = item.get('LANGUAGE_CERTIFICATES'),
         lang  = jobref.split('-'),
         language  = lang[2],
-        name = item.get('NAME'),
+        job_name = item.get('NAME'),
         position = item.get('POSITION'),
         postdate = parse_date(item.get('POSTDATE')),
         salarymin = item.get('SALARYMIN'),
