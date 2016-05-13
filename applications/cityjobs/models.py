@@ -18,14 +18,10 @@ class Job(models.Model):
             (FRENCH, 'FR'),
             (ENGLISH, 'EN'),
             )
-    company_desc = models.TextField(blank=True, null=True)
-    educationandexp = models.TextField(blank=True, null=True)
     expirydate = models.DateTimeField(auto_now=False, blank=True, null=True)
     joburl = models.URLField(max_length=250, blank=True, null=True)
     jobref = models.CharField(max_length=30, unique=True, blank=True, null=True)
     job_summary = models.TextField(blank=True, null=True)
-    knowledge = models.TextField(blank=True, null=True)
-    language_certificates = models.TextField(blank=True, null=True)
     language = models.CharField(max_length=2, choices=LANGUAGE_CHOICE, default=ENGLISH) 
     jobname = models.URLField(max_length=250, blank=True, null=True)
     position = models.CharField(max_length=150, blank=True, null=True)

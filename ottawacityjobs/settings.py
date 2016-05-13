@@ -42,10 +42,11 @@ INSTALLED_APPS = [
     'django_extensions',
     'debug_toolbar',
     'django_q',
+    'rest_framework',
     #'metasettings',
     'bootstrap_pagination',
     #slugs
-    'uuslug',
+    #'uuslug',
     #applications
     'applications.emplois',
     'applications.cityjobs',
