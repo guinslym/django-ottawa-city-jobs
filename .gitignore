@@ -6,6 +6,7 @@ cache/
 cache_dir/
 totrash/
 /totrash
+*/migrations/*
 tasks.todo
 staticfiles/
 local_settings.py

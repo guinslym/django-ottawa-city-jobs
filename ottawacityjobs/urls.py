@@ -21,6 +21,7 @@ from applications.cityjobs.views import *
 
 urlpatterns = [
     url(r'^jobs/', all_jobs),
+    #url(r'^desc/', all_descriptions),
     url(r'^emplois/', include('applications.emplois.urls', namespace="emplois")),
     url(r'^ottawacityjobs/', include('applications.emplois.urls')),
     url(r'^admin/', admin.site.urls),

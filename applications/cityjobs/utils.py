@@ -18,36 +18,32 @@ def open_this_file():
     data = data['jobs']
     return data
 
+
 #get the absolute path
 def open_json_file(data):
     for item in data:
         job_ref = item.get("JOBREF")
         lang = job_ref.split('-')
-        job = Job.objects.create(
-        company_desc = item.get("COMPANY_DESC"),
-        educationandexp = item.get("EDUCATIONANDEXP"),
-        expirydate = parse_date(item.get("EXPIRYDATE")),
-        joburl = item.get("JOBURL"),
-        jobref = job_ref,
-        job_summary = item.get("JOB_SUMMARY"),
-        knowledge = item.get('KNOWLEDGE'),
-        language_certificates = item.get('LANGUAGE_CERTIFICATES'),
-        language  = lang[2],
-        jobname = item.get('NAME'),
-        position = item.get('POSITION'),
-        postdate = parse_date(item.get('POSTDATE')),
-        salarymin = item.get('SALARYMIN'),
-        salarymax = item.get('SALARYMAX'),
-        salarytype = item.get('SALARYTYPE')
+        description = Description.objects.create(
+        KNOWLEDGE = item.get('KNOWLEDGE'),
+        LANGUAGE_CERTIFICATES = item.get('LANGUAGE_CERTIFICATES'),
+        EDUCATIONANDEXP = item.get("EDUCATIONANDEXP"),
+        COMPANY_DESC = item.get("COMPANY_DESC"),
+        JOBURL = item.get("JOBURL"),
+        JOB_SUMMARY = item.get("JOB_SUMMARY")
     )
-        job.description_set.create(
-        knowledge = item.get('KNOWLEDGE'),
-        language_certificates = item.get('LANGUAGE_CERTIFICATES'),
-        educationandexp = item.get("EDUCATIONANDEXP"),
-        company_desc = item.get("COMPANY_DESC")
+        description.emploi_set.create(
+        EXPIRYDATE = parse_date(item.get("EXPIRYDATE")),
+        JOBREF = job_ref,
+        LANGUAGE  = lang[2],
+        JOBNAME = item.get('NAME'),
+        POSITION = item.get('POSITION'),
+        POSTDATE = parse_date(item.get('POSTDATE')),
+        SALARYMIN = item.get('SALARYMIN'),
+        SALARYMAX = item.get('SALARYMAX'),
+        SALARYTYPE = item.get('SALARYTYPE')
      )
     return 'successful'
-
 
 
 #load json files
@@ -56,11 +52,11 @@ def open_json_file(data):
 ''' shell
 https://stackoverflow.com/questions/2265357/parse-date-string-and-change-format
 
-from applications.cityjobs.models import Description, Job
+from applications.cityjobs.models import Description, Emploi
 from applications.cityjobs.utils import open_json_file as main_app
 from applications.cityjobs.utils import open_this_file as op 
 
-Job.objects.all().delete()
+Emploi.objects.all().delete()
 Description.objects.all().delete()
 data = op()
 a = main_app(data)
