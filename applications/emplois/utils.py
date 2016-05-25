@@ -133,6 +133,7 @@ def emplois():
             pub_date = parse(job.get('POSTDATE', None))
             pub_date = str(pub_date).split(' ')[0]
             #calcul
+            salary = job.get('SALARYMAX', None)
             if job.get('SALARYMAX', None):
                 if ',' in job.get('SALARYMAX', None):
                     salary = job.get('SALARYMAX', None)
@@ -182,3 +183,15 @@ def emplois():
     print('json file created: uottawa_emplois_bilingual.json')
 
 
+#get each row into the db
+''' shell
+https://stackoverflow.com/questions/2265357/parse-date-string-and-change-format
+
+from applications.emplois.models import Description, Job
+from applications.emplois.utils import emplois
+
+emplois()
+
+"JOBREF": "2016-EX-EN-51513638"
+
+'''

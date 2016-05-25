@@ -3,7 +3,7 @@
 import json
 import os
 from dateutil.parser import parse
-from .models import Job, Description
+from .models import Emploi, Description
 
 def parse_date(this_date):
     this_date = parse(this_date)

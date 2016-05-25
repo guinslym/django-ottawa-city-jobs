@@ -10,8 +10,6 @@ from django.conf import settings
 #pagination   
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 #Task queues
-from django_q.tasks import async, schedule, result
-from django_q.models import Schedule
 #cache
 from django.views.decorators.cache import cache_page
 #models and utils

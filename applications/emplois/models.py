@@ -2,10 +2,6 @@
 from django.db import models
 from django.utils.encoding import python_2_unicode_compatible
 
-#third party
-from uuslug import slugify
-from uuslug import uuslug
-
 import datetime
 from django.utils import timezone
 
@@ -44,10 +40,6 @@ class Job(models.Model):
     pub_date = models.DateTimeField(auto_now=False, blank=True, null=True)
     slug = models.CharField(max_length=200)
     tweeted = models.BooleanField(default=False)
-
-    def save(self, *args, **kwargs):
-        self.slug = uuslug(self.jobref, instance=self)
-        super(Job, self).save(*args, **kwargs)
 
 @python_2_unicode_compatible
 class Description(models.Model):
