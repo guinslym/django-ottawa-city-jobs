@@ -175,7 +175,7 @@ LANGUAGES = (
    #('pt', gettext('Portugues')),
 )
 
-DEFAULT_LANGUAGE = 0    
+DEFAULT_LANGUAGE = 0
 
 #FIXTURE_DIRS = ['fixtures']
 
@@ -199,3 +199,131 @@ STATICFILES_DIRS = (
 # Simplified static file serving.
 # https://warehouse.python.org/project/whitenoise/
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+
+
+
+# SITE CONFIG
+ENV = os.environ.get('ENV', 'development')
+
+
+# SECURITY WARNING: don't run with debug turned on in production!
+if ENV == 'production':
+    DEBUG = False
+    TEMPLATE_DEBUG_MODE = False
+else:
+    DEBUG = True
+    TEMPLATE_DEBUG_MODE = True
+
+# LOGGING
+if ENV == 'production':
+    LOGGING = LOGGING = {
+        'version': 1,
+        'disable_existing_loggers': False,
+        'formatters': {
+            'verbose': {
+                'format': '%(levelname)s %(asctime)s %(module)s %(process)d %(thread)d %(message)s'
+            },
+            'simple': {
+                'format': '%(levelname)s %(message)s'
+            },
+        },
+        'handlers': {
+            'mail_admins': {
+                'level': 'ERROR',
+                'class': 'django.utils.log.AdminEmailHandler'
+            },
+            'console': {
+                'level': 'INFO',
+                'class': 'logging.StreamHandler',
+                'formatter': 'simple'
+            },
+            'null': {
+                'level': 'DEBUG',
+                'class': 'logging.NullHandler',
+            },
+        },
+        'loggers': {
+            'django': {
+                'handlers': ['console'],
+                'propagate': True,
+            },
+            'django.request': {
+                'handlers': ['mail_admins'],
+                'level': 'ERROR',
+                'propagate': True,
+            },
+            'django_seo_js.middleware.escaped_fragment': {
+                'handlers': ['mail_admins'],
+                'level': 'ERROR',
+                'propagate': True,
+            },
+            'django_seo_js.middleware.hashbang': {
+                'handlers': ['mail_admins'],
+                'level': 'ERROR',
+                'propagate': True,
+            },
+            'django_seo_js.middleware.useragent': {
+                'handlers': ['mail_admins'],
+                'level': 'ERROR',
+                'propagate': True,
+            },
+        }
+    }
+else:
+    LOGGING = {
+        'version': 1,
+        'disable_existing_loggers': False,
+        'formatters': {
+            'verbose': {
+                'format': '%(levelname)s %(asctime)s %(module)s %(process)d %(thread)d %(message)s'
+            },
+            'simple': {
+                'format': '%(levelname)s %(message)s'
+            },
+        },
+        'handlers': {
+            'mail_admins': {
+                'level': 'ERROR',
+                'class': 'django.utils.log.AdminEmailHandler'
+            },
+            'console': {
+                'level': 'INFO',
+                'class': 'logging.StreamHandler',
+                'formatter': 'simple'
+            },
+            'mail_admins': {
+                'level': 'ERROR',
+                'class': 'logging.NullHandler'
+            },
+            'null': {
+                'level': 'DEBUG',
+                'class': 'logging.NullHandler',
+            },
+        },
+        'loggers': {
+            'django': {
+                'handlers': ['console'],
+                'propagate': True,
+            },
+            'django.request': {
+                'handlers': ['console'],
+                'level': 'ERROR',
+                'propagate': True,
+            },
+            'django_seo_js.middleware.escaped_fragment': {
+                'handlers': ['console'],
+                'level': 'ERROR',
+                'propagate': True,
+            },
+            'django_seo_js.middleware.hashbang': {
+                'handlers': ['console'],
+                'level': 'ERROR',
+                'propagate': True,
+            },
+            'django_seo_js.middleware.useragent': {
+                'handlers': ['console'],
+                'level': 'ERROR',
+                'propagate': True,
+            },
+        }
+    }

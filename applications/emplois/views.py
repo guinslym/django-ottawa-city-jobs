@@ -6,8 +6,8 @@ from django.utils import timezone
 from django.core import serializers
 from django.core.urlresolvers import reverse
 from django.http import HttpResponse
-from django.conf import settings 
-#pagination   
+from django.conf import settings
+#pagination
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 #Task queues
 #cache
@@ -19,6 +19,10 @@ from .utils import job_object_list, language_set
 from json import dumps, loads
 from datetime import datetime, timedelta
 # Create your views here.
+
+from django.http import HttpResponseRedirect
+from django.utils.translation import check_for_language
+from django.utils import translation
 
 #http:://localhost:8001/
 class IndexView(generic.ListView):
@@ -33,24 +37,22 @@ class IndexView(generic.ListView):
     def language(self):
         """Return the user default language"""
         language = language_set(self.request.LANGUAGE_CODE)
+        language = language.upper()
         return language
-
 
     def get_queryset(self):
         """
-        Return a list of Jobs that have an EXPIRATION DATE 
+        Return a list of Jobs that have an EXPIRATION DATE
         greater than Now() and a default Language
         """
         #import ipdb;ipdb.set_trace()
-        return Job.objects.filter(language=self.language,\
-              expirydate__gt=datetime.now())\
-            .order_by('expirydate')
+        return Job.objects.filter(language=self.language(), expirydate__gt=datetime.now()).order_by('expirydate')
 
 ''' Dealing with pagination can't set it properly
     When I go to a page that doesn't exist I get a warning
     def get_context_data(self, **kwargs):
-        context = super(IndexView, self).get_context_data(**kwargs) 
-        latest_jobs_list = Job.objects.filter(language=self.language, 
+        context = super(IndexView, self).get_context_data(**kwargs)
+        latest_jobs_list = Job.objects.filter(language=self.language,
                             expirydate__gt=datetime.now())\
                         .order_by('expirydate')
         paginator = Paginator(latest_jobs_list, self.paginate_by)
@@ -74,7 +76,7 @@ class LatestView(generic.ListView):
     published these past 2 weeks
     """
     template_name='emplois/index.html'
-    paginate_by = 10 
+    paginate_by = 10
     context_object_name='latest_jobs_list'
 
     def language(self):
@@ -84,12 +86,12 @@ class LatestView(generic.ListView):
 
     def get_queryset(self):
         """
-        Return a list of Jobs that has a PUBLICATION DATE 
+        Return a list of Jobs that has a PUBLICATION DATE
         within the past 2 weeks
 
         Order: by PUBLICATION DATE
         """
-        return Job.objects.filter(language=self.language, 
+        return Job.objects.filter(language=self.language,
         pub_date__gte=datetime.now()-timedelta(days=14)).order_by('-pub_date')
 
 
@@ -99,7 +101,7 @@ class ExpiringSoonView(generic.ListView):
     return a list of Jobs that will expire within the next two weeks
     """
     template_name='emplois/index.html'
-    paginate_by = 10 
+    paginate_by = 10
     context_object_name='latest_jobs_list'
 
     def language(self):
@@ -117,7 +119,7 @@ class ExpiringSoonView(generic.ListView):
         """
         today =  timezone.now().date()
         ending_in_two_weeks = datetime.now()+timedelta(days=14)
-        return Job.objects.filter(language=self.language, 
+        return Job.objects.filter(language=self.language,
          expirydate__lte=ending_in_two_weeks,expirydate__gte=today)\
                  .order_by('expirydate')
 
@@ -127,7 +129,7 @@ class AllJobsView(generic.ListView):
     Return all Jobs that are in the Database
     """
     template_name='emplois/index.html'
-    paginate_by = 10 
+    paginate_by = 10
     context_object_name='latest_jobs_list'
 
     def language(self):
@@ -151,7 +153,7 @@ class DetailView(generic.DetailView):
     NOTES???: The language is set by default
     """
     model = Job
-    paginate_by = 10 
+    paginate_by = 10
     template_name = 'emplois/details.html'
     context_object_name='job'
 
@@ -159,7 +161,7 @@ class DetailView(generic.DetailView):
 class StatsView(generic.TemplateView):
     """
     Return a list of aggratated timestamps that will populate
-    the Javascript array in order to make the 
+    the Javascript array in order to make the
     Calendar HeatMap view
     """
     template_name='emplois/stats.html'
@@ -242,7 +244,7 @@ def job_search(request):
 def emplois(request):
     """
     This will receive an AJAX request and will return a JSON
-    object 
+    object
     """
     import datetime
     jobs = Job.objects.filter(
@@ -270,7 +272,7 @@ def download(request):
 ##########TWITTER + Update the content######################
 def update_and_tweets(request):
     """
-    This will update or tweet 
+    This will update or tweet
     depending on the time
     """
     from datetime import datetime, timedelta, time
@@ -281,13 +283,13 @@ def update_and_tweets(request):
     now_time = ottawa_now.time()
     tweet_time = False#now_time >= time(5,30) and now_time <= time(18,30)
     upgrade_time = True#(now_time >= time(12,00) and now_time <= time(16,30))
-    
+
     if tweet_time:
         #tweet
         from .tweets import tweet_a_job
         #tweet_a_job()
         return HttpResponse("<h1>Tweet time </h1>")
-    elif upgrade_time: 
+    elif upgrade_time:
         #Update the list of jobs from Open Data portal (Ottawa.open.data)
         job_object_list()
         return HttpResponse("<h1>Update time</h1>")
@@ -298,7 +300,7 @@ def update_and_tweets(request):
 #I try  to create a Class based view of 'def job_search()'
 class SearchJobView(generic.ListView):
     """
-    An attempt to use a Class Based view to 
+    An attempt to use a Class Based view to
     process the job search
     """
     template_name='emplois/index.html'
@@ -311,5 +313,3 @@ class SearchJobView(generic.ListView):
             return Job.objects.filter(position__icontains = keyword).order_by('-pub_date')
         else:
             return redirect('/')
-
-   

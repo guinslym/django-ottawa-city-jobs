@@ -159,12 +159,12 @@ div.jumbotron img{
 </head>
 <body>
 
-<!-- 
- _  _          _              
-| \| |__ ___ _| |__  __ _ _ _ 
+<!--
+ _  _          _
+| \| |__ ___ _| |__  __ _ _ _
 | .` / _` \ V / '_ \/ _` | '_|
-|_|\_\__,_|\_/|_.__/\__,_|_|  
-                              
+|_|\_\__,_|\_/|_.__/\__,_|_|
+
                               -->
 <div class="navbar navbar-default">
       <div class="container">
@@ -191,9 +191,9 @@ div.jumbotron img{
 
 
 <!--
-     _            _         _                
-  _ | |_  _ _ __ | |__  ___| |_ _ _ ___ _ _  
- | || | || | '  \| '_ \/ _ \  _| '_/ _ \ ' \ 
+     _            _         _
+  _ | |_  _ _ __ | |__  ___| |_ _ _ ___ _ _
+ | || | || | '  \| '_ \/ _ \  _| '_/ _ \ ' \
   \__/ \_,_|_|_|_|_.__/\___/\__|_| \___/_||_|
 -->
 <div class="jumbotron">
@@ -207,7 +207,7 @@ div.jumbotron img{
       <input class="form-group main-form" id="q_objname_en_cont" name="searchKey"  placeholder='{%trans "Search by Job title"%}' required="required" style="height:40px;width:60%" type="search">
       <input class="btn btn-warning" type="submit" value="{% trans "Search" %}">
    </form>
-  
+
 </div>
 </div>
 <!-- end Jumbotron -->
@@ -216,13 +216,13 @@ div.jumbotron img{
 <div class="container">
 
 
-<!-- 
-  _                                      
- | |   __ _ _ _  __ _ _  _ __ _ __ _ ___ 
+<!--
+  _
+ | |   __ _ _ _  __ _ _  _ __ _ __ _ ___
  | |__/ _` | ' \/ _` | || / _` / _` / -_)
  |____\__,_|_||_\__, |\_,_\__,_\__, \___|
-                |___/          |___/     
--->	
+                |___/          |___/
+-->
   <div class="col-lg-12">
 
 
@@ -238,7 +238,14 @@ div.jumbotron img{
       <option value="{{ lang.0 }}">{{ lang.1 }}</option>
       {% endfor %}
   </select>
-  </form>  
+  </form>
+
+{% get_language_info for LANGUAGE_CODE as lang %}
+Language code: {{ lang.code }}<br />
+Name of language: {{ lang.name_local }}<br />
+Name in English: {{ lang.name }}<br />
+Bi-directional: {{ lang.bidi }}
+Name in the active language: {{ lang.name_translated }}
 
 </div>
 </div><!-- div col-lg-12 end -->
@@ -248,15 +255,15 @@ div.jumbotron img{
 <br/>
 
 <!--
-    __    __           __                       __             __ 
+    __    __           __                       __             __
    / /_  / /___  _____/ /__   _________  ____  / /____  ____  / /_
   / __ \/ / __ \/ ___/ //_/  / ___/ __ \/ __ \/ __/ _ \/ __ \/ __/
- / /_/ / / /_/ / /__/ ,<    / /__/ /_/ / / / / /_/  __/ / / / /_  
-/_.___/_/\____/\___/_/|_|   \___/\____/_/ /_/\__/\___/_/ /_/\__/  
-                                                                  
+ / /_/ / / /_/ / /__/ ,<    / /__/ /_/ / / / / /_/  __/ / / / /_
+/_.___/_/\____/\___/_/|_|   \___/\____/_/ /_/\__/\___/_/ /_/\__/
+
  -->
   <div class="col-lg-11 col-lg-offset-1">
-    
+
   {% block content %}
   {% endblock %}
   </div>
@@ -265,12 +272,12 @@ div.jumbotron img{
 </div>
 
 <!--
-    ____            __           
+    ____            __
    / __/___  ____  / /____  _____
   / /_/ __ \/ __ \/ __/ _ \/ ___/
- / __/ /_/ / /_/ / /_/  __/ /    
-/_/  \____/\____/\__/\___/_/     
-                                 
+ / __/ /_/ / /_/ / /_/  __/ /
+/_/  \____/\____/\__/\___/_/
+
                                  -->
 
 <footer class="bs-docs-footer" role="contentinfo">
@@ -288,12 +295,12 @@ div.jumbotron img{
 <span id="scrollUp"></span>
 
 <!--
-       _                                  _       __ 
+       _                                  _       __
       (_)___ __   ______ ________________(_)___  / /_
      / / __ `/ | / / __ `/ ___/ ___/ ___/ / __ \/ __/
-    / / /_/ /| |/ / /_/ (__  ) /__/ /  / / /_/ / /_  
- __/ /\__,_/ |___/\__,_/____/\___/_/  /_/ .___/\__/  
-/___/                                  /_/           
+    / / /_/ /| |/ / /_/ (__  ) /__/ /  / / /_/ / /_
+ __/ /\__,_/ |___/\__,_/____/\___/_/  /_/ .___/\__/
+/___/                                  /_/
 -->
 
 <script type="text/javascript" src="{% static 'js/jquery.scrollUp.js' %}"></script>
