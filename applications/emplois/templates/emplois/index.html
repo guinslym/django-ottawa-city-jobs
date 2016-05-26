@@ -7,28 +7,28 @@
 	{% block content %}
 
 	<h1>{% trans "Job list"%} </h1>
-	
+
 	<div class="row text-right">
 		<ul>
 			<li><strong>{% trans "Sort by"%}:</strong></li>
 			<li><a href="{% url 'emplois:latest' %}">{% trans "Posted within the last 2 weeks"%}</a></li>
 			<li><a href="{% url 'emplois:expire' %}">{% trans "Will expired in 2 weeks from now" %}</a></li>
 			<li><a href="{% url 'emplois:all_jobs_posted' %}">{% trans "All jobs" %}</a></li>
-		</ul>	
+		</ul>
 	</div>
 
 <div class="row">
 <div class="text-left">
 <br/>
 <!--
-                       _             __  _           
-    ____  ____ _____ _(_)___  ____ _/ /_(_)___  ____ 
+                       _             __  _
+    ____  ____ _____ _(_)___  ____ _/ /_(_)___  ____
    / __ \/ __ `/ __ `/ / __ \/ __ `/ __/ / __ \/ __ \
   / /_/ / /_/ / /_/ / / / / / /_/ / /_/ / /_/ / / / /
- / .___/\__,_/\__, /_/_/ /_/\__,_/\__/_/\____/_/ /_/ 
-/_/          /____/                                  
+ / .___/\__,_/\__, /_/_/ /_/\__,_/\__/_/\____/_/ /_/
+/_/          /____/
 -->
- {% bootstrap_paginate page_obj last_label="Last" first_label="First"  range=5 show_prev_next='true' previous_label="<" next_label=">" %}		
+ {% bootstrap_paginate page_obj last_label="Last" first_label="First"  range=5 show_prev_next='true' previous_label="<" next_label=">" %}
  <!-- pagination -->
 </div>
 
@@ -46,25 +46,39 @@
 	<div class="filterWrap">
 
 		<h3><a href="{% url 'emplois:detail' emploi.id %}">{{ emploi.position }}.</a></h3>
-		
+
 		<p>
      	{% autoescape off %}
 			      {{ emploi.job_summary |truncatewords_html:50}}
 			{% endautoescape %}
 		</p>
 		<ul>
+
+		{% get_language_info for LANGUAGE_CODE as lang %}
+		{% if lang.code == 'fr' %}
 			<li><strong>{% trans "Salary" %}: </strong>
 				{% if ',' in emploi.salarymax %}
-			{{ emploi.salarymax | intcomma }}$ {% trans "anually" %}
+			{{ emploi.salarymax | intcomma }} $
 			{% else %}
-			{{ emploi.salarymax | floatformat:2 }}$ {% trans "hourly" %}
+			{{ emploi.salarymax | floatformat:2 }} $
 			{% endif %}
 			</li>
+		{% else %}
+			<li><strong>{% trans "Salary" %}: </strong>
+				{% if ',' in emploi.salarymax %}
+			$ {{ emploi.salarymax | intcomma }}
+			{% else %}
+			$ {{ emploi.salarymax | floatformat:2 }}
+			{% endif %}
+			</li>
+		{% endif %}
+
+
 			<li><strong>{% trans "Expiring date"%} : </strong>{{ emploi.expirydate }}</li>
 			<li><strong>{% trans "postdate" %}: </strong> {{ emploi.pub_date| naturalday }}</li>
 			<li><strong>{% trans "Apply link" %}: </strong> <a href="{{ emploi.joburl }}" target="_blank">{% trans "Apply"%}</a></li>
 		</ul>
-	
+
 	</div><!-- div.filterWrap-->
 	{% endfor %}
 </div><!-- div.outterspace-->
@@ -75,15 +89,15 @@
 <div class="text-left">
 <br/>
 <!--
-                       _             __  _           
-    ____  ____ _____ _(_)___  ____ _/ /_(_)___  ____ 
+                       _             __  _
+    ____  ____ _____ _(_)___  ____ _/ /_(_)___  ____
    / __ \/ __ `/ __ `/ / __ \/ __ `/ __/ / __ \/ __ \
   / /_/ / /_/ / /_/ / / / / / /_/ / /_/ / /_/ / / / /
- / .___/\__,_/\__, /_/_/ /_/\__,_/\__/_/\____/_/ /_/ 
-/_/          /____/                                  
+ / .___/\__,_/\__, /_/_/ /_/\__,_/\__/_/\____/_/ /_/
+/_/          /____/
 -->
- {% bootstrap_paginate page_obj range=5 show_prev_next='true' previous_label='<' next_label='>' last_label='>>' %}	
- <!-- end pagination -->	
+ {% bootstrap_paginate page_obj range=5 show_prev_next='true' previous_label='<' next_label='>' last_label='>>' %}
+ <!-- end pagination -->
 </div>
 
 </div>

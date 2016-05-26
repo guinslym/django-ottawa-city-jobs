@@ -37,7 +37,7 @@ class IndexView(generic.ListView):
     def language(self):
         """Return the user default language"""
         language = language_set(self.request.LANGUAGE_CODE)
-        language = language.upper()
+        #language = language.upper()
         return language
 
     def get_queryset(self):
@@ -46,7 +46,9 @@ class IndexView(generic.ListView):
         greater than Now() and a default Language
         """
         #import ipdb;ipdb.set_trace()
-        return Job.objects.filter(language=self.language(), expirydate__gt=datetime.now()).order_by('expirydate')
+        return Job.objects.filter(language=self.language(),\
+              expirydate__gt=datetime.now())\
+            .order_by('expirydate')
 
 ''' Dealing with pagination can't set it properly
     When I go to a page that doesn't exist I get a warning
@@ -91,7 +93,7 @@ class LatestView(generic.ListView):
 
         Order: by PUBLICATION DATE
         """
-        return Job.objects.filter(language=self.language,
+        return Job.objects.filter(language=self.language(),
         pub_date__gte=datetime.now()-timedelta(days=14)).order_by('-pub_date')
 
 
@@ -119,7 +121,7 @@ class ExpiringSoonView(generic.ListView):
         """
         today =  timezone.now().date()
         ending_in_two_weeks = datetime.now()+timedelta(days=14)
-        return Job.objects.filter(language=self.language,
+        return Job.objects.filter(language=self.language(),
          expirydate__lte=ending_in_two_weeks,expirydate__gte=today)\
                  .order_by('expirydate')
 
@@ -143,7 +145,7 @@ class AllJobsView(generic.ListView):
         order by: PUBLICATION DATE
         latest is at the end
         """
-        return Job.objects.filter(language=self.language).order_by('pub_date')
+        return Job.objects.filter(language=self.language()).order_by('pub_date')
 
 #http://localhost:8001/emplois/<id>
 class DetailView(generic.DetailView):
