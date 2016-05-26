@@ -52,31 +52,10 @@ class IndexView(generic.ListView):
         greater than Now() and a default Language
         """
         #import ipdb;ipdb.set_trace()
-        return Job.objects.filter(LANGUAGE=self.language(),\
+        return Job.objects.filter(language=self.language(),\
               EXPIRYDATE__gt=datetime.now())\
-            .order_by('expirydate')
+            .order_by('EXPIRYDATE')
 
-''' Dealing with pagination can't set it properly
-    When I go to a page that doesn't exist I get a warning
-    def get_context_data(self, **kwargs):
-        context = super(IndexView, self).get_context_data(**kwargs)
-        latest_jobs_list = Job.objects.filter(language=self.language,
-                            expirydate__gt=datetime.now())\
-                        .order_by('expirydate')
-        paginator = Paginator(latest_jobs_list, self.paginate_by)
-
-        page = self.request.GET.get('page')
-
-        try:
-            latest_jobs_list = paginator.page(page)
-        except PageNotAnInteger:
-            latest_jobs_list = paginator.page(1)
-        except EmptyPage:
-            latest_jobs_list = paginator.page(paginator.num_pages)
-
-        context['latest_jobs_list'] = latest_jobs_list
-        return context
-'''
 
 #http://localhost:8001/emplois/latest
 class LatestView(generic.ListView):
@@ -99,7 +78,7 @@ class LatestView(generic.ListView):
 
         Order: by PUBLICATION DATE
         """
-        return Job.objects.filter(LANGUAGE=self.language(),
+        return Job.objects.filter(language=self.language(),
         POSTDATE__gte=datetime.now()-timedelta(days=14)).order_by('-POSTDATE')
 
 
@@ -128,8 +107,8 @@ class ExpiringSoonView(generic.ListView):
         today =  timezone.now().date()
         ending_in_two_weeks = datetime.now()+timedelta(days=14)
         return Job.objects.filter(language=self.language(),
-         expirydate__lte=ending_in_two_weeks,expirydate__gte=today)\
-                 .order_by('expirydate')
+         EXPIRYDATE__lte=ending_in_two_weeks,EXPIRYDATE__gte=today)\
+                 .order_by('EXPIRYDATE')
 
 #http://localhost:8001/emplois/all_job_posted
 class AllJobsView(generic.ListView):
@@ -151,7 +130,7 @@ class AllJobsView(generic.ListView):
         order by: PUBLICATION DATE
         latest is at the end
         """
-        return Job.objects.filter(language=self.language()).order_by('pub_date')
+        return Job.objects.filter(language=self.language()).order_by('POSTDATE')
 
 #http://localhost:8001/emplois/<id>
 class DetailView(generic.DetailView):
@@ -190,11 +169,11 @@ class StatsView(generic.TemplateView):
         #get all the English/French values
         english = Job.objects.filter(language=self.language)
         #Grouup by date
-        data = english.values('pub_date').annotate(dcount=Count('pub_date'))
+        data = english.values('POSTDATE').annotate(dcount=Count('POSTDATE'))
         content = {}
         #I want the date in a UNIX TIME format
         for job in data:
-            unix_time = time.mktime(job['pub_date'].timetuple())
+            unix_time = time.mktime(job['POSTDATE'].timetuple())
             content.update({unix_time:job['dcount']})
         context['stats'] = content
 
@@ -231,9 +210,9 @@ def job_search(request):
                 return redirect('/')
         else:
             lang = language_set(request.LANGUAGE_CODE)
-            latest_jobs_list = Job.objects.filter(position__icontains\
+            latest_jobs_list = Job.objects.filter(POSITION__icontains\
                     = keyword,language__icontains=lang).\
-                    order_by('-pub_date')
+                    order_by('-POSTDATE')
             paginator = Paginator(latest_jobs_list, 10)
             page = request.GET.get('page')
             try:
@@ -256,9 +235,9 @@ def emplois(request):
     """
     import datetime
     jobs = Job.objects.filter(
-        pub_date__year=request.GET.get('annee'),
-        pub_date__month=request.GET.get('mois'),
-        pub_date__day=request.GET.get('jour'),
+        POSTDATE__year=request.GET.get('annee'),
+        POSTDATE__month=request.GET.get('mois'),
+        POSTDATE__day=request.GET.get('jour'),
         language=language_set(request.LANGUAGE_CODE)
         )
     data = serializers.serialize('json', jobs)
@@ -318,6 +297,6 @@ class SearchJobView(generic.ListView):
         response = super(self, SearchJobView).get(request, *args, **kwargs)
         keyword = kwargs.get('searchKey')
         if keyword:
-            return Job.objects.filter(position__icontains = keyword).order_by('-pub_date')
+            return Job.objects.filter(POSITION__icontains = keyword).order_by('-POSTDATE')
         else:
             return redirect('/')

@@ -1,0 +1,115 @@
+[2016-05-26 00:42:15,726] WARNING : Session data corrupted
+[2016-05-26 00:42:15,775] ERROR : Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/core/handlers/base.py", line 174, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/core/handlers/base.py", line 172, in get_response
+    response = response.render()
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/template/response.py", line 160, in render
+    self.content = self.rendered_content
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/template/response.py", line 137, in rendered_content
+    content = template.render(context, self._request)
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/template/backends/django.py", line 95, in render
+    return self.template.render(context)
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/template/base.py", line 206, in render
+    return self._render(context)
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/test/utils.py", line 92, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/template/loader_tags.py", line 173, in render
+    return compiled_parent._render(context)
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/test/utils.py", line 92, in instrumented_test_render
+    return self.nodelist.render(context)
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/template/loader_tags.py", line 69, in render
+    result = block.nodelist.render(context)
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/template/base.py", line 1049, in render
+    return render_value_in_context(output, context)
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/template/base.py", line 1026, in render_value_in_context
+    value = force_text(value)
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/utils/encoding.py", line 76, in force_text
+    s = six.text_type(s)
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/db/models/query.py", line 234, in __repr__
+    data = list(self[:REPR_OUTPUT_SIZE + 1])
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/db/models/query.py", line 258, in __iter__
+    self._fetch_all()
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/db/models/query.py", line 1074, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/db/models/query.py", line 52, in __iter__
+    results = compiler.execute_sql()
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/db/models/sql/compiler.py", line 837, in execute_sql
+    sql, params = self.as_sql()
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/db/models/sql/compiler.py", line 382, in as_sql
+    extra_select, order_by, group_by = self.pre_sql_setup()
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/db/models/sql/compiler.py", line 49, in pre_sql_setup
+    order_by = self.get_order_by()
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/db/models/sql/compiler.py", line 295, in get_order_by
+    field, self.query.get_meta(), default_order=asc))
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/db/models/sql/compiler.py", line 566, in find_ordering_name
+    field, targets, alias, joins, path, opts = self._setup_joins(pieces, opts, alias)
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/db/models/sql/compiler.py", line 599, in _setup_joins
+    pieces, opts, alias)
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/db/models/sql/query.py", line 1405, in setup_joins
+    names, opts, allow_many, fail_on_missing=True)
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/db/models/sql/query.py", line 1330, in names_to_path
+    "Choices are: %s" % (name, ", ".join(available)))
+django.core.exceptions.FieldError: Cannot resolve keyword 'expirydate' into field. Choices are: EXPIRYDATE, JOBREF, JOBURL, JOB_SUMMARY, LANGUAGE, NAME, POSITION, POSTDATE, SALARYMAX, SALARYMIN, SALARYTYPE, description, id, slug, tweeted
+[2016-05-26 00:42:39,373] WARNING : Session data corrupted
+[2016-05-26 00:42:39,395] ERROR : Internal Server Error: /jobs/
+Traceback (most recent call last):
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/rest_framework/fields.py", line 401, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/rest_framework/fields.py", line 76, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'Emploi' object has no attribute 'description'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/rest_framework/views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/rest_framework/views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/rest_framework/decorators.py", line 53, in handler
+    return func(*args, **kwargs)
+  File "/home/guinsly/development/public/project/django-ottawa-city-jobs/applications/cityjobs/views.py", line 18, in all_jobs
+    return Response(serializers.data)
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/rest_framework/serializers.py", line 658, in data
+    ret = super(ListSerializer, self).data
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/rest_framework/serializers.py", line 223, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/rest_framework/serializers.py", line 598, in to_representation
+    self.child.to_representation(item) for item in iterable
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/rest_framework/serializers.py", line 598, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/rest_framework/serializers.py", line 447, in to_representation
+    attribute = field.get_attribute(instance)
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/rest_framework/fields.py", line 418, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `description` on serializer `EmploiSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `Emploi` instance.
+Original exception text was: 'Emploi' object has no attribute 'description'.
+[2016-05-26 12:55:43,330] WARNING : Session data corrupted
+[2016-05-26 12:57:36,664] WARNING : Session data corrupted
+[2016-05-26 12:57:36,891] WARNING : Session data corrupted
+[2016-05-26 12:58:20,988] WARNING : Session data corrupted
+[2016-05-26 12:58:25,355] WARNING : Session data corrupted
+[2016-05-26 12:58:31,552] WARNING : Session data corrupted

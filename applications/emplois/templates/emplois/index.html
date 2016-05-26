@@ -45,11 +45,11 @@
 	{% for emploi in latest_jobs_list %}
 	<div class="filterWrap">
 
-		<h3><a href="{% url 'emplois:detail' emploi.id %}">{{ emploi.position }}.</a></h3>
+		<h3><a href="{% url 'emplois:detail' emploi.id %}">{{ emploi.POSITION }}.</a></h3>
 
 		<p>
      	{% autoescape off %}
-			      {{ emploi.job_summary |truncatewords_html:50}}
+			      {{ emploi.JOB_SUMMARY |truncatewords_html:50}}
 			{% endautoescape %}
 		</p>
 		<ul>
@@ -57,26 +57,26 @@
 		{% get_language_info for LANGUAGE_CODE as lang %}
 		{% if lang.code == 'fr' %}
 			<li><strong>{% trans "Salary" %}: </strong>
-				{% if ',' in emploi.salarymax %}
-			{{ emploi.salarymax | intcomma }} $
+				{% if ',' in emploi.SALARYMAX %}
+			{{ emploi.SALARYMAX | intcomma }} $
 			{% else %}
-			{{ emploi.salarymax | floatformat:2 }} $
+			{{ emploi.SALARYMAX | floatformat:2 }} $
 			{% endif %}
 			</li>
 		{% else %}
 			<li><strong>{% trans "Salary" %}: </strong>
-				{% if ',' in emploi.salarymax %}
-			$ {{ emploi.salarymax | intcomma }}
+				{% if ',' in emploi.SALARYMAX %}
+			$ {{ emploi.SALARYMAX | intcomma }}
 			{% else %}
-			$ {{ emploi.salarymax | floatformat:2 }}
+			$ {{ emploi.SALARYMAX | floatformat:2 }}
 			{% endif %}
 			</li>
 		{% endif %}
 
 
-			<li><strong>{% trans "Expiring date"%} : </strong>{{ emploi.expirydate }}</li>
-			<li><strong>{% trans "postdate" %}: </strong> {{ emploi.pub_date| naturalday }}</li>
-			<li><strong>{% trans "Apply link" %}: </strong> <a href="{{ emploi.joburl }}" target="_blank">{% trans "Apply"%}</a></li>
+			<li><strong>{% trans "Expiring date"%} : </strong>{{ emploi.EXPIRYDATE }}</li>
+			<li><strong>{% trans "postdate" %}: </strong> {{ emploi.POSTDATE| naturalday }}</li>
+			<li><strong>{% trans "Apply link" %}: </strong> <a href="{{ emploi.JOBURL }}" target="_blank">{% trans "Apply"%}</a></li>
 		</ul>
 
 	</div><!-- div.filterWrap-->

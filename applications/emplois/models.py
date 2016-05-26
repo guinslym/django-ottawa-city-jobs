@@ -33,7 +33,7 @@ class Job(models.Model):
     SALARYMIN = models.CharField(max_length=40, blank=True, null=True)
     SALARYTYPE = models.CharField(max_length=20, blank=True, null=True)
     NAME = models.CharField(max_length=40, blank=True, null=True)
-    LANGUAGE = models.CharField(max_length=2, choices=LANGUAGE_CHOICE, default=ENGLISH)
+    language = models.CharField(max_length=2, choices=LANGUAGE_CHOICE, default=ENGLISH)
     POSITION = models.CharField(max_length=150, blank=True, null=True)
     JOBREF = models.CharField(max_length=30, unique=True, blank=True, null=True)
     JOB_SUMMARY = models.TextField(blank=True, null=True)
