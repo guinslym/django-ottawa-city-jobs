@@ -17,6 +17,11 @@ from django.conf.urls import url, include
 from django.contrib import admin
 admin.autodiscover()
 
+import logging
+logger = logging.getLogger(__name__)
+logger.error('Test Django Logging')
+logger.error('Something went wrong!')
+
 from applications.cityjobs.views import *
 
 urlpatterns = [
@@ -31,4 +36,3 @@ urlpatterns = [
     #url(r'^searchBlog/$','emplois.views.SearchJobView',name="blog_search"),
     url(r'^', include('applications.emplois.urls')),
 ]
-
