@@ -29,18 +29,18 @@
 					{% endif %}
 					</li>
 {% else %}
-<li><strong>Salary Max: </strong>
-	{% if ',' in job.salarymax %}
-$ {{ job.salarymax | intcomma }}
-{% else %}
-$ {{ job.salarymax | floatformat:2 }}
-{% endif %}
-</li>
-<li><strong>Salary Min: </strong>
-	{% if ',' in job.salarymin %}
-$ {{ job.salarymin | intcomma }}
-{% else %}
-$ {{ job.salarymin | floatformat:2 }}
+					<li><strong>Salary Max: </strong>
+						{% if ',' in job.salarymax %}
+					$ {{ job.salarymax | intcomma }}
+					{% else %}
+					$ {{ job.salarymax | floatformat:2 }}
+					{% endif %}
+					</li>
+					<li><strong>Salary Min: </strong>
+						{% if ',' in job.salarymin %}
+					$ {{ job.salarymin | intcomma }}
+					{% else %}
+					$ {{ job.salarymin | floatformat:2 }}
 {% endif %}
 </li>
 
