@@ -39,6 +39,7 @@ class IndexView(generic.ListView):
     def language(self):
         """Return the user default language"""
         language = language_set(self.request.LANGUAGE_CODE)
+        language = language.upper()
         return language
 
     def get_queryset(self):
@@ -47,10 +48,9 @@ class IndexView(generic.ListView):
         greater than Now() and a default Language
         """
         #import ipdb;ipdb.set_trace()
-        logger.info('Number of Object retrieved : '+ str(Job.objects.filter(language=self.language(),EXPIRYDATE__gt=datetime.now()).count()))
-        logger.info('Language : '+ self.language() )
-        logger.info('ExpiryDate : ' + str( datetime.now() ) )
-        return Job.objects.filter(language=self.language())
+        return Job.objects.filter(language=self.language(),\
+              EXPIRYDATE__gt=datetime.now())\
+            .order_by('EXPIRYDATE')
 
 
 #http://localhost:8001/emplois/latest
@@ -296,3 +296,16 @@ class SearchJobView(generic.ListView):
             return Job.objects.filter(POSITION__icontains = keyword).order_by('-POSTDATE')
         else:
             return redirect('/')
+
+def handler404(request):
+    response = render(request, 'emplois/page_not_found.html')
+    logger.info('Error page not found 404')
+    response.status_code = 404
+    return response
+
+
+def handler500(request):
+    response = render(request, 'emplois/app_error_500.html')
+    logger.info('Error page not found 500')
+    response.status_code = 404
+    return response

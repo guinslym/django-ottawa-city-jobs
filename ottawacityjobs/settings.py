@@ -24,9 +24,17 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 with open(BASE_DIR+ '/secret_key.txt') as f:
     SECRET_KEY = f.read().strip()
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
 
+# SITE CONFIG
+ENV = os.environ.get('ENV', 'development')
+
+# SECURITY WARNING: don't run with debug turned on in production!
+if ENV == 'production':
+    DEBUG = False
+    TEMPLATE_DEBUG_MODE = False
+else:
+    DEBUG = False
+    TEMPLATE_DEBUG_MODE = False
 
 
 # Application definition
@@ -41,7 +49,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.humanize',
     'django_extensions',
-    'debug_toolbar',
+    #'debug_toolbar',
     'rest_framework',
     'MySQLdb',
     #'metasettings',
@@ -74,7 +82,6 @@ TEMPLATES = [
         'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
-            'debug': DEBUG,
             'context_processors': [
                 'django.template.context_processors.debug',
                 'django.template.context_processors.request',
@@ -131,7 +138,7 @@ DATABASES['default']['CONN_MAX_AGE'] = 500
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 # Allow all host headers
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 
 
 # Password validation
@@ -199,21 +206,10 @@ STATICFILES_DIRS = (
 
 # Simplified static file serving.
 # https://warehouse.python.org/project/whitenoise/
-STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+#STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
 
 
-# SITE CONFIG
-ENV = os.environ.get('ENV', 'development')
-
-
-# SECURITY WARNING: don't run with debug turned on in production!
-if ENV == 'production':
-    DEBUG = False
-    TEMPLATE_DEBUG_MODE = False
-else:
-    DEBUG = True
-    TEMPLATE_DEBUG_MODE = True
 
 # LOGGING
 LOGGING = {
@@ -224,7 +220,7 @@ LOGGING = {
              'format': '[%(asctime)s] %(levelname)s : %(message)s'
          },
          'verbose': {
-             'format': '[%(asctime)s] %(levelname)s %(filename) %(process)d %(thread)d : %(message)s'
+             'format': '[%(asctime)s] %(levelname)s %(filename) % : %(message)s'
          },
      },
      'handlers': {
@@ -243,6 +239,16 @@ LOGGING = {
              'propagate': True,
          },
          'applications.emplois.views': {
+             'handlers': ['file'],
+             'level':'INFO',
+             'propagate': True,
+         },
+         'applications.emplois.utils': {
+             'handlers': ['file'],
+             'level':'INFO',
+             'propagate': True,
+         },
+         'applications.emplois.tweets': {
              'handlers': ['file'],
              'level':'INFO',
              'propagate': True,

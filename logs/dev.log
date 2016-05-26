@@ -223,3 +223,276 @@ TypeError: Can't convert 'int' object to str implicitly
 [2016-05-26 13:43:35,440] INFO %(process)d -1274021056 : Number of Object retrieved : 98
 [2016-05-26 13:43:35,440] INFO %(process)d -1274021056 : Language : EN
 [2016-05-26 13:43:35,440] INFO %(process)d -1274021056 : ExpiryDate : 2016-05-26 13:43:35.440661
+[2016-05-26 13:45:37,820] ERROR %(process)d -1263535296 : Internal Server Error: /emplois/
+Traceback (most recent call last):
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/views/generic/base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/views/generic/list.py", line 159, in get
+    self.object_list = self.get_queryset()
+  File "/home/guinsly/development/public/project/django-ottawa-city-jobs/applications/emplois/views.py", line 52, in get_queryset
+    logger.info('Number of Object retrived : '+ language)
+NameError: name 'language' is not defined
+[2016-05-26 13:45:57,477] INFO %(process)d -1263535296 : Language is set to : EN
+[2016-05-26 13:46:02,787] INFO %(process)d -1315964096 : Language is set to : FR
+[2016-05-26 13:46:19,707] WARNING %(process)d -1315964096 : Not Found: /emplois/searchJobs
+[2016-05-26 13:57:30,521] INFO % : Language is set to : EN
+[2016-05-26 13:59:40,445] INFO % : Language is set to : EN
+[2016-05-26 15:06:30,534] INFO % : Language is set to : EN
+[2016-05-26 15:06:55,422] INFO % : Language is set to : EN
+[2016-05-26 15:07:00,515] INFO % : Language is set to : EN
+[2016-05-26 15:07:05,457] INFO % : Language is set to : EN
+[2016-05-26 15:07:37,551] INFO % : Language is set to : EN
+[2016-05-26 15:07:38,064] INFO % : Language is set to : EN
+[2016-05-26 15:07:38,635] INFO % : Language is set to : EN
+[2016-05-26 15:07:38,916] INFO % : Language is set to : EN
+[2016-05-26 15:08:45,629] INFO % : Language is set to : EN
+[2016-05-26 15:08:59,014] INFO % : Language is set to : EN
+[2016-05-26 15:09:00,271] INFO % : Language is set to : EN
+[2016-05-26 15:09:00,793] INFO % : Language is set to : EN
+[2016-05-26 15:09:01,073] INFO % : Language is set to : EN
+[2016-05-26 15:09:01,122] INFO % : Language is set to : EN
+[2016-05-26 15:09:06,005] INFO % : Language is set to : EN
+[2016-05-26 15:09:06,484] INFO % : Language is set to : EN
+[2016-05-26 15:09:06,733] INFO % : Language is set to : EN
+[2016-05-26 15:09:06,787] INFO % : Language is set to : EN
+[2016-05-26 15:09:38,440] INFO % : Language is set to : EN
+[2016-05-26 15:09:39,012] INFO % : Language is set to : EN
+[2016-05-26 15:09:39,308] INFO % : Language is set to : EN
+[2016-05-26 15:09:39,370] INFO % : Language is set to : EN
+[2016-05-26 15:09:39,643] INFO % : Language is set to : EN
+[2016-05-26 15:12:48,355] ERROR % : Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/core/handlers/base.py", line 174, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/core/handlers/base.py", line 172, in get_response
+    response = response.render()
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/template/response.py", line 160, in render
+    self.content = self.rendered_content
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/template/response.py", line 137, in rendered_content
+    content = template.render(context, self._request)
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/template/backends/django.py", line 95, in render
+    return self.template.render(context)
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/template/base.py", line 206, in render
+    return self._render(context)
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/template/loader_tags.py", line 173, in render
+    return compiled_parent._render(context)
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/templatetags/static.py", line 103, in render
+    url = self.url(context)
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/contrib/staticfiles/templatetags/staticfiles.py", line 16, in url
+    return static(path)
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/contrib/staticfiles/templatetags/staticfiles.py", line 9, in static
+    return staticfiles_storage.url(path)
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/contrib/staticfiles/storage.py", line 131, in url
+    hashed_name = self.stored_name(clean_name)
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/contrib/staticfiles/storage.py", line 280, in stored_name
+    cache_name = self.clean_name(self.hashed_name(name))
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/contrib/staticfiles/storage.py", line 94, in hashed_name
+    (clean_name, self))
+ValueError: The file 'js/jquery.scrollUp.js' could not be found with <whitenoise.storage.CompressedManifestStaticFilesStorage object at 0xb4117d8c>.
+[2016-05-26 15:12:54,058] WARNING % : Not Found: /emplois
+[2016-05-26 15:12:54,121] ERROR % : Internal Server Error: /emplois/
+Traceback (most recent call last):
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/core/handlers/base.py", line 174, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/core/handlers/base.py", line 172, in get_response
+    response = response.render()
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/template/response.py", line 160, in render
+    self.content = self.rendered_content
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/template/response.py", line 137, in rendered_content
+    content = template.render(context, self._request)
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/template/backends/django.py", line 95, in render
+    return self.template.render(context)
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/template/base.py", line 206, in render
+    return self._render(context)
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/template/loader_tags.py", line 173, in render
+    return compiled_parent._render(context)
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/templatetags/static.py", line 103, in render
+    url = self.url(context)
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/contrib/staticfiles/templatetags/staticfiles.py", line 16, in url
+    return static(path)
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/contrib/staticfiles/templatetags/staticfiles.py", line 9, in static
+    return staticfiles_storage.url(path)
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/contrib/staticfiles/storage.py", line 131, in url
+    hashed_name = self.stored_name(clean_name)
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/contrib/staticfiles/storage.py", line 280, in stored_name
+    cache_name = self.clean_name(self.hashed_name(name))
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/contrib/staticfiles/storage.py", line 94, in hashed_name
+    (clean_name, self))
+ValueError: The file 'js/jquery.scrollUp.js' could not be found with <whitenoise.storage.CompressedManifestStaticFilesStorage object at 0xb4117d8c>.
+[2016-05-26 15:15:20,272] WARNING % : Not Found: /static/js/jquery.scrollUp.js
+[2016-05-26 15:15:39,466] WARNING % : Not Found: /static/js/jquery.scrollUp.js
+[2016-05-26 15:16:10,073] WARNING % : Not Found: /static/js/jquery.scrollUp.js
+[2016-05-26 15:16:46,041] WARNING % : Not Found: /emplois/sdf
+[2016-05-26 15:20:16,149] WARNING % : Not Found: /static/js/jquery.scrollUp.js
+[2016-05-26 15:20:16,149] ERROR % : Internal Server Error: /static/js/jquery.scrollUp.js
+Traceback (most recent call last):
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/core/handlers/base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/core/urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'path': 'static/js/jquery.scrollUp.js', 'tried': [[<RegexURLPattern None ^jobs/>], [<RegexURLResolver <module 'applications.emplois.urls' from '/home/guinsly/development/public/project/django-ottawa-city-jobs/applications/emplois/urls.py'> (emplois:emplois) ^emplois/>], [<RegexURLResolver <module 'applications.emplois.urls' from '/home/guinsly/development/public/project/django-ottawa-city-jobs/applications/emplois/urls.py'> (emplois:emplois) ^ottawacityjobs/>], [<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'django.conf.urls.i18n' from '/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/conf/urls/i18n.py'> (None:None) ^i18n/>], [<RegexURLResolver <module 'applications.emplois.urls' from '/home/guinsly/development/public/project/django-ottawa-city-jobs/applications/emplois/urls.py'> (emplois:emplois) ^>, <RegexURLPattern detail ^(?P<pk>[0-9]+)/$>], [<RegexURLResolver <module 'applications.emplois.urls' from '/home/guinsly/development/public/project/django-ottawa-city-jobs/applications/emplois/urls.py'> (emplois:emplois) ^>, <RegexURLPattern stats ^stats$>], [<RegexURLResolver <module 'applications.emplois.urls' from '/home/guinsly/development/public/project/django-ottawa-city-jobs/applications/emplois/urls.py'> (emplois:emplois) ^>, <RegexURLPattern job_search ^searchJobs/$>], [<RegexURLResolver <module 'applications.emplois.urls' from '/home/guinsly/development/public/project/django-ottawa-city-jobs/applications/emplois/urls.py'> (emplois:emplois) ^>, <RegexURLPattern emplois ^stats_emplois/$>], [<RegexURLResolver <module 'applications.emplois.urls' from '/home/guinsly/development/public/project/django-ottawa-city-jobs/applications/emplois/urls.py'> (emplois:emplois) ^>, <RegexURLPattern about ^about$>], [<RegexURLResolver <module 'applications.emplois.urls' from '/home/guinsly/development/public/project/django-ottawa-city-jobs/applications/emplois/urls.py'> (emplois:emplois) ^>, <RegexURLPattern all_jobs_posted ^all_jobs_posted$>], [<RegexURLResolver <module 'applications.emplois.urls' from '/home/guinsly/development/public/project/django-ottawa-city-jobs/applications/emplois/urls.py'> (emplois:emplois) ^>, <RegexURLPattern expire ^expiring$>], [<RegexURLResolver <module 'applications.emplois.urls' from '/home/guinsly/development/public/project/django-ottawa-city-jobs/applications/emplois/urls.py'> (emplois:emplois) ^>, <RegexURLPattern latest ^latest$>], [<RegexURLResolver <module 'applications.emplois.urls' from '/home/guinsly/development/public/project/django-ottawa-city-jobs/applications/emplois/urls.py'> (emplois:emplois) ^>, <RegexURLResolver <module 'django.conf.urls.i18n' from '/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/conf/urls/i18n.py'> (None:None) ^i18n/>], [<RegexURLResolver <module 'applications.emplois.urls' from '/home/guinsly/development/public/project/django-ottawa-city-jobs/applications/emplois/urls.py'> (emplois:emplois) ^>, <RegexURLPattern upgrade ^update/$>], [<RegexURLResolver <module 'applications.emplois.urls' from '/home/guinsly/development/public/project/django-ottawa-city-jobs/applications/emplois/urls.py'> (emplois:emplois) ^>, <RegexURLPattern download ^download/$>], [<RegexURLResolver <module 'applications.emplois.urls' from '/home/guinsly/development/public/project/django-ottawa-city-jobs/applications/emplois/urls.py'> (emplois:emplois) ^>, <RegexURLPattern index ^emplois/$>], [<RegexURLResolver <module 'applications.emplois.urls' from '/home/guinsly/development/public/project/django-ottawa-city-jobs/applications/emplois/urls.py'> (emplois:emplois) ^>, <RegexURLPattern index ^$>]]}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/core/urlresolvers.py", line 129, in get_callable
+    view_func = getattr(mod, func_name)
+AttributeError: 'module' object has no attribute 'handler404'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/core/handlers/base.py", line 87, in get_exception_response
+    callback, param_dict = resolver.resolve_error_handler(status_code)
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/core/urlresolvers.py", line 436, in resolve_error_handler
+    return get_callable(callback), {}
+  File "/home/guinsly/.pyenv/versions/3.4.4/lib/python3.4/functools.py", line 448, in wrapper
+    result = user_function(*args, **kwds)
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/core/urlresolvers.py", line 136, in get_callable
+    (lookup_view, mod_name))
+django.core.exceptions.ViewDoesNotExist: Could not import 'applications.emplois.handler404'. View does not exist in module applications.emplois.
+[2016-05-26 15:20:19,854] WARNING % : Not Found: /emplois/ljl
+[2016-05-26 15:20:19,856] ERROR % : Internal Server Error: /emplois/ljl
+Traceback (most recent call last):
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/core/handlers/base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/core/urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'path': 'emplois/ljl', 'tried': [[<RegexURLPattern None ^jobs/>], [<RegexURLResolver <module 'applications.emplois.urls' from '/home/guinsly/development/public/project/django-ottawa-city-jobs/applications/emplois/urls.py'> (emplois:emplois) ^emplois/>, <RegexURLPattern detail ^(?P<pk>[0-9]+)/$>], [<RegexURLResolver <module 'applications.emplois.urls' from '/home/guinsly/development/public/project/django-ottawa-city-jobs/applications/emplois/urls.py'> (emplois:emplois) ^emplois/>, <RegexURLPattern stats ^stats$>], [<RegexURLResolver <module 'applications.emplois.urls' from '/home/guinsly/development/public/project/django-ottawa-city-jobs/applications/emplois/urls.py'> (emplois:emplois) ^emplois/>, <RegexURLPattern job_search ^searchJobs/$>], [<RegexURLResolver <module 'applications.emplois.urls' from '/home/guinsly/development/public/project/django-ottawa-city-jobs/applications/emplois/urls.py'> (emplois:emplois) ^emplois/>, <RegexURLPattern emplois ^stats_emplois/$>], [<RegexURLResolver <module 'applications.emplois.urls' from '/home/guinsly/development/public/project/django-ottawa-city-jobs/applications/emplois/urls.py'> (emplois:emplois) ^emplois/>, <RegexURLPattern about ^about$>], [<RegexURLResolver <module 'applications.emplois.urls' from '/home/guinsly/development/public/project/django-ottawa-city-jobs/applications/emplois/urls.py'> (emplois:emplois) ^emplois/>, <RegexURLPattern all_jobs_posted ^all_jobs_posted$>], [<RegexURLResolver <module 'applications.emplois.urls' from '/home/guinsly/development/public/project/django-ottawa-city-jobs/applications/emplois/urls.py'> (emplois:emplois) ^emplois/>, <RegexURLPattern expire ^expiring$>], [<RegexURLResolver <module 'applications.emplois.urls' from '/home/guinsly/development/public/project/django-ottawa-city-jobs/applications/emplois/urls.py'> (emplois:emplois) ^emplois/>, <RegexURLPattern latest ^latest$>], [<RegexURLResolver <module 'applications.emplois.urls' from '/home/guinsly/development/public/project/django-ottawa-city-jobs/applications/emplois/urls.py'> (emplois:emplois) ^emplois/>, <RegexURLResolver <module 'django.conf.urls.i18n' from '/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/conf/urls/i18n.py'> (None:None) ^i18n/>], [<RegexURLResolver <module 'applications.emplois.urls' from '/home/guinsly/development/public/project/django-ottawa-city-jobs/applications/emplois/urls.py'> (emplois:emplois) ^emplois/>, <RegexURLPattern upgrade ^update/$>], [<RegexURLResolver <module 'applications.emplois.urls' from '/home/guinsly/development/public/project/django-ottawa-city-jobs/applications/emplois/urls.py'> (emplois:emplois) ^emplois/>, <RegexURLPattern download ^download/$>], [<RegexURLResolver <module 'applications.emplois.urls' from '/home/guinsly/development/public/project/django-ottawa-city-jobs/applications/emplois/urls.py'> (emplois:emplois) ^emplois/>, <RegexURLPattern index ^emplois/$>], [<RegexURLResolver <module 'applications.emplois.urls' from '/home/guinsly/development/public/project/django-ottawa-city-jobs/applications/emplois/urls.py'> (emplois:emplois) ^emplois/>, <RegexURLPattern index ^$>], [<RegexURLResolver <module 'applications.emplois.urls' from '/home/guinsly/development/public/project/django-ottawa-city-jobs/applications/emplois/urls.py'> (emplois:emplois) ^ottawacityjobs/>], [<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'django.conf.urls.i18n' from '/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/conf/urls/i18n.py'> (None:None) ^i18n/>], [<RegexURLResolver <module 'applications.emplois.urls' from '/home/guinsly/development/public/project/django-ottawa-city-jobs/applications/emplois/urls.py'> (emplois:emplois) ^>, <RegexURLPattern detail ^(?P<pk>[0-9]+)/$>], [<RegexURLResolver <module 'applications.emplois.urls' from '/home/guinsly/development/public/project/django-ottawa-city-jobs/applications/emplois/urls.py'> (emplois:emplois) ^>, <RegexURLPattern stats ^stats$>], [<RegexURLResolver <module 'applications.emplois.urls' from '/home/guinsly/development/public/project/django-ottawa-city-jobs/applications/emplois/urls.py'> (emplois:emplois) ^>, <RegexURLPattern job_search ^searchJobs/$>], [<RegexURLResolver <module 'applications.emplois.urls' from '/home/guinsly/development/public/project/django-ottawa-city-jobs/applications/emplois/urls.py'> (emplois:emplois) ^>, <RegexURLPattern emplois ^stats_emplois/$>], [<RegexURLResolver <module 'applications.emplois.urls' from '/home/guinsly/development/public/project/django-ottawa-city-jobs/applications/emplois/urls.py'> (emplois:emplois) ^>, <RegexURLPattern about ^about$>], [<RegexURLResolver <module 'applications.emplois.urls' from '/home/guinsly/development/public/project/django-ottawa-city-jobs/applications/emplois/urls.py'> (emplois:emplois) ^>, <RegexURLPattern all_jobs_posted ^all_jobs_posted$>], [<RegexURLResolver <module 'applications.emplois.urls' from '/home/guinsly/development/public/project/django-ottawa-city-jobs/applications/emplois/urls.py'> (emplois:emplois) ^>, <RegexURLPattern expire ^expiring$>], [<RegexURLResolver <module 'applications.emplois.urls' from '/home/guinsly/development/public/project/django-ottawa-city-jobs/applications/emplois/urls.py'> (emplois:emplois) ^>, <RegexURLPattern latest ^latest$>], [<RegexURLResolver <module 'applications.emplois.urls' from '/home/guinsly/development/public/project/django-ottawa-city-jobs/applications/emplois/urls.py'> (emplois:emplois) ^>, <RegexURLResolver <module 'django.conf.urls.i18n' from '/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/conf/urls/i18n.py'> (None:None) ^i18n/>], [<RegexURLResolver <module 'applications.emplois.urls' from '/home/guinsly/development/public/project/django-ottawa-city-jobs/applications/emplois/urls.py'> (emplois:emplois) ^>, <RegexURLPattern upgrade ^update/$>], [<RegexURLResolver <module 'applications.emplois.urls' from '/home/guinsly/development/public/project/django-ottawa-city-jobs/applications/emplois/urls.py'> (emplois:emplois) ^>, <RegexURLPattern download ^download/$>], [<RegexURLResolver <module 'applications.emplois.urls' from '/home/guinsly/development/public/project/django-ottawa-city-jobs/applications/emplois/urls.py'> (emplois:emplois) ^>, <RegexURLPattern index ^emplois/$>], [<RegexURLResolver <module 'applications.emplois.urls' from '/home/guinsly/development/public/project/django-ottawa-city-jobs/applications/emplois/urls.py'> (emplois:emplois) ^>, <RegexURLPattern index ^$>]]}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/core/urlresolvers.py", line 129, in get_callable
+    view_func = getattr(mod, func_name)
+AttributeError: 'module' object has no attribute 'handler404'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/core/handlers/base.py", line 87, in get_exception_response
+    callback, param_dict = resolver.resolve_error_handler(status_code)
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/core/urlresolvers.py", line 436, in resolve_error_handler
+    return get_callable(callback), {}
+  File "/home/guinsly/.pyenv/versions/3.4.4/lib/python3.4/functools.py", line 448, in wrapper
+    result = user_function(*args, **kwds)
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/core/urlresolvers.py", line 136, in get_callable
+    (lookup_view, mod_name))
+django.core.exceptions.ViewDoesNotExist: Could not import 'applications.emplois.handler404'. View does not exist in module applications.emplois.
+[2016-05-26 15:21:06,821] WARNING % : Not Found: /emplois/ljl
+[2016-05-26 15:21:06,822] ERROR % : Internal Server Error: /emplois/ljl
+Traceback (most recent call last):
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/core/handlers/base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/core/urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'tried': [[<RegexURLPattern None ^jobs/>], [<RegexURLResolver <module 'applications.emplois.urls' from '/home/guinsly/development/public/project/django-ottawa-city-jobs/applications/emplois/urls.py'> (emplois:emplois) ^emplois/>, <RegexURLPattern detail ^(?P<pk>[0-9]+)/$>], [<RegexURLResolver <module 'applications.emplois.urls' from '/home/guinsly/development/public/project/django-ottawa-city-jobs/applications/emplois/urls.py'> (emplois:emplois) ^emplois/>, <RegexURLPattern stats ^stats$>], [<RegexURLResolver <module 'applications.emplois.urls' from '/home/guinsly/development/public/project/django-ottawa-city-jobs/applications/emplois/urls.py'> (emplois:emplois) ^emplois/>, <RegexURLPattern job_search ^searchJobs/$>], [<RegexURLResolver <module 'applications.emplois.urls' from '/home/guinsly/development/public/project/django-ottawa-city-jobs/applications/emplois/urls.py'> (emplois:emplois) ^emplois/>, <RegexURLPattern emplois ^stats_emplois/$>], [<RegexURLResolver <module 'applications.emplois.urls' from '/home/guinsly/development/public/project/django-ottawa-city-jobs/applications/emplois/urls.py'> (emplois:emplois) ^emplois/>, <RegexURLPattern about ^about$>], [<RegexURLResolver <module 'applications.emplois.urls' from '/home/guinsly/development/public/project/django-ottawa-city-jobs/applications/emplois/urls.py'> (emplois:emplois) ^emplois/>, <RegexURLPattern all_jobs_posted ^all_jobs_posted$>], [<RegexURLResolver <module 'applications.emplois.urls' from '/home/guinsly/development/public/project/django-ottawa-city-jobs/applications/emplois/urls.py'> (emplois:emplois) ^emplois/>, <RegexURLPattern expire ^expiring$>], [<RegexURLResolver <module 'applications.emplois.urls' from '/home/guinsly/development/public/project/django-ottawa-city-jobs/applications/emplois/urls.py'> (emplois:emplois) ^emplois/>, <RegexURLPattern latest ^latest$>], [<RegexURLResolver <module 'applications.emplois.urls' from '/home/guinsly/development/public/project/django-ottawa-city-jobs/applications/emplois/urls.py'> (emplois:emplois) ^emplois/>, <RegexURLResolver <module 'django.conf.urls.i18n' from '/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/conf/urls/i18n.py'> (None:None) ^i18n/>], [<RegexURLResolver <module 'applications.emplois.urls' from '/home/guinsly/development/public/project/django-ottawa-city-jobs/applications/emplois/urls.py'> (emplois:emplois) ^emplois/>, <RegexURLPattern upgrade ^update/$>], [<RegexURLResolver <module 'applications.emplois.urls' from '/home/guinsly/development/public/project/django-ottawa-city-jobs/applications/emplois/urls.py'> (emplois:emplois) ^emplois/>, <RegexURLPattern download ^download/$>], [<RegexURLResolver <module 'applications.emplois.urls' from '/home/guinsly/development/public/project/django-ottawa-city-jobs/applications/emplois/urls.py'> (emplois:emplois) ^emplois/>, <RegexURLPattern index ^emplois/$>], [<RegexURLResolver <module 'applications.emplois.urls' from '/home/guinsly/development/public/project/django-ottawa-city-jobs/applications/emplois/urls.py'> (emplois:emplois) ^emplois/>, <RegexURLPattern index ^$>], [<RegexURLResolver <module 'applications.emplois.urls' from '/home/guinsly/development/public/project/django-ottawa-city-jobs/applications/emplois/urls.py'> (emplois:emplois) ^ottawacityjobs/>], [<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'django.conf.urls.i18n' from '/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/conf/urls/i18n.py'> (None:None) ^i18n/>], [<RegexURLResolver <module 'applications.emplois.urls' from '/home/guinsly/development/public/project/django-ottawa-city-jobs/applications/emplois/urls.py'> (emplois:emplois) ^>, <RegexURLPattern detail ^(?P<pk>[0-9]+)/$>], [<RegexURLResolver <module 'applications.emplois.urls' from '/home/guinsly/development/public/project/django-ottawa-city-jobs/applications/emplois/urls.py'> (emplois:emplois) ^>, <RegexURLPattern stats ^stats$>], [<RegexURLResolver <module 'applications.emplois.urls' from '/home/guinsly/development/public/project/django-ottawa-city-jobs/applications/emplois/urls.py'> (emplois:emplois) ^>, <RegexURLPattern job_search ^searchJobs/$>], [<RegexURLResolver <module 'applications.emplois.urls' from '/home/guinsly/development/public/project/django-ottawa-city-jobs/applications/emplois/urls.py'> (emplois:emplois) ^>, <RegexURLPattern emplois ^stats_emplois/$>], [<RegexURLResolver <module 'applications.emplois.urls' from '/home/guinsly/development/public/project/django-ottawa-city-jobs/applications/emplois/urls.py'> (emplois:emplois) ^>, <RegexURLPattern about ^about$>], [<RegexURLResolver <module 'applications.emplois.urls' from '/home/guinsly/development/public/project/django-ottawa-city-jobs/applications/emplois/urls.py'> (emplois:emplois) ^>, <RegexURLPattern all_jobs_posted ^all_jobs_posted$>], [<RegexURLResolver <module 'applications.emplois.urls' from '/home/guinsly/development/public/project/django-ottawa-city-jobs/applications/emplois/urls.py'> (emplois:emplois) ^>, <RegexURLPattern expire ^expiring$>], [<RegexURLResolver <module 'applications.emplois.urls' from '/home/guinsly/development/public/project/django-ottawa-city-jobs/applications/emplois/urls.py'> (emplois:emplois) ^>, <RegexURLPattern latest ^latest$>], [<RegexURLResolver <module 'applications.emplois.urls' from '/home/guinsly/development/public/project/django-ottawa-city-jobs/applications/emplois/urls.py'> (emplois:emplois) ^>, <RegexURLResolver <module 'django.conf.urls.i18n' from '/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/conf/urls/i18n.py'> (None:None) ^i18n/>], [<RegexURLResolver <module 'applications.emplois.urls' from '/home/guinsly/development/public/project/django-ottawa-city-jobs/applications/emplois/urls.py'> (emplois:emplois) ^>, <RegexURLPattern upgrade ^update/$>], [<RegexURLResolver <module 'applications.emplois.urls' from '/home/guinsly/development/public/project/django-ottawa-city-jobs/applications/emplois/urls.py'> (emplois:emplois) ^>, <RegexURLPattern download ^download/$>], [<RegexURLResolver <module 'applications.emplois.urls' from '/home/guinsly/development/public/project/django-ottawa-city-jobs/applications/emplois/urls.py'> (emplois:emplois) ^>, <RegexURLPattern index ^emplois/$>], [<RegexURLResolver <module 'applications.emplois.urls' from '/home/guinsly/development/public/project/django-ottawa-city-jobs/applications/emplois/urls.py'> (emplois:emplois) ^>, <RegexURLPattern index ^$>]], 'path': 'emplois/ljl'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/core/urlresolvers.py", line 129, in get_callable
+    view_func = getattr(mod, func_name)
+AttributeError: 'module' object has no attribute 'handler404'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/core/handlers/base.py", line 87, in get_exception_response
+    callback, param_dict = resolver.resolve_error_handler(status_code)
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/core/urlresolvers.py", line 436, in resolve_error_handler
+    return get_callable(callback), {}
+  File "/home/guinsly/.pyenv/versions/3.4.4/lib/python3.4/functools.py", line 448, in wrapper
+    result = user_function(*args, **kwds)
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/core/urlresolvers.py", line 136, in get_callable
+    (lookup_view, mod_name))
+django.core.exceptions.ViewDoesNotExist: Could not import 'applications.emplois.handler404'. View does not exist in module applications.emplois.
+[2016-05-26 15:21:29,361] WARNING % : Not Found: /emplois/ljl
+[2016-05-26 15:21:29,361] ERROR % : Internal Server Error: /emplois/ljl
+Traceback (most recent call last):
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/core/handlers/base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/core/urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'tried': [[<RegexURLPattern None ^jobs/>], [<RegexURLResolver <module 'applications.emplois.urls' from '/home/guinsly/development/public/project/django-ottawa-city-jobs/applications/emplois/urls.py'> (emplois:emplois) ^emplois/>, <RegexURLPattern detail ^(?P<pk>[0-9]+)/$>], [<RegexURLResolver <module 'applications.emplois.urls' from '/home/guinsly/development/public/project/django-ottawa-city-jobs/applications/emplois/urls.py'> (emplois:emplois) ^emplois/>, <RegexURLPattern stats ^stats$>], [<RegexURLResolver <module 'applications.emplois.urls' from '/home/guinsly/development/public/project/django-ottawa-city-jobs/applications/emplois/urls.py'> (emplois:emplois) ^emplois/>, <RegexURLPattern job_search ^searchJobs/$>], [<RegexURLResolver <module 'applications.emplois.urls' from '/home/guinsly/development/public/project/django-ottawa-city-jobs/applications/emplois/urls.py'> (emplois:emplois) ^emplois/>, <RegexURLPattern emplois ^stats_emplois/$>], [<RegexURLResolver <module 'applications.emplois.urls' from '/home/guinsly/development/public/project/django-ottawa-city-jobs/applications/emplois/urls.py'> (emplois:emplois) ^emplois/>, <RegexURLPattern about ^about$>], [<RegexURLResolver <module 'applications.emplois.urls' from '/home/guinsly/development/public/project/django-ottawa-city-jobs/applications/emplois/urls.py'> (emplois:emplois) ^emplois/>, <RegexURLPattern all_jobs_posted ^all_jobs_posted$>], [<RegexURLResolver <module 'applications.emplois.urls' from '/home/guinsly/development/public/project/django-ottawa-city-jobs/applications/emplois/urls.py'> (emplois:emplois) ^emplois/>, <RegexURLPattern expire ^expiring$>], [<RegexURLResolver <module 'applications.emplois.urls' from '/home/guinsly/development/public/project/django-ottawa-city-jobs/applications/emplois/urls.py'> (emplois:emplois) ^emplois/>, <RegexURLPattern latest ^latest$>], [<RegexURLResolver <module 'applications.emplois.urls' from '/home/guinsly/development/public/project/django-ottawa-city-jobs/applications/emplois/urls.py'> (emplois:emplois) ^emplois/>, <RegexURLResolver <module 'django.conf.urls.i18n' from '/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/conf/urls/i18n.py'> (None:None) ^i18n/>], [<RegexURLResolver <module 'applications.emplois.urls' from '/home/guinsly/development/public/project/django-ottawa-city-jobs/applications/emplois/urls.py'> (emplois:emplois) ^emplois/>, <RegexURLPattern upgrade ^update/$>], [<RegexURLResolver <module 'applications.emplois.urls' from '/home/guinsly/development/public/project/django-ottawa-city-jobs/applications/emplois/urls.py'> (emplois:emplois) ^emplois/>, <RegexURLPattern download ^download/$>], [<RegexURLResolver <module 'applications.emplois.urls' from '/home/guinsly/development/public/project/django-ottawa-city-jobs/applications/emplois/urls.py'> (emplois:emplois) ^emplois/>, <RegexURLPattern index ^emplois/$>], [<RegexURLResolver <module 'applications.emplois.urls' from '/home/guinsly/development/public/project/django-ottawa-city-jobs/applications/emplois/urls.py'> (emplois:emplois) ^emplois/>, <RegexURLPattern index ^$>], [<RegexURLResolver <module 'applications.emplois.urls' from '/home/guinsly/development/public/project/django-ottawa-city-jobs/applications/emplois/urls.py'> (emplois:emplois) ^ottawacityjobs/>], [<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'django.conf.urls.i18n' from '/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/conf/urls/i18n.py'> (None:None) ^i18n/>], [<RegexURLResolver <module 'applications.emplois.urls' from '/home/guinsly/development/public/project/django-ottawa-city-jobs/applications/emplois/urls.py'> (emplois:emplois) ^>, <RegexURLPattern detail ^(?P<pk>[0-9]+)/$>], [<RegexURLResolver <module 'applications.emplois.urls' from '/home/guinsly/development/public/project/django-ottawa-city-jobs/applications/emplois/urls.py'> (emplois:emplois) ^>, <RegexURLPattern stats ^stats$>], [<RegexURLResolver <module 'applications.emplois.urls' from '/home/guinsly/development/public/project/django-ottawa-city-jobs/applications/emplois/urls.py'> (emplois:emplois) ^>, <RegexURLPattern job_search ^searchJobs/$>], [<RegexURLResolver <module 'applications.emplois.urls' from '/home/guinsly/development/public/project/django-ottawa-city-jobs/applications/emplois/urls.py'> (emplois:emplois) ^>, <RegexURLPattern emplois ^stats_emplois/$>], [<RegexURLResolver <module 'applications.emplois.urls' from '/home/guinsly/development/public/project/django-ottawa-city-jobs/applications/emplois/urls.py'> (emplois:emplois) ^>, <RegexURLPattern about ^about$>], [<RegexURLResolver <module 'applications.emplois.urls' from '/home/guinsly/development/public/project/django-ottawa-city-jobs/applications/emplois/urls.py'> (emplois:emplois) ^>, <RegexURLPattern all_jobs_posted ^all_jobs_posted$>], [<RegexURLResolver <module 'applications.emplois.urls' from '/home/guinsly/development/public/project/django-ottawa-city-jobs/applications/emplois/urls.py'> (emplois:emplois) ^>, <RegexURLPattern expire ^expiring$>], [<RegexURLResolver <module 'applications.emplois.urls' from '/home/guinsly/development/public/project/django-ottawa-city-jobs/applications/emplois/urls.py'> (emplois:emplois) ^>, <RegexURLPattern latest ^latest$>], [<RegexURLResolver <module 'applications.emplois.urls' from '/home/guinsly/development/public/project/django-ottawa-city-jobs/applications/emplois/urls.py'> (emplois:emplois) ^>, <RegexURLResolver <module 'django.conf.urls.i18n' from '/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/conf/urls/i18n.py'> (None:None) ^i18n/>], [<RegexURLResolver <module 'applications.emplois.urls' from '/home/guinsly/development/public/project/django-ottawa-city-jobs/applications/emplois/urls.py'> (emplois:emplois) ^>, <RegexURLPattern upgrade ^update/$>], [<RegexURLResolver <module 'applications.emplois.urls' from '/home/guinsly/development/public/project/django-ottawa-city-jobs/applications/emplois/urls.py'> (emplois:emplois) ^>, <RegexURLPattern download ^download/$>], [<RegexURLResolver <module 'applications.emplois.urls' from '/home/guinsly/development/public/project/django-ottawa-city-jobs/applications/emplois/urls.py'> (emplois:emplois) ^>, <RegexURLPattern index ^emplois/$>], [<RegexURLResolver <module 'applications.emplois.urls' from '/home/guinsly/development/public/project/django-ottawa-city-jobs/applications/emplois/urls.py'> (emplois:emplois) ^>, <RegexURLPattern index ^$>]], 'path': 'emplois/ljl'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/core/urlresolvers.py", line 129, in get_callable
+    view_func = getattr(mod, func_name)
+AttributeError: 'module' object has no attribute 'handler404'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/core/handlers/base.py", line 87, in get_exception_response
+    callback, param_dict = resolver.resolve_error_handler(status_code)
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/core/urlresolvers.py", line 436, in resolve_error_handler
+    return get_callable(callback), {}
+  File "/home/guinsly/.pyenv/versions/3.4.4/lib/python3.4/functools.py", line 448, in wrapper
+    result = user_function(*args, **kwds)
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/core/urlresolvers.py", line 136, in get_callable
+    (lookup_view, mod_name))
+django.core.exceptions.ViewDoesNotExist: Could not import 'applications.emplois.handler404'. View does not exist in module applications.emplois.
+[2016-05-26 15:22:05,353] WARNING % : Not Found: /emplois/ljl
+[2016-05-26 15:24:16,292] WARNING % : Not Found: /emplois/ljl
+[2016-05-26 15:24:16,292] ERROR % : Internal Server Error: /emplois/ljl
+Traceback (most recent call last):
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/core/handlers/base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/core/urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'path': 'emplois/ljl', 'tried': [[<RegexURLPattern None ^jobs/>], [<RegexURLResolver <module 'applications.emplois.urls' from '/home/guinsly/development/public/project/django-ottawa-city-jobs/applications/emplois/urls.py'> (emplois:emplois) ^emplois/>, <RegexURLPattern detail ^(?P<pk>[0-9]+)/$>], [<RegexURLResolver <module 'applications.emplois.urls' from '/home/guinsly/development/public/project/django-ottawa-city-jobs/applications/emplois/urls.py'> (emplois:emplois) ^emplois/>, <RegexURLPattern stats ^stats$>], [<RegexURLResolver <module 'applications.emplois.urls' from '/home/guinsly/development/public/project/django-ottawa-city-jobs/applications/emplois/urls.py'> (emplois:emplois) ^emplois/>, <RegexURLPattern job_search ^searchJobs/$>], [<RegexURLResolver <module 'applications.emplois.urls' from '/home/guinsly/development/public/project/django-ottawa-city-jobs/applications/emplois/urls.py'> (emplois:emplois) ^emplois/>, <RegexURLPattern emplois ^stats_emplois/$>], [<RegexURLResolver <module 'applications.emplois.urls' from '/home/guinsly/development/public/project/django-ottawa-city-jobs/applications/emplois/urls.py'> (emplois:emplois) ^emplois/>, <RegexURLPattern about ^about$>], [<RegexURLResolver <module 'applications.emplois.urls' from '/home/guinsly/development/public/project/django-ottawa-city-jobs/applications/emplois/urls.py'> (emplois:emplois) ^emplois/>, <RegexURLPattern all_jobs_posted ^all_jobs_posted$>], [<RegexURLResolver <module 'applications.emplois.urls' from '/home/guinsly/development/public/project/django-ottawa-city-jobs/applications/emplois/urls.py'> (emplois:emplois) ^emplois/>, <RegexURLPattern expire ^expiring$>], [<RegexURLResolver <module 'applications.emplois.urls' from '/home/guinsly/development/public/project/django-ottawa-city-jobs/applications/emplois/urls.py'> (emplois:emplois) ^emplois/>, <RegexURLPattern latest ^latest$>], [<RegexURLResolver <module 'applications.emplois.urls' from '/home/guinsly/development/public/project/django-ottawa-city-jobs/applications/emplois/urls.py'> (emplois:emplois) ^emplois/>, <RegexURLResolver <module 'django.conf.urls.i18n' from '/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/conf/urls/i18n.py'> (None:None) ^i18n/>], [<RegexURLResolver <module 'applications.emplois.urls' from '/home/guinsly/development/public/project/django-ottawa-city-jobs/applications/emplois/urls.py'> (emplois:emplois) ^emplois/>, <RegexURLPattern upgrade ^update/$>], [<RegexURLResolver <module 'applications.emplois.urls' from '/home/guinsly/development/public/project/django-ottawa-city-jobs/applications/emplois/urls.py'> (emplois:emplois) ^emplois/>, <RegexURLPattern download ^download/$>], [<RegexURLResolver <module 'applications.emplois.urls' from '/home/guinsly/development/public/project/django-ottawa-city-jobs/applications/emplois/urls.py'> (emplois:emplois) ^emplois/>, <RegexURLPattern index ^emplois/$>], [<RegexURLResolver <module 'applications.emplois.urls' from '/home/guinsly/development/public/project/django-ottawa-city-jobs/applications/emplois/urls.py'> (emplois:emplois) ^emplois/>, <RegexURLPattern index ^$>], [<RegexURLResolver <module 'applications.emplois.urls' from '/home/guinsly/development/public/project/django-ottawa-city-jobs/applications/emplois/urls.py'> (emplois:emplois) ^ottawacityjobs/>], [<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'django.conf.urls.i18n' from '/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/conf/urls/i18n.py'> (None:None) ^i18n/>], [<RegexURLResolver <module 'applications.emplois.urls' from '/home/guinsly/development/public/project/django-ottawa-city-jobs/applications/emplois/urls.py'> (emplois:emplois) ^>, <RegexURLPattern detail ^(?P<pk>[0-9]+)/$>], [<RegexURLResolver <module 'applications.emplois.urls' from '/home/guinsly/development/public/project/django-ottawa-city-jobs/applications/emplois/urls.py'> (emplois:emplois) ^>, <RegexURLPattern stats ^stats$>], [<RegexURLResolver <module 'applications.emplois.urls' from '/home/guinsly/development/public/project/django-ottawa-city-jobs/applications/emplois/urls.py'> (emplois:emplois) ^>, <RegexURLPattern job_search ^searchJobs/$>], [<RegexURLResolver <module 'applications.emplois.urls' from '/home/guinsly/development/public/project/django-ottawa-city-jobs/applications/emplois/urls.py'> (emplois:emplois) ^>, <RegexURLPattern emplois ^stats_emplois/$>], [<RegexURLResolver <module 'applications.emplois.urls' from '/home/guinsly/development/public/project/django-ottawa-city-jobs/applications/emplois/urls.py'> (emplois:emplois) ^>, <RegexURLPattern about ^about$>], [<RegexURLResolver <module 'applications.emplois.urls' from '/home/guinsly/development/public/project/django-ottawa-city-jobs/applications/emplois/urls.py'> (emplois:emplois) ^>, <RegexURLPattern all_jobs_posted ^all_jobs_posted$>], [<RegexURLResolver <module 'applications.emplois.urls' from '/home/guinsly/development/public/project/django-ottawa-city-jobs/applications/emplois/urls.py'> (emplois:emplois) ^>, <RegexURLPattern expire ^expiring$>], [<RegexURLResolver <module 'applications.emplois.urls' from '/home/guinsly/development/public/project/django-ottawa-city-jobs/applications/emplois/urls.py'> (emplois:emplois) ^>, <RegexURLPattern latest ^latest$>], [<RegexURLResolver <module 'applications.emplois.urls' from '/home/guinsly/development/public/project/django-ottawa-city-jobs/applications/emplois/urls.py'> (emplois:emplois) ^>, <RegexURLResolver <module 'django.conf.urls.i18n' from '/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/conf/urls/i18n.py'> (None:None) ^i18n/>], [<RegexURLResolver <module 'applications.emplois.urls' from '/home/guinsly/development/public/project/django-ottawa-city-jobs/applications/emplois/urls.py'> (emplois:emplois) ^>, <RegexURLPattern upgrade ^update/$>], [<RegexURLResolver <module 'applications.emplois.urls' from '/home/guinsly/development/public/project/django-ottawa-city-jobs/applications/emplois/urls.py'> (emplois:emplois) ^>, <RegexURLPattern download ^download/$>], [<RegexURLResolver <module 'applications.emplois.urls' from '/home/guinsly/development/public/project/django-ottawa-city-jobs/applications/emplois/urls.py'> (emplois:emplois) ^>, <RegexURLPattern index ^emplois/$>], [<RegexURLResolver <module 'applications.emplois.urls' from '/home/guinsly/development/public/project/django-ottawa-city-jobs/applications/emplois/urls.py'> (emplois:emplois) ^>, <RegexURLPattern index ^$>]]}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/core/handlers/base.py", line 92, in get_exception_response
+    response = callback(request, **dict(param_dict, exception=exception))
+TypeError: handler404() got an unexpected keyword argument 'exception'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/core/handlers/base.py", line 99, in get_exception_response
+    response = callback(request, **param_dict)
+  File "/home/guinsly/development/public/project/django-ottawa-city-jobs/applications/emplois/views.py", line 301, in handler404
+    response = render('emplois/page_not_found.html')
+TypeError: render() missing 1 required positional argument: 'template_name'
+[2016-05-26 15:25:06,676] WARNING % : Not Found: /emplois/ljl
+[2016-05-26 15:25:17,391] WARNING % : Not Found: /emplois/ljl
+[2016-05-26 15:25:45,845] WARNING % : Not Found: /emplois/ljl
+[2016-05-26 15:25:45,877] INFO % : Error page not found 404
+[2016-05-26 15:26:45,036] WARNING % : Not Found: /emplois/ljl
+[2016-05-26 15:26:45,067] INFO % : Error page not found 404

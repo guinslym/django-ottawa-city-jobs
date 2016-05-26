@@ -31,3 +31,6 @@ urlpatterns = [
     #url(r'^searchBlog/$','emplois.views.SearchJobView',name="blog_search"),
     url(r'^', include('applications.emplois.urls')),
 ]
+
+handler404 = 'applications.emplois.views.handler404'
+handler500 = 'applications.emplois.views.handler500'
