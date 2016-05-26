@@ -115,3 +115,111 @@ Original exception text was: 'Emploi' object has no attribute 'description'.
 [2016-05-26 12:58:31,552] WARNING : Session data corrupted
 [2016-05-26 13:03:55,327] WARNING : Not Found: /emplois/searchJobs
 [2016-05-26 13:04:43,358] WARNING : Not Found: /emplois/searchJobs
+[2016-05-26 13:11:04,146] WARNING : Not Found: /emplois/searchJobs
+[2016-05-26 13:21:23,816] INFO %(lineno)d %(module)s 12704 -1219602688 : Test Django Logging
+[2016-05-26 13:21:23,816] INFO %(lineno)d %(module)s 12704 -1219602688 : Something went wrong!
+[2016-05-26 13:21:23,816] ERROR %(lineno)d %(module)s 12704 -1219602688 : Test Django Logging
+[2016-05-26 13:21:39,003] INFO %(lineno)d %(module)s 12730 -1219168512 : Test Django Logging
+[2016-05-26 13:21:39,003] INFO %(lineno)d %(module)s 12730 -1219168512 : Something went wrong!
+[2016-05-26 13:21:39,003] ERROR %(lineno)d %(module)s 12730 -1219168512 : Test Django Logging
+[2016-05-26 13:21:44,204] INFO %(lineno)d %(module)s 12774 -1219627264 : Test Django Logging
+[2016-05-26 13:21:44,204] INFO %(lineno)d %(module)s 12774 -1219627264 : Something went wrong!
+[2016-05-26 13:21:44,204] ERROR %(lineno)d %(module)s 12774 -1219627264 : Test Django Logging
+[2016-05-26 13:21:44,796] INFO %(lineno)d %(module)s 12802 -1219410176 : Test Django Logging
+[2016-05-26 13:21:44,796] INFO %(lineno)d %(module)s 12802 -1219410176 : Something went wrong!
+[2016-05-26 13:21:44,797] ERROR %(lineno)d %(module)s 12802 -1219410176 : Test Django Logging
+[2016-05-26 13:22:14,494] INFO %(lineno)d %(module)s 12834 -1219492096 : Test Django Logging
+[2016-05-26 13:22:14,494] INFO %(lineno)d %(module)s 12834 -1219492096 : Something went wrong!
+[2016-05-26 13:22:14,494] ERROR %(lineno)d %(module)s 12834 -1219492096 : Test Django Logging
+[2016-05-26 13:22:37,892] INFO %(lineno)d %(module)s 12941 -1219770624 : Something went wrong!
+[2016-05-26 13:22:37,892] ERROR %(lineno)d %(module)s 12941 -1219770624 : Test Django Logging
+[2016-05-26 13:22:43,846] INFO %(lineno)d %(module)s 12955 -1219422464 : Something went wrong!
+[2016-05-26 13:22:43,846] ERROR %(lineno)d %(module)s 12955 -1219422464 : Test Django Logging
+[2016-05-26 13:22:54,673] INFO %(lineno)d %(module)s 12992 -1219057920 : Something went wrong!
+[2016-05-26 13:22:54,673] ERROR %(lineno)d %(module)s 12992 -1219057920 : Test Django Logging
+[2016-05-26 13:23:00,647] ERROR %(lineno)d %(module)s 13010 -1219717376 : Test Django Logging
+[2016-05-26 13:23:05,462] ERROR %(lineno)d %(module)s 13010 -1263535296 : Test Django Logging
+[2016-05-26 13:23:05,462] INFO %(lineno)d %(module)s 13010 -1263535296 : LIQPAY: API Call from LiqPay: <QueryDict: {}>
+[2016-05-26 13:23:28,173] ERROR %(lineno)d %(module)s 13158 -1219729664 : Test Django Logging
+[2016-05-26 13:23:50,560] ERROR %(lineno)d %(module)s 13183 -1219799296 : Test Django Logging
+[2016-05-26 13:24:01,728] INFO %(lineno)d %(module)s 13210 -1263535296 : Language is set to : FR
+[2016-05-26 13:24:51,301] INFO %(lineno)d %(module)s 13361 -1263535296 : Language is set to : FR
+[2016-05-26 13:24:51,307] ERROR %(lineno)d %(module)s 13361 -1263535296 : Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/views/generic/base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/views/generic/list.py", line 159, in get
+    self.object_list = self.get_queryset()
+  File "/home/guinsly/development/public/project/django-ottawa-city-jobs/applications/emplois/views.py", line 54, in get_queryset
+    .order_by('EXPIRYDATE').count())
+TypeError: Can't convert 'int' object to str implicitly
+[2016-05-26 13:25:17,695] INFO %(lineno)d %(module)s 13409 -1262486720 : Language is set to : FR
+[2016-05-26 13:25:17,702] ERROR %(lineno)d %(module)s 13409 -1262486720 : Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/views/generic/base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/views/generic/list.py", line 159, in get
+    self.object_list = self.get_queryset()
+  File "/home/guinsly/development/public/project/django-ottawa-city-jobs/applications/emplois/views.py", line 52, in get_queryset
+    logger.info('Number of Object retrived : '+ Job.objects.filter(language=self.language(),EXPIRYDATE__gt=datetime.now()).order_by('EXPIRYDATE').count())
+TypeError: Can't convert 'int' object to str implicitly
+[2016-05-26 13:25:59,575] INFO %(lineno)d %(module)s 13490 -1263535296 : Language is set to : FR
+[2016-05-26 13:25:59,581] INFO %(lineno)d %(module)s 13490 -1263535296 : Number of Object retrived : 0
+[2016-05-26 13:25:59,581] INFO %(lineno)d %(module)s 13490 -1263535296 : Language is set to : FR
+[2016-05-26 13:28:24,671] INFO %(lineno)d %(module)s 13807 -1263535296 : Language is set to : FR
+[2016-05-26 13:28:24,678] INFO %(lineno)d %(module)s 13807 -1263535296 : Number of Object retrieved : 0
+[2016-05-26 13:28:24,678] INFO %(lineno)d %(module)s 13807 -1263535296 : Language is set to : FR
+[2016-05-26 13:28:24,678] INFO %(lineno)d %(module)s 13807 -1263535296 : Language : FR
+[2016-05-26 13:28:24,678] INFO %(lineno)d %(module)s 13807 -1263535296 : ExpiryDate2016-05-26 13:28:24.678643
+[2016-05-26 13:28:24,678] INFO %(lineno)d %(module)s 13807 -1263535296 : Language is set to : FR
+[2016-05-26 13:28:45,371] INFO %(lineno)d %(module)s 13945 -1263535296 : Language is set to : FR
+[2016-05-26 13:28:45,378] INFO %(lineno)d %(module)s 13945 -1263535296 : Number of Object retrieved : 0
+[2016-05-26 13:28:45,379] INFO %(lineno)d %(module)s 13945 -1263535296 : Language is set to : FR
+[2016-05-26 13:28:45,379] INFO %(lineno)d %(module)s 13945 -1263535296 : Language : FR
+[2016-05-26 13:28:45,379] INFO %(lineno)d %(module)s 13945 -1263535296 : ExpiryDate : 2016-05-26 13:28:45.379333
+[2016-05-26 13:28:45,379] INFO %(lineno)d %(module)s 13945 -1263535296 : Language is set to : FR
+[2016-05-26 13:29:17,035] INFO %(funcName) 14100 -1263535296 : Language is set to : FR
+[2016-05-26 13:29:17,042] INFO %(funcName) 14100 -1263535296 : Number of Object retrieved : 0
+[2016-05-26 13:29:17,043] INFO %(funcName) 14100 -1263535296 : Language is set to : FR
+[2016-05-26 13:29:17,043] INFO %(funcName) 14100 -1263535296 : Language : FR
+[2016-05-26 13:29:17,043] INFO %(funcName) 14100 -1263535296 : ExpiryDate : 2016-05-26 13:29:17.043284
+[2016-05-26 13:29:17,043] INFO %(funcName) 14100 -1263535296 : Language is set to : FR
+[2016-05-26 13:29:36,664] INFO %(process)d -1263535296 : Language is set to : FR
+[2016-05-26 13:29:36,670] INFO %(process)d -1263535296 : Number of Object retrieved : 0
+[2016-05-26 13:29:36,670] INFO %(process)d -1263535296 : Language is set to : FR
+[2016-05-26 13:29:36,670] INFO %(process)d -1263535296 : Language : FR
+[2016-05-26 13:29:36,670] INFO %(process)d -1263535296 : ExpiryDate : 2016-05-26 13:29:36.670865
+[2016-05-26 13:29:36,671] INFO %(process)d -1263535296 : Language is set to : FR
+[2016-05-26 13:30:29,940] INFO %(process)d -1263535296 : Language is set to : FR
+[2016-05-26 13:30:29,950] INFO %(process)d -1263535296 : Number of Object retrieved : 0
+[2016-05-26 13:30:29,950] INFO %(process)d -1263535296 : Language is set to : FR
+[2016-05-26 13:30:29,950] INFO %(process)d -1263535296 : Language : FR
+[2016-05-26 13:30:29,950] INFO %(process)d -1263535296 : ExpiryDate : 2016-05-26 13:30:29.950641
+[2016-05-26 13:30:29,950] INFO %(process)d -1263535296 : Language is set to : FR
+[2016-05-26 13:31:20,213] INFO %(process)d -1263535296 : Number of Object retrieved : 0
+[2016-05-26 13:31:20,213] INFO %(process)d -1263535296 : Language : FR
+[2016-05-26 13:31:20,213] INFO %(process)d -1263535296 : ExpiryDate : 2016-05-26 13:31:20.213971
+[2016-05-26 13:31:48,818] INFO %(process)d -1263535296 : Number of Object retrieved : 0
+[2016-05-26 13:31:48,818] INFO %(process)d -1263535296 : Language : FR
+[2016-05-26 13:31:48,818] INFO %(process)d -1263535296 : ExpiryDate : 2016-05-26 13:31:48.818622
+[2016-05-26 13:33:23,516] INFO %(process)d -1294992576 : Number of Object retrieved : 0
+[2016-05-26 13:33:23,516] INFO %(process)d -1294992576 : Language : FR
+[2016-05-26 13:33:23,516] INFO %(process)d -1294992576 : ExpiryDate : 2016-05-26 13:33:23.516478
+[2016-05-26 13:43:25,309] INFO %(process)d -1263535296 : Number of Object retrieved : 98
+[2016-05-26 13:43:25,310] INFO %(process)d -1263535296 : Language : FR
+[2016-05-26 13:43:25,310] INFO %(process)d -1263535296 : ExpiryDate : 2016-05-26 13:43:25.310350
+[2016-05-26 13:43:35,440] INFO %(process)d -1274021056 : Number of Object retrieved : 98
+[2016-05-26 13:43:35,440] INFO %(process)d -1274021056 : Language : EN
+[2016-05-26 13:43:35,440] INFO %(process)d -1274021056 : ExpiryDate : 2016-05-26 13:43:35.440661

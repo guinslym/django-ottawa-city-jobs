@@ -25,8 +25,7 @@ from django.http import HttpResponseRedirect
 
 import logging
 logger = logging.getLogger(__name__)
-logger.error('Test Django Logging')
-logger.error('Something went wrong!')
+
 #http:://localhost:8001/
 class IndexView(generic.ListView):
     """
@@ -36,14 +35,10 @@ class IndexView(generic.ListView):
     template_name='emplois/index.html'
     context_object_name='latest_jobs_list'
     paginate_by = 10
-    logger.error('Test Django Logging')
 
     def language(self):
         """Return the user default language"""
         language = language_set(self.request.LANGUAGE_CODE)
-        language = language.upper()
-        logger.error('Test Django Logging')
-        logger.info("LIQPAY: API Call from LiqPay: {}".format(str(self.request.GET)))
         return language
 
     def get_queryset(self):
@@ -52,9 +47,10 @@ class IndexView(generic.ListView):
         greater than Now() and a default Language
         """
         #import ipdb;ipdb.set_trace()
-        return Job.objects.filter(language=self.language(),\
-              EXPIRYDATE__gt=datetime.now())\
-            .order_by('EXPIRYDATE')
+        logger.info('Number of Object retrieved : '+ str(Job.objects.filter(language=self.language(),EXPIRYDATE__gt=datetime.now()).count()))
+        logger.info('Language : '+ self.language() )
+        logger.info('ExpiryDate : ' + str( datetime.now() ) )
+        return Job.objects.filter(language=self.language())
 
 
 #http://localhost:8001/emplois/latest

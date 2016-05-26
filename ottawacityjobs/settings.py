@@ -224,30 +224,26 @@ LOGGING = {
              'format': '[%(asctime)s] %(levelname)s : %(message)s'
          },
          'verbose': {
-             'format': '[%(asctime)s] %(levelname)s %(module)s %(process)d %(thread)d : %(message)s'
+             'format': '[%(asctime)s] %(levelname)s %(filename) %(process)d %(thread)d : %(message)s'
          },
      },
      'handlers': {
-         'null': {
-             'level': 'DEBUG',
-             'class': 'logging.NullHandler',
-         },
-         'console': {
-             'level': 'INFO',
-             'class': 'logging.StreamHandler',
-             'formatter': 'simple',
-         },
          'file': {
              'level': 'INFO',
              'class': 'logging.FileHandler',
-             'formatter': 'simple',
+             'formatter': 'verbose',
              'filename': BASE_DIR+'/logs/dev.log',
              'mode': 'a',
          },
      },
      'loggers': {
          'django': {
-             'handlers': ['file', 'console'],
+             'handlers': ['file'],
+             'level':'INFO',
+             'propagate': True,
+         },
+         'applications.emplois.views': {
+             'handlers': ['file'],
              'level':'INFO',
              'propagate': True,
          },
