@@ -18,26 +18,26 @@ class Job(models.Model):
             (ENGLISH, 'English'),
             )
     def __str__(self):
-        return self.position
+        return self.POSITION
     def was_published_recently(self):
         now = timezone.now()
-        return now - datetime.timedelta(days=7) <= self.pub_date <= now
+        return now - datetime.timedelta(days=7) <= self.POSTDATE <= now
     def still_not_expired_job_list(self):
         now = timezone.now()
-        return self.expirydate >= now 
+        return self.EXPIRYDATE >= now
 
 
-    joburl = models.URLField(max_length=250, blank=True, null=True)
-    expirydate = models.DateField(auto_now=False, blank=True, null=True)
-    salarymax = models.CharField(max_length=40, blank=True, null=True)
-    salarymin = models.CharField(max_length=40, blank=True, null=True)
-    salarytype = models.CharField(max_length=20, blank=True, null=True) 
-    name = models.CharField(max_length=40, blank=True, null=True) 
-    language = models.CharField(max_length=2, choices=LANGUAGE_CHOICE, default=ENGLISH) 
-    position = models.CharField(max_length=150, blank=True, null=True)
-    jobref = models.CharField(max_length=30, unique=True, blank=True, null=True)
-    job_summary = models.TextField(blank=True, null=True)
-    pub_date = models.DateTimeField(auto_now=False, blank=True, null=True)
+    JOBURL = models.URLField(max_length=250, blank=True, null=True)
+    EXPIRYDATE = models.DateField(auto_now=False, blank=True, null=True)
+    SALARYMAX = models.CharField(max_length=40, blank=True, null=True)
+    SALARYMIN = models.CharField(max_length=40, blank=True, null=True)
+    SALARYTYPE = models.CharField(max_length=20, blank=True, null=True)
+    NAME = models.CharField(max_length=40, blank=True, null=True)
+    LANGUAGE = models.CharField(max_length=2, choices=LANGUAGE_CHOICE, default=ENGLISH)
+    POSITION = models.CharField(max_length=150, blank=True, null=True)
+    JOBREF = models.CharField(max_length=30, unique=True, blank=True, null=True)
+    JOB_SUMMARY = models.TextField(blank=True, null=True)
+    POSTDATE = models.DateTimeField(auto_now=False, blank=True, null=True)
     slug = models.CharField(max_length=200)
     tweeted = models.BooleanField(default=False)
 
@@ -47,14 +47,11 @@ class Description(models.Model):
     Job.Description.models
     '''
     def __str__(self):
-        return self.company_desc
+        return self.COMPANY_DESC
 
     jobs = models.ForeignKey(Job, on_delete=models.CASCADE)
-    knowledge = models.TextField(blank=True, null=True)
-    languagecert = models.TextField(blank=True, null=True)
-    educationandexp = models.TextField(blank=True, null=True)
-    company_desc = models.TextField(blank=True, null=True)
-    pub_date = models.DateTimeField(auto_now=True, blank=True, null=True)
-
-
-
+    KNOWLEDGE = models.TextField(blank=True, null=True)
+    LANGUAGE_CERTIFICATES = models.TextField(blank=True, null=True)
+    EDUCATIONANDEXP = models.TextField(blank=True, null=True)
+    COMPANY_DESC = models.TextField(blank=True, null=True)
+    POSTDATE = models.DateTimeField(auto_now=True, blank=True, null=True)

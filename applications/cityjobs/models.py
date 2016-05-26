@@ -34,14 +34,14 @@ class Emploi(models.Model):
             )
     EXPIRYDATE = models.DateTimeField(auto_now=False, blank=True, null=True)
     JOBREF = models.CharField(max_length=30, unique=True, blank=True, null=True)
-    LANGUAGE = models.CharField(max_length=2, choices=LANGUAGE_CHOICE, default=ENGLISH) 
+    LANGUAGE = models.CharField(max_length=2, choices=LANGUAGE_CHOICE, default=ENGLISH)
     JOBNAME = models.URLField(max_length=250, blank=True, null=True)
     POSITION = models.CharField(max_length=150, blank=True, null=True)
     POSTDATE = models.DateTimeField(auto_now=False, blank=True, null=True)
     SALARYMIN = models.CharField(max_length=40, blank=True, null=True)
     SALARYMAX = models.CharField(max_length=40, blank=True, null=True)
     SALARYTYPE = models.CharField(max_length=20, blank=True, null=True)
-    description = models.ForeignKey(Description, on_delete=models.CASCADE)
+    DESCRIPTION = models.ForeignKey(Description, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.POSITION
@@ -50,5 +50,4 @@ class Emploi(models.Model):
         return now - datetime.timedelta(days=7) <= self.POSTDATE <= now
     def still_not_expired_job_list(self):
         now = timezone.now()
-        return self.EXPIRYDATE >= now 
-
+        return self.EXPIRYDATE >= now

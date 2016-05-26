@@ -52,8 +52,8 @@ class IndexView(generic.ListView):
         greater than Now() and a default Language
         """
         #import ipdb;ipdb.set_trace()
-        return Job.objects.filter(language=self.language(),\
-              expirydate__gt=datetime.now())\
+        return Job.objects.filter(LANGUAGE=self.language(),\
+              EXPIRYDATE__gt=datetime.now())\
             .order_by('expirydate')
 
 ''' Dealing with pagination can't set it properly
@@ -99,8 +99,8 @@ class LatestView(generic.ListView):
 
         Order: by PUBLICATION DATE
         """
-        return Job.objects.filter(language=self.language(),
-        pub_date__gte=datetime.now()-timedelta(days=14)).order_by('-pub_date')
+        return Job.objects.filter(LANGUAGE=self.language(),
+        POSTDATE__gte=datetime.now()-timedelta(days=14)).order_by('-POSTDATE')
 
 
 #http://localhost:8001/emplois/expiring
