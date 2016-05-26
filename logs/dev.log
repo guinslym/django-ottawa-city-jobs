@@ -113,3 +113,5 @@ Original exception text was: 'Emploi' object has no attribute 'description'.
 [2016-05-26 12:58:20,988] WARNING : Session data corrupted
 [2016-05-26 12:58:25,355] WARNING : Session data corrupted
 [2016-05-26 12:58:31,552] WARNING : Session data corrupted
+[2016-05-26 13:03:55,327] WARNING : Not Found: /emplois/searchJobs
+[2016-05-26 13:04:43,358] WARNING : Not Found: /emplois/searchJobs

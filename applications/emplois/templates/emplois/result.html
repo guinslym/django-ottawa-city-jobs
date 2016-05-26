@@ -52,8 +52,7 @@
 
   {% for emploi in latest_jobs_list %}
 
-          <h3><a href="{% url 'emplois:detail' emploi.id %}">{{ emploi.position }}.</a></h3>
-
+          <h3><a href="{% url 'emplois:detail' emploi.id %}">{{ emploi.POSITION }}.</a></h3>
           <p>
   {% autoescape off %}
                         {{ emploi.JOB_SUMMARY |truncatewords_html:50}}.
