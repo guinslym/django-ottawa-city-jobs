@@ -8,18 +8,16 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>
 
 <link href="{% static "css/font-awesome.min.css" %}" rel="stylesheet"/>
-
-
 	<link rel="stylesheet" href="{% static "css/cal-heatmap.css" %}" rel="stylesheet" />
 <script type="text/javascript" src="{% static "js/cal-heatmap.min.js" %}"></script>
 
 	<h1>{% trans "statistics" %}</h1>
 
-<button id="example-c-PreviousDomain-selector" style="margin-bottom: 10px;" class="btn btn-info"> 
+<button id="example-c-PreviousDomain-selector" style="margin-bottom: 10px;" class="btn btn-info">
 	<i class="icon icon-chevron-left"></i>
 </button>
 
-<button id="example-c-NextDomain-selector" style="margin-bottom: 10px;" class="btn btn-info"> 
+<button id="example-c-NextDomain-selector" style="margin-bottom: 10px;" class="btn btn-info">
 	<i class="icon icon-chevron-right"></i>
 </button>
 
@@ -32,12 +30,21 @@
 </div>
 
 {% get_current_language as LANGUAGE_CODE %}
-<script type="text/javascript"> 
+<script type="text/javascript">
    var lang = "{{ LANGUAGE_CODE}}"
 </script>
 <script type="text/javascript">
 
 
+Date.prototype.SubtractMonth = function(numberOfMonths) {
+
+	var d = this;
+	d.setMonth(d.getMonth() - numberOfMonths);
+	d.setDate(1);
+
+	return d;
+}
+var thisMonth = new Date();
 
 var cal = new CalHeatMap();
 var hello =0;
@@ -47,14 +54,14 @@ cal.init({
 	//subDomain: "month",
   itemName: ["job", "jobs"],
 	data: {{ stats }},
-	start: new Date(2015, 3),
+	start: thisMonth.SubtractMonth(5),
 	cellSize: 10,
 	range: 15,
 	legend: [1, 2, 4, 6],
 	previousSelector: "#example-c-PreviousDomain-selector",
 	nextSelector: "#example-c-NextDomain-selector",
     onClick: function(date, nb) {
-    	
+
         //Add AJAX call for all the jobs for that date
         //Add cookie or variable for the language i18n
         /*
@@ -76,7 +83,7 @@ var jqxhr = $.ajax({
   data: { mois: le_mois,
           annee: l_annee,
           jour:le_jour,
-          language: lang 
+          language: lang
         }
 })
   .done(function(data) {

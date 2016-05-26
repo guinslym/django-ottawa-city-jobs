@@ -13,8 +13,10 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
-from django.conf.urls import url, include
+from django.conf import settings
+from django.conf.urls import url, include, handler404, handler500
 from django.contrib import admin
+from django.conf.urls.static import static
 admin.autodiscover()
 
 from applications.cityjobs.views import *
@@ -30,7 +32,7 @@ urlpatterns = [
     #url (r'^settings', include('metasettings.urls')),
     #url(r'^searchBlog/$','emplois.views.SearchJobView',name="blog_search"),
     url(r'^', include('applications.emplois.urls')),
-]
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 handler404 = 'applications.emplois.views.handler404'
 handler500 = 'applications.emplois.views.handler500'

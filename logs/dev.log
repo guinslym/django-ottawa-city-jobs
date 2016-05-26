@@ -496,3 +496,181 @@ TypeError: render() missing 1 required positional argument: 'template_name'
 [2016-05-26 15:25:45,877] INFO % : Error page not found 404
 [2016-05-26 15:26:45,036] WARNING % : Not Found: /emplois/ljl
 [2016-05-26 15:26:45,067] INFO % : Error page not found 404
+[2016-05-26 15:28:04,335] WARNING % : Not Found: /emplois/ljl
+[2016-05-26 15:28:04,337] INFO % : Error page not found 404
+[2016-05-26 15:28:07,837] WARNING % : Not Found: /static/js/jquery.scrollUp.js
+[2016-05-26 15:28:07,839] INFO % : Error page not found 404
+[2016-05-26 15:28:10,061] WARNING % : Not Found: /static/js/jquery.scrollUp.js
+[2016-05-26 15:28:10,063] INFO % : Error page not found 404
+[2016-05-26 15:28:11,445] WARNING % : Not Found: /static/js/jquery.scrollUp.js
+[2016-05-26 15:28:11,456] INFO % : Error page not found 404
+[2016-05-26 15:28:16,998] WARNING % : Not Found: /static/js/jquery.scrollUp.js
+[2016-05-26 15:28:17,001] INFO % : Error page not found 404
+[2016-05-26 15:28:49,363] WARNING % : Not Found: /static/js/jquery.scrollUp.js
+[2016-05-26 15:28:49,365] INFO % : Error page not found 404
+[2016-05-26 15:29:06,758] ERROR % : Internal Server Error: /jobs/
+Traceback (most recent call last):
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/rest_framework/fields.py", line 401, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/rest_framework/fields.py", line 76, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'Emploi' object has no attribute 'description'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/rest_framework/views.py", line 466, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/rest_framework/views.py", line 463, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/rest_framework/decorators.py", line 53, in handler
+    return func(*args, **kwargs)
+  File "/home/guinsly/development/public/project/django-ottawa-city-jobs/applications/cityjobs/views.py", line 18, in all_jobs
+    return Response(serializers.data)
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/rest_framework/serializers.py", line 658, in data
+    ret = super(ListSerializer, self).data
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/rest_framework/serializers.py", line 223, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/rest_framework/serializers.py", line 598, in to_representation
+    self.child.to_representation(item) for item in iterable
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/rest_framework/serializers.py", line 598, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/rest_framework/serializers.py", line 447, in to_representation
+    attribute = field.get_attribute(instance)
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/rest_framework/fields.py", line 418, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `description` on serializer `EmploiSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `Emploi` instance.
+Original exception text was: 'Emploi' object has no attribute 'description'.
+[2016-05-26 15:29:06,774] INFO % : Error page not found 500
+[2016-05-26 15:30:44,365] WARNING % : Not Found: /static/css/font-awesome.min.css
+[2016-05-26 15:30:44,367] INFO % : Error page not found 404
+[2016-05-26 15:30:44,370] WARNING % : Not Found: /static/js/cal-heatmap.min.js
+[2016-05-26 15:30:44,372] INFO % : Error page not found 404
+[2016-05-26 15:30:44,374] WARNING % : Not Found: /static/css/cal-heatmap.css
+[2016-05-26 15:30:44,377] INFO % : Error page not found 404
+[2016-05-26 15:30:44,403] WARNING % : Not Found: /static/js/jquery.scrollUp.js
+[2016-05-26 15:30:44,405] INFO % : Error page not found 404
+[2016-05-26 15:32:18,005] WARNING % : Not Found: /static/css/font-awesome.min.css
+[2016-05-26 15:32:18,008] INFO % : Error page not found 404
+[2016-05-26 15:32:18,012] WARNING % : Not Found: /static/js/cal-heatmap.min.js
+[2016-05-26 15:32:18,015] INFO % : Error page not found 404
+[2016-05-26 15:32:18,022] WARNING % : Not Found: /static/js/jquery.scrollUp.js
+[2016-05-26 15:32:18,025] WARNING % : Not Found: /static/css/cal-heatmap.css
+[2016-05-26 15:32:18,026] INFO % : Error page not found 404
+[2016-05-26 15:32:18,028] INFO % : Error page not found 404
+[2016-05-26 16:07:13,573] WARNING % : Not Found: /emplois/stats_emplois
+[2016-05-26 16:07:13,575] INFO % : Error page not found 404
+[2016-05-26 16:07:18,835] WARNING % : Not Found: /emplois/stats_emplois
+[2016-05-26 16:07:18,839] INFO % : Error page not found 404
+[2016-05-26 16:09:25,909] WARNING % : Not Found: /emplois/stats_emplois
+[2016-05-26 16:09:25,934] INFO % : Error page not found 404
+[2016-05-26 16:09:25,954] INFO % : Annee : 2016
+[2016-05-26 16:09:25,954] INFO % : Mois : 2
+[2016-05-26 16:09:25,954] INFO % : Jour : 4
+[2016-05-26 16:09:25,954] INFO % : Language Code : fr
+[2016-05-26 16:10:55,594] WARNING % : Not Found: /emplois/stats_emplois
+[2016-05-26 16:10:55,595] INFO % : Error page not found 404
+[2016-05-26 16:10:55,620] INFO % : Annee : 2016
+[2016-05-26 16:10:55,620] INFO % : Mois : 4
+[2016-05-26 16:10:55,621] INFO % : Jour : 11
+[2016-05-26 16:10:55,622] INFO % : Language Code : fr
+[2016-05-26 16:12:30,489] WARNING % : Not Found: /emplois/jobs
+[2016-05-26 16:12:30,491] INFO % : Error page not found 404
+[2016-05-26 16:13:03,732] WARNING % : Not Found: /stats_emplois
+[2016-05-26 16:13:03,734] INFO % : Error page not found 404
+[2016-05-26 16:13:03,755] INFO % : Annee : 2016
+[2016-05-26 16:13:03,755] INFO % : Mois : 3
+[2016-05-26 16:13:03,755] INFO % : Jour : 1
+[2016-05-26 16:13:03,755] INFO % : Language Code : fr
+[2016-05-26 16:14:04,077] ERROR % : Internal Server Error: /emplois/stats
+Traceback (most recent call last):
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/core/urlresolvers.py", line 129, in get_callable
+    view_func = getattr(mod, func_name)
+AttributeError: 'module' object has no attribute 'stats'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/core/handlers/base.py", line 174, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/core/handlers/base.py", line 172, in get_response
+    response = response.render()
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/template/response.py", line 160, in render
+    self.content = self.rendered_content
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/template/response.py", line 137, in rendered_content
+    content = template.render(context, self._request)
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/template/backends/django.py", line 95, in render
+    return self.template.render(context)
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/template/base.py", line 206, in render
+    return self._render(context)
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/template/loader_tags.py", line 173, in render
+    return compiled_parent._render(context)
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/template/defaulttags.py", line 499, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/core/urlresolvers.py", line 568, in reverse
+    app_list = resolver.app_dict[ns]
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/core/urlresolvers.py", line 360, in app_dict
+    self._populate()
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/core/urlresolvers.py", line 334, in _populate
+    lookups.appendlist(pattern.callback, (bits, p_pattern, pattern.default_args))
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/core/urlresolvers.py", line 255, in callback
+    self._callback = get_callable(self._callback_str)
+  File "/home/guinsly/.pyenv/versions/3.4.4/lib/python3.4/functools.py", line 448, in wrapper
+    result = user_function(*args, **kwds)
+  File "/home/guinsly/.pyenv/versions/django1.9.3.4.3/lib/python3.4/site-packages/django/core/urlresolvers.py", line 136, in get_callable
+    (lookup_view, mod_name))
+django.core.exceptions.ViewDoesNotExist: Could not import 'applications.emplois.views.stats'. View does not exist in module applications.emplois.views.
+[2016-05-26 16:14:04,087] INFO % : Error page not found 500
+[2016-05-26 16:14:33,864] WARNING % : Not Found: /stats_emplois
+[2016-05-26 16:14:33,866] INFO % : Error page not found 404
+[2016-05-26 16:14:33,885] INFO % : Annee : 2016
+[2016-05-26 16:14:33,885] INFO % : Mois : 2
+[2016-05-26 16:14:33,886] INFO % : Jour : 2
+[2016-05-26 16:14:33,886] INFO % : Language Code : fr
+[2016-05-26 16:14:42,869] WARNING % : Not Found: /stats_emplois
+[2016-05-26 16:14:42,870] INFO % : Error page not found 404
+[2016-05-26 16:14:42,897] INFO % : Annee : 2016
+[2016-05-26 16:14:42,897] INFO % : Mois : 4
+[2016-05-26 16:14:42,897] INFO % : Jour : 11
+[2016-05-26 16:14:42,898] INFO % : Language Code : fr
+[2016-05-26 16:15:05,244] WARNING % : Not Found: /stats_emplois
+[2016-05-26 16:15:05,245] INFO % : Error page not found 404
+[2016-05-26 16:15:05,268] INFO % : Annee : 2016
+[2016-05-26 16:15:05,269] INFO % : Mois : 2
+[2016-05-26 16:15:05,269] INFO % : Jour : 17
+[2016-05-26 16:15:05,269] INFO % : Language Code : fr
+[2016-05-26 16:15:55,846] WARNING % : Not Found: /stats_emplois
+[2016-05-26 16:15:55,849] INFO % : Error page not found 404
+[2016-05-26 16:15:55,871] INFO % : Annee : 2016
+[2016-05-26 16:15:55,871] INFO % : Mois : 2
+[2016-05-26 16:15:55,871] INFO % : Jour : 1
+[2016-05-26 16:15:55,871] INFO % : Language Code : fr
+[2016-05-26 16:16:55,485] WARNING % : Not Found: /emplois/stats_emplois
+[2016-05-26 16:16:55,487] INFO % : Error page not found 404
+[2016-05-26 16:16:55,510] INFO % : Annee : 2016
+[2016-05-26 16:16:55,510] INFO % : Mois : 2
+[2016-05-26 16:16:55,511] INFO % : Jour : 2
+[2016-05-26 16:16:55,511] INFO % : Language Code : fr
+[2016-05-26 16:17:12,741] WARNING % : Not Found: /emplois/emplois
+[2016-05-26 16:17:12,744] INFO % : Error page not found 404

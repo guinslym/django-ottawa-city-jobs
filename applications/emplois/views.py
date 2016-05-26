@@ -163,7 +163,7 @@ class StatsView(generic.TemplateView):
         #
         context = super(StatsView, self).get_context_data(**kwargs)
         #get all the English/French values
-        english = Job.objects.filter(language=self.language)
+        english = Job.objects.filter(language=self.language())
         #Grouup by date
         data = english.values('POSTDATE').annotate(dcount=Count('POSTDATE'))
         content = {}
@@ -193,7 +193,7 @@ class AboutView(generic.TemplateView):
         return context
 
 #http://localhost:8001/emplois/searchJobs/<searchKey>
-@cache_page(60 * 1, key_prefix="site1"  )
+#@cache_page(60 * 1, key_prefix="site1"  )
 def job_search(request):
     """
     This function will receive a query
@@ -236,6 +236,10 @@ def emplois(request):
         POSTDATE__day=request.GET.get('jour'),
         language=language_set(request.LANGUAGE_CODE)
         )
+    logger.info('Annee : ' + request.GET.get('annee') )
+    logger.info('Mois : ' + request.GET.get('mois'))
+    logger.info('Jour : ' + request.GET.get('jour'))
+    logger.info('Language Code : ' + request.LANGUAGE_CODE)
     data = serializers.serialize('json', jobs)
     return HttpResponse(data, content_type='application/json')
 
@@ -305,7 +309,7 @@ def handler404(request):
 
 
 def handler500(request):
-    response = render(request, 'emplois/app_error_500.html')
+    response = render(request, 'emplois/server_error.html')
     logger.info('Error page not found 500')
-    response.status_code = 404
+    response.status_code = 500
     return response
