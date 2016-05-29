@@ -19,7 +19,7 @@ from django.contrib import admin
 from django.conf.urls.static import static
 admin.autodiscover()
 
-from applications.cityjobs.views import *
+#from applications.cityjobs.views import *
 
 urlpatterns = [
     url(r'^jobs/', all_jobs),
