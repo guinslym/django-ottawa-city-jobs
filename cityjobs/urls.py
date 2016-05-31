@@ -22,17 +22,14 @@ admin.autodiscover()
 #from applications.cityjobs.views import *
 
 urlpatterns = [
-    url(r'^jobs/', all_jobs),
-    #url(r'^desc/', all_descriptions),
     url(r'^emplois/', include('applications.emplois.urls', namespace="emplois")),
     url(r'^ottawacityjobs/', include('applications.emplois.urls')),
-    url(r'^admin/', admin.site.urls),
+    #url(r'^admin/', admin.site.urls),
     # i18n
     url(r'^i18n/', include('django.conf.urls.i18n')),
-    #url (r'^settings', include('metasettings.urls')),
-    #url(r'^searchBlog/$','emplois.views.SearchJobView',name="blog_search"),
     url(r'^', include('applications.emplois.urls')),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 handler404 = 'applications.emplois.views.handler404'
 handler500 = 'applications.emplois.views.handler500'
+

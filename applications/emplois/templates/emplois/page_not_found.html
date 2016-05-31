@@ -1,10 +1,17 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>404 error</title>
-  </head>
-  <body>
-    <h1>Page not found custom -- 404</h1>
-  </body>
-</html>
+{% extends "base.html" %}
+{% load humanize %}
+{% load i18n %}
+
+	{% block content %}
+  {% get_language_info for LANGUAGE_CODE as lang %}
+      {% if lang.code == "en" %}
+        <h1>Page not found -- 404</h1>
+        <h3>You are trying to find a job that doesn't exist</h3>
+        <hr>
+    	{% endif %}
+    {% if lang.code == "fr" %}
+      <h1>Page non trouvé -- 404</h1>
+      <h3>Essayez-vous de dénicher un job qui n'existe pas?</h3>
+    {% endif %}
+ {% endblock  %}
+

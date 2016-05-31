@@ -1,1 +1,0 @@
-web: gunicorn ottawacityjobs.wsgi --log-file -

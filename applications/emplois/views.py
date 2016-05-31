@@ -14,17 +14,27 @@ from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.views.decorators.cache import cache_page
 #models and utils
 from .models import Job, Description
-from .utils import job_object_list, language_set
+#from .utils import job_object_list, language_set
 # Standard Python module
 from json import dumps, loads
 from datetime import datetime, timedelta
 # Create your views here.
 
 from django.http import HttpResponseRedirect
-
+from .utils import process_it
 
 import logging
 logger = logging.getLogger(__name__)
+
+def language_set(language):
+    if "-" in language:
+        return (language.split('-')[1]).upper()
+    else:
+        return language.upper()
+
+def hello(request):
+  return HttpResponse('<h1>Hello world emplois 2</h1>')
+
 
 #http:://localhost:8001/
 class IndexView(generic.ListView):
@@ -256,32 +266,30 @@ def download(request):
 
 
 
-##########TWITTER + Update the content######################
 def update_and_tweets(request):
     """
     This will update or tweet
     depending on the time
     """
+    logger.info('Updating the list of jobs')
     from datetime import datetime, timedelta, time
     from pytz import timezone
 
     ottawa_timezone = timezone('America/Montreal')
     ottawa_now = datetime.now(ottawa_timezone)
     now_time = ottawa_now.time()
-    tweet_time = False#now_time >= time(5,30) and now_time <= time(18,30)
-    upgrade_time = True#(now_time >= time(12,00) and now_time <= time(16,30))
+    #tweet_time = False#now_time >= time(5,30) and now_time <= time(18,30)
+    upgrade_time = True# now_time >= time(17,00) and now_time <= time(19,30)
 
-    if tweet_time:
-        #tweet
-        from .tweets import tweet_a_job
-        #tweet_a_job()
-        return HttpResponse("<h1>Tweet time </h1>")
-    elif upgrade_time:
+    if upgrade_time:
+        res = process_it()
         #Update the list of jobs from Open Data portal (Ottawa.open.data)
-        job_object_list()
-        return HttpResponse("<h1>Update time</h1>")
+        logger.infor('yes we add new jobs')
+        return redirect("/")
     else:
-        return HttpResponse("<h1>Nothing</h1>")
+        logger.info('no we didn t have new jobs in full.json')
+        return redirect("/")
+
 
 #Error on this template
 #I try  to create a Class based view of 'def job_search()'
@@ -313,3 +321,4 @@ def handler500(request):
     logger.info('Error page not found 500')
     response.status_code = 500
     return response
+
