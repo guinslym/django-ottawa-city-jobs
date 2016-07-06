@@ -28,7 +28,8 @@ urlpatterns = [
     # i18n
     url(r'^i18n/', include('django.conf.urls.i18n')),
     url(r'^', include('applications.emplois.urls')),
-] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+    url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT, 'show_indexes': False}),
+]# + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 handler404 = 'applications.emplois.views.handler404'
 handler500 = 'applications.emplois.views.handler500'

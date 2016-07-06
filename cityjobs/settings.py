@@ -115,10 +115,10 @@ WSGI_APPLICATION = 'cityjobs.wsgi.application'
 DATABASES = {
 'default': {
     'ENGINE': 'django.db.backends.postgresql_psycopg2', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-    'NAME': '',                      # Or path to database file if using sqlite3.
+    'NAME': 'ottawad6_cityjbobs',                      # Or path to database file if using sqlite3.
     # The following settings are not used with sqlite3:
-    'USER': '',
-    'PASSWORD': '',
+    'USER': 'ottawad6_cityjobs',
+    'PASSWORD': '(famille)',
     'HOST': 'localhost',                      # Empty for localhost through domain sockets or           '127.0.0.1' for localhost through TCP.
     'PORT': '',                      # Set to empty string for default.
 }
@@ -128,20 +128,22 @@ DATABASES = {
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': '',
-        'USER': '',
-        'PASSWORD': '',
+        'NAME': 'ottawad6_cityjobs',
+        'USER': 'ottawad6_hello',
+        'PASSWORD': '(famille)',
         'HOST': 'localhost',
         'PORT': '3306',
     }
 }
 """
+'''
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
+'''
 # Parse database configuration from $DATABASE_URL
 #PRODUCTION
 #DATABASES['default'] = dj_database_url.config()
@@ -153,7 +155,7 @@ DATABASES['default']['CONN_MAX_AGE'] = 500
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 # Allow all host headers
-ALLOWED_HOSTS = ['www.ottawacitycarreers.ca/cityjobs', '*' ]
+ALLOWED_HOSTS = ['www.ottawacitycarreers.ca', 'ottawacitycarreers.ca' ]
 
 
 # Password validation

@@ -4,6 +4,8 @@ import json
 import urllib
 from .models import Job, Description
 from dateutil.parser import *
+import logging
+logger = logging.getLogger(__name__)
 
 def stringify_object(data):
     '''
@@ -17,6 +19,7 @@ def stringify_object(data):
 def is_there_a_new_json_file():
     import os.path
     if os.path.isfile('full.json'):
+        logger.info("There is a full.json file in the current path")
         return True
     else:
         return False
@@ -28,6 +31,7 @@ def get_the_data_from_this_file():
     return data
 
 def insert_this_job_in_the_db(job):
+    logger.info("This job will be added : " +  job.get('POSITION', None))
     salary = job.get('SALARYMAX', None)
     if salary:
         if ',' in salary:
@@ -35,6 +39,7 @@ def insert_this_job_in_the_db(job):
     emploi_model = Job(
         JOBURL = job.get('JOBURL', None),
         EXPIRYDATE =  stringify_object(job.get('EXPIRYDATE', None)),
+        POSTDATE =  stringify_object(job.get('POSTDATE', None)),
         SALARYMAX =  job.get('SALARYMAX', None),
         SALARYMIN =  job.get('SALARYMIN', None),
         SALARYTYPE = job.get('SALARYTYPE', None),
@@ -53,6 +58,7 @@ def insert_this_job_in_the_db(job):
         LANGUAGE_CERTIFICATES = job.get('LANGUAGE_CERTIFICATES', None),
         EDUCATIONANDEXP = job.get('EDUCATIONANDEXP', None),
         COMPANY_DESC = job.get('COMPANY_DESC', None),
+        POSTDATE =  stringify_object(job.get('POSTDATE', None)),
             )
 
 def check_in_the_db(data):
@@ -61,13 +67,16 @@ def check_in_the_db(data):
         result = Job.objects.filter(JOBREF=jobref)
         if result:
             print('Already in the DB')
+            logger.info('Already in the DB')
         else:
+            logger.info('A new job will be added')
             insert_this_job_in_the_db(job)
 
 def process_it():
     file_exist = is_there_a_new_json_file()
     if file_exist:
         data = get_the_data_from_this_file()
+        logger.info("len data : " + str(len(data)) )
         check_in_the_db(data)
         return True
     return False

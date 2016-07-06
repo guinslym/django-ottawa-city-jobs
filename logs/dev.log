@@ -2,3 +2,777 @@
 [2016-05-31 11:01:13,445] INFO % : Updating the list of jobs
 [2016-05-31 11:05:17,814] INFO % : Updating the list of jobs
 [2016-05-31 11:05:59,480] INFO % : Updating the list of jobs
+[2016-05-31 22:00:07,863] INFO % : Updating the list of jobs
+[2016-05-31 22:00:07,871] ERROR % : Internal Server Error: /cityjobs/emplois/update/
+Traceback (most recent call last):
+  File "/home/ottawad6/local_usr/lib/python3.4/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ottawad6/django_projects/cityjobs/applications/emplois/views.py", line 287, in update_and_tweets
+    logger.infor('yes we add new jobs')
+AttributeError: 'Logger' object has no attribute 'infor'
+[2016-05-31 22:00:07,946] INFO % : Error page not found 500
+[2016-06-01 17:47:29,985] ERROR % : Invalid HTTP_HOST header: 'ottawacitycarreers.ca'. You may need to add 'ottawacitycarreers.ca' to ALLOWED_HOSTS.
+[2016-06-01 17:47:29,985] ERROR % : Invalid HTTP_HOST header: 'ottawacitycarreers.ca'. You may need to add 'ottawacitycarreers.ca' to ALLOWED_HOSTS.
+[2016-06-01 17:47:30,473] ERROR % : Invalid HTTP_HOST header: 'ottawacitycarreers.ca'. You may need to add 'ottawacitycarreers.ca' to ALLOWED_HOSTS.
+[2016-06-01 17:47:30,477] ERROR % : Invalid HTTP_HOST header: 'ottawacitycarreers.ca'. You may need to add 'ottawacitycarreers.ca' to ALLOWED_HOSTS.
+[2016-06-01 17:47:57,847] ERROR % : Invalid HTTP_HOST header: 'ottawacitycarreers.ca'. You may need to add 'ottawacitycarreers.ca' to ALLOWED_HOSTS.
+[2016-06-01 17:50:21,576] ERROR % : Invalid HTTP_HOST header: 'ottawacitycarreers.ca'. You may need to add 'ottawacitycarreers.ca' to ALLOWED_HOSTS.
+[2016-06-01 17:53:07,390] WARNING % : Not Found: /static/js/jquery.scrollUp.js
+[2016-06-01 17:53:07,411] INFO % : Error page not found 404
+[2016-06-01 17:53:16,324] WARNING % : Not Found: /404.shtml
+[2016-06-01 17:53:16,332] INFO % : Error page not found 404
+[2016-06-01 17:53:16,477] WARNING % : Not Found: /404.shtml
+[2016-06-01 17:53:16,486] INFO % : Error page not found 404
+[2016-06-01 17:53:16,874] WARNING % : Not Found: /static/js/jquery.scrollUp.js
+[2016-06-01 17:53:16,879] INFO % : Error page not found 404
+[2016-06-01 17:53:22,670] WARNING % : Not Found: /static/js/jquery.scrollUp.js
+[2016-06-01 17:53:22,676] INFO % : Error page not found 404
+[2016-06-01 17:53:34,327] WARNING % : Not Found: /404.shtml
+[2016-06-01 17:53:34,346] INFO % : Error page not found 404
+[2016-06-01 17:53:34,682] WARNING % : Not Found: /static/js/jquery.scrollUp.js
+[2016-06-01 17:53:34,687] INFO % : Error page not found 404
+[2016-06-01 17:53:40,158] WARNING % : Not Found: /404.shtml
+[2016-06-01 17:53:40,167] INFO % : Error page not found 404
+[2016-06-01 17:53:40,323] WARNING % : Not Found: /404.shtml
+[2016-06-01 17:53:40,331] INFO % : Error page not found 404
+[2016-06-01 17:53:40,713] WARNING % : Not Found: /static/js/jquery.scrollUp.js
+[2016-06-01 17:53:40,722] INFO % : Error page not found 404
+[2016-06-01 17:53:40,787] WARNING % : Not Found: /404.shtml
+[2016-06-01 17:53:40,792] INFO % : Error page not found 404
+[2016-06-01 17:53:46,607] WARNING % : Not Found: /404.shtml
+[2016-06-01 17:53:46,612] INFO % : Error page not found 404
+[2016-06-01 17:53:46,760] WARNING % : Not Found: /404.shtml
+[2016-06-01 17:53:46,768] INFO % : Error page not found 404
+[2016-06-01 17:53:47,295] WARNING % : Not Found: /static/js/jquery.scrollUp.js
+[2016-06-01 17:53:47,304] INFO % : Error page not found 404
+[2016-06-01 17:54:16,784] WARNING % : Not Found: /static/js/jquery.scrollUp.js
+[2016-06-01 17:54:16,791] INFO % : Error page not found 404
+[2016-06-01 17:54:21,191] WARNING % : Not Found: /static/js/jquery.scrollUp.js
+[2016-06-01 17:54:21,199] INFO % : Error page not found 404
+[2016-06-01 17:54:24,189] WARNING % : Not Found: /404.shtml
+[2016-06-01 17:54:24,202] INFO % : Error page not found 404
+[2016-06-01 17:54:24,345] WARNING % : Not Found: /404.shtml
+[2016-06-01 17:54:24,353] INFO % : Error page not found 404
+[2016-06-01 17:54:25,363] WARNING % : Not Found: /static/js/jquery.scrollUp.js
+[2016-06-01 17:54:25,393] INFO % : Error page not found 404
+[2016-06-01 17:54:46,021] WARNING % : Not Found: /404.shtml
+[2016-06-01 17:54:46,029] INFO % : Error page not found 404
+[2016-06-01 17:54:46,190] WARNING % : Not Found: /404.shtml
+[2016-06-01 17:54:46,195] INFO % : Error page not found 404
+[2016-06-01 17:54:46,911] WARNING % : Not Found: /static/js/jquery.scrollUp.js
+[2016-06-01 17:54:46,919] INFO % : Error page not found 404
+[2016-06-01 17:54:47,181] WARNING % : Not Found: /static/js/jquery.scrollUp.js
+[2016-06-01 17:54:47,186] INFO % : Error page not found 404
+[2016-06-01 17:55:52,625] WARNING % : Not Found: /static/js/jquery.scrollUp.js
+[2016-06-01 17:55:52,629] INFO % : Error page not found 404
+[2016-06-01 18:09:22,730] ERROR % : Invalid HTTP_HOST header: 'ottawacitycarreers.ca'. You may need to add 'ottawacitycarreers.ca' to ALLOWED_HOSTS.
+[2016-06-01 18:09:27,590] ERROR % : Invalid HTTP_HOST header: 'ottawacitycarreers.ca'. You may need to add 'ottawacitycarreers.ca' to ALLOWED_HOSTS.
+[2016-06-01 18:09:28,759] ERROR % : Invalid HTTP_HOST header: 'ottawacitycarreers.ca'. You may need to add 'ottawacitycarreers.ca' to ALLOWED_HOSTS.
+[2016-06-01 18:09:29,739] ERROR % : Invalid HTTP_HOST header: 'ottawacitycarreers.ca'. You may need to add 'ottawacitycarreers.ca' to ALLOWED_HOSTS.
+[2016-06-01 18:09:30,542] ERROR % : Invalid HTTP_HOST header: 'ottawacitycarreers.ca'. You may need to add 'ottawacitycarreers.ca' to ALLOWED_HOSTS.
+[2016-06-01 18:09:45,851] ERROR % : Invalid HTTP_HOST header: 'ottawacitycarreers.ca'. You may need to add 'ottawacitycarreers.ca' to ALLOWED_HOSTS.
+[2016-06-01 18:12:34,070] ERROR % : Invalid HTTP_HOST header: 'ottawacitycarreers.ca'. You may need to add 'ottawacitycarreers.ca' to ALLOWED_HOSTS.
+[2016-06-01 18:12:34,451] ERROR % : Invalid HTTP_HOST header: 'ottawacitycarreers.ca'. You may need to add 'ottawacitycarreers.ca' to ALLOWED_HOSTS.
+[2016-06-01 18:12:59,203] ERROR % : Invalid HTTP_HOST header: 'ottawacitycarreers.ca'. You may need to add 'ottawacitycarreers.ca' to ALLOWED_HOSTS.
+[2016-06-01 18:15:03,773] WARNING % : Not Found: /static/js/jquery.scrollUp.js
+[2016-06-01 18:15:03,809] INFO % : Error page not found 404
+[2016-06-01 18:15:15,620] WARNING % : Not Found: /static/js/jquery.scrollUp.js
+[2016-06-01 18:15:15,628] INFO % : Error page not found 404
+[2016-06-01 18:15:26,292] WARNING % : Not Found: /static/js/jquery.scrollUp.js
+[2016-06-01 18:15:26,297] INFO % : Error page not found 404
+[2016-06-01 18:15:31,575] WARNING % : Not Found: /static/js/jquery.scrollUp.js
+[2016-06-01 18:15:31,580] INFO % : Error page not found 404
+[2016-06-01 18:15:37,559] WARNING % : Not Found: /static/js/jquery.scrollUp.js
+[2016-06-01 18:15:37,563] INFO % : Error page not found 404
+[2016-06-01 18:15:48,663] WARNING % : Not Found: /static/css/font-awesome.min.css
+[2016-06-01 18:15:48,679] INFO % : Error page not found 404
+[2016-06-01 18:15:48,704] WARNING % : Not Found: /static/js/cal-heatmap.min.js
+[2016-06-01 18:15:48,710] INFO % : Error page not found 404
+[2016-06-01 18:15:48,719] WARNING % : Not Found: /static/js/jquery.scrollUp.js
+[2016-06-01 18:15:48,726] INFO % : Error page not found 404
+[2016-06-01 18:15:49,666] WARNING % : Not Found: /static/css/cal-heatmap.css
+[2016-06-01 18:15:49,673] INFO % : Error page not found 404
+[2016-06-01 18:16:00,256] WARNING % : Not Found: /static/css/font-awesome.min.css
+[2016-06-01 18:16:00,263] INFO % : Error page not found 404
+[2016-06-01 18:16:00,280] WARNING % : Not Found: /static/css/cal-heatmap.css
+[2016-06-01 18:16:00,297] INFO % : Error page not found 404
+[2016-06-01 18:17:27,219] WARNING % : Not Found: /static/css/font-awesome.min.css
+[2016-06-01 18:17:27,230] INFO % : Error page not found 404
+[2016-06-01 18:17:27,496] WARNING % : Not Found: /static/js/cal-heatmap.min.js
+[2016-06-01 18:17:27,505] INFO % : Error page not found 404
+[2016-06-01 18:17:28,616] WARNING % : Not Found: /static/js/jquery.scrollUp.js
+[2016-06-01 18:17:28,626] INFO % : Error page not found 404
+[2016-06-01 18:17:31,699] WARNING % : Not Found: /static/css/cal-heatmap.css
+[2016-06-01 18:17:31,704] INFO % : Error page not found 404
+[2016-06-01 18:17:42,372] WARNING % : Not Found: /static/css/cal-heatmap.css
+[2016-06-01 18:17:42,381] INFO % : Error page not found 404
+[2016-06-01 18:17:50,624] WARNING % : Not Found: /static/js/jquery.scrollUp.js
+[2016-06-01 18:17:50,631] INFO % : Error page not found 404
+[2016-06-01 18:18:15,348] WARNING % : Not Found: /static/js/jquery.scrollUp.js
+[2016-06-01 18:18:15,353] INFO % : Error page not found 404
+[2016-06-01 18:18:18,788] WARNING % : Not Found: /static/js/jquery.scrollUp.js
+[2016-06-01 18:18:18,793] INFO % : Error page not found 404
+[2016-06-01 18:18:21,962] WARNING % : Not Found: /static/js/jquery.scrollUp.js
+[2016-06-01 18:18:21,969] INFO % : Error page not found 404
+[2016-06-01 18:18:24,240] WARNING % : Not Found: /static/js/jquery.scrollUp.js
+[2016-06-01 18:18:24,245] INFO % : Error page not found 404
+[2016-06-01 18:18:26,164] WARNING % : Not Found: /static/js/jquery.scrollUp.js
+[2016-06-01 18:18:26,168] INFO % : Error page not found 404
+[2016-06-01 18:18:29,996] WARNING % : Not Found: /static/js/cal-heatmap.min.js
+[2016-06-01 18:18:30,001] INFO % : Error page not found 404
+[2016-06-01 18:18:30,014] WARNING % : Not Found: /static/css/font-awesome.min.css
+[2016-06-01 18:18:30,022] INFO % : Error page not found 404
+[2016-06-01 18:18:30,246] WARNING % : Not Found: /static/css/cal-heatmap.css
+[2016-06-01 18:18:30,251] INFO % : Error page not found 404
+[2016-06-01 18:18:31,248] WARNING % : Not Found: /static/js/jquery.scrollUp.js
+[2016-06-01 18:18:31,255] INFO % : Error page not found 404
+[2016-06-01 18:18:36,514] WARNING % : Not Found: /static/css/font-awesome.min.css
+[2016-06-01 18:18:36,519] INFO % : Error page not found 404
+[2016-06-01 18:18:36,607] WARNING % : Not Found: /static/css/cal-heatmap.css
+[2016-06-01 18:18:36,614] INFO % : Error page not found 404
+[2016-06-01 18:18:37,451] WARNING % : Not Found: /static/js/jquery.scrollUp.js
+[2016-06-01 18:18:37,455] INFO % : Error page not found 404
+[2016-06-01 18:18:52,807] WARNING % : Not Found: /static/js/jquery.scrollUp.js
+[2016-06-01 18:18:52,812] INFO % : Error page not found 404
+[2016-06-01 18:18:53,226] WARNING % : Not Found: /static/js/jquery.scrollUp.js
+[2016-06-01 18:18:53,234] INFO % : Error page not found 404
+[2016-06-01 18:25:58,595] WARNING % : Not Found: /static/js/jquery.scrollUp.js
+[2016-06-01 18:25:58,600] INFO % : Error page not found 404
+[2016-06-01 18:26:38,837] WARNING % : Not Found: /static/js/jquery.scrollUp.js
+[2016-06-01 18:26:38,845] INFO % : Error page not found 404
+[2016-06-01 18:27:16,511] WARNING % : Not Found: /static/js/jquery.scrollUp.js
+[2016-06-01 18:27:16,519] INFO % : Error page not found 404
+[2016-06-01 18:27:41,638] WARNING % : Not Found: /static/js/jquery.scrollUp.js
+[2016-06-01 18:27:41,643] INFO % : Error page not found 404
+[2016-06-01 18:28:08,767] WARNING % : Not Found: /static/js/jquery.scrollUp.js
+[2016-06-01 18:28:08,869] INFO % : Error page not found 404
+[2016-06-01 18:28:11,584] WARNING % : Not Found: /static/js/jquery.scrollUp.js
+[2016-06-01 18:28:11,648] INFO % : Error page not found 404
+[2016-06-01 18:28:16,727] WARNING % : Not Found: /static/js/jquery.scrollUp.js
+[2016-06-01 18:28:16,733] INFO % : Error page not found 404
+[2016-06-01 18:29:07,652] WARNING % : Not Found: /static/css/font-awesome.min.css
+[2016-06-01 18:29:07,657] INFO % : Error page not found 404
+[2016-06-01 18:29:07,661] WARNING % : Not Found: /static/js/cal-heatmap.min.js
+[2016-06-01 18:29:07,668] INFO % : Error page not found 404
+[2016-06-01 18:29:10,569] WARNING % : Not Found: /static/js/jquery.scrollUp.js
+[2016-06-01 18:29:10,572] WARNING % : Not Found: /static/css/cal-heatmap.css
+[2016-06-01 18:29:10,577] INFO % : Error page not found 404
+[2016-06-01 18:29:10,580] INFO % : Error page not found 404
+[2016-06-01 18:36:06,704] WARNING % : Not Found: /static/css/cal-heatmap.css
+[2016-06-01 18:36:06,715] INFO % : Error page not found 404
+[2016-06-01 18:36:06,735] WARNING % : Not Found: /static/js/cal-heatmap.min.js
+[2016-06-01 18:36:06,746] INFO % : Error page not found 404
+[2016-06-01 18:36:07,736] WARNING % : Not Found: /static/js/jquery.scrollUp.js
+[2016-06-01 18:36:07,743] INFO % : Error page not found 404
+[2016-06-01 18:40:36,773] WARNING % : Not Found: /static/js/jquery.scrollUp.js
+[2016-06-01 18:40:36,788] INFO % : Error page not found 404
+[2016-06-01 18:40:37,356] WARNING % : Not Found: /static/js/jquery.scrollUp.js
+[2016-06-01 18:40:37,365] INFO % : Error page not found 404
+[2016-06-01 18:40:39,735] WARNING % : Not Found: /static/css/cal-heatmap.css
+[2016-06-01 18:40:39,741] INFO % : Error page not found 404
+[2016-06-01 18:40:39,783] WARNING % : Not Found: /static/js/cal-heatmap.min.js
+[2016-06-01 18:40:39,788] INFO % : Error page not found 404
+[2016-06-01 18:40:39,976] WARNING % : Not Found: /static/js/jquery.scrollUp.js
+[2016-06-01 18:40:39,981] INFO % : Error page not found 404
+[2016-06-01 18:40:48,232] WARNING % : Not Found: /static/css/cal-heatmap.css
+[2016-06-01 18:40:48,240] INFO % : Error page not found 404
+[2016-06-01 18:40:48,694] WARNING % : Not Found: /static/js/jquery.scrollUp.js
+[2016-06-01 18:40:48,703] INFO % : Error page not found 404
+[2016-06-01 18:40:55,385] WARNING % : Not Found: /static/js/cal-heatmap.min.js
+[2016-06-01 18:40:55,389] INFO % : Error page not found 404
+[2016-06-01 18:46:42,815] WARNING % : Not Found: /static/js/jquery.scrollUp.js
+[2016-06-01 18:46:42,834] INFO % : Error page not found 404
+[2016-06-01 18:51:05,515] WARNING % : Not Found: /static/js/cal-heatmap.min.js
+[2016-06-01 18:51:05,525] INFO % : Error page not found 404
+[2016-06-01 18:51:06,258] WARNING % : Not Found: /static/js/jquery.scrollUp.js
+[2016-06-01 18:51:06,263] INFO % : Error page not found 404
+[2016-06-01 18:51:10,392] WARNING % : Not Found: /static/css/cal-heatmap.css
+[2016-06-01 18:51:10,400] INFO % : Error page not found 404
+[2016-06-01 18:51:25,489] WARNING % : Not Found: /static/css/cal-heatmap.css
+[2016-06-01 18:51:25,498] INFO % : Error page not found 404
+[2016-06-01 18:51:48,735] WARNING % : Not Found: /font/fontawesome-webfont.woff
+[2016-06-01 18:51:48,743] INFO % : Error page not found 404
+[2016-06-01 18:51:48,888] WARNING % : Not Found: /font/fontawesome-webfont.woff
+[2016-06-01 18:51:48,893] INFO % : Error page not found 404
+[2016-06-01 18:51:56,305] WARNING % : Not Found: /static/js/cal-heatmap.min.js
+[2016-06-01 18:51:56,325] INFO % : Error page not found 404
+[2016-06-01 18:51:56,556] WARNING % : Not Found: /static/js/jquery.scrollUp.js
+[2016-06-01 18:51:56,566] INFO % : Error page not found 404
+[2016-06-01 18:52:00,818] WARNING % : Not Found: /static/css/cal-heatmap.css
+[2016-06-01 18:52:00,823] INFO % : Error page not found 404
+[2016-06-01 18:52:01,411] WARNING % : Not Found: /font/fontawesome-webfont.woff
+[2016-06-01 18:52:01,422] INFO % : Error page not found 404
+[2016-06-01 18:52:01,817] WARNING % : Not Found: /font/fontawesome-webfont.ttf
+[2016-06-01 18:52:01,825] INFO % : Error page not found 404
+[2016-06-01 18:52:01,975] WARNING % : Not Found: /font/fontawesome-webfont.ttf
+[2016-06-01 18:52:01,995] INFO % : Error page not found 404
+[2016-06-01 18:52:14,081] WARNING % : Not Found: /static/css/cal-heatmap.css
+[2016-06-01 18:52:14,089] INFO % : Error page not found 404
+[2016-06-01 18:53:47,582] WARNING % : Not Found: /static/js/jquery.scrollUp.js
+[2016-06-01 18:53:47,592] INFO % : Error page not found 404
+[2016-06-01 18:53:48,132] WARNING % : Not Found: /font/fontawesome-webfont.woff
+[2016-06-01 18:53:48,140] INFO % : Error page not found 404
+[2016-06-01 18:53:48,485] WARNING % : Not Found: /font/fontawesome-webfont.ttf
+[2016-06-01 18:53:48,490] INFO % : Error page not found 404
+[2016-06-01 18:57:53,015] WARNING % : Not Found: /static/js/jquery.scrollUp.js
+[2016-06-01 18:57:53,022] INFO % : Error page not found 404
+[2016-06-01 18:58:09,044] WARNING % : Not Found: /static/js/jquery.scrollUp.js
+[2016-06-01 18:58:09,049] INFO % : Error page not found 404
+[2016-06-01 18:58:42,160] WARNING % : Not Found: /static/js/jquery.scrollUp.js
+[2016-06-01 18:58:42,168] INFO % : Error page not found 404
+[2016-06-01 18:59:20,628] INFO % : Annee : 2016
+[2016-06-01 18:59:20,629] INFO % : Mois : 5
+[2016-06-01 18:59:20,629] INFO % : Jour : 16
+[2016-06-01 18:59:20,629] INFO % : Language Code : en
+[2016-06-01 18:59:49,986] INFO % : Annee : 2016
+[2016-06-01 18:59:49,986] INFO % : Mois : 3
+[2016-06-01 18:59:49,986] INFO % : Jour : 14
+[2016-06-01 18:59:49,986] INFO % : Language Code : en
+[2016-06-01 19:01:36,086] INFO % : Annee : 2016
+[2016-06-01 19:01:36,087] INFO % : Mois : 3
+[2016-06-01 19:01:36,087] INFO % : Jour : 16
+[2016-06-01 19:01:36,087] INFO % : Language Code : en
+[2016-06-01 19:02:00,044] INFO % : Annee : 2016
+[2016-06-01 19:02:00,044] INFO % : Mois : 5
+[2016-06-01 19:02:00,045] INFO % : Jour : 25
+[2016-06-01 19:02:00,045] INFO % : Language Code : en
+[2016-06-01 19:02:06,829] INFO % : Annee : 2016
+[2016-06-01 19:02:06,830] INFO % : Mois : 2
+[2016-06-01 19:02:06,830] INFO % : Jour : 1
+[2016-06-01 19:02:06,830] INFO % : Language Code : en
+[2016-06-01 19:02:49,614] INFO % : Annee : 2016
+[2016-06-01 19:02:49,614] INFO % : Mois : 2
+[2016-06-01 19:02:49,614] INFO % : Jour : 2
+[2016-06-01 19:02:49,614] INFO % : Language Code : en
+[2016-06-01 19:05:40,686] INFO % : Annee : 2016
+[2016-06-01 19:05:40,687] INFO % : Mois : 3
+[2016-06-01 19:05:40,687] INFO % : Jour : 10
+[2016-06-01 19:05:40,687] INFO % : Language Code : en
+[2016-06-01 19:08:30,107] INFO % : Annee : 2016
+[2016-06-01 19:08:30,107] INFO % : Mois : 2
+[2016-06-01 19:08:30,107] INFO % : Jour : 17
+[2016-06-01 19:08:30,107] INFO % : Language Code : en
+[2016-06-01 19:08:30,989] INFO % : Annee : 2016
+[2016-06-01 19:08:30,990] INFO % : Mois : 2
+[2016-06-01 19:08:30,990] INFO % : Jour : 3
+[2016-06-01 19:08:30,990] INFO % : Language Code : en
+[2016-06-01 19:09:53,255] INFO % : Annee : 2016
+[2016-06-01 19:09:53,255] INFO % : Mois : 5
+[2016-06-01 19:09:53,255] INFO % : Jour : 16
+[2016-06-01 19:09:53,255] INFO % : Language Code : fr
+[2016-06-01 19:09:59,416] INFO % : Annee : 2016
+[2016-06-01 19:09:59,416] INFO % : Mois : 5
+[2016-06-01 19:09:59,417] INFO % : Jour : 25
+[2016-06-01 19:09:59,417] INFO % : Language Code : fr
+[2016-06-01 19:10:21,420] INFO % : Annee : 2016
+[2016-06-01 19:10:21,420] INFO % : Mois : 2
+[2016-06-01 19:10:21,420] INFO % : Jour : 24
+[2016-06-01 19:10:21,420] INFO % : Language Code : fr
+[2016-06-01 19:10:22,250] INFO % : Annee : 2016
+[2016-06-01 19:10:22,250] INFO % : Mois : 2
+[2016-06-01 19:10:22,250] INFO % : Jour : 3
+[2016-06-01 19:10:22,251] INFO % : Language Code : fr
+[2016-06-01 19:10:22,491] INFO % : Annee : 2016
+[2016-06-01 19:10:22,491] INFO % : Mois : 3
+[2016-06-01 19:10:22,492] INFO % : Jour : 10
+[2016-06-01 19:10:22,492] INFO % : Language Code : fr
+[2016-06-01 19:14:30,912] INFO % : Annee : 2016
+[2016-06-01 19:14:30,912] INFO % : Mois : 3
+[2016-06-01 19:14:30,912] INFO % : Jour : 16
+[2016-06-01 19:14:30,913] INFO % : Language Code : fr
+[2016-06-01 19:14:33,421] INFO % : Annee : 2016
+[2016-06-01 19:14:33,421] INFO % : Mois : 2
+[2016-06-01 19:14:33,422] INFO % : Jour : 16
+[2016-06-01 19:14:33,422] INFO % : Language Code : fr
+[2016-06-01 19:14:35,287] INFO % : Annee : 2016
+[2016-06-01 19:14:35,288] INFO % : Mois : 2
+[2016-06-01 19:14:35,288] INFO % : Jour : 2
+[2016-06-01 19:14:35,288] INFO % : Language Code : fr
+[2016-06-01 19:15:27,282] INFO % : Annee : 2016
+[2016-06-01 19:15:27,282] INFO % : Mois : 5
+[2016-06-01 19:15:27,282] INFO % : Jour : 20
+[2016-06-01 19:15:27,283] INFO % : Language Code : fr
+[2016-06-01 19:15:28,723] INFO % : Annee : 2016
+[2016-06-01 19:15:28,724] INFO % : Mois : 4
+[2016-06-01 19:15:28,724] INFO % : Jour : 6
+[2016-06-01 19:15:28,724] INFO % : Language Code : fr
+[2016-06-01 19:15:30,439] INFO % : Annee : 2016
+[2016-06-01 19:15:30,439] INFO % : Mois : 4
+[2016-06-01 19:15:30,439] INFO % : Jour : 11
+[2016-06-01 19:15:30,439] INFO % : Language Code : fr
+[2016-06-01 19:15:33,740] INFO % : Annee : 2016
+[2016-06-01 19:15:33,740] INFO % : Mois : 3
+[2016-06-01 19:15:33,740] INFO % : Jour : 3
+[2016-06-01 19:15:33,740] INFO % : Language Code : fr
+[2016-06-01 19:15:36,774] INFO % : Annee : 2016
+[2016-06-01 19:15:36,774] INFO % : Mois : 2
+[2016-06-01 19:15:36,774] INFO % : Jour : 17
+[2016-06-01 19:15:36,774] INFO % : Language Code : fr
+[2016-06-01 19:15:43,952] INFO % : Annee : 2016
+[2016-06-01 19:15:43,952] INFO % : Mois : 2
+[2016-06-01 19:15:43,952] INFO % : Jour : 4
+[2016-06-01 19:15:43,952] INFO % : Language Code : fr
+[2016-06-01 19:16:53,040] INFO % : Annee : 2016
+[2016-06-01 19:16:53,040] INFO % : Mois : 2
+[2016-06-01 19:16:53,040] INFO % : Jour : 1
+[2016-06-01 19:16:53,040] INFO % : Language Code : fr
+[2016-06-01 19:17:04,030] INFO % : Annee : 2016
+[2016-06-01 19:17:04,030] INFO % : Mois : 2
+[2016-06-01 19:17:04,030] INFO % : Jour : 1
+[2016-06-01 19:17:04,030] INFO % : Language Code : fr
+[2016-06-01 19:18:30,536] INFO % : Updating the list of jobs
+[2016-06-01 19:18:30,536] ERROR % : Internal Server Error: /emplois/update/
+Traceback (most recent call last):
+  File "/home/ottawad6/local_usr/lib/python3.4/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ottawad6/django_projects/cityjobs/applications/emplois/views.py", line 287, in update_and_tweets
+    logger.infor('yes we add new jobs')
+AttributeError: 'Logger' object has no attribute 'infor'
+[2016-06-01 19:18:30,568] INFO % : Error page not found 500
+[2016-06-01 19:20:02,347] INFO % : Updating the list of jobs
+[2016-06-01 19:20:02,347] ERROR % : Internal Server Error: /emplois/update/
+Traceback (most recent call last):
+  File "/home/ottawad6/local_usr/lib/python3.4/site-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/ottawad6/django_projects/cityjobs/applications/emplois/views.py", line 287, in update_and_tweets
+    logger.info('yes we add new jobs')
+AttributeError: 'Logger' object has no attribute 'infor'
+[2016-06-01 19:20:02,358] INFO % : Error page not found 500
+[2016-06-01 19:25:24,116] INFO % : Updating the list of jobs
+[2016-06-01 19:25:24,116] INFO % : yes we add new jobs
+[2016-06-01 19:29:12,361] INFO % : Updating the list of jobs
+[2016-06-01 19:29:12,361] INFO % : yes we add new jobs
+[2016-06-01 19:29:46,343] INFO % : Updating the list of jobs
+[2016-06-01 19:29:46,343] INFO % : yes we add new jobs
+[2016-06-01 19:31:00,314] INFO % : Updating the list of jobs
+[2016-06-01 19:31:00,314] INFO % : yes we add new jobs
+[2016-06-01 19:31:10,534] INFO % : Updating the list of jobs
+[2016-06-01 19:31:10,534] INFO % : yes we add new jobs
+[2016-06-01 19:47:43,726] WARNING % : Not Found: /static/js/jquery.scrollUp.js
+[2016-06-01 19:47:43,744] INFO % : Error page not found 404
+[2016-06-01 19:47:43,984] WARNING % : Not Found: /static/js/jquery.scrollUp.js
+[2016-06-01 19:47:43,991] INFO % : Error page not found 404
+[2016-06-01 19:47:49,795] WARNING % : Not Found: /static/js/jquery.scrollUp.js
+[2016-06-01 19:47:49,800] INFO % : Error page not found 404
+[2016-06-01 19:48:01,168] WARNING % : Not Found: /static/js/jquery.scrollUp.js
+[2016-06-01 19:48:01,172] INFO % : Error page not found 404
+[2016-06-01 22:00:12,743] WARNING % : Not Found: /cityjobs/emplois/update
+[2016-06-01 22:00:12,811] INFO % : Error page not found 404
+[2016-06-02 12:35:11,713] WARNING % : Not Found: /th1s_1s_a_4o4.html
+[2016-06-02 12:35:11,745] INFO % : Error page not found 404
+[2016-06-02 22:00:07,800] WARNING % : Not Found: /cityjobs/emplois/update
+[2016-06-02 22:00:07,876] INFO % : Error page not found 404
+[2016-06-03 01:14:04,383] INFO % : Updating the list of jobs
+[2016-06-03 01:14:04,383] INFO % : yes we added new jobs
+[2016-06-03 01:15:10,467] INFO % : Updating the list of jobs
+[2016-06-03 01:15:10,468] INFO % : yes we added new jobs
+[2016-06-03 01:16:56,732] INFO % : Already in the DB
+[2016-06-03 01:16:56,734] INFO % : Already in the DB
+[2016-06-03 01:16:56,735] INFO % : Already in the DB
+[2016-06-03 01:16:56,736] INFO % : Already in the DB
+[2016-06-03 01:16:56,738] INFO % : Already in the DB
+[2016-06-03 01:16:56,739] INFO % : Already in the DB
+[2016-06-03 01:16:56,740] INFO % : Already in the DB
+[2016-06-03 01:16:56,741] INFO % : Already in the DB
+[2016-06-03 01:16:56,742] INFO % : Already in the DB
+[2016-06-03 01:16:56,743] INFO % : Already in the DB
+[2016-06-03 01:16:56,745] INFO % : Already in the DB
+[2016-06-03 01:16:56,748] INFO % : Already in the DB
+[2016-06-03 01:16:56,749] INFO % : Already in the DB
+[2016-06-03 01:16:56,750] INFO % : Already in the DB
+[2016-06-03 01:16:56,751] INFO % : Already in the DB
+[2016-06-03 01:16:56,752] INFO % : Already in the DB
+[2016-06-03 01:16:56,753] INFO % : Already in the DB
+[2016-06-03 01:16:56,754] INFO % : Already in the DB
+[2016-06-03 01:16:56,756] INFO % : Already in the DB
+[2016-06-03 01:16:56,757] INFO % : Already in the DB
+[2016-06-03 01:16:56,758] INFO % : Already in the DB
+[2016-06-03 01:16:56,759] INFO % : Already in the DB
+[2016-06-03 01:16:56,760] INFO % : Already in the DB
+[2016-06-03 01:16:56,761] INFO % : Already in the DB
+[2016-06-03 01:16:56,762] INFO % : Already in the DB
+[2016-06-03 01:16:56,763] INFO % : Already in the DB
+[2016-06-03 01:16:56,764] INFO % : Already in the DB
+[2016-06-03 01:16:56,765] INFO % : Already in the DB
+[2016-06-03 01:16:56,766] INFO % : Already in the DB
+[2016-06-03 01:16:56,768] INFO % : Already in the DB
+[2016-06-03 01:16:56,769] INFO % : Already in the DB
+[2016-06-03 01:16:56,770] INFO % : Already in the DB
+[2016-06-03 01:16:56,771] INFO % : Already in the DB
+[2016-06-03 01:16:56,772] INFO % : Already in the DB
+[2016-06-03 01:16:56,773] INFO % : Already in the DB
+[2016-06-03 01:16:56,774] INFO % : Already in the DB
+[2016-06-03 01:16:56,775] INFO % : Already in the DB
+[2016-06-03 01:16:56,776] INFO % : Already in the DB
+[2016-06-03 01:16:56,777] INFO % : Already in the DB
+[2016-06-03 01:16:56,779] INFO % : Already in the DB
+[2016-06-03 01:16:56,780] INFO % : Already in the DB
+[2016-06-03 01:16:56,781] INFO % : Already in the DB
+[2016-06-03 01:16:56,782] INFO % : Already in the DB
+[2016-06-03 01:16:56,783] INFO % : Already in the DB
+[2016-06-03 01:16:56,784] INFO % : Already in the DB
+[2016-06-03 01:16:56,785] INFO % : Already in the DB
+[2016-06-03 01:16:56,786] INFO % : Already in the DB
+[2016-06-03 01:16:56,787] INFO % : Already in the DB
+[2016-06-03 01:16:56,788] INFO % : Already in the DB
+[2016-06-03 01:16:56,790] INFO % : Already in the DB
+[2016-06-03 01:16:56,791] INFO % : Already in the DB
+[2016-06-03 01:16:56,792] INFO % : Already in the DB
+[2016-06-03 01:16:56,793] INFO % : Already in the DB
+[2016-06-03 01:16:56,794] INFO % : Already in the DB
+[2016-06-03 01:16:56,795] INFO % : Already in the DB
+[2016-06-03 01:16:56,796] INFO % : Already in the DB
+[2016-06-03 01:16:56,797] INFO % : Already in the DB
+[2016-06-03 01:16:56,799] INFO % : Already in the DB
+[2016-06-03 01:16:56,800] INFO % : Already in the DB
+[2016-06-03 01:16:56,801] INFO % : Already in the DB
+[2016-06-03 01:16:56,802] INFO % : Already in the DB
+[2016-06-03 01:16:56,803] INFO % : Already in the DB
+[2016-06-03 01:16:56,804] INFO % : Already in the DB
+[2016-06-03 01:16:56,805] INFO % : Already in the DB
+[2016-06-03 01:16:56,806] INFO % : Already in the DB
+[2016-06-03 01:16:56,807] INFO % : Already in the DB
+[2016-06-03 01:16:56,808] INFO % : Already in the DB
+[2016-06-03 01:16:56,809] INFO % : Already in the DB
+[2016-06-03 01:16:56,811] INFO % : Already in the DB
+[2016-06-03 01:16:56,812] INFO % : Already in the DB
+[2016-06-03 01:16:56,813] INFO % : Already in the DB
+[2016-06-03 01:16:56,814] INFO % : Already in the DB
+[2016-06-03 01:16:56,815] INFO % : Already in the DB
+[2016-06-03 01:16:56,816] INFO % : Already in the DB
+[2016-06-03 01:16:56,817] INFO % : Already in the DB
+[2016-06-03 01:16:56,818] INFO % : Already in the DB
+[2016-06-03 01:16:56,819] INFO % : Already in the DB
+[2016-06-03 01:16:56,820] INFO % : Already in the DB
+[2016-06-03 01:16:56,822] INFO % : Already in the DB
+[2016-06-03 01:16:56,823] INFO % : Already in the DB
+[2016-06-03 01:16:56,824] INFO % : Already in the DB
+[2016-06-03 01:16:56,825] INFO % : Already in the DB
+[2016-06-03 01:16:56,826] INFO % : Already in the DB
+[2016-06-03 01:16:56,827] INFO % : Already in the DB
+[2016-06-03 01:16:56,828] INFO % : Already in the DB
+[2016-06-03 01:16:56,829] INFO % : Already in the DB
+[2016-06-03 01:16:56,830] INFO % : Already in the DB
+[2016-06-03 01:16:56,831] INFO % : Already in the DB
+[2016-06-03 01:16:56,833] INFO % : Already in the DB
+[2016-06-03 01:16:56,834] INFO % : Already in the DB
+[2016-06-03 01:16:56,835] INFO % : Already in the DB
+[2016-06-03 01:16:56,836] INFO % : Already in the DB
+[2016-06-03 01:16:56,837] INFO % : Already in the DB
+[2016-06-03 01:16:56,838] INFO % : Already in the DB
+[2016-06-03 01:16:56,839] INFO % : Already in the DB
+[2016-06-03 01:16:56,840] INFO % : Already in the DB
+[2016-06-03 01:16:56,841] INFO % : Already in the DB
+[2016-06-03 01:16:56,842] INFO % : Already in the DB
+[2016-06-03 01:16:56,844] INFO % : Already in the DB
+[2016-06-03 01:16:56,845] INFO % : Already in the DB
+[2016-06-03 01:16:56,846] INFO % : Already in the DB
+[2016-06-03 01:16:56,847] INFO % : Already in the DB
+[2016-06-03 01:16:56,848] INFO % : Already in the DB
+[2016-06-03 01:16:56,849] INFO % : Already in the DB
+[2016-06-03 01:16:56,850] INFO % : Already in the DB
+[2016-06-03 01:16:56,851] INFO % : Already in the DB
+[2016-06-03 01:16:56,852] INFO % : Already in the DB
+[2016-06-03 01:16:56,854] INFO % : Already in the DB
+[2016-06-03 01:16:56,855] INFO % : Already in the DB
+[2016-06-03 01:16:56,856] INFO % : Already in the DB
+[2016-06-03 01:16:56,857] INFO % : Already in the DB
+[2016-06-03 01:16:56,858] INFO % : Already in the DB
+[2016-06-03 01:16:56,859] INFO % : Already in the DB
+[2016-06-03 01:16:56,860] INFO % : Already in the DB
+[2016-06-03 01:16:56,861] INFO % : Already in the DB
+[2016-06-03 01:16:56,862] INFO % : Already in the DB
+[2016-06-03 01:16:56,863] INFO % : Already in the DB
+[2016-06-03 01:16:56,864] INFO % : Already in the DB
+[2016-06-03 01:16:56,866] INFO % : Already in the DB
+[2016-06-03 01:16:56,867] INFO % : Already in the DB
+[2016-06-03 01:16:56,868] INFO % : Already in the DB
+[2016-06-03 01:16:56,869] INFO % : Already in the DB
+[2016-06-03 01:16:56,870] INFO % : Already in the DB
+[2016-06-03 01:16:56,871] INFO % : Already in the DB
+[2016-06-03 01:16:56,872] INFO % : Already in the DB
+[2016-06-03 01:16:56,873] INFO % : Already in the DB
+[2016-06-03 01:16:56,874] INFO % : Already in the DB
+[2016-06-03 01:16:56,875] INFO % : Already in the DB
+[2016-06-03 01:16:56,876] INFO % : Already in the DB
+[2016-06-03 01:16:56,878] INFO % : Already in the DB
+[2016-06-03 01:16:56,879] INFO % : Already in the DB
+[2016-06-03 01:16:56,880] INFO % : Already in the DB
+[2016-06-03 01:16:56,881] INFO % : Already in the DB
+[2016-06-03 01:16:56,882] INFO % : Already in the DB
+[2016-06-03 01:16:56,883] INFO % : Already in the DB
+[2016-06-03 01:16:56,884] INFO % : Already in the DB
+[2016-06-03 01:16:56,885] INFO % : Already in the DB
+[2016-06-03 01:16:56,886] INFO % : Already in the DB
+[2016-06-03 01:16:56,888] INFO % : Already in the DB
+[2016-06-03 01:16:56,889] INFO % : Already in the DB
+[2016-06-03 01:16:56,890] INFO % : Already in the DB
+[2016-06-03 01:16:56,891] INFO % : Already in the DB
+[2016-06-03 01:16:56,892] INFO % : Already in the DB
+[2016-06-03 01:16:56,893] INFO % : Already in the DB
+[2016-06-03 01:16:56,894] INFO % : Already in the DB
+[2016-06-03 01:16:56,895] INFO % : Already in the DB
+[2016-06-03 01:16:56,896] INFO % : Already in the DB
+[2016-06-03 01:16:56,897] INFO % : Already in the DB
+[2016-06-03 01:16:56,899] INFO % : Already in the DB
+[2016-06-03 01:16:56,900] INFO % : Already in the DB
+[2016-06-03 01:16:56,901] INFO % : Already in the DB
+[2016-06-03 01:16:56,902] INFO % : Already in the DB
+[2016-06-03 01:16:56,903] INFO % : Already in the DB
+[2016-06-03 01:16:56,904] INFO % : Already in the DB
+[2016-06-03 01:16:56,905] INFO % : Already in the DB
+[2016-06-03 01:16:56,906] INFO % : Already in the DB
+[2016-06-03 01:16:56,908] INFO % : Already in the DB
+[2016-06-03 01:16:56,909] INFO % : Already in the DB
+[2016-06-03 01:16:56,910] INFO % : Already in the DB
+[2016-06-03 01:16:56,911] INFO % : Already in the DB
+[2016-06-03 01:16:56,912] INFO % : Already in the DB
+[2016-06-03 01:16:56,913] INFO % : Already in the DB
+[2016-06-03 01:16:56,914] INFO % : Already in the DB
+[2016-06-03 01:16:56,915] INFO % : Already in the DB
+[2016-06-03 01:16:56,916] INFO % : Already in the DB
+[2016-06-03 01:16:56,917] INFO % : Already in the DB
+[2016-06-03 01:16:56,919] INFO % : Already in the DB
+[2016-06-03 01:16:56,920] INFO % : Already in the DB
+[2016-06-03 01:16:56,921] INFO % : Already in the DB
+[2016-06-03 01:16:56,922] INFO % : Already in the DB
+[2016-06-03 01:16:56,923] INFO % : Already in the DB
+[2016-06-03 01:16:56,924] INFO % : Already in the DB
+[2016-06-03 01:16:56,925] INFO % : Already in the DB
+[2016-06-03 01:16:56,926] INFO % : Already in the DB
+[2016-06-03 01:16:56,927] INFO % : Already in the DB
+[2016-06-03 01:16:56,928] INFO % : Already in the DB
+[2016-06-03 01:16:56,930] INFO % : Already in the DB
+[2016-06-03 01:16:56,931] INFO % : Already in the DB
+[2016-06-03 01:16:56,932] INFO % : Already in the DB
+[2016-06-03 01:16:56,933] INFO % : Already in the DB
+[2016-06-03 01:16:56,934] INFO % : Already in the DB
+[2016-06-03 01:16:56,935] INFO % : Already in the DB
+[2016-06-03 01:16:56,936] INFO % : Already in the DB
+[2016-06-03 01:16:56,937] INFO % : Already in the DB
+[2016-06-03 01:16:56,938] INFO % : Already in the DB
+[2016-06-03 01:16:56,940] INFO % : Already in the DB
+[2016-06-03 01:16:56,941] INFO % : Already in the DB
+[2016-06-03 01:16:56,942] INFO % : Already in the DB
+[2016-06-03 01:16:56,943] INFO % : Already in the DB
+[2016-06-03 01:16:56,944] INFO % : Already in the DB
+[2016-06-03 01:16:56,945] INFO % : Already in the DB
+[2016-06-03 01:16:56,946] INFO % : Already in the DB
+[2016-06-03 01:16:56,947] INFO % : Already in the DB
+[2016-06-03 01:16:56,948] INFO % : Already in the DB
+[2016-06-03 12:49:45,898] WARNING % : Not Found: /cityjobs/emplois/update
+[2016-06-03 12:49:45,931] INFO % : Error page not found 404
+[2016-06-03 12:50:57,945] INFO % : Updating the list of jobs
+[2016-06-03 12:50:57,946] INFO % : yes we added new jobs
+[2016-06-03 12:59:34,685] INFO % : Updating the list of jobs
+[2016-06-03 12:59:34,686] INFO % : yes we added new jobs
+[2016-06-03 12:59:34,854] INFO % : Updating the list of jobs
+[2016-06-03 12:59:34,854] INFO % : yes we added new jobs
+[2016-06-03 13:11:59,747] WARNING % : Not Found: /th1s_1s_a_4o4.html
+[2016-06-03 13:11:59,757] INFO % : Error page not found 404
+[2016-06-03 22:07:35,547] INFO % : Updating the list of jobs
+[2016-06-03 22:07:35,548] INFO % : yes we added new jobs
+[2016-06-04 12:37:27,385] WARNING % : Not Found: /th1s_1s_a_4o4.html
+[2016-06-04 12:37:27,421] INFO % : Error page not found 404
+[2016-06-04 18:27:33,402] WARNING % : Not Found: /robots.txt
+[2016-06-04 18:27:33,500] INFO % : Error page not found 404
+[2016-06-05 08:55:11,494] WARNING % : Not Found: /robots.txt
+[2016-06-05 08:55:11,642] INFO % : Error page not found 404
+[2016-06-05 12:31:03,111] WARNING % : Not Found: /th1s_1s_a_4o4.html
+[2016-06-05 12:31:03,139] INFO % : Error page not found 404
+[2016-06-06 01:25:44,031] WARNING % : Not Found: /robots.txt
+[2016-06-06 01:25:44,178] INFO % : Error page not found 404
+[2016-06-06 05:12:38,653] WARNING % : Not Found: /emplois/lang/
+[2016-06-06 05:12:38,716] INFO % : Error page not found 404
+[2016-06-06 12:41:22,668] WARNING % : Not Found: /th1s_1s_a_4o4.html
+[2016-06-06 12:41:22,692] INFO % : Error page not found 404
+[2016-06-06 14:05:27,599] WARNING % : Not Found: /robots.txt
+[2016-06-06 14:05:27,628] INFO % : Error page not found 404
+[2016-06-06 22:00:10,129] INFO % : Updating the list of jobs
+[2016-06-06 22:00:10,129] INFO % : yes we added new jobs
+[2016-06-07 02:59:16,035] WARNING % : Not Found: /robots.txt
+[2016-06-07 02:59:16,200] INFO % : Error page not found 404
+[2016-06-07 09:20:18,789] WARNING % : Not Found: /m/
+[2016-06-07 09:20:18,964] INFO % : Error page not found 404
+[2016-06-07 12:38:32,728] WARNING % : Not Found: /th1s_1s_a_4o4.html
+[2016-06-07 12:38:32,751] INFO % : Error page not found 404
+[2016-06-07 17:14:43,757] WARNING % : Not Found: /robots.txt
+[2016-06-07 17:14:43,788] INFO % : Error page not found 404
+[2016-06-07 17:14:43,863] WARNING % : Not Found: /m/
+[2016-06-07 17:14:43,870] INFO % : Error page not found 404
+[2016-06-07 22:00:11,160] INFO % : Updating the list of jobs
+[2016-06-07 22:00:11,160] INFO % : yes we added new jobs
+[2016-06-08 05:24:07,883] WARNING % : Not Found: /robots.txt
+[2016-06-08 05:24:07,919] INFO % : Error page not found 404
+[2016-06-08 12:32:38,935] WARNING % : Not Found: /th1s_1s_a_4o4.html
+[2016-06-08 12:32:38,967] INFO % : Error page not found 404
+[2016-06-08 20:54:23,663] WARNING % : Not Found: /robots.txt
+[2016-06-08 20:54:23,760] INFO % : Error page not found 404
+[2016-06-08 21:31:12,644] WARNING % : Not Found: /mobile/
+[2016-06-08 21:31:12,649] INFO % : Error page not found 404
+[2016-06-08 22:00:09,322] INFO % : Updating the list of jobs
+[2016-06-08 22:00:09,322] INFO % : yes we added new jobs
+[2016-06-09 06:55:43,448] WARNING % : Not Found: /m/
+[2016-06-09 06:55:43,609] INFO % : Error page not found 404
+[2016-06-09 12:30:56,981] WARNING % : Not Found: /th1s_1s_a_4o4.html
+[2016-06-09 12:30:57,015] INFO % : Error page not found 404
+[2016-06-09 19:15:39,327] WARNING % : Not Found: /robots.txt
+[2016-06-09 19:15:39,389] INFO % : Error page not found 404
+[2016-06-09 19:15:40,509] WARNING % : Not Found: /mobile/
+[2016-06-09 19:15:40,515] INFO % : Error page not found 404
+[2016-06-09 22:00:16,878] INFO % : Updating the list of jobs
+[2016-06-09 22:00:16,879] INFO % : yes we added new jobs
+[2016-06-10 07:01:33,620] WARNING % : Not Found: /mobile/
+[2016-06-10 07:01:33,758] INFO % : Error page not found 404
+[2016-06-10 12:40:44,242] WARNING % : Not Found: /th1s_1s_a_4o4.html
+[2016-06-10 12:40:44,276] INFO % : Error page not found 404
+[2016-06-10 22:00:11,868] INFO % : Updating the list of jobs
+[2016-06-10 22:00:11,875] INFO % : yes we added new jobs
+[2016-06-11 08:43:39,668] WARNING % : Not Found: /robots.txt
+[2016-06-11 08:43:39,839] INFO % : Error page not found 404
+[2016-06-11 12:31:49,161] WARNING % : Not Found: /th1s_1s_a_4o4.html
+[2016-06-11 12:31:49,170] INFO % : Error page not found 404
+[2016-06-12 12:32:39,682] WARNING % : Not Found: /th1s_1s_a_4o4.html
+[2016-06-12 12:32:39,701] INFO % : Error page not found 404
+[2016-06-13 12:39:27,242] WARNING % : Not Found: /th1s_1s_a_4o4.html
+[2016-06-13 12:39:27,273] INFO % : Error page not found 404
+[2016-06-13 22:00:13,723] INFO % : Updating the list of jobs
+[2016-06-13 22:00:13,723] INFO % : yes we added new jobs
+[2016-06-14 10:39:24,227] WARNING % : Not Found: /robots.txt
+[2016-06-14 10:39:24,321] INFO % : Error page not found 404
+[2016-06-14 12:36:50,105] WARNING % : Not Found: /th1s_1s_a_4o4.html
+[2016-06-14 12:36:50,113] INFO % : Error page not found 404
+[2016-06-14 22:00:09,168] INFO % : Updating the list of jobs
+[2016-06-14 22:00:09,169] INFO % : yes we added new jobs
+[2016-06-15 08:41:08,803] WARNING % : Not Found: /robots.txt
+[2016-06-15 08:41:08,856] INFO % : Error page not found 404
+[2016-06-15 12:38:35,300] WARNING % : Not Found: /th1s_1s_a_4o4.html
+[2016-06-15 12:38:35,329] INFO % : Error page not found 404
+[2016-06-15 22:00:09,830] INFO % : Updating the list of jobs
+[2016-06-15 22:00:09,837] INFO % : yes we added new jobs
+[2016-06-15 23:34:21,837] WARNING % : Not Found: /robots.txt
+[2016-06-15 23:34:21,930] INFO % : Error page not found 404
+[2016-06-16 01:22:16,065] WARNING % : Not Found: /robots.txt
+[2016-06-16 01:22:16,086] INFO % : Error page not found 404
+[2016-06-16 12:35:08,182] WARNING % : Not Found: /th1s_1s_a_4o4.html
+[2016-06-16 12:35:08,211] INFO % : Error page not found 404
+[2016-06-16 22:00:12,845] INFO % : Updating the list of jobs
+[2016-06-16 22:00:12,853] INFO % : yes we added new jobs
+[2016-06-17 09:03:14,813] WARNING % : Not Found: /robots.txt
+[2016-06-17 09:03:14,906] INFO % : Error page not found 404
+[2016-06-17 12:35:23,283] WARNING % : Not Found: /th1s_1s_a_4o4.html
+[2016-06-17 12:35:23,307] INFO % : Error page not found 404
+[2016-06-17 22:00:09,991] INFO % : Updating the list of jobs
+[2016-06-17 22:00:09,992] INFO % : yes we added new jobs
+[2016-06-18 12:32:02,579] WARNING % : Not Found: /th1s_1s_a_4o4.html
+[2016-06-18 12:32:02,601] INFO % : Error page not found 404
+[2016-06-19 12:31:40,457] WARNING % : Not Found: /th1s_1s_a_4o4.html
+[2016-06-19 12:31:40,490] INFO % : Error page not found 404
+[2016-06-19 18:26:20,445] WARNING % : Not Found: /robots.txt
+[2016-06-19 18:26:20,631] INFO % : Error page not found 404
+[2016-06-20 10:45:41,255] WARNING % : Not Found: /robots.txt
+[2016-06-20 10:45:41,367] INFO % : Error page not found 404
+[2016-06-20 12:30:35,399] WARNING % : Not Found: /th1s_1s_a_4o4.html
+[2016-06-20 12:30:35,425] INFO % : Error page not found 404
+[2016-06-20 22:00:10,715] INFO % : Updating the list of jobs
+[2016-06-20 22:00:10,716] INFO % : yes we added new jobs
+[2016-06-21 03:27:43,086] WARNING % : Not Found: /robots.txt
+[2016-06-21 03:27:43,118] INFO % : Error page not found 404
+[2016-06-21 12:39:03,669] WARNING % : Not Found: /th1s_1s_a_4o4.html
+[2016-06-21 12:39:03,685] INFO % : Error page not found 404
+[2016-06-21 21:16:07,560] WARNING % : Not Found: /robots.txt
+[2016-06-21 21:16:07,649] INFO % : Error page not found 404
+[2016-06-21 22:00:10,561] INFO % : Updating the list of jobs
+[2016-06-21 22:00:10,561] INFO % : yes we added new jobs
+[2016-06-22 12:34:55,896] WARNING % : Not Found: /th1s_1s_a_4o4.html
+[2016-06-22 12:34:55,921] INFO % : Error page not found 404
+[2016-06-22 22:00:12,238] INFO % : Updating the list of jobs
+[2016-06-22 22:00:12,252] INFO % : yes we added new jobs
+[2016-06-23 04:09:11,349] WARNING % : Not Found: /robots.txt
+[2016-06-23 04:09:11,374] INFO % : Error page not found 404
+[2016-06-23 06:01:24,671] WARNING % : Not Found: /robots.txt
+[2016-06-23 06:01:24,716] INFO % : Error page not found 404
+[2016-06-23 13:11:51,436] WARNING % : Not Found: /th1s_1s_a_4o4.html
+[2016-06-23 13:11:51,451] INFO % : Error page not found 404
+[2016-06-23 17:51:17,728] WARNING % : Not Found: /robots.txt
+[2016-06-23 17:51:17,760] INFO % : Error page not found 404
+[2016-06-23 22:00:11,243] INFO % : Updating the list of jobs
+[2016-06-23 22:00:11,244] INFO % : yes we added new jobs
+[2016-06-24 02:38:19,351] WARNING % : Not Found: /robots.txt
+[2016-06-24 02:38:19,425] INFO % : Error page not found 404
+[2016-06-24 12:38:20,821] WARNING % : Not Found: /th1s_1s_a_4o4.html
+[2016-06-24 12:38:20,836] INFO % : Error page not found 404
+[2016-06-24 12:52:32,206] WARNING % : Not Found: /robots.txt
+[2016-06-24 12:52:32,227] INFO % : Error page not found 404
+[2016-06-24 16:55:36,180] WARNING % : Not Found: /robots.txt
+[2016-06-24 16:55:36,321] INFO % : Error page not found 404
+[2016-06-24 22:00:18,487] INFO % : Updating the list of jobs
+[2016-06-24 22:00:18,492] INFO % : yes we added new jobs
+[2016-06-25 05:16:21,388] WARNING % : Not Found: /robots.txt
+[2016-06-25 05:16:21,425] WARNING % : Not Found: /robots.txt
+[2016-06-25 05:16:21,454] INFO % : Error page not found 404
+[2016-06-25 05:16:21,458] INFO % : Error page not found 404
+[2016-06-25 05:49:50,014] WARNING % : Not Found: /robots.txt
+[2016-06-25 05:49:50,029] INFO % : Error page not found 404
+[2016-06-25 12:34:44,534] WARNING % : Not Found: /th1s_1s_a_4o4.html
+[2016-06-25 12:34:44,556] INFO % : Error page not found 404
+[2016-06-26 01:46:03,364] WARNING % : Not Found: /robots.txt
+[2016-06-26 01:46:03,516] INFO % : Error page not found 404
+[2016-06-26 04:10:42,739] WARNING % : Not Found: /robots.txt
+[2016-06-26 04:10:42,904] INFO % : Error page not found 404
+[2016-06-26 12:35:57,962] WARNING % : Not Found: /th1s_1s_a_4o4.html
+[2016-06-26 12:35:57,985] INFO % : Error page not found 404
+[2016-06-26 21:28:36,440] WARNING % : Not Found: /robots.txt
+[2016-06-26 21:28:36,530] INFO % : Error page not found 404
+[2016-06-27 12:42:39,799] WARNING % : Not Found: /th1s_1s_a_4o4.html
+[2016-06-27 12:42:39,836] INFO % : Error page not found 404
+[2016-06-27 22:00:09,075] INFO % : Updating the list of jobs
+[2016-06-27 22:00:09,076] INFO % : yes we added new jobs
+[2016-06-28 12:39:43,916] WARNING % : Not Found: /th1s_1s_a_4o4.html
+[2016-06-28 12:39:43,932] INFO % : Error page not found 404
+[2016-06-28 22:00:16,994] INFO % : Updating the list of jobs
+[2016-06-28 22:00:17,006] INFO % : yes we added new jobs
+[2016-06-28 23:41:11,901] WARNING % : Not Found: /robots.txt
+[2016-06-28 23:41:11,934] INFO % : Error page not found 404
+[2016-06-29 12:40:58,589] WARNING % : Not Found: /th1s_1s_a_4o4.html
+[2016-06-29 12:40:58,611] INFO % : Error page not found 404
+[2016-06-29 22:00:11,016] INFO % : Updating the list of jobs
+[2016-06-29 22:00:11,017] INFO % : yes we added new jobs
+[2016-06-30 12:55:15,278] WARNING % : Not Found: /th1s_1s_a_4o4.html
+[2016-06-30 12:55:15,296] INFO % : Error page not found 404
+[2016-06-30 15:58:42,371] WARNING % : Not Found: /robots.txt
+[2016-06-30 15:58:42,371] WARNING % : Not Found: /robots.txt
+[2016-06-30 15:58:42,484] INFO % : Error page not found 404
+[2016-06-30 15:58:42,489] INFO % : Error page not found 404
+[2016-06-30 22:00:17,640] INFO % : Updating the list of jobs
+[2016-06-30 22:00:17,670] INFO % : yes we added new jobs
+[2016-07-01 12:59:02,620] WARNING % : Not Found: /th1s_1s_a_4o4.html
+[2016-07-01 12:59:02,730] INFO % : Error page not found 404
+[2016-07-01 22:00:11,298] INFO % : Updating the list of jobs
+[2016-07-01 22:00:11,298] INFO % : yes we added new jobs
+[2016-07-02 13:22:56,512] WARNING % : Not Found: /th1s_1s_a_4o4.html
+[2016-07-02 13:22:56,535] INFO % : Error page not found 404
+[2016-07-03 04:28:32,408] WARNING % : Not Found: /robots.txt
+[2016-07-03 04:28:32,518] INFO % : Error page not found 404
+[2016-07-03 13:12:07,177] WARNING % : Not Found: /th1s_1s_a_4o4.html
+[2016-07-03 13:12:07,209] INFO % : Error page not found 404
+[2016-07-04 12:48:35,328] WARNING % : Not Found: /th1s_1s_a_4o4.html
+[2016-07-04 12:48:35,352] INFO % : Error page not found 404
+[2016-07-04 18:36:58,931] WARNING % : Not Found: /robots.txt
+[2016-07-04 18:36:58,973] INFO % : Error page not found 404
+[2016-07-05 13:16:09,616] WARNING % : Not Found: /th1s_1s_a_4o4.html
+[2016-07-05 13:16:09,646] INFO % : Error page not found 404
+[2016-07-05 18:33:28,208] WARNING % : Not Found: /robots.txt
+[2016-07-05 18:33:28,275] INFO % : Error page not found 404
+[2016-07-05 18:33:28,555] WARNING % : Not Found: /robots.txt
+[2016-07-05 18:33:28,564] INFO % : Error page not found 404
+[2016-07-05 21:18:12,145] INFO % : Updating the list of jobs
+[2016-07-05 21:18:12,145] INFO % : yes we added new jobs
+[2016-07-05 21:19:08,289] INFO % : Updating the list of jobs
+[2016-07-05 21:19:08,289] INFO % : yes we added new jobs
+[2016-07-05 21:24:16,094] INFO % : Updating the list of jobs
+[2016-07-05 21:24:16,094] INFO % : yes we added new jobs
+[2016-07-05 21:24:28,381] INFO % : Updating the list of jobs
+[2016-07-05 21:24:28,381] INFO % : yes we added new jobs
+[2016-07-06 02:11:33,697] WARNING % : Not Found: /robots.txt
+[2016-07-06 02:11:33,787] INFO % : Error page not found 404

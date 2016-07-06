@@ -5,11 +5,12 @@
 {% load staticfiles %}
 
 	{% block content %}
+<!-- I had some issue with Django trying to serve static files in Production
+so I decided to put the css and js in a partial -->
+{% include "emplois/static_include.html" %}
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>
 
-<link href="{% static "css/font-awesome.min.css" %}" rel="stylesheet"/>
-	<link rel="stylesheet" href="{% static "css/cal-heatmap.css" %}" rel="stylesheet" />
-<script type="text/javascript" src="{% static "js/cal-heatmap.min.js" %}"></script>
 
 	<h1>{% trans "statistics" %}</h1>
 
@@ -94,7 +95,8 @@ var jqxhr = $.ajax({
     data.forEach(function(entry) {
       //console.log(entry);
       //console.log(entry['fields']['slug'])
-      position = entry['fields']['position'];
+      //console.log(entry['fields']['POSITION']);
+      position = entry['fields']['POSITION'];
 
       $("#onClick-placeholder").append(
        "Position : <b style='font-size:18px;'><a href=\"/" + entry['pk'] + "\"</a>" +  position + " </b><br/>" + " date : " +"<b>" +

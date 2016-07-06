@@ -246,10 +246,10 @@ def emplois(request):
         POSTDATE__day=request.GET.get('jour'),
         language=language_set(request.LANGUAGE_CODE)
         )
-    logger.info('Annee : ' + request.GET.get('annee') )
-    logger.info('Mois : ' + request.GET.get('mois'))
-    logger.info('Jour : ' + request.GET.get('jour'))
-    logger.info('Language Code : ' + request.LANGUAGE_CODE)
+    #logger.info('Annee : ' + request.GET.get('annee') )
+    #logger.info('Mois : ' + request.GET.get('mois'))
+    #logger.info('Jour : ' + request.GET.get('jour'))
+    #logger.info('Language Code : ' + request.LANGUAGE_CODE)
     data = serializers.serialize('json', jobs)
     return HttpResponse(data, content_type='application/json')
 
@@ -284,10 +284,10 @@ def update_and_tweets(request):
     if upgrade_time:
         res = process_it()
         #Update the list of jobs from Open Data portal (Ottawa.open.data)
-        logger.infor('yes we add new jobs')
+        logger.info('yes we added new jobs')
         return redirect("/")
     else:
-        logger.info('no we didn t have new jobs in full.json')
+        logger.info("no we didn't have new jobs in full.jsonr")
         return redirect("/")
 
 
